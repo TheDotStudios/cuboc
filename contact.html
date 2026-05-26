@@ -1740,17 +1740,18 @@
               <div class="footer-4__wrapper">
                 <div class="footer-widget-box">
                   <div class="content">
-                    <h3 class="title">Let's work together</h3>
+                    <h3 class="title">Here's the Direct Line.</h3>
+
                     <div class="info">
-                      <a href="tel:47345234789">+47 345 234 789</a>
-                      <a href="mailto:archidex@example.com"
-                        >archidex@example.com</a
-                      >
-                      <a
-                        href="https://maps.app.goo.gl/JKwVELppRvPnjZ8c6"
-                        target="_blank"
-                        >360 Lexington Avenue, 2nd Floor,<br />United States</a
-                      >
+                      <a href="tel:+919318404993">Sales — +91 93184 04993</a>
+
+                      <a href="tel:+919310133066">Support — +91 93101 33066</a>
+
+                      <a href="tel:+919818538180">Director — +91 98185 38180</a>
+
+                      <a href="mailto:info@cubocdisplay.com">
+                        info@cubocdisplay.com
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -1848,9 +1849,7 @@
                   </div>
                 </div>
                 <p class="copyright__text" style="text-align: right">
-                  <a href="https://themeforest.net/user/ravextheme"
-                    >ravextheme</a
-                  >
+                  <a href="#">cuboc</a>
                   © 2025. All Rights Reserved.
                 </p>
               </div>
@@ -1882,5 +1881,120 @@
     <script src="assets/vandor/magnific/magnific-popup.min.js"></script>
     <script src="assets/vandor/common-js/common.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+      (function () {
+        var form = document.getElementById("contact__form");
+        if (!form) return;
+
+        /* ── Field definitions ── */
+        var fields = [
+          { id: "name2", label: "Name", type: "text" },
+          { id: "email2", label: "Company Name", type: "text" },
+          { id: "phone", label: "Phone Number", type: "phone" },
+          { id: "company", label: "Email Address", type: "email" },
+          { id: "Budget", label: "Product of Interest", type: "select" },
+          { id: "solution", label: "Approximate Quantity", type: "text" },
+          { id: "message", label: "Your Requirement", type: "text" },
+        ];
+
+        /* ── Helpers ── */
+        function isValidEmail(v) {
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+        }
+        function isValidPhone(v) {
+          return /^[+]?[\d\s\-().]{7,15}$/.test(v.trim());
+        }
+        function markError(el, msg) {
+          el.style.borderBottomColor = "#e74c3c";
+          var err = el.parentElement.querySelector(".cx-err");
+          if (!err) {
+            err = document.createElement("span");
+            err.className = "cx-err";
+            err.style.cssText =
+              "font-size:11px;color:#e74c3c;margin-top:4px;display:block;";
+            el.parentElement.appendChild(err);
+          }
+          err.textContent = msg;
+        }
+        function clearError(el) {
+          el.style.borderBottomColor = "";
+          var err = el.parentElement.querySelector(".cx-err");
+          if (err) err.remove();
+        }
+
+        /* ── Live clear on input ── */
+        fields.forEach(function (f) {
+          var el = document.getElementById(f.id);
+          if (!el) return;
+          el.addEventListener("input", function () {
+            clearError(el);
+          });
+          el.addEventListener("change", function () {
+            clearError(el);
+          });
+        });
+
+        /* ── Submit handler ── */
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          var valid = true;
+          var firstInvalid = null;
+
+          fields.forEach(function (f) {
+            var el = document.getElementById(f.id);
+            if (!el) return;
+            var val = el.value;
+
+            /* Empty check */
+            if (!val || val.trim() === "" || val === "0") {
+              markError(el, f.label + " is required.");
+              valid = false;
+              if (!firstInvalid) firstInvalid = el;
+              return;
+            }
+
+            /* Type-specific validation */
+            if (f.type === "email" && !isValidEmail(val)) {
+              markError(el, "Please enter a valid email address.");
+              valid = false;
+              if (!firstInvalid) firstInvalid = el;
+              return;
+            }
+            if (f.type === "phone" && !isValidPhone(val)) {
+              markError(el, "Please enter a valid phone number.");
+              valid = false;
+              if (!firstInvalid) firstInvalid = el;
+              return;
+            }
+
+            clearError(el);
+          });
+
+          if (!valid) {
+            if (firstInvalid) firstInvalid.focus();
+            return;
+          }
+
+          /* ── Success ── */
+          Swal.fire({
+            icon: "success",
+            title: "Submitted Successfully!",
+            text: "Thank you for reaching out. We'll get back to you within 1 working day.",
+            confirmButtonText: "Got it",
+            confirmButtonColor: "#111111",
+            customClass: {
+              popup: "cx-swal-popup",
+            },
+          }).then(function () {
+            form.reset();
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
