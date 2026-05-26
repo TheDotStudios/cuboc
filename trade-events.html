@@ -1,0 +1,2219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cuboc Case Studies — Real Problems. Built Solutions."
+    />
+    <title>Case Studies — Cuboc</title>
+
+    <!-- Fav Icon -->
+    <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.png" />
+
+    <!-- Dependencies CSS Files -->
+    <link rel="stylesheet" href="assets/vandor/bootstrap/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/vandor/fontawesome/fontawesome-pro.min.css"
+    />
+    <link rel="stylesheet" href="assets/vandor/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/vandor/menu/meanmenu.min.css" />
+    <link rel="stylesheet" href="assets/vandor/popup/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vandor/nice-select/nice-select.css" />
+    <link
+      rel="stylesheet"
+      href="assets/vandor/odometer/odometer-theme-default.css"
+    />
+
+    <!-- Google Fonts — Inter (matches index.html via style.css @import) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100;0,14..32,200;0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,100;1,14..32,200;1,14..32,300;1,14..32,400;1,14..32,500;1,14..32,600;1,14..32,700;1,14..32,800;1,14..32,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      .service-6__arrow {
+        width: 50px;
+        height: 50px;
+      }
+      .service-6__wrapper {
+        padding-bottom: 200px;
+      }
+      .header-area-2 .header__logo img {
+        max-width: 120px;
+        filter: invert(1);
+      }
+      .our-service-9__title {
+        margin: 30px 0 0px 0;
+      }
+      /* ── Font-family enforcement (matches index.html behaviour) ── */
+
+      /* ── Page layout overrides ── */
+      .our-service-9__btn {
+        margin-bottom: 150px;
+      }
+
+      .rr-btn-primary {
+        gap: 6px;
+        display: inline-flex;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 16px;
+        padding: 15px 45px;
+        color: var(--white);
+        align-items: center;
+        border-radius: unset;
+        justify-content: center;
+        border: 1px solid var(--border);
+        transition:
+          background 0.3s ease,
+          color 0.3s ease;
+        cursor: pointer;
+        background: #111111;
+      }
+
+      .rr-btn-primary:hover {
+        background: #333333;
+        color: var(--white);
+      }
+
+      .hero-6__inner {
+        padding-top: 100px;
+      }
+
+      .breadcrumb__content {
+        padding-bottom: 150px;
+      }
+
+      /* ── Breadcrumb heading — same Inter treatment as index.html hero title ── */
+      .breadcrumb__title {
+        font-size: 100px;
+
+        font-weight: 500;
+        line-height: 1.05;
+        letter-spacing: -4px;
+        color: var(--white);
+      }
+
+      @media (max-width: 1199px) {
+        .breadcrumb__title {
+          font-size: 72px;
+          letter-spacing: -3px;
+        }
+      }
+      @media (max-width: 767px) {
+        .breadcrumb__title {
+          font-size: 50px;
+          letter-spacing: -2px;
+        }
+      }
+      @media (max-width: 575px) {
+        .breadcrumb__title {
+          font-size: 38px;
+          letter-spacing: -1.5px;
+        }
+      }
+
+      .header-area-3 .main-menu li a {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 16px;
+        color: var(--white);
+        padding: 31.5px 14px;
+      }
+
+      .breadcrumb__bg::before {
+        background: #111111;
+        opacity: 0.6;
+        mix-blend-mode: normal;
+      }
+    </style>
+    <style>
+      .breadcrumb__bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.58);
+        mix-blend-mode: normal;
+      }
+
+      /* ── Case study card elements ── */
+      .our-service-9__content .cs-tag {
+        display: inline-block;
+        font-size: 10px;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        color: var(--white);
+        background: var(--primary);
+        padding: 3px 11px;
+        border-radius: 500px;
+        margin-bottom: 14px;
+      }
+
+      .our-service-9__content .cs-blocks {
+        margin-top: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .our-service-9__content .cs-block-label {
+        display: block;
+        font-size: 22px;
+
+        text-transform: capitalize;
+        color: var(--primary);
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        margin-bottom: 10px;
+      }
+
+      .our-service-9__title {
+        font-size: 36px;
+
+        font-weight: 500;
+        letter-spacing: -1px;
+        line-height: 1.2;
+        color: var(--primary);
+      }
+
+      .our-service-9__title a {
+        font-weight: 500;
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      .our-service-9__desc {
+        font-size: 15px;
+        line-height: 1.7;
+        font-weight: 400;
+        color: var(--secondary);
+      }
+
+      .our-service-9__content .cs-result {
+        padding-top: 14px;
+        margin-top: 4px;
+      }
+
+      .our-service-9__content .cs-result p {
+        font-size: 14px;
+        line-height: 1.7;
+        font-weight: 400;
+
+        color: var(--primary);
+      }
+
+      /* ── Approach grid ── */
+      .cs-approach-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        border-top: 1px solid rgba(17, 17, 17, 0.1);
+        margin-top: 30px;
+      }
+
+      .cs-approach-cell {
+        padding: 30px 0;
+        border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+      }
+
+      .cs-approach-cell:nth-child(odd) {
+        padding-right: 36px;
+        border-right: 1px solid rgba(17, 17, 17, 0.1);
+      }
+
+      .cs-approach-cell:nth-child(even) {
+        padding-left: 36px;
+      }
+
+      .cs-approach-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: #f3f3f3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 15px;
+        color: var(--primary);
+      }
+
+      .cs-approach-cell h4 {
+        font-size: 17px;
+        font-weight: 600;
+
+        color: var(--primary);
+        margin-bottom: 5px;
+        letter-spacing: -0.2px;
+      }
+
+      .cs-approach-cell p {
+        font-size: 15px;
+        line-height: 1.65;
+        font-weight: 400;
+
+        color: var(--secondary);
+      }
+
+      .cs-approach-footer {
+        font-size: 20px;
+        font-weight: 500;
+
+        color: var(--primary);
+        letter-spacing: -0.3px;
+      }
+
+      /* ── Stat bar ── */
+      .cs-stat-bar {
+        display: flex;
+        gap: 0;
+        border-top: 1px solid rgba(17, 17, 17, 0.1);
+        border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+        margin-bottom: 60px;
+      }
+
+      .cs-stat-item {
+        flex: 1;
+        padding: 28px 0;
+        text-align: center;
+        border-right: 1px solid rgba(17, 17, 17, 0.1);
+      }
+
+      .cs-stat-item:last-child {
+        border-right: none;
+      }
+
+      .cs-stat-item strong {
+        display: block;
+        font-size: 42px;
+        font-weight: 500;
+
+        letter-spacing: -2px;
+        color: var(--primary);
+        line-height: 1;
+      }
+
+      .cs-stat-item span {
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+
+        color: var(--secondary);
+        margin-top: 6px;
+        letter-spacing: 0;
+      }
+
+      /* ── Thumb image ── */
+      .our-service-9__thumb {
+        position: relative;
+      }
+
+      .our-service-9__thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* ── hero-6 content — Cuboc-specific font fix ── */
+      .hero-6__inner .hero-6__title-wrap .sub-title {
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .hero-6__inner .hero-6__title-wrap .title {
+        font-size: 72px;
+        font-weight: 500;
+        line-height: 1.08;
+        letter-spacing: -3px;
+        color: var(--primary);
+      }
+
+      .hero-6__inner .hero-6__title-wrap .title span {
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      .hero-6__inner .hero-6__text .desc {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.7;
+        color: var(--secondary);
+        max-width: 400px;
+        margin-bottom: 32px;
+        letter-spacing: -0.2px;
+      }
+
+      @media (max-width: 1199px) {
+        .hero-6__inner .hero-6__title-wrap .title {
+          font-size: 54px;
+          letter-spacing: -2px;
+        }
+      }
+      @media (max-width: 767px) {
+        .hero-6__inner .hero-6__title-wrap .title {
+          font-size: 40px;
+          letter-spacing: -1.5px;
+        }
+        .cs-approach-row {
+          grid-template-columns: 1fr;
+        }
+        .cs-approach-cell:nth-child(odd) {
+          border-right: none;
+          padding-right: 0;
+        }
+        .cs-approach-cell:nth-child(even) {
+          padding-left: 0;
+        }
+        .cs-stat-bar {
+          flex-direction: column;
+        }
+        .cs-stat-item {
+          border-right: none;
+          border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+        }
+        .cs-stat-item:last-child {
+          border-bottom: none;
+        }
+      }
+
+      /* ── Header nav ── */
+      .header-area-2 .header__logo img {
+        max-width: 120px;
+      }
+
+      .header-area-2 .main-menu li a,
+      .header-area-2 .header-meta .date {
+        color: white;
+      }
+
+      /* ── Breadcrumb bottom strip ── */
+      .breadcrumb__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+        margin-top: 40px;
+        padding-top: 28px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .breadcrumb__tagline {
+        font-size: 20px;
+        font-weight: 500;
+
+        line-height: 1.4;
+        color: var(--white);
+        letter-spacing: -0.54px;
+        max-width: 380px;
+        flex: 0 0 40%;
+      }
+
+      .breadcrumb__body {
+        font-size: 16px;
+        font-weight: 300;
+
+        line-height: 1.75;
+        color: white;
+        letter-spacing: -0.01em;
+        flex: 0 0 50%;
+      }
+
+      @media (max-width: 767px) {
+        .breadcrumb__bottom {
+          flex-direction: column;
+          gap: 16px;
+        }
+        .breadcrumb__tagline,
+        .breadcrumb__body {
+          flex: unset;
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Scroll to top -->
+    <div class="progress-wrap">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+      </svg>
+    </div>
+
+    <!-- Side toggle start -->
+    <aside class="fix">
+      <div class="side-info-4">
+        <div class="offcanvas-4">
+          <div class="side-info-content">
+            <div class="offset-widget offset-header">
+              <div class="offset-logo">
+                <a href="index.html">
+                  <img
+                    class="show-light"
+                    src="assets/imgs/logo/dark-logo.png"
+                    alt="site logo"
+                  />
+                </a>
+              </div>
+              <h6>Display systems. Made in India. Built to work.</h6>
+              <span class="date">Cuboc</span>
+            </div>
+            <div class="mobile-menu d-block d-xl-none"></div>
+            <div class="offset-widget-box d-none d-xl-grid">
+              <div class="contact-meta">
+                <div class="contact-item">
+                  <h6 class="title">Menu</h6>
+                  <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="caseStudiesDetails.html">Services</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button id="side-info-4-close" class="side-info-close">
+              Close<i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- Side toggle end -->
+
+    <div class="has-smooth" id="has_smooth"></div>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <!-- ── Header ── -->
+        <header class="header-area-2">
+          <div class="header-main">
+            <div class="container rr-container-1710">
+              <div class="header-area-2__inner">
+                <div class="header__logo">
+                  <a href="index.html">
+                    <img src="assets/imgs/cuboc-logo-transparent.png" />
+                  </a>
+                </div>
+                <div class="header__nav-2">
+                  <nav class="main-menu">
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+
+                      <li class="menu-item-has-children">
+                        <a href="#">Company</a>
+                        <ul class="dp-menu">
+                          <li><a href="about.html">About Us</a></li>
+                          <li>
+                            <a href="recognitionNetwork.html"
+                              >Recognition &amp; Network</a
+                            >
+                          </li>
+                          <li>
+                            <a href="trade-events.html"
+                              >Trade Shows &amp; Events</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li class="menu-item-has-children">
+                        <a href="products.html">Products</a>
+                        <ul class="dp-menu">
+                          <li>
+                            <a href="product-01.html">Fabric Light Boxes</a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li><a href="visualroom.html">Virtual Showroom</a></li>
+
+                      <li class="menu-item-has-children">
+                        <a href="caseStudy.html">Case Studies</a>
+                        <ul class="dp-menu">
+                          <li>
+                            <a href="caseStudiesDetails.html"
+                              >Case Studies Details</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="header-right">
+                  <div class="header__navicon">
+                    <div class="side-toggle mobile-button d-lg-block d-xl-none">
+                      <a class="bar-icon" href="javascript:void(0)"
+                        ><span></span><span></span
+                      ></a>
+                    </div>
+                    <a href="contact.html" class="rr-btn-primary bg-base-color">
+                      <span class="text">Let's Talk</span>
+                      <i class="fa-solid fa-angle-right right-icon"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- Header end -->
+
+        <main>
+          <!-- banner / hero start -->
+          <style>
+            .about-hero {
+              position: relative;
+            }
+            .about-hero__cta-bar {
+              position: absolute;
+              bottom: 40px;
+              left: 0;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              z-index: 10;
+            }
+            .about-hero__cta-btn {
+              display: inline-flex;
+              align-items: center;
+              gap: 10px;
+              padding: 16px 48px;
+              background: #fff;
+              color: #111;
+
+              font-size: 15px;
+              font-weight: 600;
+              text-decoration: none;
+              transition:
+                background 0.25s,
+                color 0.25s;
+            }
+            .about-hero__cta-btn:hover {
+              background: #111;
+              color: #fff;
+            }
+          </style>
+
+          <div class="about-hero">
+            <div class="about-hero__bg">
+              <img
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&auto=format&fit=crop"
+                alt="About Cuboc"
+              />
+            </div>
+            <div class="about-hero__inner">
+              <div class="container rr-container-1710">
+                <p class="about-hero__eyebrow">Industry Presence</p>
+                <h1 class="about-hero__title">
+                  Where We Show Up Tells<br /><span class="base-text-coor"
+                    >You Who We Are.
+                  </span>
+                </h1>
+                <div class="about-hero__bottom">
+                  <p class="about-hero__sub">
+                    Trade shows are where the Indian display industry actually
+                    meets. We started showing up seriously in 2023. We've been
+                    growing ever since.
+                  </p>
+                  <div class="about-hero__actions"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .intro-strip {
+              max-width: 1160px;
+              margin: 0 auto;
+              background: linear-gradient(
+                135deg,
+                #21175e 0%,
+                rgb(86 63 167) 100%
+              );
+              padding: 30px 48px;
+              box-sizing: border-box;
+              border-radius: 16px;
+              position: relative;
+              bottom: 60px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 32px;
+            }
+
+            .intro-strip__body {
+              flex: 1;
+            }
+
+            .intro-strip__body p {
+              font-size: 16px;
+              line-height: 1.7;
+              color: #ffffff;
+              margin: 0 0 12px 0;
+              max-width: 100%;
+            }
+
+            .intro-strip__body p:last-child {
+              margin-bottom: 0;
+              color: white;
+              font-size: 18px;
+            }
+
+            .strip__btn {
+              flex-shrink: 0;
+              background: #ffffff;
+              color: #21175e;
+              font-size: 14px;
+              font-weight: 600;
+              padding: 12px 28px;
+              border-radius: 8px;
+              border: none;
+              cursor: pointer;
+              white-space: nowrap;
+              text-decoration: none;
+              display: inline-flex;
+              align-items: center;
+              gap: 8px;
+              transition: opacity 0.2s ease;
+            }
+
+            .strip__btn:hover {
+              opacity: 0.88;
+            }
+          </style>
+
+          <section class="intro-strip">
+            <div class="intro-strip__body">
+              <p>
+                Some companies treat exhibitions as marketing expenses. We treat
+                them as the ground truth — the place where we learn what the
+                market actually wants, what competitors are doing, and where the
+                industry is headed.
+              </p>
+              <p>Every show changes what we build next.</p>
+            </div>
+
+            <a href="contact.html" class="strip__btn">
+              Get a Quote <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </section>
+
+          <style>
+            /* ── Events Section ── */
+            .cx-events {
+              padding: 100px 0;
+              background: #fff;
+            }
+
+            .cx-events__header {
+              padding-bottom: 48px;
+              border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+              margin-bottom: 0;
+            }
+
+            .cx-events__list {
+              display: flex;
+              flex-direction: column;
+            }
+
+            .cx-event-item {
+              display: grid;
+              grid-template-columns: 80px 1fr 1fr;
+              gap: 48px;
+              align-items: start;
+              padding: 56px 0;
+              border-bottom: 1px solid #ccc;
+            }
+
+            .cx-event-item:last-child {
+              border-bottom: none;
+            }
+
+            .cx-event__date {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              padding-top: 4px;
+            }
+
+            .cx-event__month {
+              font-size: 16px;
+              font-weight: 600;
+              letter-spacing: 0.13em;
+              text-transform: uppercase;
+              color: rgba(17, 17, 17, 0.35);
+              margin-bottom: 4px;
+              display: block;
+            }
+
+            .cx-event__day {
+              font-size: 52px;
+              font-weight: 600;
+              letter-spacing: -3px;
+              line-height: 1;
+              color: var(--primary);
+            }
+
+            .cx-event__image {
+              width: 722px;
+              height: 541px;
+              aspect-ratio: 4 / 3;
+              object-fit: cover;
+              display: block;
+            }
+
+            .cx-event__content {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              height: 100%;
+              padding-top: 4px;
+            }
+
+            .cx-event__label {
+              font-size: 16px;
+              font-weight: 600;
+              letter-spacing: 0.13em;
+              text-transform: uppercase;
+              color: rgba(17, 17, 17, 0.35);
+              margin-bottom: 14px;
+              display: block;
+            }
+
+            .cx-event__title {
+              font-size: 32px;
+              font-weight: 500;
+              letter-spacing: -1.5px;
+              line-height: 1.1;
+              color: var(--primary);
+              margin-bottom: 10px;
+            }
+
+            .cx-event__meta {
+              font-size: 13px;
+              font-weight: 400;
+              color: var(--secondary);
+              margin-bottom: 18px;
+              line-height: 1.6;
+            }
+
+            .cx-event__meta strong {
+              font-weight: 600;
+              color: var(--primary);
+            }
+
+            .cx-event__desc {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 1.75;
+              color: var(--secondary);
+              letter-spacing: -0.1px;
+              margin-bottom: 20px;
+            }
+
+            .cx-event__bullets {
+              list-style: none;
+              padding: 0;
+              margin: 0 0 28px 0;
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+            }
+
+            .cx-event__bullets li {
+              font-size: 16px;
+              font-weight: 400;
+              color: var(--secondary);
+              line-height: 1.65;
+              padding-left: 16px;
+              position: relative;
+            }
+
+            .cx-event__bullets li::before {
+              content: "—";
+              position: absolute;
+              left: 0;
+              color: rgba(17, 17, 17, 0.3);
+              font-size: 11px;
+              top: 4px;
+            }
+
+            .cx-event__closing {
+              padding-top: 24px;
+              border-top: 1px solid #ccc;
+              margin-bottom: 28px;
+            }
+
+            .cx-event__actions {
+              margin-top: auto;
+            }
+
+            @media (max-width: 991px) {
+              .cx-event-item {
+                grid-template-columns: 64px 1fr;
+                grid-template-rows: auto auto;
+                gap: 28px;
+              }
+              .cx-event__image {
+                grid-column: 1 / -1;
+              }
+              .cx-event__content {
+                grid-column: 2 / 3;
+              }
+            }
+
+            @media (max-width: 767px) {
+              .cx-events {
+                padding: 60px 0;
+              }
+              .cx-event-item {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 40px 0;
+              }
+              .cx-event__date {
+                flex-direction: row;
+                align-items: baseline;
+                gap: 8px;
+              }
+              .cx-event__day {
+                font-size: 38px;
+                letter-spacing: -2px;
+              }
+              .cx-event__image {
+                grid-column: unset;
+              }
+              .cx-event__content {
+                grid-column: unset;
+              }
+              .cx-event__title {
+                font-size: 24px;
+                letter-spacing: -1px;
+              }
+            }
+          </style>
+
+          <section class="cx-events">
+            <div class="container rr-container-1710">
+              <div class="team-3__inner rr-pos-rel">
+                <div class="section-title-3__wrapper fade-anim">
+                  <div class="wrap">
+                    <h2 class="sub-title">Industry Events</h2>
+                    <h3 class="title rr_title_anim" style="perspective: 400px">
+                      <div style="max-width: 50%">
+                        Where Cuboc
+                        <span class="base-text-color">Showed Up.</span>
+                      </div>
+                    </h3>
+                  </div>
+                  <div class="ts-top">
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Debitis fugiat accusamus omnis earum et a minus,
+                      voluptates quidem tempore sequi!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Events List -->
+              <div class="cx-events__list">
+                <!-- Event 1 -->
+                <div class="cx-event-item" style="padding-top: 0px">
+                  <div class="cx-event__date">
+                    <span class="cx-event__month">Jan</span>
+                    <span class="cx-event__day">23</span>
+                  </div>
+
+                  <img
+                    class="cx-event__image"
+                    src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&auto=format&fit=crop"
+                    alt="Media Expo Delhi 2023"
+                  />
+
+                  <div class="cx-event__content">
+                    <div>
+                      <span class="cx-event__label">Event 1</span>
+                      <h3 class="cx-event__title">
+                        First Major Showcase.<br />18 Square Metres.
+                      </h3>
+                      <p class="cx-event__meta">
+                        <strong>Media Expo Delhi</strong> · 2023
+                      </p>
+                      <p class="cx-event__desc">
+                        Our first serious industry presence. An 18 sq. m stall
+                        that put Cuboc in front of a national audience for the
+                        first time. The stall was small. The learning wasn't.
+                      </p>
+                      <ul class="cx-event__bullets">
+                        <li>
+                          First real exposure to buyers outside our existing
+                          network
+                        </li>
+                        <li>
+                          Direct feedback on product range from fabricators,
+                          agencies, and dealers who'd never seen our work before
+                        </li>
+                        <li>
+                          The first market signals that told us what to build
+                          next — including the demand for modular fabric systems
+                          that later became FABx
+                        </li>
+                      </ul>
+                      <div class="cx-event__closing">
+                        <p
+                          class="cx-body"
+                          style="
+                            font-weight: 600;
+                            color: var(--primary);
+                            margin: 0;
+                          "
+                        >
+                          This show validated that we were on the right track.
+                          It also showed us how far we had to go.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="cx-event__actions">
+                      <a href="#" class="rr-btn-primary btn-black-2">
+                        <span class="text"> View Event Details</span>
+                        <i class="fa-regular fa-arrow-right-long"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="cx-event-item">
+                  <div class="cx-event__date">
+                    <span class="cx-event__month">Mar</span>
+                    <span class="cx-event__day">07</span>
+                  </div>
+
+                  <img
+                    class="cx-event__image"
+                    src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&auto=format&fit=crop"
+                    alt="Media Expo Delhi 2025"
+                  />
+
+                  <div class="cx-event__content">
+                    <div>
+                      <span class="cx-event__label">Event 2</span>
+                      <h3 class="cx-event__title">
+                        Same Show.<br />3.5× The Floor Space.
+                      </h3>
+                      <p class="cx-event__meta">
+                        <strong>Media Expo Delhi</strong> · 2025
+                      </p>
+                      <p class="cx-event__desc">
+                        Two years later, we returned with a 64 sq. m stall —
+                        more than three times our 2023 footprint. The size
+                        wasn't the statement. The product range was.
+                      </p>
+                      <ul class="cx-event__bullets">
+                        <li>
+                          Full FABx series on display — the modular fabric
+                          system that was still an idea in 2023
+                        </li>
+                        <li>
+                          Live demonstrations of tool-free setup on
+                          exhibition-grade booths
+                        </li>
+                        <li>
+                          Complete standee range across five variants, including
+                          the Cube Standee
+                        </li>
+                        <li>
+                          First public showing of customisation capability at
+                          scale
+                        </li>
+                      </ul>
+                      <div class="cx-event__closing">
+                        <p
+                          class="cx-body"
+                          style="
+                            font-weight: 600;
+                            color: var(--primary);
+                            margin: 0;
+                          "
+                        >
+                          Every customer conversation confirmed the same thing:
+                          the market wanted what we'd built. We just needed to
+                          make sure they knew it existed.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="cx-event__actions">
+                      <a href="#" class="rr-btn-primary btn-black-2">
+                        <span class="text"> View Event Details</span>
+                        <i class="fa-regular fa-arrow-right-long"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <style>
+            .cx-trajectory {
+              padding: 200px 0;
+              background: #f8f8f8;
+            }
+
+            .cx-trajectory__inner {
+              display: grid;
+              grid-template-columns: 1fr 1.4fr;
+              gap: 80px;
+              align-items: start;
+            }
+
+            .cx-trajectory__left {
+              position: sticky;
+              top: 40px;
+            }
+
+            .cx-trajectory__intro {
+              font-size: 16px;
+              font-weight: 400;
+              color: var(--secondary);
+              line-height: 1.75;
+              margin-top: 24px;
+              letter-spacing: -0.1px;
+            }
+
+            .cx-trajectory__rows {
+              display: flex;
+              flex-direction: column;
+              border-top: 1px solid rgba(17, 17, 17, 0.1);
+            }
+
+            .cx-trajectory__row {
+              display: grid;
+              grid-template-columns: 160px 1fr;
+              gap: 24px;
+              padding: 24px 0;
+              border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+              align-items: baseline;
+            }
+
+            .cx-trajectory__row-label {
+              font-size: 13px;
+              font-weight: 600;
+              letter-spacing: 0.09em;
+              text-transform: uppercase;
+              color: rgba(17, 17, 17, 0.35);
+              padding-top: 2px;
+            }
+
+            .cx-trajectory__row-value {
+              font-size: 16px;
+              font-weight: 400;
+              color: var(--secondary);
+              line-height: 1.65;
+            }
+
+            .cx-trajectory__row-value strong {
+              font-weight: 600;
+              color: var(--primary);
+            }
+
+            .cx-trajectory__row-value em {
+              font-style: italic;
+              color: rgba(17, 17, 17, 0.4);
+              font-size: 13px;
+            }
+
+            .cx-trajectory__closing {
+              margin-top: 32px;
+              padding: 24px 28px;
+              border-left: 3px solid #111;
+              background: #fff;
+            }
+
+            .cx-trajectory__closing p {
+              font-size: 16px;
+              font-weight: 400;
+              color: var(--secondary);
+              line-height: 1.75;
+              margin: 0;
+            }
+
+            @media (max-width: 991px) {
+              .cx-trajectory__inner {
+                grid-template-columns: 1fr;
+                gap: 48px;
+              }
+              .cx-trajectory__left {
+                position: static;
+              }
+            }
+
+            @media (max-width: 767px) {
+              .cx-trajectory {
+                padding: 60px 0;
+              }
+              .cx-trajectory__row {
+                grid-template-columns: 1fr;
+                gap: 6px;
+              }
+            }
+            .cx-section-header {
+              display: flex;
+              align-items: flex-start;
+              justify-content: space-between;
+              gap: 40px;
+              padding-bottom: 48px;
+              border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+              margin-bottom: 64px;
+            }
+            .cx-section-header__left {
+              flex: 0 0 40%;
+            }
+            .cx-section-header__right {
+              flex: 0 0 52%;
+              padding-top: 6px;
+            }
+            .cx-eyebrow {
+              font-size: 14px;
+              font-weight: 600;
+              letter-spacing: 0.09em;
+              text-transform: uppercase;
+              color: var(--secondary);
+              margin-bottom: 18px;
+              display: block;
+            }
+            .cx-heading {
+              font-size: 50px;
+              font-weight: 500;
+              letter-spacing: -2.5px;
+              line-height: 1.05;
+              color: var(--primary);
+            }
+            .cx-heading span {
+              font-weight: 600;
+              color: #21175e !important;
+            }
+          </style>
+
+          <section class="cx-trajectory">
+            <div class="container rr-container-1710">
+              <div class="cx-trajectory__inner">
+                <!-- LEFT -->
+                <div class="cx-trajectory__left">
+                  <span class="cx-eyebrow">What These Shows Tell Us</span>
+                  <h2 class="cx-heading" style="margin-top: 16px">
+                    Our Stall Size Is the Easiest Way to
+                    <span>Measure Our Trajectory.</span>
+                  </h2>
+                  <p class="cx-trajectory__intro">From 2023 to 2025:</p>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="cx-trajectory__right">
+                  <div class="cx-trajectory__rows">
+                    <div class="cx-trajectory__row">
+                      <span class="cx-trajectory__row-label">Stall Size</span>
+                      <span class="cx-trajectory__row-value">
+                        18 sq. m → 64 sq. m <em>(3.5× growth)</em>
+                      </span>
+                    </div>
+
+                    <div class="cx-trajectory__row">
+                      <span class="cx-trajectory__row-label"
+                        >Product Range</span
+                      >
+                      <span class="cx-trajectory__row-value">
+                        Standard products →
+                        <strong>FABx modular systems</strong> + expanded standee
+                        line
+                      </span>
+                    </div>
+
+                    <div class="cx-trajectory__row">
+                      <span class="cx-trajectory__row-label">Customer Mix</span>
+                      <span class="cx-trajectory__row-value">
+                        Regional dealers →
+                        <strong>national brands and agencies</strong>
+                      </span>
+                    </div>
+
+                    <div class="cx-trajectory__row">
+                      <span class="cx-trajectory__row-label"
+                        >Team Confidence</span
+                      >
+                      <span class="cx-trajectory__row-value">
+                        First-time exhibitors →
+                        <strong>category specialists</strong>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="cx-trajectory__closing">
+                    <p>
+                      No press releases. No award shows. Just measurable growth,
+                      shown in the place where the industry meets.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- banner / hero end -->
+        </main>
+
+        <!-- ═══════════════════════════════════════════
+     PASTE THIS <style> BLOCK INTO YOUR <head>
+     ═══════════════════════════════════════════ -->
+        <style>
+          /* ── Trade Show Section ── */
+          .tradeshows {
+            padding: 200px 0 200px;
+            background: #111111;
+            background-image:
+              linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+          }
+
+          .tradeshows__eyebrow {
+            font-size: 11px;
+            font-weight: 600;
+
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.45);
+            margin-bottom: 12px;
+            display: block;
+          }
+
+          .tradeshows__label {
+            font-size: 13px;
+            font-weight: 600;
+
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.45);
+            display: block;
+            margin-bottom: 28px;
+          }
+
+          .tradeshows__heading {
+            font-size: 50px;
+            font-weight: 500;
+
+            letter-spacing: -2.5px;
+            line-height: 1.05;
+            color: #ffffff;
+            margin-bottom: 0;
+          }
+
+          .tradeshows__heading em {
+            font-style: italic;
+            font-weight: 300;
+          }
+
+          /* ── Top intro row: heading left, para right ── */
+          .tradeshows__intro {
+            display: flex;
+            gap: 60px;
+            align-items: flex-end;
+            margin-bottom: 0;
+          }
+
+          .tradeshows__intro-left {
+            flex: 0 0 55%;
+          }
+
+          .tradeshows__intro-right {
+            flex: 1;
+            padding-bottom: 6px;
+          }
+
+          .tradeshows__lead {
+            font-size: 16px;
+            font-weight: 400;
+
+            color: rgba(255, 255, 255, 0.55);
+            line-height: 1.75;
+            margin-bottom: 0;
+          }
+
+          /* ── 2-col grid of insight items ── */
+          .tradeshows__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 52px;
+          }
+
+          .tradeshows__item {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            padding: 32px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          }
+
+          .tradeshows__item:nth-child(odd) {
+            padding-right: 44px;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+          }
+
+          .tradeshows__item:nth-child(even) {
+            padding-left: 44px;
+          }
+
+          .tradeshows__icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 15px;
+            color: #ffffff;
+          }
+
+          .tradeshows__item-body h4 {
+            font-size: 18px;
+            font-weight: 500;
+
+            color: #ffffff;
+            letter-spacing: -0.2px;
+            margin-bottom: 6px;
+          }
+
+          .tradeshows__item-body p {
+            font-size: 16px;
+            font-weight: 400;
+
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.65;
+            margin: 0;
+          }
+
+          /* ── Footer callout ── */
+          .tradeshows__footer {
+            margin-top: 44px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+            flex-wrap: wrap;
+          }
+
+          .tradeshows__footer-text {
+            font-size: 18px;
+            font-weight: 400;
+
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.55;
+            max-width: 540px;
+            margin: 0;
+          }
+
+          .tradeshows__stat {
+            text-align: right;
+            flex-shrink: 0;
+          }
+
+          .tradeshows__stat strong {
+            display: block;
+            font-size: 48px;
+            font-weight: 500;
+
+            letter-spacing: -2.5px;
+            color: #ffffff;
+            line-height: 1;
+          }
+
+          .tradeshows__stat span {
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 0.04em;
+            margin-top: 6px;
+            text-transform: uppercase;
+          }
+
+          /* ── Responsive ── */
+          @media (max-width: 991px) {
+            .tradeshows__heading {
+              font-size: 46px;
+              letter-spacing: -2px;
+            }
+            .tradeshows__intro {
+              gap: 36px;
+            }
+            .tradeshows__intro-left {
+              flex: 0 0 52%;
+            }
+          }
+
+          @media (max-width: 767px) {
+            .tradeshows {
+              padding: 60px 0 50px;
+            }
+            .tradeshows__heading {
+              font-size: 36px;
+              letter-spacing: -1.5px;
+            }
+            .tradeshows__intro {
+              flex-direction: column;
+              gap: 24px;
+              align-items: flex-start;
+            }
+            .tradeshows__intro-left,
+            .tradeshows__intro-right {
+              flex: unset;
+              width: 100%;
+            }
+            .tradeshows__grid {
+              grid-template-columns: 1fr;
+            }
+            .tradeshows__item:nth-child(odd) {
+              padding-right: 0;
+              border-right: none;
+            }
+            .tradeshows__item:nth-child(even) {
+              padding-left: 0;
+            }
+            .tradeshows__footer {
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 20px;
+            }
+            .tradeshows__stat {
+              text-align: left;
+            }
+          }
+        </style>
+
+        <!-- ═══════════════════════════════════════════
+     PASTE THIS <section> INTO YOUR PAGE BODY
+     ═══════════════════════════════════════════ -->
+        <section class="tradeshows">
+          <div class="container rr-container-1710">
+            <!-- Intro row: heading left, para right -->
+            <div class="tradeshows__intro">
+              <div class="tradeshows__intro-left">
+                <span class="tradeshows__eyebrow">WHY WE KEEP SHOWING UP</span>
+                <span class="tradeshows__label">Beyond the Booth</span>
+                <h2 class="tradeshows__heading">
+                  Trade Shows Are How We <em>Listen.</em>
+                </h2>
+              </div>
+              <div class="tradeshows__intro-right">
+                <p class="tradeshows__lead">
+                  Every show teaches us something the factory floor can't. Half
+                  of every product we've launched since 2023 started as a
+                  conversation at a trade show.
+                </p>
+              </div>
+            </div>
+
+            <!-- Insight grid -->
+            <div class="tradeshows__grid">
+              <!-- Item 1 -->
+              <div class="tradeshows__item">
+                <div class="tradeshows__icon">
+                  <i class="fa-regular fa-comments"></i>
+                </div>
+                <div class="tradeshows__item-body">
+                  <h4>What customers actually ask for</h4>
+                  <p>
+                    Not what surveys say they want — what they reach across a
+                    table and point at.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="tradeshows__item">
+                <div class="tradeshows__icon">
+                  <i class="fa-regular fa-binoculars"></i>
+                </div>
+                <div class="tradeshows__item-body">
+                  <h4>What competitors are launching</h4>
+                  <p>
+                    Months before it hits the market — giving us time to
+                    respond, not react.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="tradeshows__item">
+                <div class="tradeshows__icon">
+                  <i class="fa-regular fa-chart-line-up"></i>
+                </div>
+                <div class="tradeshows__item-body">
+                  <h4>Where the industry is headed</h4>
+                  <p>
+                    Which categories are growing, which are dying — read live,
+                    not from reports.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="tradeshows__item">
+                <div class="tradeshows__icon">
+                  <i class="fa-regular fa-magnifying-glass-chart"></i>
+                </div>
+                <div class="tradeshows__item-body">
+                  <h4>What our own product gaps are</h4>
+                  <p>
+                    The requests we couldn't fulfil on the spot — our next
+                    R&amp;D brief.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- /.tradeshows__grid -->
+
+            <!-- Footer callout -->
+            <div class="tradeshows__footer">
+              <p class="tradeshows__footer-text">
+                If you want to see the next one, we'll be at the next major
+                industry show. Come say hello.
+              </p>
+              <div class="tradeshows__stat">
+                <strong>2023</strong>
+                <span>Every launch since then began at a show</span>
+              </div>
+            </div>
+          </div>
+          <!-- /.container -->
+        </section>
+        <style>
+          .cx-always-on {
+            background: #f5f5f5;
+            padding: 200px 0;
+            position: relative;
+            overflow: hidden;
+          }
+
+          /* subtle grid lines in background */
+          .cx-always-on::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background-size: 80px 80px;
+            pointer-events: none;
+          }
+
+          .cx-always-on__inner {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: center;
+          }
+
+          /* LEFT */
+          .cx-always-on__left {
+            flex-direction: column;
+          }
+
+          .cx-always-on__eyebrow {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 24px;
+            padding: 1px 12px;
+            margin-bottom: 28px;
+            display: inline-block;
+            background: #f0f0f0;
+            color: var(--primary);
+            letter-spacing: -0.42px;
+            font-family: var(--font_body);
+            text-transform: uppercase;
+          }
+
+          .cx-always-on__heading {
+            font-size: 50px;
+            font-weight: 500;
+            letter-spacing: -3px;
+            line-height: 1;
+            color: #111111;
+            margin-bottom: 18px;
+          }
+
+          .cx-always-on__heading em {
+            font-weight: 500;
+            color: #21175e !important;
+          }
+
+          .cx-always-on__sub {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.75;
+            color: rgba(17, 17, 17, 0.5);
+            letter-spacing: -0.1px;
+            margin-bottom: 28px;
+            max-width: 450px;
+          }
+
+          .cx-always-on__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #fff;
+            background: #111111;
+            padding: 16px 32px;
+            text-decoration: none;
+            transition:
+              background 0.25s,
+              color 0.25s;
+            align-self: flex-start;
+          }
+
+          .cx-always-on__cta:hover {
+            background: #333333;
+            color: #fff;
+          }
+
+          .cx-always-on__cta i {
+            transition: transform 0.25s;
+          }
+
+          .cx-always-on__cta:hover i {
+            transform: translateX(4px);
+          }
+
+          /* RIGHT */
+          .cx-always-on__right {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            border-top: 1px solid rgba(17, 17, 17, 0.1);
+          }
+
+          .cx-always-on__point {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            padding: 28px 0;
+            border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+          }
+
+          .cx-always-on__point-num {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: rgba(17, 17, 17, 0.2);
+            flex-shrink: 0;
+            padding-top: 3px;
+            width: 28px;
+          }
+
+          .cx-always-on__point-text {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.7;
+            color: rgba(17, 17, 17, 0.55);
+            letter-spacing: -0.1px;
+          }
+
+          .cx-always-on__point-text strong {
+            font-weight: 600;
+            color: #111111;
+          }
+
+          /* live badge */
+          .cx-always-on__live {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            align-self: flex-start;
+          }
+
+          .cx-always-on__live-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #16a34a;
+            position: relative;
+          }
+
+          .cx-always-on__live-dot::after {
+            content: "";
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            border: 1px solid #16a34a;
+            animation: liveRing 1.8s infinite;
+            opacity: 0.5;
+          }
+
+          @keyframes liveRing {
+            0% {
+              transform: scale(1);
+              opacity: 0.5;
+            }
+            100% {
+              transform: scale(2.2);
+              opacity: 0;
+            }
+          }
+
+          .cx-always-on__live-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #16a34a;
+          }
+
+          /* bottom strip */
+          .cx-always-on__strip {
+            margin-top: 80px;
+            /* padding-top: 40px; */
+            /* border-top: 1px solid rgba(17, 17, 17, 0.1); */
+            position: relative;
+            z-index: 1;
+          }
+
+          .cx-always-on__strip-text {
+            font-size: 16px;
+            font-weight: 400;
+            color: #666;
+            letter-spacing: -0.1px;
+            line-height: 1.7;
+            max-width: 700px;
+          }
+
+          .cx-always-on__strip-text strong {
+            color: rgba(17, 17, 17, 0.6);
+            font-weight: 500;
+          }
+
+          @media (max-width: 991px) {
+            .cx-always-on__inner {
+              grid-template-columns: 1fr;
+              gap: 56px;
+            }
+            .cx-always-on__heading {
+              font-size: 44px;
+              letter-spacing: -2px;
+            }
+          }
+
+          @media (max-width: 767px) {
+            .cx-always-on {
+              padding: 80px 0;
+            }
+            .cx-always-on__heading {
+              font-size: 34px;
+              letter-spacing: -1.5px;
+            }
+            .cx-always-on__sub {
+              max-width: 100%;
+            }
+          }
+        </style>
+
+        <section class="cx-always-on">
+          <div class="container rr-container-1710">
+            <div class="cx-always-on__inner">
+              <!-- LEFT -->
+              <div class="cx-always-on__left">
+                <!-- <div class="cx-always-on__live">
+                  <span class="cx-always-on__live-dot"></span>
+                  <span class="cx-always-on__live-label">Always Open</span>
+                </div> -->
+
+                <span class="cx-always-on__eyebrow">Virtual Showroom</span>
+
+                <h2 class="cx-always-on__heading">
+                  The Show That
+                  <span class="base-text-color">Never <br />Ends.</span>
+                </h2>
+
+                <p class="cx-always-on__sub">
+                  Physical exhibitions happen once or twice a year. The virtual
+                  showroom runs 365 days — same products, same team, same
+                  conversations. No queues. No travel. No waiting for the next
+                  show.
+                </p>
+
+                <a href="about.html" class="rr-btn-primary btn-black-2">
+                  <span class="text"> Enter the Virtual Showroom</span>
+                  <i class="fa-regular fa-arrow-right-long"></i>
+                </a>
+              </div>
+
+              <!-- RIGHT -->
+              <div class="cx-always-on__right">
+                <div class="cx-always-on__point">
+                  <span class="cx-always-on__point-num">01</span>
+                  <p class="cx-always-on__point-text">
+                    We've built a <strong>3D virtual environment</strong> that
+                    shows Cuboc's products — FABx fabric booths, standees,
+                    frames — assembled at full exhibition scale.
+                  </p>
+                </div>
+
+                <div class="cx-always-on__point">
+                  <span class="cx-always-on__point-num">02</span>
+                  <p class="cx-always-on__point-text">
+                    Walk through it in <strong>360°.</strong> See how a FABxPRO
+                    booth comes together. Ask <strong>Nora</strong>, our AI
+                    assistant, the technical questions you'd ask at a stall.
+                  </p>
+                </div>
+
+                <div class="cx-always-on__point">
+                  <span class="cx-always-on__point-num">03</span>
+                  <p class="cx-always-on__point-text">
+                    <strong>Talk to our founder on live video</strong> if you
+                    want a real conversation.
+                  </p>
+                </div>
+
+                <div class="cx-always-on__point">
+                  <span class="cx-always-on__point-num">04</span>
+                  <p class="cx-always-on__point-text">
+                    Think of it as the Cuboc stall you can visit
+                    <strong>any day of the year</strong> — without the travel,
+                    without the queues, without waiting for the next Media Expo.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom strip -->
+          </div>
+        </section>
+
+        <!-- ── Strap CTA ── -->
+        <section class="strap-cta">
+          <div class="container rr-container-1710">
+            <div class="strap-cta__inner">
+              <div class="strap-cta__left">
+                <p class="strap-cta__eyebrow">Meet Us In Person</p>
+                <h2 class="strap-cta__heading">
+                  Prefer to See the Factory in Real Life?
+                </h2>
+                <p class="strap-cta__sub">
+                  Our Delhi office, Paharganj showroom, and Mundka factory are
+                  open to serious conversations. If online isn't enough for
+                  you,<br />
+                  neither is a phone call. Come visit.
+                </p>
+              </div>
+
+              <div class="strap-cta__actions">
+                <a
+                  href="contact.html"
+                  class="strap-cta__btn strap-cta__btn--primary"
+                >
+                  Schedule a Visit
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a
+                  href="contact.html"
+                  class="strap-cta__btn strap-cta__btn--secondary"
+                >
+                  See the Product Range
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Footer ── -->
+        <footer class="footer-4 theme-bg-primary">
+          <div class="container rr-container-1820">
+            <div class="footer-4__inner">
+              <div class="footer-4__wrapper">
+                <div class="footer-widget-box">
+                  <div class="content">
+                    <h3 class="title">Let's work together</h3>
+                    <div class="info">
+                      <a href="tel:47345234789">+47 345 234 789</a>
+                      <a href="mailto:archidex@example.com"
+                        >archidex@example.com</a
+                      >
+                      <a
+                        href="https://maps.app.goo.gl/JKwVELppRvPnjZ8c6"
+                        target="_blank"
+                        >360 Lexington Avenue, 2nd Floor,<br />United States</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-widget-box">
+                  <h2 class="title">JOIN OUR NEWSLETTER</h2>
+                  <div class="newsletter">
+                    <div class="input-group">
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email*"
+                      />
+                      <button type="submit">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-widget-box">
+                  <h2 class="title">Quick Links</h2>
+                  <ul class="footer-nav-list">
+                    <li>
+                      <a href="index.html" data-text="Home"
+                        ><span>Home</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="about.html" data-text="About Us"
+                        ><span>About Us</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="caseStudy.html" data-text="Case Studies"
+                        ><span>Case Studies</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="visualroom.html" data-text="Virtual Showroom"
+                        ><span>Virtual Showroom</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="contact.html" data-text="Contact"
+                        ><span>Contact</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-widget-box">
+                  <h2 class="title">Social</h2>
+                  <ul class="footer-nav-list">
+                    <li>
+                      <a href="https://www.facebook.com/" data-text="Facebook"
+                        ><span>Facebook</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://x.com/" data-text="Twitter"
+                        ><span>Twitter</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/" data-text="Instagram"
+                        ><span>Instagram</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.pinterest.com/" data-text="Pinterest"
+                        ><span>Pinterest</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="copyright">
+                <div class="copyright__logo">
+                  <link
+                    href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+                    rel="stylesheet"
+                  />
+                  <div
+                    class="footer_logo__5ncK8"
+                    style="
+                      color: white;
+                      font-family: &quot;Russo One&quot;, sans-serif;
+                      font-size: 110px;
+                      font-weight: 500;
+                      letter-spacing: 1px;
+                      text-transform: uppercase;
+                      line-height: 0.85;
+                    "
+                  >
+                    CUBOC
+                  </div>
+                </div>
+                <p class="copyright__text" style="text-align: right">
+                  <a href="https://themeforest.net/user/ravextheme"
+                    >ravextheme</a
+                  >
+                  © 2025. All Rights Reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+        <style>
+          .team-modal-grid {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 28px;
+            align-items: start;
+          }
+          .team-modal-media img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+          }
+          .tm-name {
+            font-size: 28px;
+            font-weight: 500;
+            letter-spacing: -0.8px;
+            margin: 0 0 4px;
+          }
+          .tm-role {
+            display: inline-block;
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--secondary, #666);
+            margin-bottom: 14px;
+          }
+          .tm-tagline {
+            font-size: 16px;
+            color: var(--primary, #111);
+            margin: 0 0 18px;
+            line-height: 1.5;
+          }
+          .tm-bio p {
+            font-size: 16px;
+            color: var(--secondary, #444);
+            margin: 0 0 14px;
+          }
+          .tm-bio p:last-child {
+            margin-bottom: 0;
+          }
+          .tm-counter {
+            margin-right: auto;
+            font-size: 13px;
+            color: #888;
+          }
+          @media (max-width: 575px) {
+            .team-modal-grid {
+              grid-template-columns: 1fr;
+              gap: 18px;
+            }
+            .team-modal-media {
+              max-width: 200px;
+            }
+          }
+        </style>
+        <!-- footer end -->
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="teamModal"
+      tabindex="-1"
+      aria-labelledby="teamModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="teamModalLabel">Leadership</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="team-modal-grid">
+              <div class="team-modal-media">
+                <img id="modalPersonImage" src="" alt="" />
+              </div>
+              <div class="team-modal-text">
+                <h3 id="modalPersonName" class="tm-name"></h3>
+                <span id="modalPersonRole" class="tm-role"></span>
+                <p id="modalPersonTagline" class="tm-tagline"></p>
+                <div id="modalPersonBio" class="tm-bio"></div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <span id="modalCounter" class="tm-counter"></span>
+            <button
+              type="button"
+              id="modalNextBtn"
+              class="btn btn-dark"
+              style="font-size: 14px"
+            >
+              Next <i class="fa-regular fa-arrow-right-long"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Dependencies JS Files -->
+    <script src="assets/vandor/jquery/jquery.js"></script>
+    <script src="assets/vandor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/vandor/popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vandor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vandor/gsap/gsap.min.js"></script>
+    <script src="assets/vandor/gsap/ScrollSmoother.min.js"></script>
+    <script src="assets/vandor/gsap/ScrollTrigger.min.js"></script>
+    <script src="assets/vandor/gsap/SplitText.min.js"></script>
+    <script src="assets/vandor/gsap/SplitType.js"></script>
+    <script src="assets/vandor/gsap/customEase.js"></script>
+    <script src="assets/vandor/menu/jquery.meanmenu.min.js"></script>
+    <script src="assets/vandor/backtop/backToTop.js"></script>
+    <script src="assets/vandor/nice-select/nice-select.js"></script>
+    <script src="assets/vandor/odometer/odometer.min.js"></script>
+    <script src="assets/vandor/odometer/waypoints.min.js"></script>
+    <script src="assets/vandor/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vandor/isotope/isotope.pkgd.min.js"></script>
+    <script src="assets/vandor/magnific/magnific-popup.min.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/vandor/common-js/common.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

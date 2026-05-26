@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cuboc — Products. Display systems built in India."
+    />
+    <title>Products — Cuboc</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.png" />
+    <link rel="stylesheet" href="assets/vandor/bootstrap/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/vandor/fontawesome/fontawesome-pro.min.css"
+    />
+    <link rel="stylesheet" href="assets/vandor/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/vandor/menu/meanmenu.min.css" />
+    <link rel="stylesheet" href="assets/vandor/popup/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vandor/nice-select/nice-select.css" />
+    <link
+      rel="stylesheet"
+      href="assets/vandor/odometer/odometer-theme-default.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+      /* Header */
+      .header-area-2 .header__logo img {
+        max-width: 120px;
+        filter: invert(1);
+      }
+      .header-area-2 .main-menu li a {
+        color: white;
+      }
+      .rr-btn-primary {
+        gap: 6px;
+        display: inline-flex;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 16px;
+        padding: 15px 45px;
+        color: #fff;
+        align-items: center;
+        border-radius: unset;
+        justify-content: center;
+        border: 1px solid rgba(17, 17, 17, 0.1);
+        transition:
+          background 0.3s ease,
+          color 0.3s ease;
+        cursor: pointer;
+        background: #111;
+      }
+      .rr-btn-primary:hover {
+        background: #333;
+        color: #fff;
+      }
+
+      /* Breadcrumb */
+      .breadcrumb__bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.75);
+      }
+      .breadcrumb__bg img {
+        opacity: 0.4;
+      }
+      .breadcrumb__content {
+        padding-bottom: 120px;
+      }
+      .breadcrumb__title {
+        font-size: 80px;
+        font-weight: 500;
+        line-height: 1.05;
+        letter-spacing: -4px;
+        color: #fff;
+      }
+      .breadcrumb__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+        margin-top: 40px;
+        padding-top: 28px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .breadcrumb__tagline {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.4;
+        color: #fff;
+        letter-spacing: -0.5px;
+        max-width: 340px;
+        flex: 0 0 38%;
+      }
+      .breadcrumb__body {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.75;
+        color: rgba(255, 255, 255, 0.85);
+        flex: 0 0 52%;
+      }
+
+      /* Products Section */
+      .products-section {
+        padding: 150px 0 150px;
+        background: #f5f5f3;
+      }
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 16px;
+      }
+
+      .product-card:nth-child(1) {
+        grid-column: span 7;
+      }
+      .product-card:nth-child(2) {
+        grid-column: span 5;
+      }
+      .product-card:nth-child(3) {
+        grid-column: span 4;
+      }
+      .product-card:nth-child(4) {
+        grid-column: span 4;
+      }
+      .product-card:nth-child(5) {
+        grid-column: span 4;
+      }
+
+      .product-card {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        background: #111;
+      }
+
+      .product-card img {
+        width: 100%;
+        height: 460px;
+        object-fit: cover;
+        display: block;
+        opacity: 0.8;
+        transition:
+          opacity 0.5s ease,
+          transform 0.6s ease;
+      }
+
+      .product-card:nth-child(3) img,
+      .product-card:nth-child(4) img,
+      .product-card:nth-child(5) img {
+        height: 340px;
+      }
+
+      .product-card:hover img {
+        opacity: 0.5;
+        transform: scale(1.05);
+      }
+
+      .product-card__overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.88) 0%,
+          rgba(0, 0, 0, 0.1) 60%,
+          transparent 100%
+        );
+      }
+
+      .product-card__content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 28px 30px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+
+      .product-card__number {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+        margin-bottom: 7px;
+        display: block;
+      }
+
+      .product-card__name {
+        font-size: 25px;
+        font-weight: 500;
+        color: #fff;
+        letter-spacing: -0.4px;
+        line-height: 1.2;
+        margin: 0;
+      }
+
+      .product-card:nth-child(1) .product-card__name,
+      .product-card:nth-child(2) .product-card__name {
+        font-size: 26px;
+      }
+
+      .product-card__btn {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 14px;
+        flex-shrink: 0;
+        opacity: 0;
+        transform: scale(0.85);
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s ease,
+          background 0.3s ease;
+      }
+
+      .product-card:hover .product-card__btn {
+        opacity: 1;
+        transform: scale(1);
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .product-card__tag {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(6px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.8);
+        padding: 5px 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="progress-wrap">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+      </svg>
+    </div>
+
+    <aside class="fix">
+      <div class="side-info-4">
+        <div class="offcanvas-4">
+          <div class="side-info-content">
+            <div class="offset-widget offset-header">
+              <div class="offset-logo">
+                <a href="index.html">
+                  <img
+                    class="show-light"
+                    src="assets/imgs/logo/dark-logo.png"
+                    alt="site logo"
+                  />
+                </a>
+              </div>
+              <h6>Display systems. Made in India. Built to work.</h6>
+              <span class="date">Cuboc</span>
+            </div>
+            <div class="mobile-menu d-block d-xl-none"></div>
+            <div class="offset-widget-box d-none d-xl-grid">
+              <div class="contact-meta">
+                <div class="contact-item">
+                  <h6 class="title">Menu</h6>
+                  <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="caseStudy.html">Case Studies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button id="side-info-4-close" class="side-info-close">
+              Close<i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="has-smooth" id="has_smooth"></div>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <!-- Header -->
+        <header class="header-area-2">
+          <div class="header-main">
+            <div class="container rr-container-1710">
+              <div class="header-area-2__inner">
+                <div class="header__logo">
+                  <a href="index.html">
+                    <img src="assets/imgs/cuboc-logo-transparent.png" />
+                  </a>
+                </div>
+                <div class="header__nav-2">
+                  <nav class="main-menu">
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+
+                      <li class="menu-item-has-children">
+                        <a href="#">Company</a>
+                        <ul class="dp-menu">
+                          <li><a href="about.html">About Us</a></li>
+                          <li>
+                            <a href="recognitionNetwork.html"
+                              >Recognition &amp; Network</a
+                            >
+                          </li>
+                          <li>
+                            <a href="trade-events.html"
+                              >Trade Shows &amp; Events</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li class="menu-item-has-children">
+                        <a href="products.html">Products</a>
+                        <ul class="dp-menu">
+                          <li>
+                            <a href="product-01.html">Fabric Light Boxes</a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li><a href="visualroom.html">Virtual Showroom</a></li>
+
+                      <li class="menu-item-has-children">
+                        <a href="caseStudy.html">Case Studies</a>
+                        <ul class="dp-menu">
+                          <li>
+                            <a href="caseStudiesDetails.html"
+                              >Case Studies Details</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="header-right">
+                  <div class="header__navicon">
+                    <div class="side-toggle mobile-button d-lg-block d-xl-none">
+                      <a class="bar-icon" href="javascript:void(0)"
+                        ><span></span><span></span
+                      ></a>
+                    </div>
+                    <a href="contact.html" class="rr-btn-primary bg-base-color">
+                      <span class="text">Let's Talk</span>
+                      <i class="fa-solid fa-angle-right right-icon"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main>
+          <!-- Breadcrumb -->
+          <div class="breadcrumb rr-pos-rel">
+            <div class="breadcrumb__bg">
+              <img
+                src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&h=454&auto=format&fit=crop"
+                alt="Cuboc Products"
+              />
+            </div>
+            <div class="container rr-container-1710">
+              <div class="breadcrumb__content">
+                <h2 class="breadcrumb__title">Products</h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- Products Grid -->
+          <section class="products-section">
+            <div class="container rr-container-1710">
+              <div class="products-grid">
+                <!-- 01 Fabric Light Boxes -->
+                <div class="product-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&h=600&auto=format&fit=crop"
+                    alt="Fabric Light Boxes"
+                  />
+                  <div class="product-card__overlay"></div>
+                  <span class="product-card__tag">Illuminated</span>
+                  <div class="product-card__content">
+                    <div>
+                      <span class="product-card__number">01</span>
+                      <h3 class="product-card__name">Fabric Light Boxes</h3>
+                    </div>
+                    <div class="product-card__btn">
+                      <a href="product-01.html"
+                        ><i class="fa-solid fa-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 02 Standees -->
+                <div class="product-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&auto=format&fit=crop"
+                    alt="Standees"
+                  />
+                  <div class="product-card__overlay"></div>
+                  <span class="product-card__tag">Modular</span>
+                  <div class="product-card__content">
+                    <div>
+                      <span class="product-card__number">02</span>
+                      <h3 class="product-card__name">Standees</h3>
+                    </div>
+                    <div class="product-card__btn">
+                      <a href="product-01.html"
+                        ><i class="fa-solid fa-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 03 Ultra Thin Glass Frames -->
+                <div class="product-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=800&h=600&auto=format&fit=crop"
+                    alt="Ultra Thin Glass Frames"
+                  />
+                  <div class="product-card__overlay"></div>
+                  <span class="product-card__tag">Slim</span>
+                  <div class="product-card__content">
+                    <div>
+                      <span class="product-card__number">03</span>
+                      <h3 class="product-card__name">
+                        Ultra Thin Glass Frames
+                      </h3>
+                    </div>
+                    <div class="product-card__btn">
+                      <a href="product-01.html"
+                        ><i class="fa-solid fa-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 04 Battery Table Top Displays -->
+                <div class="product-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&auto=format&fit=crop"
+                    alt="Battery Table Top Displays"
+                  />
+                  <div class="product-card__overlay"></div>
+                  <span class="product-card__tag">Portable</span>
+                  <div class="product-card__content">
+                    <div>
+                      <span class="product-card__number">04</span>
+                      <h3 class="product-card__name">
+                        Battery Table Top Displays
+                      </h3>
+                    </div>
+                    <div class="product-card__btn">
+                      <a href="product-01.html"
+                        ><i class="fa-solid fa-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 05 Gazebo Tents -->
+                <div class="product-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&h=600&auto=format&fit=crop"
+                    alt="Gazebo Tents"
+                  />
+                  <div class="product-card__overlay"></div>
+                  <span class="product-card__tag">Outdoor</span>
+                  <div class="product-card__content">
+                    <div>
+                      <span class="product-card__number">05</span>
+                      <h3 class="product-card__name">Gazebo Tents</h3>
+                    </div>
+                    <div class="product-card__btn">
+                      <a href="product-01.html"
+                        ><i class="fa-solid fa-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer-4 theme-bg-primary">
+          <div class="container rr-container-1820">
+            <div class="footer-4__inner">
+              <div class="footer-4__wrapper">
+                <div class="footer-widget-box">
+                  <div class="content">
+                    <h3 class="title">Let's work together</h3>
+                    <div class="info">
+                      <a href="tel:47345234789">+47 345 234 789</a>
+                      <a href="mailto:archidex@example.com"
+                        >archidex@example.com</a
+                      >
+                      <a
+                        href="https://maps.app.goo.gl/JKwVELppRvPnjZ8c6"
+                        target="_blank"
+                        >360 Lexington Avenue, 2nd Floor,<br />United States</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-widget-box">
+                  <h2 class="title">JOIN OUR NEWSLETTER</h2>
+                  <div class="newsletter">
+                    <div class="input-group">
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email*"
+                      />
+                      <button type="submit">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-widget-box">
+                  <h2 class="title">Quick Links</h2>
+                  <ul class="footer-nav-list">
+                    <li>
+                      <a href="index.html" data-text="Home"
+                        ><span>Home</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="about.html" data-text="About Us"
+                        ><span>About Us</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="products.html" data-text="Products"
+                        ><span>Products</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="caseStudy.html" data-text="Case Studies"
+                        ><span>Case Studies</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="visualroom.html" data-text="Virtual Showroom"
+                        ><span>Virtual Showroom</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="contact.html" data-text="Contact"
+                        ><span>Contact</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-widget-box">
+                  <h2 class="title">Social</h2>
+                  <ul class="footer-nav-list">
+                    <li>
+                      <a href="https://www.facebook.com/" data-text="Facebook"
+                        ><span>Facebook</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://x.com/" data-text="Twitter"
+                        ><span>Twitter</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/" data-text="Instagram"
+                        ><span>Instagram</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.pinterest.com/" data-text="Pinterest"
+                        ><span>Pinterest</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="copyright">
+                <div class="copyright__logo">
+                  <div
+                    style="
+                      color: white;
+                      font-family: &quot;Russo One&quot;, sans-serif;
+                      font-size: 110px;
+                      font-weight: 500;
+                      letter-spacing: 1px;
+                      text-transform: uppercase;
+                      line-height: 0.85;
+                    "
+                  >
+                    CUBOC
+                  </div>
+                </div>
+                <p class="copyright__text" style="text-align: right">
+                  <a href="https://themeforest.net/user/ravextheme"
+                    >ravextheme</a
+                  >
+                  © 2025. All Rights Reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="assets/vandor/jquery/jquery.js"></script>
+    <script src="assets/vandor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/vandor/popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vandor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vandor/gsap/gsap.min.js"></script>
+    <script src="assets/vandor/gsap/ScrollSmoother.min.js"></script>
+    <script src="assets/vandor/gsap/ScrollTrigger.min.js"></script>
+    <script src="assets/vandor/gsap/SplitText.min.js"></script>
+    <script src="assets/vandor/gsap/SplitType.js"></script>
+    <script src="assets/vandor/gsap/customEase.js"></script>
+    <script src="assets/vandor/menu/jquery.meanmenu.min.js"></script>
+    <script src="assets/vandor/backtop/backToTop.js"></script>
+    <script src="assets/vandor/nice-select/nice-select.js"></script>
+    <script src="assets/vandor/odometer/odometer.min.js"></script>
+    <script src="assets/vandor/odometer/waypoints.min.js"></script>
+    <script src="assets/vandor/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vandor/isotope/isotope.pkgd.min.js"></script>
+    <script src="assets/vandor/magnific/magnific-popup.min.js"></script>
+    <script src="assets/vandor/common-js/common.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
