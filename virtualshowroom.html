@@ -1,0 +1,2029 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cuboc — Get in Touch. Four ways to reach us."
+    />
+    <title>Contact — Cuboc</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.png" />
+
+    <!-- Dependencies CSS -->
+    <link rel="stylesheet" href="assets/vandor/bootstrap/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/vandor/fontawesome/fontawesome-pro.min.css"
+    />
+    <link rel="stylesheet" href="assets/vandor/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/vandor/menu/meanmenu.min.css" />
+    <link rel="stylesheet" href="assets/vandor/popup/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vandor/nice-select/nice-select.css" />
+    <link
+      rel="stylesheet"
+      href="assets/vandor/odometer/odometer-theme-default.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100;0,14..32,200;0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,100;1,14..32,200;1,14..32,300;1,14..32,400;1,14..32,500;1,14..32,600;1,14..32,700;1,14..32,800;1,14..32,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Template Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+      .about-hero__sub {
+        max-width: 600px;
+      }
+      .about-hero__inner {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding: 0 0 140px;
+      }
+      .services-3__inner {
+        padding-top: 112px;
+        padding-bottom: 150px;
+      }
+      .team-3__inner .section-title-3__wrapper {
+        margin-bottom: 20px;
+      }
+      /* ── Global type enforcement ── */
+
+      /* ── Header (same as case-studies.html) ── */
+      .header-area-2 .header__logo img {
+        max-width: 120px;
+        filter: invert(1);
+      }
+      .header-area-2 .main-menu li a,
+      .header-area-2 .header-meta .date {
+        color: white;
+      }
+      .rr-btn-primary {
+        gap: 6px;
+        display: inline-flex;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 16px;
+        padding: 15px 45px;
+        color: var(--white);
+        align-items: center;
+        border-radius: unset;
+        justify-content: center;
+        border: 1px solid var(--border);
+        transition:
+          background 0.3s ease,
+          color 0.3s ease;
+        cursor: pointer;
+        background: #111111;
+      }
+      .rr-btn-primary:hover {
+        background: #333333;
+        color: var(--white);
+      }
+
+      /* ── Breadcrumb ── */
+      .breadcrumb__bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.62);
+      }
+      .breadcrumb__content {
+        padding-bottom: 120px;
+      }
+      .breadcrumb__title {
+        font-size: 100px;
+        font-weight: 500;
+        line-height: 1.05;
+        letter-spacing: -4px;
+        color: var(--white);
+      }
+      .breadcrumb__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+        margin-top: 40px;
+        padding-top: 28px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .breadcrumb__tagline {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.4;
+        color: var(--white);
+        letter-spacing: -0.5px;
+        max-width: 340px;
+        flex: 0 0 38%;
+      }
+      .breadcrumb__body {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.75;
+        color: rgba(255, 255, 255, 0.85);
+        letter-spacing: -0.01em;
+        flex: 0 0 52%;
+      }
+
+      /* ════════════════════════════════
+         CONTACT SECTIONS
+      ════════════════════════════════ */
+
+      .contact-page {
+        padding: 120px 0 0;
+      }
+
+      /* ── Section header ── */
+      .cx-section-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 40px;
+        padding-bottom: 48px;
+        border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+        margin-bottom: 64px;
+      }
+      .cx-section-header__left {
+        flex: 0 0 40%;
+      }
+      .cx-section-header__right {
+        flex: 0 0 52%;
+        padding-top: 6px;
+      }
+      .cx-eyebrow {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+        padding: 1px 12px;
+        display: inline-block;
+        background: #f0f0f0;
+        color: var(--primary);
+        letter-spacing: -0.42px;
+        font-family: var(--font_body);
+        text-transform: uppercase;
+      }
+      .cx-heading {
+        font-size: 50px;
+        font-weight: 500;
+        letter-spacing: -2.5px;
+        line-height: 1.05;
+        color: var(--primary);
+      }
+      .cx-heading span {
+        font-weight: 600;
+        color: #21175e !important;
+      }
+      .cx-body {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.75;
+        color: var(--secondary);
+        letter-spacing: -0.1px;
+      }
+
+      /* ── Divider label ── */
+      .cx-block-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        color: var(--secondary);
+        margin-bottom: 40px;
+        display: block;
+        padding-top: 60px;
+        border-top: 1px solid rgba(17, 17, 17, 0.1);
+      }
+
+      /* ════════════════════
+         1. VIRTUAL SHOWROOM
+      ════════════════════ */
+      .cx-showroom {
+        background: #111111;
+        padding: 80px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+        margin-bottom: 0;
+      }
+      .cx-showroom__badge {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #111;
+        background: #ffffff;
+        padding: 5px 14px;
+        margin-bottom: 28px;
+      }
+      .cx-showroom__title {
+        font-size: 42px;
+        font-weight: 500;
+        letter-spacing: -2px;
+        line-height: 1.1;
+        color: #ffffff;
+        margin-bottom: 20px;
+      }
+      .cx-showroom__title em {
+        font-weight: 300;
+        font-style: italic;
+      }
+      .cx-showroom__desc {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.75;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 40px;
+        letter-spacing: -0.1px;
+      }
+      .cx-showroom__actions {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .cx-btn {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1;
+        padding: 15px 32px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        transition: all 0.25s ease;
+        white-space: nowrap;
+        border: 1px solid transparent;
+      }
+      .cx-btn--white {
+        background: #fff;
+        color: #111;
+        border-color: #fff;
+      }
+      .cx-btn--white:hover {
+        background: transparent;
+        color: #fff;
+      }
+      .cx-btn--outline-white {
+        background: transparent;
+        color: rgba(255, 255, 255, 0.6);
+        border-color: rgba(255, 255, 255, 0.25);
+      }
+      .cx-btn--outline-white:hover {
+        color: #fff;
+        border-color: #fff;
+      }
+      .cx-btn--dark {
+        background: #111;
+        color: #fff;
+        border-color: #111;
+      }
+      .cx-btn--dark:hover {
+        background: #333;
+      }
+      .cx-btn--outline-dark {
+        background: transparent;
+        color: var(--secondary);
+        border-color: rgba(17, 17, 17, 0.25);
+      }
+      .cx-btn--outline-dark:hover {
+        border-color: #111;
+        color: #111;
+      }
+
+      /* right visual */
+      .cx-showroom__visual {
+        position: relative;
+        height: 380px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .cx-showroom__visual::before {
+        content: "";
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.08) 0%,
+          transparent 70%
+        );
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .cx-showroom__visual-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
+        position: relative;
+        z-index: 1;
+      }
+      .cx-showroom__pulse {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #fff;
+        top: 36px;
+        right: 36px;
+        animation: pulse 2s infinite;
+      }
+      .cx-showroom__pulse-ring {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        top: 36px;
+        right: 36px;
+        animation: pulseRing 2s infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.4;
+        }
+      }
+      @keyframes pulseRing {
+        0% {
+          transform: scale(1);
+          opacity: 0.6;
+        }
+        100% {
+          transform: scale(2.8);
+          opacity: 0;
+        }
+      }
+
+      /* ════════════════════
+         2. VISIT US
+      ════════════════════ */
+      .cx-visit {
+        padding: 100px 0;
+      }
+      .cx-locations {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        border-top: 1px solid rgba(17, 17, 17, 0.1);
+        border-left: 1px solid rgba(17, 17, 17, 0.1);
+      }
+      .cx-location-card {
+        padding: 40px 36px;
+        border-right: 1px solid rgba(17, 17, 17, 0.1);
+        border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+      }
+      .cx-location-card__num {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(17, 17, 17, 0.3);
+        margin-bottom: 24px;
+        display: block;
+      }
+      .cx-location-card__type {
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+        color: var(--primary);
+        margin-bottom: 14px;
+      }
+      .cx-location-card__address {
+        font-size: 14px;
+        line-height: 1.75;
+        font-weight: 400;
+        color: var(--secondary);
+        margin-bottom: 20px;
+      }
+      .cx-location-card__note {
+        font-size: 13px;
+        line-height: 1.7;
+        font-weight: 400;
+        color: rgba(17, 17, 17, 0.45);
+        font-style: italic;
+      }
+      .cx-visit__cta {
+        margin-top: 48px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      /* ════════════════════
+         3. DIRECT CONTACT
+      ════════════════════ */
+      .cx-direct {
+        padding: 100px 0;
+        background: #f8f8f8;
+      }
+      .cx-contacts-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        border-top: 1px solid rgba(17, 17, 17, 0.1);
+        border-left: 1px solid rgba(17, 17, 17, 0.1);
+        margin-top: 0;
+      }
+      .cx-contact-card {
+        padding: 36px 32px;
+        border-right: 1px solid rgba(17, 17, 17, 0.1);
+        border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+      }
+      .cx-contact-card__role {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        color: rgba(17, 17, 17, 0.35);
+        margin-bottom: 18px;
+        display: block;
+      }
+      .cx-contact-card__name {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        color: var(--primary);
+        margin-bottom: 8px;
+      }
+      .cx-contact-card__value {
+        font-size: 15px;
+        font-weight: 400;
+        color: var(--secondary);
+        text-decoration: none;
+        display: block;
+        transition: color 0.2s;
+      }
+      .cx-contact-card__value:hover {
+        color: var(--primary);
+      }
+
+      /* ════════════════════
+         4. ENQUIRY FORM
+      ════════════════════ */
+      .cx-form-section {
+        padding: 120px 0;
+      }
+      .cx-form-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
+        align-items: flex-start;
+      }
+      .cx-form-left__heading {
+        font-size: 48px;
+        font-weight: 500;
+        letter-spacing: -2px;
+        line-height: 1.1;
+        color: var(--primary);
+        margin-bottom: 20px;
+      }
+      .cx-form-left__heading em {
+        font-weight: 300;
+        font-style: italic;
+      }
+      .cx-form-left__desc {
+        font-size: 15px;
+        line-height: 1.75;
+        font-weight: 400;
+        color: var(--secondary);
+        margin-bottom: 48px;
+      }
+
+      /* What Happens Next */
+      .cx-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .cx-step {
+        display: flex;
+        gap: 20px;
+        padding: 24px 0;
+        border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+      }
+      .cx-step:first-child {
+        border-top: 1px solid rgba(17, 17, 17, 0.08);
+      }
+      .cx-step__time {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(17, 17, 17, 0.35);
+        flex: 0 0 140px;
+        padding-top: 2px;
+      }
+      .cx-step__text {
+        font-size: 14px;
+        line-height: 1.7;
+        font-weight: 400;
+        color: var(--secondary);
+      }
+
+      /* Form itself */
+      .cx-form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .cx-form__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .cx-field {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .cx-field label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(17, 17, 17, 0.45);
+      }
+      .cx-field input,
+      .cx-field select,
+      .cx-field textarea {
+        font-size: 15px;
+        font-weight: 400;
+        color: var(--primary);
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+        padding: 12px 0;
+        outline: none;
+        transition: border-color 0.2s;
+        appearance: none;
+        -webkit-appearance: none;
+        border-radius: 0;
+      }
+      .cx-field input:focus,
+      .cx-field select:focus,
+      .cx-field textarea:focus {
+        border-color: #111;
+      }
+      .cx-field textarea {
+        resize: none;
+        min-height: 80px;
+      }
+      .cx-field--full {
+        grid-column: 1 / -1;
+      }
+      .cx-form__submit {
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .cx-submit-btn {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1;
+        padding: 16px 40px;
+        background: #111;
+        color: #fff;
+        border: 1px solid #111;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        transition: background 0.25s;
+      }
+      .cx-submit-btn:hover {
+        background: #333;
+      }
+      .cx-submit-note {
+        font-size: 12px;
+        color: rgba(17, 17, 17, 0.4);
+        line-height: 1.5;
+      }
+
+      /* ════════════════════
+         5. FINAL CTA STRAP
+      ════════════════════ */
+      .cx-final-strap {
+        background: #111;
+        padding: 80px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 60px;
+        align-items: center;
+      }
+      .cx-final-strap__label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
+        margin-bottom: 16px;
+        display: block;
+      }
+      .cx-final-strap__heading {
+        font-size: 36px;
+        font-weight: 500;
+        letter-spacing: -1.5px;
+        line-height: 1.1;
+        color: #fff;
+      }
+      .cx-final-strap__heading em {
+        font-weight: 300;
+        font-style: italic;
+      }
+      .cx-final-strap__actions {
+        display: flex;
+        gap: 14px;
+        flex-shrink: 0;
+      }
+
+      /* ── Responsive ── */
+      @media (max-width: 1199px) {
+        .breadcrumb__title {
+          font-size: 72px;
+          letter-spacing: -3px;
+        }
+        .cx-heading {
+          font-size: 42px;
+        }
+        .cx-showroom {
+          padding: 60px;
+          gap: 60px;
+        }
+        .cx-showroom__title {
+          font-size: 34px;
+        }
+        .cx-contacts-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 991px) {
+        .cx-section-header {
+          flex-direction: column;
+          gap: 20px;
+        }
+        .cx-section-header__left,
+        .cx-section-header__right {
+          flex: unset;
+        }
+        .cx-showroom {
+          grid-template-columns: 1fr;
+        }
+        .cx-showroom__visual {
+          height: 200px;
+        }
+        .cx-locations {
+          grid-template-columns: 1fr;
+        }
+        .cx-form-layout {
+          grid-template-columns: 1fr;
+          gap: 60px;
+        }
+        .cx-final-strap {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+      }
+      @media (max-width: 767px) {
+        .breadcrumb__title {
+          font-size: 50px;
+          letter-spacing: -2px;
+        }
+        .breadcrumb__bottom {
+          flex-direction: column;
+          gap: 16px;
+        }
+        .breadcrumb__tagline,
+        .breadcrumb__body {
+          flex: unset;
+          max-width: 100%;
+        }
+        .cx-heading {
+          font-size: 34px;
+          letter-spacing: -1.5px;
+        }
+        .cx-showroom {
+          padding: 40px 24px;
+        }
+        .cx-showroom__title {
+          font-size: 28px;
+          letter-spacing: -1px;
+        }
+        .cx-contacts-grid {
+          grid-template-columns: 1fr;
+        }
+        .cx-form__row {
+          grid-template-columns: 1fr;
+        }
+        .cx-final-strap {
+          padding: 40px 24px;
+        }
+        .cx-final-strap__heading {
+          font-size: 26px;
+        }
+        .cx-final-strap__actions {
+          flex-direction: column;
+        }
+        .cx-btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+      @media (max-width: 575px) {
+        .breadcrumb__title {
+          font-size: 38px;
+          letter-spacing: -1.5px;
+        }
+      }
+
+      /* select arrow */
+      .cx-field select {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23111' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 4px center;
+        padding-right: 24px;
+      }
+      .hero-6__inner {
+        padding-top: 30px;
+      }
+      .hero-6__inner .hero-6__title-wrap .title {
+        font-size: 50px;
+        line-height: 55px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Scroll to top -->
+    <div class="progress-wrap">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+      </svg>
+    </div>
+
+    <!-- Side toggle -->
+    <aside class="fix">
+      <div class="side-info-4">
+        <div class="offcanvas-4">
+          <div class="side-info-content">
+            <div class="offset-widget offset-header">
+              <div class="offset-logo">
+                <a href="index.html">
+                  <img
+                    class="show-light"
+                    src="assets/imgs/logo/dark-logo.png"
+                    alt="site logo"
+                  />
+                </a>
+              </div>
+              <h6>Display systems. Made in India. Built to work.</h6>
+              <span class="date">Cuboc</span>
+            </div>
+            <div class="mobile-menu d-block d-xl-none"></div>
+            <div class="offset-widget-box d-none d-xl-grid">
+              <div class="contact-meta">
+                <div class="contact-item">
+                  <h6 class="title">Menu</h6>
+                  <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button id="side-info-4-close" class="side-info-close">
+              Close<i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="has-smooth" id="has_smooth"></div>
+
+    <!-- ── Header ── -->
+    <header class="header-area-2">
+      <div class="header-main">
+        <div class="container rr-container-1710">
+          <div class="header-area-2__inner">
+            <div class="header__logo">
+              <a href="index.html">
+                <img src="assets/imgs/cuboc-logo-transparent.png" />
+              </a>
+            </div>
+            <div class="header__nav-2">
+              <nav class="main-menu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+
+                  <li class="menu-item-has-children">
+                    <a href="#">Company</a>
+                    <ul class="dp-menu">
+                      <li><a href="about.html">About Us</a></li>
+                      <li>
+                        <a href="recognitionNetwork.html"
+                          >Recognition &amp; Network</a
+                        >
+                      </li>
+                      <li>
+                        <a href="trade-events.html">Trade Shows &amp; Events</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="menu-item-has-children">
+                    <a href="products.html">Products</a>
+                    <ul class="dp-menu">
+                      <li>
+                        <a href="product-01.html">Fabric Light Boxes</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="virtualshowroom.html">Virtual Showroom</a>
+                  </li>
+
+                  <li class="menu-item-has-children">
+                    <a href="caseStudy.html">Case Studies</a>
+                    <ul class="dp-menu">
+                      <li>
+                        <a href="caseStudiesDetails.html"
+                          >Case Studies Details</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header-right">
+              <div class="header__navicon">
+                <div class="side-toggle mobile-button d-lg-block d-xl-none">
+                  <a class="bar-icon" href="javascript:void(0)"
+                    ><span></span><span></span
+                  ></a>
+                </div>
+                <a href="contact.html" class="rr-btn-primary bg-base-color">
+                  <span class="text">Let's Talk</span>
+                  <i class="fa-solid fa-angle-right right-icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <style>
+      .header-area-2 .main-menu li a,
+      .header-area-2 .header-meta .date {
+        color: white;
+      }
+
+      /* when scrolled up — glass bg — make text black */
+      .header-area-2.nav-scrolled .main-menu li a,
+      .header-area-2.nav-scrolled .header-meta .date {
+        color: black !important;
+      }
+      .header-area-2 .main-menu ul.dp-menu li a {
+        color: white !important;
+      }
+      @media (min-width: 1200px) and (max-width: 1399px) and (orientation: landscape) {
+        .about-hero {
+          min-height: 112vh;
+        }
+      }
+    </style>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main>
+          <style>
+            .about-hero__eyebrow {
+              font-size: 13px;
+            }
+          </style>
+          <!-- banner / hero start -->
+          <div class="about-hero">
+            <div class="about-hero__bg">
+              <img
+                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1920&auto=format&fit=crop"
+                alt="Virtual Showroom"
+              />
+              <!-- Overlay for text readability -->
+              <div
+                style="
+                  position: absolute;
+                  inset: 0;
+                  background: rgba(0, 0, 0, 0.55);
+                "
+              ></div>
+            </div>
+            <div class="about-hero__inner">
+              <div class="container rr-container-1710">
+                <p class="about-hero__eyebrow">
+                  Virtual Showroom &middot; 3D Walkthrough &middot; AI Assistant
+                  &middot; Live Founder Access
+                </p>
+
+                <h1 class="about-hero__title">
+                  See What Your Next Exhibition<br />
+                  <span class="base-text-coor">Could Look Like.</span>
+                </h1>
+
+                <div class="about-hero__bottom">
+                  <p class="about-hero__sub">
+                    We've built a 3D virtual environment that shows how Cuboc's
+                    products transform real exhibition spaces, retail
+                    environments, and brand setups. Walk through it. Ask Nora,
+                    our AI assistant, anything about our products. Meet our
+                    founder live. All in one place.
+                  </p>
+                  <div class="about-hero__actions">
+                    <a
+                      href="#"
+                      font-size:
+                      16px;
+                      class="about-hero__btn-primary"
+                    >
+                      Enter the Showroom <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a
+                      href="#guided-walkthrough"
+                      class="about-hero__btn-secondary"
+                    >
+                      Book a Guided Walkthrough
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class="intro-strip">
+            <div class="container rr-container-1710">
+              <div class="intro-strip__box">
+                <span class="quote-icon quote-open">&ldquo;</span>
+                <p>
+                  Most display manufacturers show you a product photo and expect
+                  you to imagine the rest.
+                </p>
+                <p>
+                  We built something different — a full 3D environment where
+                  Cuboc's fabric booths, standees, and displays are shown at
+                  real scale, in realistic settings, laid out the way an actual
+                  exhibition or retail space would use them.
+                </p>
+                <p>
+                  It's not a tour of our factory. It's a tour of what's possible
+                  with our products.
+                </p>
+                <span class="quote-icon quote-close">&rdquo;</span>
+              </div>
+            </div>
+          </section>
+
+          <style>
+            .project-6__thumb img {
+              height: 415px;
+              width: 100%;
+              object-fit: cover;
+            }
+
+            .intro-strip {
+              padding: 80px 0;
+              margin-top: 50px;
+            }
+
+            .intro-strip__box {
+              background: #f5f5f5;
+              max-width: 1200px;
+              margin: 0 auto;
+              padding: 50px 60px;
+              border-radius: 4px;
+              text-align: center;
+              position: relative;
+            }
+
+            .intro-strip p {
+              font-size: 22px;
+              line-height: 1.8;
+              color: #444;
+              margin: 0 0 20px;
+            }
+
+            .intro-strip p:last-child {
+              margin-bottom: 0;
+              color: #222;
+              font-weight: 600;
+              font-size: 25px;
+            }
+
+            .section-title-6__wrapper .title span {
+              font-weight: 600;
+            }
+
+            .quote-icon {
+              position: absolute;
+              font-size: 80px;
+              line-height: 1;
+              color: #ccc;
+              font-family: Georgia, serif;
+            }
+
+            .quote-open {
+              top: 16px;
+              left: 24px;
+            }
+
+            .quote-close {
+              bottom: -10px;
+              right: 24px;
+            }
+          </style>
+          <section style="padding: 80px 0; background: #fff">
+            <div class="container rr-container-1710">
+              <span class="cx-eyebrow">WHY WE BUILT THIS</span>
+              <div
+                style="
+                  width: 36px;
+
+                  margin-bottom: 40px;
+                "
+              ></div>
+
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: 1fr 1fr 1fr;
+                  gap: 0;
+                  align-items: start;
+                "
+              >
+                <!-- Left: heading + button -->
+                <div style="padding-right: 48px">
+                  <h2 class="cx-heading" style="margin-bottom: 24px">
+                    Display Products Are Hard to Picture from
+                    <span>Catalogues.</span>
+                  </h2>
+                  <p class="cx-body" style="margin-bottom: 28px">
+                    A FABxPRO booth sounds straightforward on paper. A Cube
+                    Standee reconfiguring into a wall sounds clever.
+                  </p>
+                  <a href="showroom.html" class="cx-btn cx-btn--dark"
+                    >ENTER THE SHOWROOM <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+
+                <!-- Middle: 1 item + 1 item below centered -->
+                <div
+                  style="
+                    border-left: 1px solid rgba(17, 17, 17, 0.1);
+                    padding-left: 48px;
+                    padding-right: 48px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 36px;
+                  "
+                >
+                  <div
+                    style="display: flex; align-items: flex-start; gap: 16px"
+                  >
+                    <div
+                      style="
+                        width: 44px;
+                        height: 44px;
+                        border-radius: 50%;
+                        border: 1.5px solid #111;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-shrink: 0;
+                      "
+                    >
+                      <i
+                        class="fa-regular fa-users"
+                        style="font-size: 18px; color: #111"
+                      ></i>
+                    </div>
+                    <p class="cx-body" style="margin: 0">
+                      We built this environment so exhibition organisers, brand
+                      teams, agencies, and fabricators could see for themselves
+                      what Cuboc looks like when deployed at scale.
+                    </p>
+                  </div>
+
+                  <div
+                    style="display: flex; align-items: flex-start; gap: 16px"
+                  >
+                    <div
+                      style="
+                        width: 44px;
+                        height: 44px;
+                        border-radius: 50%;
+                        border: 1.5px solid #111;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-shrink: 0;
+                      "
+                    >
+                      <i
+                        class="fa-regular fa-expand"
+                        style="font-size: 18px; color: #111"
+                      ></i>
+                    </div>
+                    <p class="cx-body" style="margin: 0">
+                      Until you see the scale — the way the lighting sits, the
+                      way the modules connect, the way the booth takes shape
+                      when it's assembled — the idea doesn't land.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Right: 1 item centered vertically between the two on the left -->
+                <div
+                  style="
+                    border-left: 1px solid rgba(17, 17, 17, 0.1);
+                    padding-left: 48px;
+                    display: flex;
+                    align-items: center;
+                    align-self: stretch;
+                  "
+                >
+                  <div
+                    style="display: flex; align-items: flex-start; gap: 16px"
+                  >
+                    <div
+                      style="
+                        width: 44px;
+                        height: 44px;
+                        border-radius: 50%;
+                        border: 1.5px solid #111;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-shrink: 0;
+                      "
+                    >
+                      <i
+                        class="fa-regular fa-handshake"
+                        style="font-size: 18px; color: #111"
+                      ></i>
+                    </div>
+                    <p class="cx-body" style="margin: 0">
+                      What started as a tool to pitch exhibition organisers
+                      turned into something every serious buyer now uses to
+                      understand our products before they commit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="project-6 section-spacing-140">
+            <div class="container rr-container-1710">
+              <div class="project-6__top">
+                <div class="section-title-6__wrapper">
+                  <h2 class="title rr_title_anim">
+                    What You Can Do Inside<br />
+                    <span class="base-text-color"
+                      >Explore. Ask. Connect. Decide.</span
+                    >
+                  </h2>
+                </div>
+                <div class="project-6__top-content">
+                  <p class="project-6__dec">
+                    Four things live inside the showroom — each one designed to
+                    replace a step of the old sales process.
+                  </p>
+                  <div class="project-6__btn">
+                    <a href="#" style="font-size: 16px" class="rr-btn-primary">
+                      <span class="text">The Experience </span>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  gap: 24px;
+                "
+              >
+                <div class="project-6__item">
+                  <div class="project-6__thumb">
+                    <img
+                      src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=507&h=415&fit=crop"
+                      alt="3D virtual showroom"
+                    />
+                    <div class="content-top">
+                      <h2 class="sub-title">3D Walkthrough</h2>
+                      <a href="#" class="project-6__arrow"
+                        ><span
+                          ><i class="fa-regular fa-arrow-right-long"></i></span
+                      ></a>
+                    </div>
+                    <div class="project-6__content">
+                      <div class="price-plan">
+                        <h3 class="title">
+                          Walk Through a Full 3D Environment
+                        </h3>
+                        <span>Experience</span>
+                        <p
+                          style="color: #555; font-size: 16px; margin-top: 6px"
+                        >
+                          FABxGO, FABxGLOW, FABxPRO, standees, frames — arranged
+                          the way they'd look in a live setting.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-6__item">
+                  <div class="project-6__thumb">
+                    <img
+                      src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=507&h=415&fit=crop"
+                      alt="AI assistant"
+                    />
+                    <div class="content-top">
+                      <h2 class="sub-title">AI Assistant</h2>
+                      <a href="#" class="project-6__arrow"
+                        ><span
+                          ><i class="fa-regular fa-arrow-right-long"></i></span
+                      ></a>
+                    </div>
+                    <div class="project-6__content">
+                      <div class="price-plan">
+                        <h3 class="title">Meet Nora, Our AI Assistant</h3>
+                        <span>Ask Anything</span>
+                        <p
+                          style="color: #555; font-size: 16px; margin-top: 6px"
+                        >
+                          Specs, materials, lead times, pricing, customisation —
+                          instant answers, same as our sales team.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-6__item">
+                  <div class="project-6__thumb">
+                    <img
+                      src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=507&h=415&fit=crop"
+                      alt="Live founder access"
+                    />
+                    <div class="content-top">
+                      <h2 class="sub-title">Live Founder Access</h2>
+                      <a href="#" class="project-6__arrow"
+                        ><span
+                          ><i class="fa-regular fa-arrow-right-long"></i></span
+                      ></a>
+                    </div>
+                    <div class="project-6__content">
+                      <div class="price-plan">
+                        <h3 class="title">
+                          Meet the Founder. Live. In Seconds.
+                        </h3>
+                        <span>No Gatekeepers</span>
+                        <p
+                          style="color: #555; font-size: 16px; margin-top: 6px"
+                        >
+                          Shashank Gupta is available for a live video call. If
+                          he's available, you're talking to him directly.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-6__item">
+                  <div class="project-6__thumb">
+                    <img
+                      src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=507&h=415&fit=crop"
+                      alt="Book a slot"
+                    />
+                    <div class="content-top">
+                      <h2 class="sub-title">Book a Slot</h2>
+                      <a href="#" class="project-6__arrow"
+                        ><span
+                          ><i class="fa-regular fa-arrow-right-long"></i></span
+                      ></a>
+                    </div>
+                    <div class="project-6__content">
+                      <div class="price-plan">
+                        <h3 class="title">
+                          Schedule a Call If Now Doesn't Suit
+                        </h3>
+                        <span>Pick Your Time</span>
+                        <p
+                          style="color: #555; font-size: 16px; margin-top: 6px"
+                        >
+                          Pick a slot from inside the showroom. We meet over
+                          video with full context of your exploration.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-6__item">
+                  <div class="project-6__thumb">
+                    <img
+                      src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=507&h=415&fit=crop"
+                      alt="Sample request"
+                    />
+                    <div class="content-top">
+                      <h2 class="sub-title">Sample Request</h2>
+                      <a href="#" class="project-6__arrow"
+                        ><span
+                          ><i class="fa-regular fa-arrow-right-long"></i></span
+                      ></a>
+                    </div>
+                    <div class="project-6__content">
+                      <div class="price-plan">
+                        <h3 class="title">
+                          Request Samples From Inside the Tour
+                        </h3>
+                        <span>Touch Before You Buy</span>
+                        <p
+                          style="color: #555; font-size: 16px; margin-top: 6px"
+                        >
+                          See something you want to touch in person? Request a
+                          sample without leaving the showroom.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <style>
+            .project-6__thumb {
+              display: flex;
+              flex-direction: column;
+            }
+
+            .project-6__thumb img {
+              width: 100% !important;
+              height: 320px !important;
+              object-fit: cover !important;
+              display: block;
+              position: relative !important;
+            }
+
+            .project-6__content {
+              position: relative !important;
+              transform: none !important;
+              left: auto !important;
+              right: auto !important;
+              bottom: auto !important;
+              background: #f5f5f5;
+              /* padding: 24px; */
+              display: block !important;
+            }
+
+            .project-6__content .title {
+              color: #111 !important;
+              opacity: 1 !important;
+              visibility: visible !important;
+              font-size: 22px;
+              font-weight: 600;
+            }
+
+            .project-6__content .price-plan span,
+            .project-6__content .price-plan h2,
+            .project-6__content .details-list,
+            .project-6__content p {
+              opacity: 1 !important;
+              visibility: visible !important;
+              color: #555 !important;
+              padding: unset !important;
+            }
+
+            /* remove hover effect completely */
+            .project-6__thumb:hover .project-6__content {
+              transform: none !important;
+              background: #f5f5f5 !important;
+            }
+          </style>
+        </main>
+        <!-- WHO IT'S FOR -->
+        <section style="padding: 150px 0; background: #eeeeee">
+          <div class="container rr-container-1710">
+            <!-- Section Header -->
+            <div style="margin-bottom: 60px">
+              <span class="cx-eyebrow mb-4">Who It's For</span>
+              <h2 class="cx-heading">
+                Three Ways People<br />Actually <span> Use This. </span>
+              </h2>
+            </div>
+
+            <!-- Cards Grid -->
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+              "
+            >
+              <!-- Card 1 -->
+              <div
+                style="
+                  background: #fff;
+                  border-radius: 16px;
+                  padding: 40px 36px 36px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  min-height: 420px;
+                "
+              >
+                <div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: flex-end;
+                      margin-bottom: 80px;
+                    "
+                  >
+                    <span class="cx-eyebrow" style="margin-bottom: 0"
+                      >Exhibition Teams</span
+                    >
+                  </div>
+                  <h3
+                    style="
+                      font-size: 32px;
+                      font-weight: 600;
+                      letter-spacing: -1px;
+                      line-height: 1.15;
+                      color: var(--primary);
+                      margin-bottom: 20px;
+                    "
+                  >
+                    Exhibition Organisers<br />&amp; Brand Teams
+                  </h3>
+                  <p class="cx-body">
+                    See how Cuboc products could fit your next event. Use the
+                    environment to picture your brand inside the booth design.
+                    Ask Nora for exact specifications. Share the link with your
+                    team before the internal pitch meeting.
+                  </p>
+                </div>
+                <div style="margin-top: 36px">
+                  <a
+                    href="#"
+                    font-size:
+                    16px;
+                    style="
+                      display: inline-flex;
+                      align-items: center;
+                      justify-content: center;
+                      width: 52px;
+                      height: 52px;
+                      border-radius: 50px;
+                      border: 1.5px solid rgba(17, 17, 17, 0.25);
+                      color: #111;
+                      text-decoration: none;
+                      transition:
+                        border-color 0.2s,
+                        background 0.2s;
+                    "
+                    onmouseover="this.style.borderColor = '#111'"
+                    onmouseout="this.style.borderColor = 'rgba(17,17,17,0.25)'"
+                  >
+                    <i class="fa-regular fa-arrow-right-long"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div
+                style="
+                  background: #fff;
+                  border-radius: 16px;
+                  padding: 40px 36px 36px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  min-height: 420px;
+                "
+              >
+                <div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: flex-end;
+                      margin-bottom: 80px;
+                    "
+                  >
+                    <span class="cx-eyebrow" style="margin-bottom: 0"
+                      >Agencies</span
+                    >
+                  </div>
+                  <h3
+                    style="
+                      font-size: 32px;
+                      font-weight: 600;
+                      letter-spacing: -1px;
+                      line-height: 1.15;
+                      color: var(--primary);
+                      margin-bottom: 20px;
+                    "
+                  >
+                    Ad Agencies<br />&amp; Fabricators
+                  </h3>
+                  <p class="cx-body">
+                    Show your client what the final setup could look like —
+                    without needing to build a mock-up first. The 3D environment
+                    becomes a pitch aid. Nora answers your client's technical
+                    questions in real time. Our founder becomes your on-call
+                    technical adviser when needed.
+                  </p>
+                </div>
+                <div style="margin-top: 36px">
+                  <a
+                    href="#"
+                    font-size:
+                    16px;
+                    style="
+                      display: inline-flex;
+                      align-items: center;
+                      justify-content: center;
+                      width: 52px;
+                      height: 52px;
+                      border-radius: 50px;
+                      border: 1.5px solid rgba(17, 17, 17, 0.25);
+                      color: #111;
+                      text-decoration: none;
+                      transition:
+                        border-color 0.2s,
+                        background 0.2s;
+                    "
+                    onmouseover="this.style.borderColor = '#111'"
+                    onmouseout="this.style.borderColor = 'rgba(17,17,17,0.25)'"
+                  >
+                    <i class="fa-regular fa-arrow-right-long"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div
+                style="
+                  background: #fff;
+                  border-radius: 16px;
+                  padding: 40px 36px 36px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  min-height: 420px;
+                "
+              >
+                <div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: flex-end;
+                      margin-bottom: 80px;
+                    "
+                  >
+                    <span class="cx-eyebrow" style="margin-bottom: 0"
+                      >Dealers</span
+                    >
+                  </div>
+                  <h3
+                    style="
+                      font-size: 32px;
+                      font-weight: 600;
+                      letter-spacing: -1px;
+                      line-height: 1.15;
+                      color: var(--primary);
+                      margin-bottom: 20px;
+                    "
+                  >
+                    Serious<br />Dealers
+                  </h3>
+                  <p class="cx-body">
+                    Walk through the full product range at scale. Understand how
+                    products connect, what the finish actually looks like, what
+                    the footprint is. Ask Nora about bulk pricing, packaging
+                    details, and stock. Ask Shashank directly about exclusivity
+                    or partnership.
+                  </p>
+                </div>
+                <div style="margin-top: 36px">
+                  <a
+                    href="#"
+                    font-size:
+                    16px;
+                    style="
+                      display: inline-flex;
+                      align-items: center;
+                      justify-content: center;
+                      width: 52px;
+                      height: 52px;
+                      border-radius: 50px;
+                      border: 1.5px solid rgba(17, 17, 17, 0.25);
+                      color: #111;
+                      text-decoration: none;
+                      transition:
+                        border-color 0.2s,
+                        background 0.2s;
+                    "
+                    onmouseover="this.style.borderColor = '#111'"
+                    onmouseout="this.style.borderColor = 'rgba(17,17,17,0.25)'"
+                  >
+                    <i class="fa-regular fa-arrow-right-long"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="lq2">
+          <div class="container rr-container-1710">
+            <div class="lq2__inner">
+              <div class="lq2__left">
+                <div>
+                  <span class="lq2__left-tag">The Login Question</span>
+                  <h2 class="lq2__left-title">Why We Ask You to Register</h2>
+                  <p class="lq2__left-sub">
+                    Because the Conversation Should Be Serious.
+                  </p>
+                </div>
+                <div class="lq2__left-bottom">
+                  <p>If that's you, the showroom is open.</p>
+                  <span>Register once. Walk in ready.</span>
+                </div>
+              </div>
+              <div class="lq2__right">
+                <ul class="lq2__points">
+                  <li>
+                    <div class="dot"></div>
+                    <p>
+                      Entering the showroom takes
+                      <strong>30 seconds of registration.</strong> It means we
+                      know who you are when you arrive.
+                    </p>
+                  </li>
+                  <li>
+                    <div class="dot"></div>
+                    <p>
+                      <strong>Shashank</strong> can see your company, your role,
+                      and your context before he picks up the call.
+                    </p>
+                  </li>
+                  <li>
+                    <div class="dot"></div>
+                    <p>
+                      <strong>Nora</strong> can personalise the conversation —
+                      every minute inside is useful from the first.
+                    </p>
+                  </li>
+                </ul>
+                <div class="lq2__middle-text">
+                  We're not building a catalogue for casual browsers. We're
+                  building a tool for buyers who want to have a real discussion.
+                </div>
+                <div class="lq2__closing">
+                  If that's you — the showroom is open.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <style>
+          .lq2 {
+            padding: 150px 0;
+          }
+          .lq2__inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e2e0db;
+          }
+          .lq2__left {
+            background: #111;
+            padding: 60px 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .lq2__left-tag {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #888;
+            font-weight: 600;
+            margin-bottom: 32px;
+            display: block;
+          }
+          .lq2__left-title {
+            font-size: 35px;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.2;
+            margin: 0 0 16px;
+          }
+          .lq2__left-sub {
+            font-size: 16px;
+            color: #aaa;
+            line-height: 1.7;
+            margin: 0;
+          }
+          .lq2__left-bottom {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid #2a2a2a;
+          }
+          .lq2__left-bottom p {
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            margin: 0 0 6px;
+          }
+          .lq2__left-bottom span {
+            font-size: 12px;
+            color: #666;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+          }
+          .lq2__right {
+            background: #fff;
+            padding: 60px 56px;
+          }
+          .lq2__points {
+            list-style: none;
+            margin: 0 0 36px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+          }
+          .lq2__points li {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+          }
+          .lq2__points li .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #111;
+            flex-shrink: 0;
+            margin-top: 9px;
+          }
+          .lq2__points li p {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.8;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22px;
+            color: var(--secondary);
+            letter-spacing: -0.03em;
+            font-family: var(--font_body);
+          }
+          .lq2__points li p strong {
+            color: #111;
+            font-weight: 600;
+          }
+          .lq2__middle-text {
+            font-size: 16px;
+            color: #777;
+            line-height: 1.8;
+            margin: 0 0 36px;
+            padding: 20px 24px;
+            background: #f7f5f2;
+            border-left: 3px solid #111;
+            border-radius: 2px;
+          }
+          .lq2__closing {
+            font-size: 20px;
+            font-weight: 600;
+            color: #111;
+          }
+        </style>
+
+        <section class="strap-cta">
+          <div class="container rr-container-1710">
+            <div class="strap-cta__inner">
+              <div class="strap-cta__left">
+                <p class="strap-cta__eyebrow">Your Turn</p>
+                <h2 class="strap-cta__heading">
+                  Walk In. Explore. Ask. Talk to Us<br />
+                  When You're Ready.
+                </h2>
+              </div>
+              <div class="strap-cta__actions">
+                <a
+                  href="contact.html"
+                  class="strap-cta__btn strap-cta__btn--secondary"
+                >
+                  Enter the Virtual Showroom
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Footer ── -->
+        <footer class="footer-4 theme-bg-primary">
+          <div class="container rr-container-1820">
+            <div class="footer-4__inner">
+              <div class="footer-4__wrapper">
+                <div class="footer-widget-box">
+                  <div class="content">
+                    <h3 class="title">Here's the Direct Line.</h3>
+
+                    <div class="info">
+                      <a href="tel:+919318404993">Sales — +91 93184 04993</a>
+
+                      <a href="tel:+919310133066">Support — +91 93101 33066</a>
+
+                      <a href="tel:+919818538180">Director — +91 98185 38180</a>
+
+                      <a href="mailto:info@cubocdisplay.com">
+                        info@cubocdisplay.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-widget-box">
+                  <h2 class="title">JOIN OUR NEWSLETTER</h2>
+                  <div class="newsletter">
+                    <div class="input-group">
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email*"
+                      />
+                      <button type="submit">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-widget-box">
+                  <h2 class="title">Quick Links</h2>
+                  <ul class="footer-nav-list">
+                    <li>
+                      <a href="index.html" data-text="Home"
+                        ><span>Home</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="about.html" data-text="About Us"
+                        ><span>About Us</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="caseStudy.html" data-text="Case Studies"
+                        ><span>Case Studies</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="virtualshowroom.html"
+                        data-text="Virtual Showroom"
+                        ><span>Virtual Showroom</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="contact.html" data-text="Contact"
+                        ><span>Contact</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-widget-box">
+                  <h2 class="title">Social</h2>
+                  <ul class="footer-nav-list">
+                    <li>
+                      <a href="https://www.facebook.com/" data-text="Facebook"
+                        ><span>Facebook</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://x.com/" data-text="Twitter"
+                        ><span>Twitter</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/" data-text="Instagram"
+                        ><span>Instagram</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.pinterest.com/" data-text="Pinterest"
+                        ><span>Pinterest</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="copyright">
+                <div class="copyright__logo">
+                  <link
+                    href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+                    rel="stylesheet"
+                  />
+                  <div
+                    class="footer_logo__5ncK8"
+                    style="
+                      color: white;
+                      font-family: &quot;Russo One&quot;, sans-serif;
+                      font-size: 110px;
+                      font-weight: 500;
+                      letter-spacing: 1px;
+                      text-transform: uppercase;
+                      line-height: 0.85;
+                    "
+                  >
+                    CUBOC
+                  </div>
+                </div>
+                <p class="copyright__text" style="text-align: right">
+                  <a href="#">cuboc</a>
+                  © 2025. All Rights Reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- footer end -->
+      </div>
+    </div>
+
+    <!-- Dependencies JS -->
+    <script src="assets/vandor/jquery/jquery.js"></script>
+    <script src="assets/vandor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/vandor/popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vandor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vandor/gsap/gsap.min.js"></script>
+    <script src="assets/vandor/gsap/ScrollSmoother.min.js"></script>
+    <script src="assets/vandor/gsap/ScrollTrigger.min.js"></script>
+    <script src="assets/vandor/gsap/SplitText.min.js"></script>
+    <script src="assets/vandor/gsap/SplitType.js"></script>
+    <script src="assets/vandor/gsap/customEase.js"></script>
+    <script src="assets/vandor/menu/jquery.meanmenu.min.js"></script>
+    <script src="assets/vandor/backtop/backToTop.js"></script>
+    <script src="assets/vandor/nice-select/nice-select.js"></script>
+    <script src="assets/vandor/odometer/odometer.min.js"></script>
+    <script src="assets/vandor/odometer/waypoints.min.js"></script>
+    <script src="assets/vandor/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vandor/isotope/isotope.pkgd.min.js"></script>
+    <script src="assets/vandor/magnific/magnific-popup.min.js"></script>
+    <script src="assets/vandor/common-js/common.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

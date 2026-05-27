@@ -43,6 +43,14 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <style>
+      .c-card.dark .c-features {
+        list-style: disc !important;
+        padding-left: 20px !important;
+      }
+      .c-card.dark .c-features li {
+        color: #ffffff !important;
+        display: list-item !important;
+      }
       .services-3__item .icon i {
         font-size: 32px; /* match your original icon image size */
         display: flex;
@@ -123,7 +131,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.62);
+        background: rgba(0, 0, 0, 0.75);
+        z-index: 1;
       }
       .breadcrumb__content {
         padding-bottom: 120px;
@@ -135,6 +144,10 @@
         letter-spacing: -4px;
         color: var(--white);
       }
+      .breadcrumb__bg::before {
+        background: rgba(0, 0, 0, 0.75) !important;
+        mix-blend-mode: normal !important;
+      }
       .breadcrumb__bottom {
         display: flex;
         justify-content: space-between;
@@ -145,7 +158,7 @@
         border-top: 1px solid rgba(255, 255, 255, 0.2);
       }
       .breadcrumb__tagline {
-        font-size: 18px;
+        font-size: 19px;
         font-weight: 500;
         line-height: 1.4;
         color: var(--white);
@@ -154,8 +167,8 @@
         flex: 0 0 38%;
       }
       .breadcrumb__body {
-        font-size: 16px;
-        font-weight: 300;
+        font-size: 17px;
+        font-weight: 500;
         line-height: 1.75;
         color: rgba(255, 255, 255, 0.85);
         letter-spacing: -0.01em;
@@ -898,7 +911,9 @@
                         </ul>
                       </li>
 
-                      <li><a href="visualroom.html">Virtual Showroom</a></li>
+                      <li>
+                        <a href="virtualshowroom.html">Virtual Showroom</a>
+                      </li>
 
                       <li class="menu-item-has-children">
                         <a href="caseStudy.html">Case Studies</a>
@@ -1380,10 +1395,14 @@
               color: #aaa;
             }
             .c-card.dark .c-features li {
-              color: #ccc;
+              color: #ffffff !important;
+              gap: 10px;
             }
             .c-card.dark .c-features li i {
-              color: #ccc;
+              color: #ffffff !important;
+            }
+            .c-card.dark .c-features li span {
+              color: #ffffff !important;
             }
             .c-location {
               margin-bottom: 18px;
@@ -1504,37 +1523,23 @@
                   Fastest Path to a Real Conversation
                 </div>
                 <hr class="c-divider" />
-                <p class="c-desc">
-                  The fastest way to get a real discussion going — faster than
-                  any contact form, faster than any phone call trail.
-                </p>
                 <ul class="c-features">
                   <li>
-                    <i class="ti ti-3d-cube-sphere" aria-hidden="true"></i
-                    ><span
-                      >Walk through a full 3D environment of our products</span
-                    >
+                    The fastest way to get a real discussion going — faster than
+                    any contact form, faster than any phone call trail.
+                  </li>
+                  <li>Walk through a full 3D environment of our products</li>
+                  <li>
+                    Ask Nora (our AI assistant) anything about specs or
+                    customisation
                   </li>
                   <li>
-                    <i class="ti ti-robot" aria-hidden="true"></i
-                    ><span
-                      >Ask Nora (our AI assistant) anything about specs or
-                      customisation</span
-                    >
+                    Connect with founder Shashank Gupta over live video in under
+                    10 seconds
                   </li>
                   <li>
-                    <i class="ti ti-video" aria-hidden="true"></i
-                    ><span
-                      >Connect with founder Shashank Gupta over live video in
-                      under 10 seconds</span
-                    >
-                  </li>
-                  <li>
-                    <i class="ti ti-user-off" aria-hidden="true"></i
-                    ><span
-                      >No gatekeepers. No sales reps. Just you and the person
-                      who runs the company.</span
-                    >
+                    No gatekeepers. No sales reps. Just you and the person who
+                    runs the company.
                   </li>
                 </ul>
                 <div class="c-cta">
@@ -1790,7 +1795,9 @@
                       >
                     </li>
                     <li>
-                      <a href="visualroom.html" data-text="Virtual Showroom"
+                      <a
+                        href="virtualshowroom.html"
+                        data-text="Virtual Showroom"
                         ><span>Virtual Showroom</span></a
                       >
                     </li>

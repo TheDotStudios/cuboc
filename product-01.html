@@ -507,83 +507,97 @@
     <!-- Side toggle end -->
 
     <div class="has-smooth" id="has_smooth"></div>
-    <div id="smooth-wrapper">
-      <div id="smooth-content">
-        <!-- ── Header ── -->
-        <header class="header-area-2">
-          <div class="header-main">
-            <div class="container rr-container-1710">
-              <div class="header-area-2__inner">
-                <div class="header__logo">
-                  <a href="index.html">
-                    <img src="assets/imgs/cuboc-logo-transparent.png" />
-                  </a>
-                </div>
-                <div class="header__nav-2">
-                  <nav class="main-menu">
-                    <ul>
-                      <li><a href="index.html">Home</a></li>
 
-                      <li class="menu-item-has-children">
-                        <a href="#">Company</a>
-                        <ul class="dp-menu">
-                          <li><a href="about.html">About Us</a></li>
-                          <li>
-                            <a href="recognitionNetwork.html"
-                              >Recognition &amp; Network</a
-                            >
-                          </li>
-                          <li>
-                            <a href="trade-events.html"
-                              >Trade Shows &amp; Events</a
-                            >
-                          </li>
-                        </ul>
+    <!-- ── Header ── -->
+    <header class="header-area-2">
+      <div class="header-main">
+        <div class="container rr-container-1710">
+          <div class="header-area-2__inner">
+            <div class="header__logo">
+              <a href="index.html">
+                <img src="assets/imgs/cuboc-logo-transparent.png" />
+              </a>
+            </div>
+            <div class="header__nav-2">
+              <nav class="main-menu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+
+                  <li class="menu-item-has-children">
+                    <a href="#">Company</a>
+                    <ul class="dp-menu">
+                      <li><a href="about.html">About Us</a></li>
+                      <li>
+                        <a href="recognitionNetwork.html"
+                          >Recognition &amp; Network</a
+                        >
                       </li>
-
-                      <li class="menu-item-has-children">
-                        <a href="products.html">Products</a>
-                        <ul class="dp-menu">
-                          <li>
-                            <a href="product-01.html">Fabric Light Boxes</a>
-                          </li>
-                        </ul>
+                      <li>
+                        <a href="trade-events.html">Trade Shows &amp; Events</a>
                       </li>
-
-                      <li><a href="visualroom.html">Virtual Showroom</a></li>
-
-                      <li class="menu-item-has-children">
-                        <a href="caseStudy.html">Case Studies</a>
-                        <ul class="dp-menu">
-                          <li>
-                            <a href="caseStudiesDetails.html"
-                              >Case Studies Details</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li><a href="contact.html">Contact</a></li>
                     </ul>
-                  </nav>
+                  </li>
+
+                  <li class="menu-item-has-children">
+                    <a href="products.html">Products</a>
+                    <ul class="dp-menu">
+                      <li>
+                        <a href="product-01.html">Fabric Light Boxes</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li><a href="virtualshowroom.html">Virtual Showroom</a></li>
+
+                  <li class="menu-item-has-children">
+                    <a href="caseStudy.html">Case Studies</a>
+                    <ul class="dp-menu">
+                      <li>
+                        <a href="caseStudiesDetails.html"
+                          >Case Studies Details</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header-right">
+              <div class="header__navicon">
+                <div class="side-toggle mobile-button d-lg-block d-xl-none">
+                  <a class="bar-icon" href="javascript:void(0)"
+                    ><span></span><span></span
+                  ></a>
                 </div>
-                <div class="header-right">
-                  <div class="header__navicon">
-                    <div class="side-toggle mobile-button d-lg-block d-xl-none">
-                      <a class="bar-icon" href="javascript:void(0)"
-                        ><span></span><span></span
-                      ></a>
-                    </div>
-                    <a href="contact.html" class="rr-btn-primary bg-base-color">
-                      <span class="text">Let's Talk</span>
-                      <i class="fa-solid fa-angle-right right-icon"></i>
-                    </a>
-                  </div>
-                </div>
+                <a href="contact.html" class="rr-btn-primary bg-base-color">
+                  <span class="text">Let's Talk</span>
+                  <i class="fa-solid fa-angle-right right-icon"></i>
+                </a>
               </div>
             </div>
           </div>
-        </header>
+        </div>
+      </div>
+    </header>
+    <style>
+      .header-area-2 .main-menu li a,
+      .header-area-2 .header-meta .date {
+        color: white;
+      }
+
+      /* when scrolled up — glass bg — make text black */
+      .header-area-2.nav-scrolled .main-menu li a,
+      .header-area-2.nav-scrolled .header-meta .date {
+        color: black !important;
+      }
+      .header-area-2 .main-menu ul.dp-menu li a {
+        color: white !important;
+      }
+    </style>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
         <!-- Header end -->
 
         <main>
@@ -783,7 +797,7 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            opacity: 0.65;
+            opacity: 0.35;
             transition:
               transform 0.5s ease,
               opacity 0.4s ease;
@@ -898,7 +912,7 @@
             color: #fff;
           }
           .ff-card.has-img .ff-card-desc {
-            color: rgba(255, 255, 255, 0.8);
+            color: white;
           }
           .ff-card.has-img .ff-more {
             color: #fff;
@@ -1933,14 +1947,14 @@
           }
 
           .why-fabx__card .title {
-            font-size: 22px;
+            font-size: 25px;
             font-weight: 600;
             letter-spacing: -0.5px;
             color: var(--primary, #111);
             margin: 0;
           }
           .why-fabx__card--bad .title {
-            color: #a3a3a3;
+            color: #111111;
           }
 
           /* ---------- List rows ---------- */
@@ -1986,8 +2000,8 @@
             font-weight: 500;
           }
           .why-fabx__card--bad .why-fabx__text {
-            color: #a3a3a3;
-            font-weight: 400;
+            color: #111111;
+            font-weight: 500;
           }
 
           /* ---------- Footer note ---------- */
@@ -2004,13 +2018,13 @@
             background: #fafaf9;
             border: 1px solid #e7e5e4;
             border-radius: 500px;
-            max-width: 760px;
+            max-width: 940px;
           }
           .why-fabx__footer .desc {
-            font-size: 15px;
+            font-size: 19px;
             line-height: 1.6;
-            color: var(--secondary, #525252);
-            font-weight: 400;
+            color: #111111;
+            font-weight: 600;
             margin: 0;
           }
           .why-fabx__star {
@@ -2714,7 +2728,7 @@
                       >
                     </li>
                     <li>
-                      <a href="visualroom.html" data-text="Virtual Showroom"
+                      <a href="virtualshowroom.html" data-text="Virtual Showroom"
                         ><span>Virtual Showroom</span></a
                       >
                     </li>

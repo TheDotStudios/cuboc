@@ -44,7 +44,7 @@
         height: 50px;
       }
       .service-6__wrapper {
-        padding-bottom: 200px;
+        padding-bottom: 120px;
       }
       .header-area-2 .header__logo img {
         max-width: 120px;
@@ -507,83 +507,97 @@
     <!-- Side toggle end -->
 
     <div class="has-smooth" id="has_smooth"></div>
-    <div id="smooth-wrapper">
-      <div id="smooth-content">
-        <!-- ── Header ── -->
-        <header class="header-area-2">
-          <div class="header-main">
-            <div class="container rr-container-1710">
-              <div class="header-area-2__inner">
-                <div class="header__logo">
-                  <a href="index.html">
-                    <img src="assets/imgs/cuboc-logo-transparent.png" />
-                  </a>
-                </div>
-                <div class="header__nav-2">
-                  <nav class="main-menu">
-                    <ul>
-                      <li><a href="index.html">Home</a></li>
+    <style>
+      .header-area-2 .main-menu li a,
+      .header-area-2 .header-meta .date {
+        color: white;
+      }
 
-                      <li class="menu-item-has-children">
-                        <a href="#">Company</a>
-                        <ul class="dp-menu">
-                          <li><a href="about.html">About Us</a></li>
-                          <li>
-                            <a href="recognitionNetwork.html"
-                              >Recognition &amp; Network</a
-                            >
-                          </li>
-                          <li>
-                            <a href="trade-events.html"
-                              >Trade Shows &amp; Events</a
-                            >
-                          </li>
-                        </ul>
+      /* when scrolled up — glass bg — make text black */
+      .header-area-2.nav-scrolled .main-menu li a,
+      .header-area-2.nav-scrolled .header-meta .date {
+        color: black !important;
+      }
+      .header-area-2 .main-menu ul.dp-menu li a {
+        color: white !important;
+      }
+    </style>
+    <!-- ── Header ── -->
+    <header class="header-area-2">
+      <div class="header-main">
+        <div class="container rr-container-1710">
+          <div class="header-area-2__inner">
+            <div class="header__logo">
+              <a href="index.html">
+                <img src="assets/imgs/cuboc-logo-transparent.png" />
+              </a>
+            </div>
+            <div class="header__nav-2">
+              <nav class="main-menu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+
+                  <li class="menu-item-has-children">
+                    <a href="#">Company</a>
+                    <ul class="dp-menu">
+                      <li><a href="about.html">About Us</a></li>
+                      <li>
+                        <a href="recognitionNetwork.html"
+                          >Recognition &amp; Network</a
+                        >
                       </li>
-
-                      <li class="menu-item-has-children">
-                        <a href="products.html">Products</a>
-                        <ul class="dp-menu">
-                          <li>
-                            <a href="product-01.html">Fabric Light Boxes</a>
-                          </li>
-                        </ul>
+                      <li>
+                        <a href="trade-events.html">Trade Shows &amp; Events</a>
                       </li>
-
-                      <li><a href="visualroom.html">Virtual Showroom</a></li>
-
-                      <li class="menu-item-has-children">
-                        <a href="caseStudy.html">Case Studies</a>
-                        <ul class="dp-menu">
-                          <li>
-                            <a href="caseStudiesDetails.html"
-                              >Case Studies Details</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li><a href="contact.html">Contact</a></li>
                     </ul>
-                  </nav>
+                  </li>
+
+                  <li class="menu-item-has-children">
+                    <a href="products.html">Products</a>
+                    <ul class="dp-menu">
+                      <li>
+                        <a href="product-01.html">Fabric Light Boxes</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li><a href="virtualshowroom.html">Virtual Showroom</a></li>
+
+                  <li class="menu-item-has-children">
+                    <a href="caseStudy.html">Case Studies</a>
+                    <ul class="dp-menu">
+                      <li>
+                        <a href="caseStudiesDetails.html"
+                          >Case Studies Details</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header-right">
+              <div class="header__navicon">
+                <div class="side-toggle mobile-button d-lg-block d-xl-none">
+                  <a class="bar-icon" href="javascript:void(0)"
+                    ><span></span><span></span
+                  ></a>
                 </div>
-                <div class="header-right">
-                  <div class="header__navicon">
-                    <div class="side-toggle mobile-button d-lg-block d-xl-none">
-                      <a class="bar-icon" href="javascript:void(0)"
-                        ><span></span><span></span
-                      ></a>
-                    </div>
-                    <a href="contact.html" class="rr-btn-primary bg-base-color">
-                      <span class="text">Let's Talk</span>
-                      <i class="fa-solid fa-angle-right right-icon"></i>
-                    </a>
-                  </div>
-                </div>
+                <a href="contact.html" class="rr-btn-primary bg-base-color">
+                  <span class="text">Let's Talk</span>
+                  <i class="fa-solid fa-angle-right right-icon"></i>
+                </a>
               </div>
             </div>
           </div>
-        </header>
+        </div>
+      </div>
+    </header>
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
         <!-- Header end -->
 
         <main>
@@ -1083,7 +1097,7 @@
           </section>
           <style>
             .cx-trajectory {
-              padding: 200px 0;
+              padding: 120px 0;
               background: #f8f8f8;
             }
 
@@ -1116,7 +1130,7 @@
 
             .cx-trajectory__row {
               display: grid;
-              grid-template-columns: 160px 1fr;
+              grid-template-columns: 180px 1fr;
               gap: 24px;
               padding: 24px 0;
               border-bottom: 1px solid rgba(17, 17, 17, 0.1);
@@ -1124,18 +1138,17 @@
             }
 
             .cx-trajectory__row-label {
-              font-size: 13px;
+              font-size: 18px;
               font-weight: 600;
-              letter-spacing: 0.09em;
               text-transform: uppercase;
-              color: rgba(17, 17, 17, 0.35);
+              color: black;
               padding-top: 2px;
             }
 
             .cx-trajectory__row-value {
-              font-size: 16px;
+              font-size: 18px;
               font-weight: 400;
-              color: var(--secondary);
+              color: #111111;
               line-height: 1.65;
             }
 
@@ -1146,7 +1159,7 @@
 
             .cx-trajectory__row-value em {
               font-style: italic;
-              color: rgba(17, 17, 17, 0.4);
+              color: var(--secondary);
               font-size: 13px;
             }
 
@@ -1158,9 +1171,9 @@
             }
 
             .cx-trajectory__closing p {
-              font-size: 16px;
-              font-weight: 400;
-              color: var(--secondary);
+              font-size: 18px;
+              font-weight: 500;
+              color: var(--primary);
               line-height: 1.75;
               margin: 0;
             }
@@ -1295,7 +1308,7 @@
         <style>
           /* ── Trade Show Section ── */
           .tradeshows {
-            padding: 200px 0 200px;
+            padding: 120px 0 120px;
             background: #111111;
             background-image:
               linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
@@ -1622,7 +1635,7 @@
         <style>
           .cx-always-on {
             background: #f5f5f5;
-            padding: 200px 0;
+            padding: 120px 0;
             position: relative;
             overflow: hidden;
           }
@@ -1736,20 +1749,20 @@
           }
 
           .cx-always-on__point-num {
-            font-size: 20px;
+            font-size: 24px;
             font-weight: 600;
             letter-spacing: 0.1em;
-            color: rgba(17, 17, 17, 0.2);
+            color: var(--primary);
             flex-shrink: 0;
             padding-top: 3px;
             width: 28px;
           }
 
           .cx-always-on__point-text {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 400;
             line-height: 1.7;
-            color: rgba(17, 17, 17, 0.55);
+            color: #111111;
             letter-spacing: -0.1px;
           }
 
@@ -1963,7 +1976,7 @@
         </section>
 
         <!-- ── Footer ── -->
-           <footer class="footer-4 theme-bg-primary">
+        <footer class="footer-4 theme-bg-primary">
           <div class="container rr-container-1820">
             <div class="footer-4__inner">
               <div class="footer-4__wrapper">
@@ -2019,7 +2032,7 @@
                       >
                     </li>
                     <li>
-                      <a href="visualroom.html" data-text="Virtual Showroom"
+                      <a href="virtualshowroom.html" data-text="Virtual Showroom"
                         ><span>Virtual Showroom</span></a
                       >
                     </li>

@@ -34,8 +34,256 @@
     <!-- Template Main CSS File -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
+      /* ── Slider image fix — no stretch ── */
+      .project-6__thumb img {
+        width: 100% !important;
+        height: 480px !important;
+        object-fit: cover !important;
+        display: block;
+      }
+
+      /* ── Content panel — sit flush at bottom, slide up on hover ── */
+      .project-6__content {
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        transform: translateY(100%) !important;
+      }
+      .project-6__thumb:hover .project-6__content {
+        transform: translateY(0) !important;
+      }
+
+      /* ── price-plan takes full width ── */
+      .project-6__content .price-plan {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      /* ── Bullets: hidden by default, visible on hover ── */
+      .product-bullets {
+        list-style: none;
+        padding: 0;
+        margin: 8px 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.3s ease-in-out,
+          visibility 0.3s ease-in-out;
+      }
+      .project-6__thumb:hover .product-bullets {
+        opacity: 1;
+        visibility: visible;
+      }
+      .product-bullets li {
+        font-size: 15px;
+        color: #444;
+        padding-left: 18px;
+        position: relative;
+        line-height: 1.6;
+      }
+      .product-bullets li::before {
+        content: "✦";
+        position: absolute;
+        left: 0;
+        font-size: 8px;
+        top: 3px;
+        color: #111;
+      }
       .header-area-2 .header__logo img {
         max-width: 120px;
+      }
+
+      /* ── Quote Button span fix ── */
+      .rr-btn-primary .text .span1 {
+        opacity: 1;
+        min-width: 4px;
+        transition: none;
+        color: var(--black);
+        font-weight: 500;
+        display: inline-block;
+        letter-spacing: -0.8px;
+        transform: translateX(0) scale(1);
+      }
+      .rr-btn-primary span {
+        font-size: 16px;
+        line-height: 14px;
+        color: white;
+        transition: all 0.3s;
+      }
+
+      /* ── Modal Field Styles ── */
+      .modal-field {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .modal-field input,
+      .modal-field select,
+      .modal-field textarea {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+        outline: none;
+        font-size: 15px;
+        font-weight: 400;
+        color: #111;
+        background: transparent;
+        padding: 10px 0;
+        transition: border-color 0.25s;
+        appearance: none;
+        -webkit-appearance: none;
+      }
+      .modal-field input::placeholder {
+        color: rgba(17, 17, 17, 0.4);
+      }
+      .modal-field input:focus,
+      .modal-field select:focus {
+        border-bottom-color: #111;
+      }
+      .modal-field.has-error input,
+      .modal-field.has-error select {
+        border-bottom-color: #e74c3c;
+      }
+      .modal-field .m-err {
+        font-size: 11px;
+        color: #e74c3c;
+        min-height: 16px;
+        display: block;
+      }
+
+      /* ── Modal Response Banner ── */
+      #quoteModalResponse.success {
+        background: #f0faf4;
+        color: #1a7f4b;
+        border-left: 3px solid #1a7f4b;
+      }
+      #quoteModalResponse.error {
+        background: #fff5f5;
+        color: #c0392b;
+        border-left: 3px solid #c0392b;
+      }
+
+      /* ── Modal Responsive ── */
+      @media (max-width: 576px) {
+        .modal-header {
+          padding: 20px !important;
+        }
+        .modal-body {
+          padding: 20px !important;
+        }
+      }
+
+      /* ══════════════════════════════════
+         MOBILE MENU FIX
+      ══════════════════════════════════ */
+
+      /* Show toggle on all mobile sizes (not just lg–xl) */
+      .side-toggle.mobile-button {
+        display: none;
+      }
+      @media (max-width: 1199px) {
+        .side-toggle.mobile-button {
+          display: block !important;
+        }
+      }
+
+      /* Mobile nav — full-width top-down dropdown */
+      .mobile-nav-drawer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #111;
+        z-index: 9999;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.4s ease;
+      }
+      .mobile-nav-drawer.open {
+        max-height: 100vh;
+        overflow-y: auto;
+      }
+      .mobile-nav-drawer .mob-inner {
+        padding: 24px 28px 32px;
+      }
+      .mobile-nav-drawer .mob-close {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .mobile-nav-drawer .mob-close .mob-logo {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .mobile-nav-drawer .mob-close button {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 26px;
+        cursor: pointer;
+        line-height: 1;
+        padding: 0;
+      }
+      .mobile-nav-drawer ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .mobile-nav-drawer > .mob-inner > ul > li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .mobile-nav-drawer ul li a {
+        display: block;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 15px 0;
+        text-decoration: none;
+        letter-spacing: -0.3px;
+        transition: color 0.2s;
+      }
+      .mobile-nav-drawer ul li a:hover {
+        color: rgba(255, 255, 255, 0.55);
+      }
+      /* Sub-menu */
+      .mobile-nav-drawer .mob-sub {
+        display: none;
+        padding-left: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .mobile-nav-drawer .mob-sub.open {
+        display: block;
+      }
+      .mobile-nav-drawer .mob-sub li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+      }
+      .mobile-nav-drawer .mob-sub li a {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.65);
+        padding: 10px 0;
+      }
+      /* Arrow */
+      .mob-arrow {
+        float: right;
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.45);
+        transition: transform 0.25s;
+        cursor: pointer;
+        padding: 4px 6px;
+        margin-top: 2px;
+      }
+      .mob-arrow.open {
+        transform: rotate(180deg);
       }
     </style>
   </head>
@@ -73,85 +321,84 @@
     </div>
 
     <div class="has-smooth" id="has_smooth"></div>
-    <div id="smooth-wrapper">
-      <div id="smooth-content">
-        <!-- Header area start -->
-        <header class="header-area-2">
-          <div class="header-main">
-            <div class="container rr-container-1710">
-              <div class="header-area-2__inner">
-                <div class="header__logo">
-                  <a href="index.html">
-                    <img src="assets/imgs/cuboc-logo-transparent.png" />
-                  </a>
-                </div>
-                <div class="header__nav-2">
-                  <nav class="main-menu">
-                    <ul>
-                      <li><a href="index.html">Home</a></li>
 
-                      <li class="menu-item-has-children">
-                        <a href="#">Company</a>
-                        <ul class="dp-menu">
-                          <li><a href="about.html">About Us</a></li>
-                          <li>
-                            <a href="recognitionNetwork.html"
-                              >Recognition &amp; Network</a
-                            >
-                          </li>
-                          <li>
-                            <a href="trade-events.html"
-                              >Trade Shows &amp; Events</a
-                            >
-                          </li>
-                        </ul>
+    <!-- Header area start -->
+    <header class="header-area-2">
+      <div class="header-main">
+        <div class="container rr-container-1710">
+          <div class="header-area-2__inner">
+            <div class="header__logo">
+              <a href="index.html">
+                <img src="assets/imgs/cuboc-logo-transparent.png" />
+              </a>
+            </div>
+            <div class="header__nav-2">
+              <nav class="main-menu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+
+                  <li class="menu-item-has-children">
+                    <a href="#">Company</a>
+                    <ul class="dp-menu">
+                      <li><a href="about.html">About Us</a></li>
+                      <li>
+                        <a href="recognitionNetwork.html"
+                          >Recognition &amp; Network</a
+                        >
                       </li>
-
-                      <li class="menu-item-has-children">
-                        <a href="products.html">Products</a>
-                        <ul class="dp-menu">
-                          <li>
-                            <a href="product-01.html">Fabric Light Boxes</a>
-                          </li>
-                        </ul>
+                      <li>
+                        <a href="trade-events.html">Trade Shows &amp; Events</a>
                       </li>
-
-                      <li><a href="visualroom.html">Virtual Showroom</a></li>
-
-                      <li class="menu-item-has-children">
-                        <a href="caseStudy.html">Case Studies</a>
-                        <ul class="dp-menu">
-                          <li>
-                            <a href="caseStudiesDetails.html"
-                              >Case Studies Details</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li><a href="contact.html">Contact</a></li>
                     </ul>
-                  </nav>
+                  </li>
+
+                  <li class="menu-item-has-children">
+                    <a href="products.html">Products</a>
+                    <ul class="dp-menu">
+                      <li>
+                        <a href="product-01.html">Fabric Light Boxes</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li><a href="virtualshowroom.html">Virtual Showroom</a></li>
+
+                  <li class="menu-item-has-children">
+                    <a href="caseStudy.html">Case Studies</a>
+                    <ul class="dp-menu">
+                      <li>
+                        <a href="caseStudiesDetails.html"
+                          >Case Studies Details</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header-right">
+              <div class="header__navicon">
+                <div class="side-toggle mobile-button d-lg-block d-xl-none">
+                  <a class="bar-icon" href="javascript:void(0)"
+                    ><span></span><span></span
+                  ></a>
                 </div>
-                <div class="header-right">
-                  <div class="header__navicon">
-                    <div class="side-toggle mobile-button d-lg-block d-xl-none">
-                      <a class="bar-icon" href="javascript:void(0)"
-                        ><span></span><span></span
-                      ></a>
-                    </div>
-                    <a href="contact.html" class="rr-btn-primary bg-base-color">
-                      <span class="text">Let's Talk</span>
-                      <i class="fa-solid fa-angle-right right-icon"></i>
-                    </a>
-                  </div>
-                </div>
+                <a href="contact.html" class="rr-btn-primary bg-base-color">
+                  <span class="text">Let's Talk</span>
+                  <i class="fa-solid fa-angle-right right-icon"></i>
+                </a>
               </div>
             </div>
           </div>
-        </header>
-        <!-- Header area end -->
+        </div>
+      </div>
+    </header>
+    <!-- Header area end -->
 
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
         <main>
           <div class="hero-2-scene">
             <section class="hero-2">
@@ -170,37 +417,15 @@
                     </h2>
 
                     <div style="display: flex; gap: 12px; margin-top: 20px">
-                      <style>
-                        .rr-btn-primary .text .span1 {
-                          opacity: 1;
-                          min-width: 4px;
-                          transition: none;
-                          color: var(--black);
-                          font-weight: 500;
-                          display: inline-block;
-                          letter-spacing: -0.8px;
-                          transform: translateX(0) scale(1);
-                        }
-                        .rr-btn-primary span {
-                          font-size: 16px;
-                          line-height: 14px;
-                          color: white;
-                          transition: all 0.3s;
-                        }
-                      </style>
                       <a
-                        href="contact.html"
+                        href="#"
                         class="rr-btn-primary bg-base-color text-white"
+                        data-bs-toggle="modal"
+                        data-bs-target="#quoteModal"
                       >
-                        <style></style>
-
                         Get a Quote
                         <span class="fa-regular fa-arrow-right-long i"></span>
                       </a>
-                      <!-- <a href="#range" class="rr-btn-primary">
-                        <span class="text">See the Range</span>
-                        <i class="fa-regular fa-arrow-right-long"></i>
-                      </a> -->
                     </div>
                   </div>
                 </div>
@@ -208,7 +433,6 @@
             </section>
           </div>
           <!-- /hero-2-scene -->
-
           <section class="featured-project-3">
             <div class="featured-project-3__inner">
               <div class="featured-project-3__left">
@@ -356,7 +580,6 @@
                       <div class="project-6__thumb">
                         <img
                           src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=570&h=479&auto=format&fit=crop"
-                          style="width: 570px; height: 479px"
                           alt="Fabric Light Boxes"
                         />
                         <div class="content-top">
@@ -377,14 +600,19 @@
                                 >Fabric Light Boxes</a
                               >
                             </h3>
-                            <span
-                              >Booths that assemble in minutes, pack into a car
-                              boot. Modular fabric systems for exhibitions,
-                              retail environments, and brand activations.
-                              Tool-free setup. Reusable across campaigns.
-                              FABxGO, FABxGLOW, FABxPRO — three systems, one
-                              integrated range.</span
-                            >
+                            <ul class="product-bullets">
+                              <li>
+                                Assembles in minutes, packs into a car boot
+                              </li>
+                              <li>
+                                Modular fabric for exhibitions, retail &amp;
+                                brand activations
+                              </li>
+                              <li>
+                                Tool-free setup, reusable across campaigns
+                              </li>
+                              <li>Three systems — FABxGO, FABxGLOW, FABxPRO</li>
+                            </ul>
                           </div>
                         </div>
                       </div>
@@ -397,7 +625,6 @@
                       <div class="project-6__thumb">
                         <img
                           src="https://images.unsplash.com/photo-1598520106830-8c45c2035460?w=570&h=479&auto=format&fit=crop"
-                          style="width: 570px; height: 479px"
                           alt="Standees"
                         />
                         <div class="content-top">
@@ -416,13 +643,16 @@
                             <h3 class="title">
                               <a href="project-details.html">Standees</a>
                             </h3>
-                            <span
-                              >The everyday display, engineered properly. Five
-                              variants from regular promotional units to premium
-                              chrome and modular cube systems. Smooth roll
-                              mechanisms. Stable structure. Bulk-order ready,
-                              consistent across every batch.</span
-                            >
+                            <ul class="product-bullets">
+                              <li>
+                                Five variants — regular to premium chrome &amp;
+                                modular cube
+                              </li>
+                              <li>Smooth roll mechanisms, stable structure</li>
+                              <li>
+                                Bulk-order ready, consistent across every batch
+                              </li>
+                            </ul>
                           </div>
                         </div>
                       </div>
@@ -435,7 +665,6 @@
                       <div class="project-6__thumb">
                         <img
                           src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=570&h=479&auto=format&fit=crop"
-                          style="width: 570px; height: 479px"
                           alt="Ultra Thin Glass Frames"
                         />
                         <div class="content-top">
@@ -456,13 +685,16 @@
                                 >Ultra Thin Glass Frames</a
                               >
                             </h3>
-                            <span
-                              >When the frame should disappear into the wall.
-                              Sleek, premium frames for showrooms, offices, and
-                              retail interiors. Wall-mounted, backlit, or
-                              custom-sized. Tabletop and ceiling accessories
-                              available.</span
-                            >
+                            <ul class="product-bullets">
+                              <li>
+                                Sleek frames for showrooms, offices &amp; retail
+                                interiors
+                              </li>
+                              <li>Wall-mounted, backlit, or custom-sized</li>
+                              <li>
+                                Tabletop and ceiling accessories available
+                              </li>
+                            </ul>
                           </div>
                         </div>
                       </div>
@@ -475,7 +707,6 @@
                       <div class="project-6__thumb">
                         <img
                           src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=570&h=479&auto=format&fit=crop"
-                          style="width: 570px; height: 479px"
                           alt="Battery Table Tops"
                         />
                         <div class="content-top">
@@ -496,13 +727,17 @@
                                 >Battery Table Tops</a
                               >
                             </h3>
-                            <span
-                              >Plug-free branding for counters and kiosks.
-                              Compact, portable, battery-operated. Some variants
-                              with 18-hour backup. Built for retail counters,
-                              reception desks, and small spaces where running a
-                              wire isn't an option.</span
-                            >
+                            <ul class="product-bullets">
+                              <li>
+                                Plug-free branding for counters and kiosks
+                              </li>
+                              <li>Compact, portable, battery-operated</li>
+                              <li>Some variants with 18-hour backup</li>
+                              <li>
+                                Built for retail counters, reception desks &amp;
+                                small spaces
+                              </li>
+                            </ul>
                           </div>
                         </div>
                       </div>
@@ -515,7 +750,6 @@
                       <div class="project-6__thumb">
                         <img
                           src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=570&h=479&auto=format&fit=crop"
-                          style="width: 570px; height: 479px"
                           alt="Gazebo Tents"
                         />
                         <div class="content-top">
@@ -534,14 +768,17 @@
                             <h3 class="title">
                               <a href="project-details.html">Gazebo Tents</a>
                             </h3>
-                            <span
-                              >Outdoor branding, up in minutes, down in minutes.
-                              Steel-frame gazebo tents for outdoor events,
-                              activations, and pop-ups. Three sizes — 3.0×3.0 m,
-                              4.5×3.0 m, 6.0×3.0 m. Customisable prints,
-                              all-weather protection, quick setup and
-                              teardown.</span
-                            >
+                            <ul class="product-bullets">
+                              <li>
+                                Steel-frame tents for outdoor events &amp;
+                                pop-ups
+                              </li>
+                              <li>Three sizes — 3×3m, 4.5×3m, 6×3m</li>
+                              <li>
+                                Customisable prints, all-weather protection
+                              </li>
+                              <li>Quick setup and teardown</li>
+                            </ul>
                           </div>
                         </div>
                       </div>
@@ -1329,7 +1566,7 @@
           }
         </style>
         <!-- footer area start  -->
-           <footer class="footer-4 theme-bg-primary">
+        <footer class="footer-4 theme-bg-primary">
           <div class="container rr-container-1820">
             <div class="footer-4__inner">
               <div class="footer-4__wrapper">
@@ -1385,7 +1622,7 @@
                       >
                     </li>
                     <li>
-                      <a href="visualroom.html" data-text="Virtual Showroom"
+                      <a href="virtualshowroom.html" data-text="Virtual Showroom"
                         ><span>Virtual Showroom</span></a
                       >
                     </li>
@@ -1477,5 +1714,396 @@
     <!-- Template Main JS File -->
     <script src="assets/vandor/common-js/common.js"></script>
     <script src="assets/js/main.js"></script>
+    <!-- ── MOBILE NAV DRAWER (top-down) ── -->
+    <div class="mobile-nav-drawer" id="mobDrawer">
+      <div class="mob-inner">
+        <div class="mob-close">
+          <span class="mob-logo">Cuboc</span>
+          <button id="mobCloseBtn" aria-label="Close menu">&#x2715;</button>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+
+          <li>
+            <a href="#"
+              >Company
+              <span class="mob-arrow" data-sub="mobSub1">&#9660;</span></a
+            >
+            <ul class="mob-sub" id="mobSub1">
+              <li><a href="about.html">About Us</a></li>
+              <li>
+                <a href="recognitionNetwork.html">Recognition &amp; Network</a>
+              </li>
+              <li><a href="trade-events.html">Trade Shows &amp; Events</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="products.html"
+              >Products
+              <span class="mob-arrow" data-sub="mobSub2">&#9660;</span></a
+            >
+            <ul class="mob-sub" id="mobSub2">
+              <li><a href="product-01.html">Fabric Light Boxes</a></li>
+            </ul>
+          </li>
+
+          <li><a href="virtualshowroom.html">Virtual Showroom</a></li>
+
+          <li>
+            <a href="caseStudy.html"
+              >Case Studies
+              <span class="mob-arrow" data-sub="mobSub3">&#9660;</span></a
+            >
+            <ul class="mob-sub" id="mobSub3">
+              <li>
+                <a href="caseStudiesDetails.html">Case Studies Details</a>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- ── END MOBILE NAV DRAWER ── -->
+
+    <script>
+      (function () {
+        var drawer = document.getElementById("mobDrawer");
+        var closeBtn = document.getElementById("mobCloseBtn");
+        var toggleBtn = document.querySelector(
+          ".side-toggle.mobile-button .bar-icon",
+        );
+
+        function openMenu() {
+          drawer.classList.add("open");
+          document.body.style.overflow = "hidden";
+        }
+        function closeMenu() {
+          drawer.classList.remove("open");
+          document.body.style.overflow = "";
+        }
+
+        if (toggleBtn)
+          toggleBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            openMenu();
+          });
+        if (closeBtn) closeBtn.addEventListener("click", closeMenu);
+
+        document.querySelectorAll(".mob-arrow").forEach(function (arrow) {
+          arrow.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var sub = document.getElementById(arrow.getAttribute("data-sub"));
+            if (!sub) return;
+            sub.classList.toggle("open");
+            arrow.classList.toggle("open");
+          });
+        });
+      })();
+    </script>
+
+    <!-- ── QUOTE MODAL (outside smooth-wrapper so GSAP does not clip it) ── -->
+    <div
+      class="modal fade"
+      id="quoteModal"
+      tabindex="-1"
+      aria-labelledby="quoteModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content" style="border-radius: 0; border: none">
+          <!-- Header -->
+          <div
+            class="modal-header"
+            style="
+              border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+              padding: 28px 36px;
+            "
+          >
+            <div>
+              <p
+                style="
+                  font-size: 11px;
+                  font-weight: 600;
+                  letter-spacing: 0.13em;
+                  text-transform: uppercase;
+                  color: rgba(17, 17, 17, 0.4);
+                  margin-bottom: 6px;
+                "
+              >
+                ENQUIRY
+              </p>
+              <h5
+                class="modal-title"
+                id="quoteModalLabel"
+                style="
+                  font-size: 28px;
+                  font-weight: 500;
+                  letter-spacing: -1px;
+                  color: #111;
+                  margin: 0;
+                "
+              >
+                Get a Quote
+              </h5>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <!-- Body -->
+          <div class="modal-body" style="padding: 36px">
+            <form id="quoteModalForm" novalidate>
+              <!-- Row 1: Name + Company -->
+              <div class="row g-3 mb-3">
+                <div class="col-12 col-sm-6">
+                  <div class="modal-field">
+                    <input
+                      type="text"
+                      id="m_name"
+                      name="name"
+                      placeholder="Name*"
+                    />
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="modal-field">
+                    <input
+                      type="text"
+                      id="m_company"
+                      name="company"
+                      placeholder="Company Name*"
+                    />
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 2: Phone + Email -->
+              <div class="row g-3 mb-3">
+                <div class="col-12 col-sm-6">
+                  <div class="modal-field">
+                    <input
+                      type="tel"
+                      id="m_phone"
+                      name="phone"
+                      placeholder="Phone Number*"
+                    />
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="modal-field">
+                    <input
+                      type="email"
+                      id="m_email"
+                      name="email"
+                      placeholder="Email Address*"
+                    />
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 3: Product + Quantity -->
+              <div class="row g-3 mb-3">
+                <div class="col-12 col-sm-6">
+                  <div class="modal-field">
+                    <select id="m_product" name="product">
+                      <option value="0">Product of Interest*</option>
+                      <option value="1">Fabric Light Boxes</option>
+                      <option value="2">Standees</option>
+                      <option value="3">Ultra Thin Glass Frames</option>
+                      <option value="4">Battery Table Tops</option>
+                      <option value="5">Gazebo Tents</option>
+                      <option value="6">Custom</option>
+                      <option value="7">Not Sure Yet</option>
+                    </select>
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="modal-field">
+                    <input
+                      type="text"
+                      id="m_qty"
+                      name="quantity"
+                      placeholder="Approximate Quantity*"
+                    />
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 4: Requirement -->
+              <div class="row g-3 mb-4">
+                <div class="col-12">
+                  <div class="modal-field">
+                    <input
+                      type="text"
+                      id="m_req"
+                      name="requirement"
+                      placeholder="Your Requirement*"
+                    />
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Submit -->
+              <div class="d-flex justify-content-end">
+                <button
+                  type="submit"
+                  class="rr-btn-primary"
+                  style="background: #111; color: #fff; border-color: #111"
+                >
+                  <span>Send Enquiry</span>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </button>
+              </div>
+
+              <!-- Response Message -->
+              <div
+                id="quoteModalResponse"
+                style="
+                  display: none;
+                  margin-top: 20px;
+                  padding: 16px 20px;
+                  font-size: 14px;
+                  font-weight: 500;
+                "
+              ></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ── END QUOTE MODAL ── -->
+
+    <script>
+      (function () {
+        var mFields = [
+          { id: "m_name", label: "Name", type: "text" },
+          { id: "m_company", label: "Company Name", type: "text" },
+          { id: "m_phone", label: "Phone Number", type: "phone" },
+          { id: "m_email", label: "Email Address", type: "email" },
+          { id: "m_product", label: "Product of Interest", type: "select" },
+          { id: "m_qty", label: "Approximate Quantity", type: "text" },
+          { id: "m_req", label: "Your Requirement", type: "text" },
+        ];
+
+        function isValidEmail(v) {
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+        }
+        function isValidPhone(v) {
+          return /^[+]?[\d\s\-().]{7,15}$/.test(v.trim());
+        }
+
+        function setError(f, msg) {
+          var el = document.getElementById(f.id);
+          var wrap = el.closest(".modal-field");
+          wrap.classList.add("has-error");
+          wrap.querySelector(".m-err").textContent = msg;
+        }
+        function clearErr(el) {
+          var wrap = el.closest(".modal-field");
+          wrap.classList.remove("has-error");
+          wrap.querySelector(".m-err").textContent = "";
+        }
+        function showResponse(type, msg) {
+          var box = document.getElementById("quoteModalResponse");
+          box.className = type;
+          box.textContent = msg;
+          box.style.display = "block";
+          box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+        function hideResponse() {
+          var box = document.getElementById("quoteModalResponse");
+          box.style.display = "none";
+          box.className = "";
+          box.textContent = "";
+        }
+
+        /* Attach listeners once DOM is ready */
+        mFields.forEach(function (f) {
+          var el = document.getElementById(f.id);
+          if (!el) return;
+          ["input", "change"].forEach(function (ev) {
+            el.addEventListener(ev, function () {
+              clearErr(el);
+            });
+          });
+        });
+
+        /* Reset on modal close */
+        document
+          .getElementById("quoteModal")
+          .addEventListener("hidden.bs.modal", function () {
+            document.getElementById("quoteModalForm").reset();
+            mFields.forEach(function (f) {
+              var el = document.getElementById(f.id);
+              if (el) clearErr(el);
+            });
+            hideResponse();
+          });
+
+        /* Submit */
+        document
+          .getElementById("quoteModalForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+            hideResponse();
+
+            var valid = true;
+            var firstInvalid = null;
+
+            mFields.forEach(function (f) {
+              var el = document.getElementById(f.id);
+              if (!el) return;
+              var val = el.value;
+
+              if (!val || val.trim() === "" || val === "0") {
+                setError(f, f.label + " is required.");
+                valid = false;
+                if (!firstInvalid) firstInvalid = el;
+                return;
+              }
+              if (f.type === "email" && !isValidEmail(val)) {
+                setError(f, "Please enter a valid email address.");
+                valid = false;
+                if (!firstInvalid) firstInvalid = el;
+                return;
+              }
+              if (f.type === "phone" && !isValidPhone(val)) {
+                setError(f, "Please enter a valid phone number.");
+                valid = false;
+                if (!firstInvalid) firstInvalid = el;
+                return;
+              }
+            });
+
+            if (!valid) {
+              if (firstInvalid) firstInvalid.focus();
+              return;
+            }
+
+            showResponse(
+              "success",
+              "✓  Thank you! We've received your enquiry and will get back to you within 1 working day.",
+            );
+            document.getElementById("quoteModalForm").reset();
+          });
+      })();
+    </script>
   </body>
 </html>
