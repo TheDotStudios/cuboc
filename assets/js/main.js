@@ -1077,4 +1077,98 @@
   //     });
   //   });
   // }
+  /* === scroll-up navbar (index 26) === */
+  /* === scroll-up navbar (index 26) === */
+  /* === scroll-up navbar (index 26) === */
+  (function () {
+    var header = document.querySelector(".header-area-2");
+    if (!header) return;
+
+    var lastScroll = 0;
+    var threshold = 80;
+    var delta = 5;
+
+    function onScroll(current) {
+      if (Math.abs(current - lastScroll) < delta) return;
+
+      if (current <= threshold) {
+        header.classList.remove("nav-hidden");
+        header.classList.remove("nav-scrolled");
+      } else if (current > lastScroll) {
+        header.classList.add("nav-hidden");
+        header.classList.add("nav-scrolled");
+      } else {
+        header.classList.remove("nav-hidden");
+        header.classList.add("nav-scrolled");
+      }
+
+      lastScroll = current;
+    }
+
+    // Works with both GSAP ScrollSmoother and normal scroll
+    window.addEventListener("scroll", function () {
+      onScroll(window.scrollY);
+    });
+
+    // Fallback for ScrollSmoother (which uses #smooth-wrapper scroll)
+    var sw = document.getElementById("smooth-wrapper");
+    if (sw) {
+      sw.addEventListener("scroll", function () {
+        onScroll(sw.scrollTop);
+      });
+    }
+  })();
+
+  (function () {
+    var input = document.getElementById("email");
+    var btn = input
+      ? input.closest(".newsletter").querySelector("button")
+      : null;
+    if (!input || !btn) return;
+
+    /* create message el */
+    var msg = document.createElement("p");
+    msg.style.cssText = "margin:8px 0 0;font-size:13px;font-weight:500;";
+    input.closest(".newsletter").appendChild(msg);
+
+    function showMsg(text, color) {
+      msg.textContent = text;
+      msg.style.color = color;
+    }
+
+    btn.addEventListener("click", function () {
+      var val = input.value.trim();
+
+      /* validation */
+      if (!val) {
+        showMsg("Please enter your email address.", "#ff6b6b");
+        input.focus();
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
+        showMsg("Please enter a valid email address.", "#ff6b6b");
+        input.focus();
+        return;
+      }
+
+      /* success */
+      showMsg("✓ You're subscribed! Thank you.", "#4caf50");
+      input.value = "";
+
+      /* clear after 4s */
+      setTimeout(function () {
+        msg.textContent = "";
+      }, 4000);
+    });
+
+    /* clear error on type */
+    input.addEventListener("input", function () {
+      if (msg.style.color === "rgb(255, 107, 107)") msg.textContent = "";
+    });
+
+    /* allow Enter key */
+    input.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") btn.click();
+    });
+  })();
 })(jQuery);

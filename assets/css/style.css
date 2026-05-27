@@ -24273,3 +24273,55 @@ section {
   font-family: var(--font_body);
   text-transform: uppercase;
 }
+
+@media (min-width: 1200px) and (max-width: 1399px) and (orientation: landscape) {
+  .hero-2__inner {
+    padding-top: 120px;
+  }
+  .hero-2-content .title {
+    font-size: 100px;
+  }
+  .about-hero {
+    min-height: 100vh;
+  }
+  .about-hero__inner {
+    padding-bottom: 120px;
+  }
+  .service-4__inner .service-4__item > .title {
+    bottom: 13px;
+    font-size: 27px;
+  }
+  .service-6__dec {
+    max-width: 370px;
+  }
+  .experience-4-wrapper .experience-4__content {
+    flex-wrap: nowrap;
+  }
+  .brand-marquee-wrap {
+    max-width: 320px;
+  }
+}
+/* ── Sticky show-on-scroll-up navbar ── */
+/* ── Sticky show-on-scroll-up navbar ── */
+.header-area-2 {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9990;
+  transform: translateY(0);
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    backdrop-filter 0.35s ease;
+}
+.header-area-2.nav-hidden {
+  transform: translateY(-100%);
+}
+.header-area-2.nav-scrolled {
+  background: rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
