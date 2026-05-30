@@ -43,6 +43,9 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <style>
+      .experience-4__item .sub-title {
+        font-size: 40px;
+      }
       .experience-4-wrapper .experience-4__content .desc {
         font-size: 16px;
         font-weight: 500;
@@ -321,7 +324,10 @@
                 </div>
                 <a href="contact.html" class="rr-btn-primary bg-base-color">
                   <span class="text">Let's Talk</span>
-                  <i class="fa-solid fa-angle-right right-icon"></i>
+                  <i
+                    class="fa-solid fa-arrow-right text-white"
+                    style="rotate: -45deg"
+                  ></i>
                 </a>
               </div>
             </div>
@@ -356,244 +362,315 @@
               </div>
             </div>
           </div>
-          <section class="experience-4">
+          <style>
+            .exp4-section {
+              border-bottom: 1px solid #e9e9e9;
+              margin-bottom: 150px;
+            }
+
+            .exp4-row1 {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 0;
+              border-left: 1px solid #e9e9e9;
+              border-right: 1px solid #e9e9e9;
+            }
+
+            .exp4-row1__left {
+              padding-top: 150px;
+              border-right: 1px solid #e9e9e9;
+            }
+
+            .exp4-row1__right {
+              padding: 100px 48px;
+              display: flex;
+              align-items: center;
+            }
+
+            .exp4-row1__right p {
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 1.7;
+              color: var(--secondary);
+              letter-spacing: -0.48px;
+              margin: 0;
+              position: relative;
+              top: 40px;
+            }
+
+            .exp4-row2 {
+              border-top: 1px solid #e9e9e9;
+              border-left: 1px solid #e9e9e9;
+              border-right: 1px solid #e9e9e9;
+              padding: 80px 0;
+              overflow: hidden;
+            }
+
+            .brand-marquee-wrap {
+              overflow: hidden;
+              width: 100%;
+            }
+
+            .brand-marquee-track {
+              display: flex;
+              gap: 48px;
+              width: max-content;
+              animation: marquee-scroll 22s linear infinite;
+            }
+
+            .brand-marquee-wrap:hover .brand-marquee-track {
+              animation-play-state: paused;
+            }
+
+            .brand-pill {
+              flex-shrink: 0;
+              padding: 10px 24px;
+              background: #fff;
+            }
+
+            .brand-pill img {
+              height: 60px;
+              width: auto;
+              max-width: 120px;
+              object-fit: contain;
+              display: block;
+            }
+
+            @keyframes marquee-scroll {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-33.333%);
+              }
+            }
+
+            /* only override layout of the wrapper, let theme handle fonts */
+            .exp4-row3 .experience-4__wrapper {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              border-top: 1px solid #e9e9e9;
+              border-left: 1px solid #e9e9e9;
+              border-right: 1px solid #e9e9e9;
+            }
+
+            .exp4-row3 .experience-4__item {
+              padding: 60px 48px;
+              border-right: 1px solid #e9e9e9;
+            }
+
+            .exp4-row3 .experience-4__item:last-child {
+              border-right: none;
+            }
+
+            @media (max-width: 991px) {
+              .exp4-row1 {
+                grid-template-columns: 1fr;
+              }
+              .exp4-row1__left {
+                border-right: none;
+                border-bottom: 1px solid #e9e9e9;
+              }
+              .exp4-row3 .experience-4__wrapper {
+                grid-template-columns: repeat(2, 1fr);
+              }
+            }
+
+            @media (max-width: 575px) {
+              .exp4-row3 .experience-4__wrapper {
+                grid-template-columns: 1fr;
+              }
+              .exp4-row3 .experience-4__item {
+                border-right: none;
+                border-bottom: 1px solid #e9e9e9;
+              }
+            }
+          </style>
+
+          <section class="exp4-section experience-4">
             <div class="experience-4__inner">
               <div class="container rr-container-1710">
-                <div class="experience-4-wrapper">
-                  <div class="experience-4__box">
+                <!-- Row 1: heading left, para right -->
+                <div class="exp4-row1">
+                  <div class="exp4-row1__left">
                     <div class="section-title-4__wrapper fade-anim">
                       <h2 class="sub-title01">Brands That Chose Us</h2>
                       <h2 class="title rr_title_anim">
                         The Names You Know.<br />The Work
                         <span class="base-text-color">You Don't See.</span>
                       </h2>
-                      <p class="mt-4">
-                        Our products sit in retail counters, exhibition stalls,
-                        and brand environments for companies you recognise —
-                        even if our logo isn't the one on display. 300 more
-                        across water purification, fashion, mobile accessories,
-                        workspace, signage, and specialised equipment.
-                      </p>
                     </div>
                   </div>
-                  <div class="experience-4__box">
-                    <div class="experience-4__content">
-                      <!-- ── Brand Marquee ── -->
-                      <style>
-                        .experience-4__box {
-                          min-width: 0;
-                        }
-                        .brand-marquee-wrap {
-                          overflow: hidden;
-                          width: 100%;
-                          max-width: 360px; /* ADD THIS */
-                          /* margin-bottom: 20px; */
-                          /* -webkit-mask-image: linear-gradient(
-                            to right,
-                            transparent 0%,
-                            black 12%,
-                            black 88%,
-                            transparent 100%
-                          );
-                          mask-image: linear-gradient(
-                            to right,
-                            transparent 0%,
-                            black 12%,
-                            black 88%,
-                            transparent 100%
-                          ); */
-                        }
-                        .brand-marquee-track {
-                          display: flex;
-                          gap: 16px;
-                          width: max-content;
-                          animation: marquee-scroll 22s linear infinite;
-                        }
-                        .brand-marquee-wrap:hover .brand-marquee-track {
-                          animation-play-state: paused;
-                        }
-                        .brand-pill {
-                          flex-shrink: 0;
-                          padding: 10px 24px;
-                          font-size: 14px;
-                          font-weight: 600;
-                          letter-spacing: 0.04em;
-                          text-transform: uppercase;
-                          color: #111;
-                          white-space: nowrap;
-                          background: #fff;
-                          /* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06); */
-                        }
-                        .brand-pill img {
-                          height: 100px;
-                          width: auto;
-                          max-width: 120px;
-                          object-fit: contain;
-                          display: block;
-                        }
-                        @keyframes marquee-scroll {
-                          0% {
-                            transform: translateX(0);
-                          }
-                          100% {
-                            transform: translateX(-33.333%);
-                          }
-                        }
-                      </style>
-                      <div class="brand-marquee-wrap">
-                        <div
-                          class="brand-marquee-track"
-                          style="position: relative; top: 50px"
-                        >
-                          <!-- set 1 -->
-                          <div class="brand-pill">
-                            <img
-                              src="assets/imgs/relience1.png"
-                              alt="Reliance"
-                            />
-                          </div>
-                          <div class="brand-pill">
-                            <img
-                              src="assets/imgs/Aditya_Birla_Group.webp"
-                              alt="Aditya Birla"
-                            />
-                          </div>
-                          <div class="brand-pill">
-                            <img
-                              src="assets/imgs/marine.webp"
-                              alt="Marine Captain Pure"
-                            />
-                          </div>
-                          <div class="brand-pill">
-                            <img src="assets/imgs/robo1.webp" alt="Robotek" />
-                          </div>
-                          <div class="brand-pill">
-                            <img
-                              src="assets/imgs/rockworthlogotransparent.png"
-                              alt="Rockworth"
-                            />
-                          </div>
-                          <div class="brand-pill">
-                            <img
-                              src="assets/imgs/falcon.png"
-                              alt="Falcon Tattoo"
-                            />
-                          </div>
-                          <div class="brand-pill">
-                            <img
-                              src="assets/imgs/satya.avif"
-                              alt="Satya Paul"
-                            />
-                          </div>
-                          <!-- set 2 -->
-                          <div class="brand-pill">
-                            <img
-                              src="assets/imgs/relience1.png"
-                              alt="Reliance"
-                            />
-                          </div>
-                          <div class="brand-pill">
-                            <img
-                              src="assets/imgs/Aditya_Birla_Group.webp"
-                              alt="Aditya Birla"
-                            />
-                          </div>
-                          <div class="brand-pill">
-                            <img
-                              src="assets/imgs/marine.webp"
-                              alt="Marine Captain Pure"
-                            />
-                          </div>
-                          <div class="brand-pill">
-                            <img src="assets/imgs/robo1.webp" alt="Robotek" />
-                          </div>
-                          <div class="brand-pill">
-                            <img
-                              src="assets/imgs/rockworthlogotransparent.png"
-                              alt="Rockworth"
-                            />
-                          </div>
-                          <div class="brand-pill">
-                            <img
-                              src="assets/imgs/falcon.png"
-                              alt="Falcon Tattoo"
-                            />
-                          </div>
-                          <div class="brand-pill">
-                            <img
-                              src="assets/imgs/satya.avif"
-                              alt="Satya Paul"
-                            />
-                          </div>
-                          <!-- set 3 -->
-                          <div class="brand-pill">
-                            <img
-                              src="assets/imgs/relience1.png"
-                              alt="Reliance"
-                            />
-                          </div>
-                          <div class="brand-pill">
-                            <img
-                              src="assets/imgs/Aditya_Birla_Group.webp"
-                              alt="Aditya Birla"
-                            />
-                          </div>
-                          <div class="brand-pill">
-                            <img
-                              src="assets/imgs/marine.webp"
-                              alt="Marine Captain Pure"
-                            />
-                          </div>
-                          <div class="brand-pill">
-                            <img src="assets/imgs/robo1.webp" alt="Robotek" />
-                          </div>
-                          <div class="brand-pill">
-                            <img
-                              src="assets/imgs/rockworthlogotransparent.png"
-                              alt="Rockworth"
-                            />
-                          </div>
-                          <div class="brand-pill">
-                            <img
-                              src="assets/imgs/falcon.png"
-                              alt="Falcon Tattoo"
-                            />
-                          </div>
-                          <div class="brand-pill">
-                            <img
-                              src="assets/imgs/satya.avif"
-                              alt="Satya Paul"
-                            />
-                          </div>
-                        </div>
-                      </div>
+                  <div class="exp4-row1__right">
+                    <p>
+                      Our products sit in retail counters, exhibition stalls,
+                      and brand environments for companies you recognise — even
+                      if our logo isn't the one on display. 300 more across
+                      water purification, fashion, mobile accessories,
+                      workspace, signage, and specialised equipment.
+                    </p>
+                  </div>
+                </div>
 
-                      <div class="experience-4__wrapper">
-                        <div class="experience-4__item">
-                          <h2 class="title">
-                            <span class="odometer" data-count="300">300</span>+
-                          </h2>
-                          <h3 class="sub-title">customers</h3>
-                        </div>
-                        <div class="experience-4__item">
-                          <h2 class="title">
-                            <span class="odometer" data-count="50">50</span>+
-                          </h2>
-                          <h3 class="sub-title">Dealer partners</h3>
-                        </div>
-                        <div class="experience-4__item">
-                          <h2 class="title">
-                            <span class="odometer" data-count="38">38 </span>
-                          </h2>
-                          <h3 class="sub-title">cities</h3>
-                        </div>
-                        <div class="experience-4__item">
-                          <h2 class="title">
-                            <span class="odometer" data-count="90">90</span>
-                          </h2>
-                          <h3 class="sub-title">Indian states</h3>
-                        </div>
+                <!-- Row 2: full width marquee -->
+                <div class="exp4-row2">
+                  <div class="brand-marquee-wrap">
+                    <div class="brand-marquee-track">
+                      <!-- set 1 -->
+                      <div class="brand-pill">
+                        <img src="assets/imgs/relience1.png" alt="Reliance" />
                       </div>
+                      <div class="brand-pill">
+                        <img
+                          src="assets/imgs/Aditya_Birla_Group.webp"
+                          alt="Aditya Birla"
+                        />
+                      </div>
+                      <div class="brand-pill">
+                        <img
+                          src="assets/imgs/marine.webp"
+                          alt="Marine Captain Pure"
+                        />
+                      </div>
+                      <div class="brand-pill">
+                        <img src="assets/imgs/robo1.webp" alt="Robotek" />
+                      </div>
+                      <div class="brand-pill">
+                        <img
+                          src="assets/imgs/rockworthlogotransparent.png"
+                          alt="Rockworth"
+                        />
+                      </div>
+                      <div class="brand-pill">
+                        <img src="assets/imgs/falcon.png" alt="Falcon Tattoo" />
+                      </div>
+                      <div class="brand-pill">
+                        <img src="assets/imgs/satya.avif" alt="Satya Paul" />
+                      </div>
+                      <!-- set 2 -->
+                      <div class="brand-pill">
+                        <img src="assets/imgs/relience1.png" alt="Reliance" />
+                      </div>
+                      <div class="brand-pill">
+                        <img
+                          src="assets/imgs/Aditya_Birla_Group.webp"
+                          alt="Aditya Birla"
+                        />
+                      </div>
+                      <div class="brand-pill">
+                        <img
+                          src="assets/imgs/marine.webp"
+                          alt="Marine Captain Pure"
+                        />
+                      </div>
+                      <div class="brand-pill">
+                        <img src="assets/imgs/robo1.webp" alt="Robotek" />
+                      </div>
+                      <div class="brand-pill">
+                        <img
+                          src="assets/imgs/rockworthlogotransparent.png"
+                          alt="Rockworth"
+                        />
+                      </div>
+                      <div class="brand-pill">
+                        <img src="assets/imgs/falcon.png" alt="Falcon Tattoo" />
+                      </div>
+                      <div class="brand-pill">
+                        <img src="assets/imgs/satya.avif" alt="Satya Paul" />
+                      </div>
+                      <!-- set 3 -->
+                      <div class="brand-pill">
+                        <img src="assets/imgs/relience1.png" alt="Reliance" />
+                      </div>
+                      <div class="brand-pill">
+                        <img
+                          src="assets/imgs/Aditya_Birla_Group.webp"
+                          alt="Aditya Birla"
+                        />
+                      </div>
+                      <div class="brand-pill">
+                        <img
+                          src="assets/imgs/marine.webp"
+                          alt="Marine Captain Pure"
+                        />
+                      </div>
+                      <div class="brand-pill">
+                        <img src="assets/imgs/robo1.webp" alt="Robotek" />
+                      </div>
+                      <div class="brand-pill">
+                        <img
+                          src="assets/imgs/rockworthlogotransparent.png"
+                          alt="Rockworth"
+                        />
+                      </div>
+                      <div class="brand-pill">
+                        <img src="assets/imgs/falcon.png" alt="Falcon Tattoo" />
+                      </div>
+                      <div class="brand-pill">
+                        <img src="assets/imgs/satya.avif" alt="Satya Paul" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Row 3: stats using original theme classes -->
+                <div class="exp4-row3">
+                  <div class="experience-4__wrapper">
+                    <div class="experience-4__item">
+                      <h2 class="title">
+                        <span
+                          class="odometer"
+                          data-count="300"
+                          style="
+                            font-family:
+                              &quot;Bai Jamjuree&quot;, sans-serif !important;
+                          "
+                          >300</span
+                        >+
+                      </h2>
+                      <h3 class="sub-title">customers</h3>
+                    </div>
+                    <div class="experience-4__item">
+                      <h2 class="title">
+                        <span
+                          class="odometer"
+                          data-count="50"
+                          style="
+                            font-family:
+                              &quot;Bai Jamjuree&quot;, sans-serif !important;
+                          "
+                          >50</span
+                        >+
+                      </h2>
+                      <h3 class="sub-title">Dealer partners</h3>
+                    </div>
+                    <div class="experience-4__item">
+                      <h2 class="title">
+                        <span
+                          class="odometer"
+                          data-count="38"
+                          style="
+                            font-family:
+                              &quot;Bai Jamjuree&quot;, sans-serif !important;
+                          "
+                          >38</span
+                        >
+                      </h2>
+                      <h3 class="sub-title">cities</h3>
+                    </div>
+                    <div class="experience-4__item">
+                      <h2 class="title">
+                        <span
+                          class="odometer"
+                          data-count="90"
+                          style="
+                            font-family:
+                              &quot;Bai Jamjuree&quot;, sans-serif !important;
+                          "
+                          >90</span
+                        >
+                      </h2>
+                      <h3 class="sub-title">Indian states</h3>
                     </div>
                   </div>
                 </div>
@@ -624,56 +701,182 @@
                     These are strong claims. We make them because they hold up.
                   </p>
                 </div>
+
                 <div class="award-3__content">
-                  <ul class="award-3__list">
-                    <li>
-                      India's first modular Cube Standee
-                      <span style="font-size: 35px">01</span>
-                    </li>
-                    <li>
-                      <p>
-                        A standee that reconfigures into walls, pillars, and
-                        backdrops. Before Cuboc, nobody in India was making one.
-                      </p>
-                    </li>
-                    <li>
-                      Only manufacturer in India of FABxGO Non-Lit Fabric Boxes
-                      <span style="font-size: 35px">02</span>
-                    </li>
-                    <li>
-                      <p>
-                        Lightweight, modular, tool-free fabric systems. One
-                        factory in the country builds them. It's ours.
-                      </p>
-                    </li>
-                    <li>
-                      Only North India hub for this specialised roll-up variety
-                      <span style="font-size: 35px">03</span>
-                    </li>
-                    <li>
-                      <p>
-                        The Delhi region's single manufacturing source for this
-                        specific standee build. Dealers across north India
-                        source from here or they source from imports.
-                      </p>
-                    </li>
-                    <li>
-                      Only Indian factory building modular and portable fabric
-                      boxes <span style="font-size: 35px">04</span>
-                    </li>
-                    <li>
-                      <p>
-                        The entire country has one factory manufacturing this
-                        category end-to-end. Again — ours.
-                      </p>
-                    </li>
-                  </ul>
+                  <div class="cub-accordion">
+                    <div class="cub-acc__item cub-acc__item--open">
+                      <button class="cub-acc__head">
+                        <span class="cub-acc__num">01</span>
+                        <span class="cub-acc__title"
+                          >India's first modular Cube Standee</span
+                        >
+                        <i class="fa-solid fa-plus cub-acc__icon"></i>
+                      </button>
+                      <div class="cub-acc__body">
+                        <p>
+                          A standee that reconfigures into walls, pillars, and
+                          backdrops. Before Cuboc, nobody in India was making
+                          one.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="cub-acc__item">
+                      <button class="cub-acc__head">
+                        <span class="cub-acc__num">02</span>
+                        <span class="cub-acc__title"
+                          >Only manufacturer in India of FABxGO Non-Lit Fabric
+                          Boxes</span
+                        >
+                        <i class="fa-solid fa-plus cub-acc__icon"></i>
+                      </button>
+                      <div class="cub-acc__body">
+                        <p>
+                          Lightweight, modular, tool-free fabric systems. One
+                          factory in the country builds them. It's ours.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="cub-acc__item">
+                      <button class="cub-acc__head">
+                        <span class="cub-acc__num">03</span>
+                        <span class="cub-acc__title"
+                          >Only North India hub for this specialised roll-up
+                          variety</span
+                        >
+                        <i class="fa-solid fa-plus cub-acc__icon"></i>
+                      </button>
+                      <div class="cub-acc__body">
+                        <p>
+                          The Delhi region's single manufacturing source for
+                          this specific standee build. Dealers across north
+                          India source from here or they source from imports.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="cub-acc__item">
+                      <button class="cub-acc__head">
+                        <span class="cub-acc__num">04</span>
+                        <span class="cub-acc__title"
+                          >Only Indian factory building modular and portable
+                          fabric boxes</span
+                        >
+                        <i class="fa-solid fa-plus cub-acc__icon"></i>
+                      </button>
+                      <div class="cub-acc__body">
+                        <p>
+                          The entire country has one factory manufacturing this
+                          category end-to-end. Again — ours.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
+        <style>
+          .cub-accordion {
+            width: 100%;
+          }
+
+          .cub-acc__item {
+            border-top: 1px solid #dadada;
+          }
+
+          .cub-acc__item:last-child {
+            border-bottom: 1px solid #dadada;
+          }
+
+          .cub-acc__head {
+            width: 100%;
+            background: transparent;
+            border: none;
+            padding: 23.5px 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+            text-align: left;
+          }
+
+          .cub-acc__num {
+            font-size: 35px;
+            font-weight: 500;
+            color: rgba(17, 17, 17, 0.35);
+            font-family: var(--font_bai);
+            letter-spacing: -0.6px;
+            flex-shrink: 0;
+          }
+
+          .cub-acc__title {
+            flex: 1;
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--primary);
+            font-family: var(--font_bai);
+            line-height: 1.3;
+            letter-spacing: -0.6px;
+          }
+
+          .cub-acc__icon {
+            color: var(--primary);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            margin-left: auto;
+          }
+
+          .cub-acc__item--open .cub-acc__icon {
+            transform: rotate(45deg);
+          }
+
+          .cub-acc__body {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+          }
+
+          .cub-acc__item--open .cub-acc__body {
+            max-height: 300px;
+          }
+
+          .cub-acc__body p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0 0 24px 0;
+            font-family: var(--font_bai);
+            letter-spacing: -0.48px;
+          }
+          .cub-acc__body {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            padding-left: 55px;
+          }
+        </style>
+
+        <script>
+          document.querySelectorAll(".cub-acc__head").forEach(function (btn) {
+            btn.addEventListener("click", function () {
+              var item = this.closest(".cub-acc__item");
+              var isOpen = item.classList.contains("cub-acc__item--open");
+              document
+                .querySelectorAll(".cub-acc__item")
+                .forEach(function (el) {
+                  el.classList.remove("cub-acc__item--open");
+                });
+              if (!isOpen) {
+                item.classList.add("cub-acc__item--open");
+              }
+            });
+          });
+        </script>
         <style>
           .industry-presence {
             padding: 150px 0;
@@ -811,330 +1014,340 @@
           }
         </style>
 
-        <section class="industry-presence">
-          <div class="container rr-container-1710">
-            <div class="industry-top">
-              <div>
-                <p class="sub-title">Where We Show Up</p>
-                <h2 class="main-title">
-                  From an 18-Metre Stall to a<br />64-Metre Stall in
-                  <span class="base-text-color">Two Years.</span>
-                </h2>
-              </div>
-              <p class="desc">
-                Trade fairs are how the display industry meets itself. They're
-                also how we've measured our own growth.
-              </p>
-            </div>
-            <div class="split-cards">
-              <div class="split-card left">
-                <p class="tag">Media Expo Delhi 2023</p>
-                <div class="number">18<span> sq.m</span></div>
-                <p class="text">
-                  Cuboc's first major industry showcase. First meaningful
-                  exposure to a national audience.
-                </p>
-              </div>
-              <div class="split-divider"><span>→</span></div>
-              <div class="split-card right">
-                <p class="tag">Media Expo Delhi 2025</p>
-                <div class="number">64<span> sq.m</span></div>
-                <p class="text">
-                  Same show, 3.5× the floor space. Reflected the growth in
-                  product range, customer base, and conviction behind what we
-                  were building.
-                </p>
-              </div>
-            </div>
-            <div class="industry-footer">
-              <p>
-                Every show teaches us something the factory floor can't. Which
-                is why we keep showing up.
-              </p>
-              <a href="#">See Our Event Coverage</a>
-            </div>
-          </div>
-        </section>
-        <style>
-          .cert-section {
-            padding: 150px 0;
-            background: #111;
-          }
-          .cert-section .sub-title {
-            font-size: 14px;
-            font-weight: 600;
-            line-height: 24px;
-            padding: 1px 12px;
-            margin-bottom: 28px;
-            display: inline-block;
-            color: #666;
-            letter-spacing: -0.42px;
-            font-family: var(--font_body);
-            text-transform: uppercase;
-          }
-          .cert-section .main-title {
-            font-size: 50px;
-            font-weight: 500;
-            line-height: 56px;
-            letter-spacing: -2.5px;
-
-            color: #fff;
-          }
-          .cert-section .desc {
-            font-size: 16px;
-            color: #888;
-            line-height: 1.7;
-            margin-bottom: 50px;
-            max-width: 520px;
-          }
-          .cert-rows {
-            display: flex;
-            flex-direction: column;
-            border-top: 1px solid #222;
-          }
-          .cert-row {
-            display: grid;
-            grid-template-columns: 60px 1fr 1fr;
-            align-items: center;
-            gap: 30px;
-            padding: 28px 0;
-            border-bottom: 1px solid #222;
-            transition: background 0.2s;
-            cursor: default;
-          }
-          .cert-row:hover {
-            background: #1a1a1a;
-            padding-left: 16px;
-            padding-right: 16px;
-            border-radius: 8px;
-          }
-          .cert-row .num {
-            font-size: 20px;
-            font-weight: 600;
-            color: #444;
-            letter-spacing: 0.1em;
-          }
-          .cert-row .cert-name {
-            font-size: 18px;
-            font-weight: 600;
-            color: #fff;
-          }
-          .cert-row .cert-desc {
-            font-size: 16px;
-            color: #888;
-            line-height: 1.6;
-          }
-          .cert-row .cert-badge {
-            display: inline-block;
-            padding: 4px 12px;
-            border: 1px solid #333;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 600;
-            color: #666;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-          }
-        </style>
-
-        <section class="cert-section">
-          <div class="container rr-container-1710">
-            <p class="sub-title">Formal Recognition</p>
-            <h2 class="main-title">
-              Certified by the Systems<br />That Matter.
-            </h2>
-            <p class="desc">
-              Marketing claims are easy. Certifications are earned. These are
-              the ones that validate how we actually work.
-            </p>
-            <div class="cert-rows">
-              <div class="cert-row">
-                <span class="num">01</span>
-                <p class="cert-name">ISO 9001:2015 Certified</p>
-                <p class="cert-desc">
-                  The globally recognised quality management standard.
-                  Independently audited. Renewed annually.
-                </p>
-              </div>
-              <div class="cert-row">
-                <span class="num">02</span>
-                <p class="cert-name">Government Empaneled OEM</p>
-                <p class="cert-desc">
-                  Approved to supply as an Original Equipment Manufacturer to
-                  government projects and institutional buyers.
-                </p>
-              </div>
-              <div class="cert-row">
-                <span class="num">03</span>
-                <p class="cert-name">MSME Registered</p>
-                <p class="cert-desc">
-                  Officially registered under India's Ministry of Micro, Small &
-                  Medium Enterprises.
-                </p>
-              </div>
-              <div class="cert-row">
-                <span class="num">04</span>
-                <p class="cert-name">Trademark Registered Brand</p>
-                <p class="cert-desc">
-                  Cuboc Display is a registered trademark. The brand is
-                  protected. So is your investment in us.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <style>
-          .mfg-recognition {
-            padding: 150px 0;
-            background: #fff;
-          }
-          .mfg-recognition .sub-title {
-            font-size: 14px;
-            font-weight: 600;
-            line-height: 24px;
-            padding: 1px 12px;
-            margin-bottom: 28px;
-            display: inline-block;
-            background: #f0f0f0;
-            color: var(--primary);
-            letter-spacing: -0.42px;
-            font-family: var(--font_body);
-            text-transform: uppercase;
-          }
-          .mfg-recognition .main-title {
-            font-size: 50px;
-            font-weight: 500;
-            line-height: 56px;
-            color: var(--primary);
-            letter-spacing: -2.5px;
-          }
-          .mfg-top {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            margin-bottom: 50px;
-            gap: 40px;
-          }
-          .mfg-top .desc {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.7;
-            max-width: 380px;
-            flex-shrink: 0;
-          }
-          .mfg-cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-bottom: 50px;
-          }
-          .mfg-card {
-            border: 1px solid #ccc;
-            border-radius: 12px;
-            padding: 35px 30px;
-          }
-          .mfg-card .icon {
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            border: 1px solid #ccc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            color: #111;
-            margin-bottom: 20px;
-          }
-          .mfg-card.dark .icon {
-            border-color: #333;
-            color: #fff;
-          }
-          .mfg-card .card-title {
-            font-size: 18px;
-            font-weight: 700;
-            color: #111;
-            margin-bottom: 10px;
-          }
-          .mfg-card .card-text {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.7;
-          }
-          .mfg-card.dark {
-            background: #111;
-            border-color: #111;
-          }
-          .mfg-card.dark .card-title {
-            color: #fff;
-          }
-          .mfg-card.dark .card-text {
-            color: #aaa;
-          }
-          .mfg-footer {
-            border-top: 1px solid #e5e5e5;
-            padding-top: 25px;
-            text-align: center;
-          }
-          .mfg-footer p {
-            font-size: 18px;
-            color: #555;
-            font-style: italic;
-          }
-        </style>
-
-        <section class="mfg-recognition">
-          <div class="container rr-container-1710">
-            <div class="mfg-top">
-              <div>
-                <p class="sub-title">Built Right. Sourced Right.</p>
-                <h2 class="main-title">
-                  The Quality Starts Before<br />We
-                  <span class="base-text-color">Touch the Product.</span>
-                </h2>
-              </div>
-              <p class="desc">
-                Our raw materials come from India's finest OEM partners — the
-                same suppliers who serve major national brands you already
-                recognise.
-              </p>
-            </div>
-            <div class="mfg-cards">
-              <div class="mfg-card">
-                <div class="icon">
-                  <i class="fa-solid fa-screwdriver-wrench"></i>
+        <!-- PS STACK -->
+        <div class="ps-stack-outer" id="psOuter">
+          <div class="ps-pinned-viewport" id="psViewport">
+            <section class="industry-presence">
+              <div class="container rr-container-1710">
+                <div class="industry-top">
+                  <div>
+                    <p class="sub-title">Where We Show Up</p>
+                    <h2 class="main-title">
+                      From an 18-Metre Stall to a<br />64-Metre Stall in
+                      <span class="base-text-color">Two Years.</span>
+                    </h2>
+                  </div>
+                  <p class="desc">
+                    Trade fairs are how the display industry meets itself.
+                    They're also how we've measured our own growth.
+                  </p>
                 </div>
-                <p class="card-title">Aluminium Extrusions</p>
-                <p class="card-text">
-                  Sourced from OEM partners serving major national brands.
-                  Precision-grade, not commodity stock.
-                </p>
+                <div class="split-cards">
+                  <div class="split-card left">
+                    <p class="tag">Media Expo Delhi 2023</p>
+                    <div class="number">18<span> sq.m</span></div>
+                    <p class="text">
+                      Cuboc's first major industry showcase. First meaningful
+                      exposure to a national audience.
+                    </p>
+                  </div>
+                  <div class="split-divider"><span>→</span></div>
+                  <div class="split-card right">
+                    <p class="tag">Media Expo Delhi 2025</p>
+                    <div class="number">64<span> sq.m</span></div>
+                    <p class="text">
+                      Same show, 3.5× the floor space. Reflected the growth in
+                      product range, customer base, and conviction behind what
+                      we were building.
+                    </p>
+                  </div>
+                </div>
+                <div class="industry-footer">
+                  <p>
+                    Every show teaches us something the factory floor can't.
+                    Which is why we keep showing up.
+                  </p>
+                  <a href="#">See Our Event Coverage</a>
+                </div>
               </div>
-              <div class="mfg-card">
-                <div class="icon"><i class="fa-solid fa-industry"></i></div>
-                <p class="card-title">Engineered Plastics & Iron Sheet Metal</p>
-                <p class="card-text">
-                  Direct from specialised manufacturers. Better process
-                  transparency. Better quality control.
+            </section>
+            <style>
+              .cert-section {
+                padding: 150px 0;
+                background: #111;
+              }
+              .cert-section .sub-title {
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 24px;
+                padding: 1px 12px;
+                margin-bottom: 28px;
+                display: inline-block;
+                color: #666;
+                letter-spacing: -0.42px;
+                font-family: var(--font_body);
+                text-transform: uppercase;
+              }
+              .cert-section .main-title {
+                font-size: 50px;
+                font-weight: 500;
+                line-height: 56px;
+                letter-spacing: -2.5px;
+
+                color: #fff;
+              }
+              .cert-section .desc {
+                font-size: 16px;
+                color: #888;
+                line-height: 1.7;
+                margin-bottom: 50px;
+                max-width: 520px;
+              }
+              .cert-rows {
+                display: flex;
+                flex-direction: column;
+                border-top: 1px solid #222;
+              }
+              .cert-row {
+                display: grid;
+                grid-template-columns: 60px 1fr 1fr;
+                align-items: center;
+                gap: 30px;
+                padding: 28px 0;
+                border-bottom: 1px solid #222;
+                transition: background 0.2s;
+                cursor: default;
+              }
+              .cert-row:hover {
+                background: #1a1a1a;
+                padding-left: 16px;
+                padding-right: 16px;
+                border-radius: 8px;
+              }
+              .cert-row .num {
+                font-size: 20px;
+                font-weight: 600;
+                color: #444;
+                letter-spacing: 0.1em;
+              }
+              .cert-row .cert-name {
+                font-size: 18px;
+                font-weight: 600;
+                color: #fff;
+              }
+              .cert-row .cert-desc {
+                font-size: 16px;
+                color: #888;
+                line-height: 1.6;
+              }
+              .cert-row .cert-badge {
+                display: inline-block;
+                padding: 4px 12px;
+                border: 1px solid #333;
+                border-radius: 20px;
+                font-size: 11px;
+                font-weight: 600;
+                color: #666;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+              }
+            </style>
+
+            <section class="cert-section">
+              <div class="container rr-container-1710">
+                <p class="sub-title">Formal Recognition</p>
+                <h2 class="main-title">
+                  Certified by the Systems<br />That Matter.
+                </h2>
+                <p class="desc">
+                  Marketing claims are easy. Certifications are earned. These
+                  are the ones that validate how we actually work.
                 </p>
+                <div class="cert-rows">
+                  <div class="cert-row">
+                    <span class="num">01</span>
+                    <p class="cert-name">ISO 9001:2015 Certified</p>
+                    <p class="cert-desc">
+                      The globally recognised quality management standard.
+                      Independently audited. Renewed annually.
+                    </p>
+                  </div>
+                  <div class="cert-row">
+                    <span class="num">02</span>
+                    <p class="cert-name">Government Empaneled OEM</p>
+                    <p class="cert-desc">
+                      Approved to supply as an Original Equipment Manufacturer
+                      to government projects and institutional buyers.
+                    </p>
+                  </div>
+                  <div class="cert-row">
+                    <span class="num">03</span>
+                    <p class="cert-name">MSME Registered</p>
+                    <p class="cert-desc">
+                      Officially registered under India's Ministry of Micro,
+                      Small & Medium Enterprises.
+                    </p>
+                  </div>
+                  <div class="cert-row">
+                    <span class="num">04</span>
+                    <p class="cert-name">Trademark Registered Brand</p>
+                    <p class="cert-desc">
+                      Cuboc Display is a registered trademark. The brand is
+                      protected. So is your investment in us.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="mfg-card dark">
-                <div class="icon"><i class="fa-solid fa-box"></i></div>
-                <p class="card-title">Premium Packaging</p>
-                <p class="card-text">
-                  We prefer working directly rather than through trading
-                  channels. Better materials in the final product.
-                </p>
+            </section>
+
+            <style>
+              .mfg-recognition {
+                padding: 150px 0;
+                background: #fff;
+              }
+              .mfg-recognition .sub-title {
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 24px;
+                padding: 1px 12px;
+                margin-bottom: 28px;
+                display: inline-block;
+                background: #f0f0f0;
+                color: var(--primary);
+                letter-spacing: -0.42px;
+                font-family: var(--font_body);
+                text-transform: uppercase;
+              }
+              .mfg-recognition .main-title {
+                font-size: 50px;
+                font-weight: 500;
+                line-height: 56px;
+                color: var(--primary);
+                letter-spacing: -2.5px;
+              }
+              .mfg-top {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                margin-bottom: 50px;
+                gap: 40px;
+              }
+              .mfg-top .desc {
+                font-size: 16px;
+                color: #555;
+                line-height: 1.7;
+                max-width: 380px;
+                flex-shrink: 0;
+              }
+              .mfg-cards {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+                margin-bottom: 50px;
+              }
+              .mfg-card {
+                border: 1px solid #ccc;
+                border-radius: 12px;
+                padding: 35px 30px;
+              }
+              .mfg-card .icon {
+                width: 52px;
+                height: 52px;
+                border-radius: 50%;
+                border: 1px solid #ccc;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                color: #111;
+                margin-bottom: 20px;
+              }
+              .mfg-card.dark .icon {
+                border-color: #333;
+                color: #fff;
+              }
+              .mfg-card .card-title {
+                font-size: 18px;
+                font-weight: 700;
+                color: #111;
+                margin-bottom: 10px;
+              }
+              .mfg-card .card-text {
+                font-size: 16px;
+                color: #555;
+                line-height: 1.7;
+              }
+              .mfg-card.dark {
+                background: #111;
+                border-color: #111;
+              }
+              .mfg-card.dark .card-title {
+                color: #fff;
+              }
+              .mfg-card.dark .card-text {
+                color: #aaa;
+              }
+              .mfg-footer {
+                border-top: 1px solid #e5e5e5;
+                padding-top: 25px;
+                text-align: center;
+              }
+              .mfg-footer p {
+                font-size: 18px;
+                color: #555;
+                font-style: italic;
+              }
+            </style>
+
+            <section class="mfg-recognition">
+              <div class="container rr-container-1710">
+                <div class="mfg-top">
+                  <div>
+                    <p class="sub-title">Built Right. Sourced Right.</p>
+                    <h2 class="main-title">
+                      The Quality Starts Before<br />We
+                      <span class="base-text-color">Touch the Product.</span>
+                    </h2>
+                  </div>
+                  <p class="desc">
+                    Our raw materials come from India's finest OEM partners —
+                    the same suppliers who serve major national brands you
+                    already recognise.
+                  </p>
+                </div>
+                <div class="mfg-cards">
+                  <div class="mfg-card">
+                    <div class="icon">
+                      <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <p class="card-title">Aluminium Extrusions</p>
+                    <p class="card-text">
+                      Sourced from OEM partners serving major national brands.
+                      Precision-grade, not commodity stock.
+                    </p>
+                  </div>
+                  <div class="mfg-card">
+                    <div class="icon"><i class="fa-solid fa-industry"></i></div>
+                    <p class="card-title">
+                      Engineered Plastics & Iron Sheet Metal
+                    </p>
+                    <p class="card-text">
+                      Direct from specialised manufacturers. Better process
+                      transparency. Better quality control.
+                    </p>
+                  </div>
+                  <div class="mfg-card dark">
+                    <div class="icon"><i class="fa-solid fa-box"></i></div>
+                    <p class="card-title">Premium Packaging</p>
+                    <p class="card-text">
+                      We prefer working directly rather than through trading
+                      channels. Better materials in the final product.
+                    </p>
+                  </div>
+                </div>
+                <div class="mfg-footer">
+                  <p>
+                    That's not a production note. That's why our standees don't
+                    come back.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="mfg-footer">
-              <p>
-                That's not a production note. That's why our standees don't come
-                back.
-              </p>
-            </div>
+            </section>
           </div>
-        </section>
+          <!-- /ps-pinned-viewport -->
+        </div>
+        <!-- /ps-stack-outer -->
+
         <section class="strap-cta">
           <div class="container rr-container-1710">
             <div class="strap-cta__inner">
@@ -1155,13 +1368,14 @@
                   class="strap-cta__btn strap-cta__btn--primary"
                 >
                   Get a Quote
-                  <i class="fa-solid fa-arrow-right"></i>
+                  <i class="fa-solid fa-arrow-right" style="rotate: -45deg"></i>
                 </a>
                 <a
                   href="contact.html"
                   class="strap-cta__btn strap-cta__btn--secondary"
                 >
                   See the Products
+                  <i class="fa-solid fa-arrow-right" style="rotate: -45deg"></i>
                 </a>
               </div>
             </div>
@@ -1225,7 +1439,9 @@
                       >
                     </li>
                     <li>
-                      <a href="virtualshowroom.html" data-text="Virtual Showroom"
+                      <a
+                        href="virtualshowroom.html"
+                        data-text="Virtual Showroom"
                         ><span>Virtual Showroom</span></a
                       >
                     </li>
@@ -1295,6 +1511,73 @@
       </div>
     </div>
 
+    <!-- GSAP SCRUB STACK -->
+    <style>
+      .ps-stack-outer {
+        position: relative;
+      }
+
+      .ps-pinned-viewport {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      /* all panels stack, no transitions — GSAP drives transform directly */
+      .ps-pinned-viewport .industry-presence,
+      .ps-pinned-viewport .cert-section,
+      .ps-pinned-viewport .mfg-recognition {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      /* z-order: later panels sit on top */
+      .ps-pinned-viewport .industry-presence {
+        z-index: 1;
+      }
+      .ps-pinned-viewport .cert-section {
+        z-index: 2;
+      }
+      .ps-pinned-viewport .mfg-recognition {
+        z-index: 3;
+      }
+
+      /* mobile */
+      @media (max-width: 767px) {
+        .ps-stack-outer {
+          height: auto !important;
+        }
+        .ps-pinned-viewport {
+          position: static;
+          height: auto;
+          overflow: visible;
+        }
+        .ps-pinned-viewport .industry-presence,
+        .ps-pinned-viewport .cert-section,
+        .ps-pinned-viewport .mfg-recognition {
+          position: static;
+          height: auto;
+          display: block;
+          opacity: 0;
+          transform: translateY(40px);
+          transition:
+            opacity 0.7s ease,
+            transform 0.7s ease;
+        }
+        .ps-pinned-viewport .ps-mob-visible {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      }
+    </style>
+
     <!-- Dependencies JS -->
     <script src="assets/vandor/jquery/jquery.js"></script>
     <script src="assets/vandor/bootstrap/bootstrap.bundle.min.js"></script>
@@ -1341,6 +1624,104 @@
           observer.observe(el);
         });
       });
+    </script>
+    <script>
+      (function () {
+        function init() {
+          var isMobile = window.innerWidth <= 767;
+          var outer = document.getElementById("psOuter");
+          var viewport = document.getElementById("psViewport");
+          var panels = Array.from(
+            viewport
+              ? viewport.querySelectorAll(
+                  ".industry-presence, .cert-section, .mfg-recognition",
+                )
+              : [],
+          );
+
+          if (!outer || !viewport || !panels.length) return;
+          if (
+            typeof gsap === "undefined" ||
+            typeof ScrollTrigger === "undefined"
+          )
+            return;
+
+          /* ── Mobile: fade-up on enter ── */
+          if (isMobile) {
+            var obs = new IntersectionObserver(
+              function (entries) {
+                entries.forEach(function (e) {
+                  if (e.isIntersecting) {
+                    e.target.classList.add("ps-mob-visible");
+                    obs.unobserve(e.target);
+                  }
+                });
+              },
+              { threshold: 0.15 },
+            );
+            panels.forEach(function (p) {
+              obs.observe(p);
+            });
+            return;
+          }
+
+          /* ── Desktop ── */
+          var N = panels.length; // 3
+          var vh = window.innerHeight;
+
+          // Outer = N viewports tall (panel 0 already visible, panels 1..N-1 need 1vh each to scroll in)
+          outer.style.height = N * 100 + "vh";
+
+          // Panel 0: already at y=0 (visible)
+          // Panels 1, 2: start translateY(100%) — below the fold
+          gsap.set(panels[0], { y: 0 });
+          for (var i = 1; i < N; i++) {
+            gsap.set(panels[i], { y: vh });
+          }
+
+          // Pin viewport for the whole scroll distance
+          ScrollTrigger.create({
+            trigger: outer,
+            start: "top top",
+            end: "bottom bottom",
+            pin: viewport,
+            pinSpacing: false,
+            scrub: true, // ← real-time 1:1 with scroll
+            onUpdate: function (self) {
+              // self.progress: 0 → 1 across the full outer height
+              // Each panel occupies 1/N of that range
+              // panel[i] slides from y=vh to y=0 during its own range
+              var prog = self.progress; // 0..1
+
+              for (var i = 1; i < N; i++) {
+                // panel i starts animating at progress = (i-1)/N  ... wait no:
+                // panel 0 visible from 0→1/N
+                // panel 1 slides in during 1/N → 2/N
+                // panel 2 slides in during 2/N → 3/N
+                var start = (i - 1) / (N - 1); // 0, 0.5  (for N=3 → 0, 0.5)
+                var end = i / (N - 1); // 0.5, 1
+
+                // Actually simpler: each panel i (1-based) slides during its window
+                // Let's recompute: total scroll = (N-1) panels need to slide in
+                // So window for panel i = [ (i-1)/(N-1) , i/(N-1) ]
+                var t = (prog - start) / (end - start); // 0..1 within this panel's window
+                t = Math.max(0, Math.min(1, t));
+                gsap.set(panels[i], { y: vh * (1 - t) });
+              }
+            },
+          });
+
+          window.addEventListener("load", function () {
+            ScrollTrigger.refresh();
+          });
+        }
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", init);
+        } else {
+          init();
+        }
+      })();
     </script>
   </body>
 </html>

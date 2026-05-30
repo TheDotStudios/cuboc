@@ -43,6 +43,9 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <style>
+      .project-6__dec {
+        margin-left: 400px;
+      }
       .about-hero__sub {
         max-width: 600px;
       }
@@ -171,7 +174,7 @@
         line-height: 24px;
         padding: 1px 12px;
         display: inline-block;
-        background: #f0f0f0;
+        background-color: #dddddd;
         color: var(--primary);
         letter-spacing: -0.42px;
         font-family: var(--font_body);
@@ -904,7 +907,10 @@
                 </div>
                 <a href="contact.html" class="rr-btn-primary bg-base-color">
                   <span class="text">Let's Talk</span>
-                  <i class="fa-solid fa-angle-right right-icon"></i>
+                  <i
+                    class="fa-solid fa-arrow-right text-white"
+                    style="rotate: -45deg"
+                  ></i>
                 </a>
               </div>
             </div>
@@ -983,13 +989,21 @@
                       16px;
                       class="about-hero__btn-primary"
                     >
-                      Enter the Showroom <i class="fa-solid fa-arrow-right"></i>
+                      Enter the Showroom
+                      <i
+                        class="fa-solid fa-arrow-right"
+                        style="rotate: -45deg"
+                      ></i>
                     </a>
                     <a
                       href="#guided-walkthrough"
                       class="about-hero__btn-secondary"
                     >
                       Book a Guided Walkthrough
+                      <i
+                        class="fa-solid fa-arrow-right"
+                        style="rotate: -45deg"
+                      ></i>
                     </a>
                   </div>
                 </div>
@@ -1032,7 +1046,7 @@
             }
 
             .intro-strip__box {
-              background: #f5f5f5;
+              /* background: #f5f5f5; */
               max-width: 1200px;
               margin: 0 auto;
               padding: 50px 60px;
@@ -1076,143 +1090,144 @@
               bottom: -10px;
               right: 24px;
             }
+            .section-spacing-140 {
+              padding-top: 100px;
+              padding-bottom: 100px;
+            }
+            .project-6__top-content {
+              margin-top: 80px;
+              margin-bottom: 60px;
+            }
           </style>
+          <style>
+            .wbi-cols {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              gap: 0;
+              align-items: start;
+            }
+
+            .wbi-col-1 {
+              padding-right: 48px;
+            }
+
+            .wbi-col-2 {
+              border-left: 1px solid rgba(17, 17, 17, 0.1);
+              padding-left: 48px;
+              padding-right: 48px;
+            }
+
+            .wbi-col-3 {
+              border-left: 1px solid rgba(17, 17, 17, 0.1);
+              padding-left: 48px;
+            }
+
+            .wbi-icon {
+              width: 44px;
+              height: 44px;
+              border-radius: 50%;
+              border: 1.5px solid #111;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-bottom: 16px;
+            }
+
+            .wbi-icon i {
+              font-size: 18px;
+              color: #111;
+            }
+
+            .cx-body {
+              margin: 0;
+            }
+          </style>
+
           <section style="padding: 80px 0; background: #fff">
             <div class="container rr-container-1710">
-              <span class="cx-eyebrow">WHY WE BUILT THIS</span>
               <div
-                style="
-                  width: 36px;
-
-                  margin-bottom: 40px;
-                "
-              ></div>
-
-              <div
-                style="
-                  display: grid;
-                  grid-template-columns: 1fr 1fr 1fr;
-                  gap: 0;
-                  align-items: start;
-                "
+                class="team-3__inner rr-pos-rel"
+                style="padding-bottom: 30px"
               >
-                <!-- Left: heading + button -->
-                <div style="padding-right: 48px">
-                  <h2 class="cx-heading" style="margin-bottom: 24px">
-                    Display Products Are Hard to Picture from
-                    <span>Catalogues.</span>
-                  </h2>
-                  <p class="cx-body" style="margin-bottom: 28px">
-                    A FABxPRO booth sounds straightforward on paper. A Cube
-                    Standee reconfiguring into a wall sounds clever.
+                <div class="rr-v-lines">
+                  <div class="rr-line"></div>
+                  <div class="rr-line"></div>
+                  <div class="rr-line"></div>
+                  <div class="rr-line"></div>
+                </div>
+                <div class="section-title-3__wrapper fade-anim">
+                  <div class="wrap">
+                    <h2 class="sub-title">WHY WE BUILT THIS</h2>
+                    <h3 class="title rr_title_anim" style="perspective: 400px">
+                      <div style="max-width: 60%">
+                        Display Products Are Hard to
+                        <span class="base-text-color"
+                          >Picture from Catalogues.</span
+                        >
+                      </div>
+                    </h3>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      gap: 20px;
+                    "
+                  >
+                    <p>
+                      A FABxPRO booth sounds straightforward on paper. A Cube
+                      Standee reconfiguring into a wall sounds clever.
+                    </p>
+                    <div class="project-6__btn">
+                      <a href="#" class="rr-btn-primary">
+                        <span class="text text-capitailise"
+                          >Enter the showroom</span
+                        >
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="width: 36px; margin-bottom: 40px"></div>
+
+              <div class="wbi-cols">
+                <!-- Column 1 -->
+                <div class="wbi-col-1">
+                  <div class="wbi-icon">
+                    <i class="fa-regular fa-users"></i>
+                  </div>
+                  <p class="cx-body">
+                    We built this environment so exhibition organisers, brand
+                    teams, agencies, and fabricators could see for themselves
+                    what Cuboc looks like when deployed at scale.
                   </p>
-                  <a href="#" class="cx-btn cx-btn--dark"
-                    >ENTER THE SHOWROOM <i class="fa-solid fa-arrow-right"></i
-                  ></a>
                 </div>
 
-                <!-- Middle: 1 item + 1 item below centered -->
-                <div
-                  style="
-                    border-left: 1px solid rgba(17, 17, 17, 0.1);
-                    padding-left: 48px;
-                    padding-right: 48px;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 36px;
-                  "
-                >
-                  <div
-                    style="display: flex; align-items: flex-start; gap: 16px"
-                  >
-                    <div
-                      style="
-                        width: 44px;
-                        height: 44px;
-                        border-radius: 50%;
-                        border: 1.5px solid #111;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        flex-shrink: 0;
-                      "
-                    >
-                      <i
-                        class="fa-regular fa-users"
-                        style="font-size: 18px; color: #111"
-                      ></i>
-                    </div>
-                    <p class="cx-body" style="margin: 0">
-                      We built this environment so exhibition organisers, brand
-                      teams, agencies, and fabricators could see for themselves
-                      what Cuboc looks like when deployed at scale.
-                    </p>
+                <!-- Column 2 -->
+                <div class="wbi-col-2">
+                  <div class="wbi-icon">
+                    <i class="fa-regular fa-expand"></i>
                   </div>
-
-                  <div
-                    style="display: flex; align-items: flex-start; gap: 16px"
-                  >
-                    <div
-                      style="
-                        width: 44px;
-                        height: 44px;
-                        border-radius: 50%;
-                        border: 1.5px solid #111;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        flex-shrink: 0;
-                      "
-                    >
-                      <i
-                        class="fa-regular fa-expand"
-                        style="font-size: 18px; color: #111"
-                      ></i>
-                    </div>
-                    <p class="cx-body" style="margin: 0">
-                      Until you see the scale — the way the lighting sits, the
-                      way the modules connect, the way the booth takes shape
-                      when it's assembled — the idea doesn't land.
-                    </p>
-                  </div>
+                  <p class="cx-body">
+                    Until you see the scale — the way the lighting sits, the way
+                    the modules connect, the way the booth takes shape when it's
+                    assembled — the idea doesn't land.
+                  </p>
                 </div>
 
-                <!-- Right: 1 item centered vertically between the two on the left -->
-                <div
-                  style="
-                    border-left: 1px solid rgba(17, 17, 17, 0.1);
-                    padding-left: 48px;
-                    display: flex;
-                    align-items: center;
-                    align-self: stretch;
-                  "
-                >
-                  <div
-                    style="display: flex; align-items: flex-start; gap: 16px"
-                  >
-                    <div
-                      style="
-                        width: 44px;
-                        height: 44px;
-                        border-radius: 50%;
-                        border: 1.5px solid #111;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        flex-shrink: 0;
-                      "
-                    >
-                      <i
-                        class="fa-regular fa-handshake"
-                        style="font-size: 18px; color: #111"
-                      ></i>
-                    </div>
-                    <p class="cx-body" style="margin: 0">
-                      What started as a tool to pitch exhibition organisers
-                      turned into something every serious buyer now uses to
-                      understand our products before they commit.
-                    </p>
+                <!-- Column 3 -->
+                <div class="wbi-col-3">
+                  <div class="wbi-icon">
+                    <i class="fa-regular fa-handshake"></i>
                   </div>
+                  <p class="cx-body">
+                    What started as a tool to pitch exhibition organisers turned
+                    into something every serious buyer now uses to understand
+                    our products before they commit.
+                  </p>
                 </div>
               </div>
             </div>
@@ -1472,7 +1487,7 @@
               <div
                 style="
                   background: #fff;
-                  border-radius: 16px;
+
                   padding: 40px 36px 36px;
                   display: flex;
                   flex-direction: column;
@@ -1542,7 +1557,7 @@
               <div
                 style="
                   background: #fff;
-                  border-radius: 16px;
+
                   padding: 40px 36px 36px;
                   display: flex;
                   flex-direction: column;
@@ -1613,7 +1628,7 @@
               <div
                 style="
                   background: #fff;
-                  border-radius: 16px;
+
                   padding: 40px 36px 36px;
                   display: flex;
                   flex-direction: column;
@@ -1869,6 +1884,10 @@
                   class="strap-cta__btn strap-cta__btn--secondary"
                 >
                   Enter the Virtual Showroom
+                  <i
+                    class="fa-solid fa-arrow-right text-white"
+                    style="rotate: -45deg"
+                  ></i>
                 </a>
               </div>
             </div>

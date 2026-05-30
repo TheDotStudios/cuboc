@@ -39,6 +39,9 @@
     <!-- Template Main CSS File -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
+      .blog-details__content p {
+        margin-bottom: 0px;
+      }
       .main-menu ul.dp-menu li a {
         font-size: 16px;
         font-weight: 500;
@@ -111,25 +114,6 @@
         margin-bottom: 150px;
       }
 
-      .rr-btn-primary {
-        gap: 6px;
-        display: inline-flex;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 16px;
-        padding: 15px 45px;
-        color: var(--white);
-        align-items: center;
-        border-radius: unset;
-        justify-content: center;
-        border: 1px solid var(--border);
-        transition:
-          background 0.3s ease,
-          color 0.3s ease;
-        cursor: pointer;
-        background: #111111;
-      }
-
       .rr-btn-primary:hover {
         background: #333333;
         color: var(--white);
@@ -184,6 +168,9 @@
         background: #111111;
         opacity: 0.6;
         mix-blend-mode: normal;
+      }
+      .blog-details__content blockquote {
+        margin-top: 150px;
       }
     </style>
     <style>
@@ -558,84 +545,101 @@
     <!-- Side toggle end -->
 
     <div class="has-smooth" id="has_smooth"></div>
-    <div id="smooth-wrapper">
-      <div id="smooth-content">
-        <!-- ── Header ── -->
-        <header class="header-area-2">
-          <div class="header-main">
-            <div class="container rr-container-1710">
-              <div class="header-area-2__inner">
-                <div class="header__logo">
-                  <a href="index.html">
-                    <img src="assets/imgs/cuboc-logo-transparent.png" />
-                  </a>
-                </div>
-                <div class="header__nav-2">
-                  <nav class="main-menu">
-                    <ul>
-                      <li><a href="index.html">Home</a></li>
+    <style>
+      .header-area-2 .main-menu li a,
+      .header-area-2 .header-meta .date {
+        color: white;
+      }
 
-                      <li class="menu-item-has-children">
-                        <a href="#">Company</a>
-                        <ul class="dp-menu">
-                          <li><a href="about.html">About Us</a></li>
-                          <li>
-                            <a href="recognitionNetwork.html"
-                              >Recognition &amp; Network</a
-                            >
-                          </li>
-                          <li>
-                            <a href="trade-events.html"
-                              >Trade Shows &amp; Events</a
-                            >
-                          </li>
-                        </ul>
+      /* when scrolled up — glass bg — make text black */
+      .header-area-2.nav-scrolled .main-menu li a,
+      .header-area-2.nav-scrolled .header-meta .date {
+        color: black !important;
+      }
+      .header-area-2 .main-menu ul.dp-menu li a {
+        color: white !important;
+      }
+    </style>
+    <!-- ── Header ── -->
+    <header class="header-area-2">
+      <div class="header-main">
+        <div class="container rr-container-1710">
+          <div class="header-area-2__inner">
+            <div class="header__logo">
+              <a href="index.html">
+                <img src="assets/imgs/cuboc-logo-transparent.png" />
+              </a>
+            </div>
+            <div class="header__nav-2">
+              <nav class="main-menu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+
+                  <li class="menu-item-has-children">
+                    <a href="#">Company</a>
+                    <ul class="dp-menu">
+                      <li><a href="about.html">About Us</a></li>
+                      <li>
+                        <a href="recognitionNetwork.html"
+                          >Recognition &amp; Network</a
+                        >
                       </li>
-
-                      <li class="menu-item-has-children">
-                        <a href="products.html">Products</a>
-                        <ul class="dp-menu">
-                          <li>
-                            <a href="product-01.html">Fabric Light Boxes</a>
-                          </li>
-                        </ul>
+                      <li>
+                        <a href="trade-events.html">Trade Shows &amp; Events</a>
                       </li>
-
-                      <li><a href="virtualshowroom.html">Virtual Showroom</a></li>
-
-                      <li class="menu-item-has-children">
-                        <a href="caseStudy.html">Case Studies</a>
-                        <ul class="dp-menu">
-                          <li>
-                            <a href="caseStudiesDetails.html"
-                              >Case Studies Details</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li><a href="contact.html">Contact</a></li>
                     </ul>
-                  </nav>
+                  </li>
+
+                  <li class="menu-item-has-children">
+                    <a href="products.html">Products</a>
+                    <ul class="dp-menu">
+                      <li>
+                        <a href="product-01.html">Fabric Light Boxes</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li><a href="virtualshowroom.html">Virtual Showroom</a></li>
+
+                  <li class="menu-item-has-children">
+                    <a href="caseStudy.html">Case Studies</a>
+                    <ul class="dp-menu">
+                      <li>
+                        <a href="caseStudiesDetails.html"
+                          >Case Studies Details</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header-right">
+              <div class="header__navicon">
+                <div class="side-toggle mobile-button d-lg-block d-xl-none">
+                  <a class="bar-icon" href="javascript:void(0)"
+                    ><span></span><span></span
+                  ></a>
                 </div>
-                <div class="header-right">
-                  <div class="header__navicon">
-                    <div class="side-toggle mobile-button d-lg-block d-xl-none">
-                      <a class="bar-icon" href="javascript:void(0)"
-                        ><span></span><span></span
-                      ></a>
-                    </div>
-                    <a href="contact.html" class="rr-btn-primary bg-base-color">
-                      <span class="text">Let's Talk</span>
-                      <i class="fa-solid fa-angle-right right-icon"></i>
-                    </a>
-                  </div>
-                </div>
+                <a href="contact.html" class="rr-btn-primary bg-base-color">
+                  <span class="text">Let's Talk</span>
+                  <i
+                    class="fa-solid fa-arrow-right text-white"
+                    style="rotate: -45deg"
+                  ></i>
+                </a>
               </div>
             </div>
           </div>
-        </header>
-        <!-- Header area end -->
+        </div>
+      </div>
+    </header>
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <!-- Header end -->
 
         <main>
           <!-- case study details area start -->
@@ -708,56 +712,126 @@
                         font-size: 26px;
                       }
                     }
+                    .rr-btn-primary {
+                      gap: 6px;
+                      display: inline-flex;
+                      font-size: 16px;
+                      font-weight: 500;
+                      line-height: 16px;
+                      padding: 15px 45px;
+                      color: var(--white);
+                      align-items: center;
+                      border-radius: unset;
+                      justify-content: center;
+                      border: 1px solid var(--border);
+                      transition:
+                        background 0.3s ease,
+                        color 0.3s ease;
+                      cursor: pointer;
+                      background: #111111;
+                      color: white;
+                    }
                   </style>
-
-                  <h3>The Challenge</h3>
-                  <p>
-                    A client operated in environments where power outages were
-                    frequent and branded displays going dark mid-shift was
-                    unacceptable. Standard battery tabletops offered 4–6 hours
-                    of backup — nowhere near enough for the operational demands
-                    of a full working shift.
-                  </p>
-
-                  <div class="cs-split-row">
-                    <h3 class="cs-split-heading">What We Did</h3>
-                    <p class="cs-split-body">
-                      We redesigned the power architecture to deliver 18 hours
-                      of backup — enough to survive a full shift plus a full
-                      outage without plugging in. We also developed a no-battery
-                      variant for budget-sensitive customers who wanted the form
-                      factor without the battery system.
-                    </p>
-                    <a
-                      href="caseStudiesDetails.html"
-                      class="rr-underline"
+                  <!-- Row 1: Challenge (left) + What We Did (right) -->
+                  <div
+                    style="
+                      display: grid;
+                      grid-template-columns: 1fr 1fr;
+                      gap: 0;
+                      border-top: 1px solid rgba(17, 17, 17, 0.1);
+                    "
+                  >
+                    <!-- Left: The Challenge -->
+                    <div
                       style="
-                        text-transform: capitalize;
-                        letter-spacing: unset;
-                        font-size: 18px;
+                        padding: 60px 60px 60px 0;
+                        border-right: 1px solid rgba(17, 17, 17, 0.1);
                       "
                     >
-                      <span class="text"> Lorem ipsum dolor sit.</span>
-                      <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+                      <h3 class="cs-split-heading">The Challenge</h3>
+                      <p class="cs-split-body" style="margin-top: 20px">
+                        A client operated in environments where power outages
+                        were frequent and branded displays going dark mid-shift
+                        was unacceptable. Standard battery tabletops offered 4–6
+                        hours of backup — nowhere near enough for the
+                        operational demands of a full working shift.
+                      </p>
+                    </div>
+
+                    <!-- Right: What We Did -->
+                    <div style="padding: 60px 0 60px 60px">
+                      <h3 class="cs-split-heading">What We Did</h3>
+                      <p class="cs-split-body" style="margin-top: 20px">
+                        We redesigned the power architecture to deliver 18 hours
+                        of backup — enough to survive a full shift plus a full
+                        outage without plugging in. We also developed a
+                        no-battery variant for budget-sensitive customers who
+                        wanted the form factor without the battery system.
+                      </p>
+                      <!-- <div class="project-6__btn" style="margin-top: 30px">
+                        <a href="#" class="rr-btn-primary">
+                          <span class="text">Lorem, ipsum dolor.</span>
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                      </div> -->
+                    </div>
                   </div>
 
-                  <h3>The Result</h3>
-                  <p>
-                    The client got displays that stayed lit when they needed
-                    them most. The catalogue got two new variants — premium
-                    battery-backed, and no-battery — built to serve completely
-                    different customer segments.
-                  </p>
+                  <!-- Row 2: The Result (left) + What These Stories Have in Common (right, black bg) -->
+                  <div
+                    style="
+                      display: grid;
+                      grid-template-columns: 1fr 1fr;
+                      gap: 0;
+                      border-top: 1px solid rgba(17, 17, 17, 0.1);
+                    "
+                  >
+                    <!-- Left: The Result -->
+                    <div
+                      style="
+                        padding: 60px 60px 60px 0;
+                        border-right: 1px solid rgba(17, 17, 17, 0.1);
+                      "
+                    >
+                      <h3 class="cs-split-heading">The Result</h3>
+                      <p class="cs-split-body" style="margin-top: 20px">
+                        The client got displays that stayed lit when they needed
+                        them most. The catalogue got two new variants — premium
+                        battery-backed, and no-battery — built to serve
+                        completely different customer segments.
+                      </p>
+                    </div>
 
-                  <h3>What These Stories Have in Common</h3>
-                  <p>
-                    None of these projects were in our catalogue. Most of them
-                    weren't in anyone's catalogue. Every one of them started
-                    with a customer asking for something we hadn't built before.
-                    That's the work.
-                  </p>
-
+                    <!-- Right: Black bg -->
+                    <div style="background: #111111; padding: 60px">
+                      <h3
+                        style="
+                          font-size: 28px;
+                          font-weight: 600;
+                          letter-spacing: -1px;
+                          line-height: 1.2;
+                          color: #ffffff;
+                          margin-bottom: 20px;
+                        "
+                      >
+                        What These Stories Have in Common
+                      </h3>
+                      <p
+                        style="
+                          font-size: 16px;
+                          line-height: 1.75;
+                          font-weight: 400;
+                          color: rgba(255, 255, 255, 0.65);
+                          margin: 0;
+                        "
+                      >
+                        None of these projects were in our catalogue. Most of
+                        them weren't in anyone's catalogue. Every one of them
+                        started with a customer asking for something we hadn't
+                        built before. That's the work.
+                      </p>
+                    </div>
+                  </div>
                   <blockquote>
                     <h2 class="title">"We Say Yes Before We Know How."</h2>
                     <h3>Our Approach</h3>
@@ -850,13 +924,15 @@
                   href="contact.html"
                   class="strap-cta__btn strap-cta__btn--primary"
                 >
-                  Get a Quote <i class="fa-solid fa-arrow-right"></i>
+                  Get a Quote
+                  <i class="fa-solid fa-arrow-right" style="rotate: -45deg"></i>
                 </a>
                 <a
                   href="caseStudiesDetails.html"
                   class="strap-cta__btn strap-cta__btn--secondary"
                 >
                   See the Standard Range
+                  <i class="fa-solid fa-arrow-right" style="rotate: -45deg"></i>
                 </a>
               </div>
             </div>
@@ -864,7 +940,7 @@
         </section>
 
         <!-- ── Footer ── -->
-             <footer class="footer-4 theme-bg-primary">
+        <footer class="footer-4 theme-bg-primary">
           <div class="container rr-container-1820">
             <div class="footer-4__inner">
               <div class="footer-4__wrapper">
@@ -920,7 +996,9 @@
                       >
                     </li>
                     <li>
-                      <a href="virtualshowroom.html" data-text="Virtual Showroom"
+                      <a
+                        href="virtualshowroom.html"
+                        data-text="Virtual Showroom"
                         ><span>Virtual Showroom</span></a
                       >
                     </li>

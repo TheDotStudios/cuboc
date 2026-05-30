@@ -26,7 +26,11 @@
       rel="stylesheet"
       href="assets/vandor/odometer/odometer-theme-default.css"
     />
-
+    <!-- Font Awesome CDN fallback -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,6 +47,12 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <style>
+      .rr-btn-primary i {
+        rotate: -45deg;
+      }
+      .team-3__inner .section-title-3__wrapper .sub-title01 {
+        background-color: #dddddd;
+      }
       .c-card.dark .c-features {
         list-style: disc !important;
         padding-left: 20px !important;
@@ -63,7 +73,7 @@
         height: 40px;
         border: none;
         outline: none;
-        font-size: 18px;
+        font-size: 15px;
         font-weight: 500;
         line-height: 20px;
         transition: all 0.5s;
@@ -868,85 +878,97 @@
     </aside>
 
     <div class="has-smooth" id="has_smooth"></div>
-    <div id="smooth-wrapper">
-      <div id="smooth-content">
-        <!-- ── Header ── -->
-        <header class="header-area-2">
-          <div class="header-main">
-            <div class="container rr-container-1710">
-              <div class="header-area-2__inner">
-                <div class="header__logo">
-                  <a href="index.html">
-                    <img src="assets/imgs/cuboc-logo-transparent.png" />
-                  </a>
-                </div>
-                <div class="header__nav-2">
-                  <nav class="main-menu">
-                    <ul>
-                      <li><a href="index.html">Home</a></li>
+    <style>
+      .header-area-2 .main-menu li a,
+      .header-area-2 .header-meta .date {
+        color: white;
+      }
 
-                      <li class="menu-item-has-children">
-                        <a href="#">Company</a>
-                        <ul class="dp-menu">
-                          <li><a href="about.html">About Us</a></li>
-                          <li>
-                            <a href="recognitionNetwork.html"
-                              >Recognition &amp; Network</a
-                            >
-                          </li>
-                          <li>
-                            <a href="trade-events.html"
-                              >Trade Shows &amp; Events</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
+      /* when scrolled up — glass bg — make text black */
+      .header-area-2.nav-scrolled .main-menu li a,
+      .header-area-2.nav-scrolled .header-meta .date {
+        color: black !important;
+      }
+      .header-area-2 .main-menu ul.dp-menu li a {
+        color: white !important;
+      }
+    </style>
+    <!-- ── Header ── -->
+    <header class="header-area-2">
+      <div class="header-main">
+        <div class="container rr-container-1710">
+          <div class="header-area-2__inner">
+            <div class="header__logo">
+              <a href="index.html">
+                <img src="assets/imgs/cuboc-logo-transparent.png" />
+              </a>
+            </div>
+            <div class="header__nav-2">
+              <nav class="main-menu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
 
-                      <li class="menu-item-has-children">
-                        <a href="products.html">Products</a>
-                        <ul class="dp-menu">
-                          <li>
-                            <a href="product-01.html">Fabric Light Boxes</a>
-                          </li>
-                        </ul>
-                      </li>
-
+                  <li class="menu-item-has-children">
+                    <a href="#">Company</a>
+                    <ul class="dp-menu">
+                      <li><a href="about.html">About Us</a></li>
                       <li>
-                        <a href="virtualshowroom.html">Virtual Showroom</a>
+                        <a href="recognitionNetwork.html"
+                          >Recognition &amp; Network</a
+                        >
                       </li>
-
-                      <li class="menu-item-has-children">
-                        <a href="caseStudy.html">Case Studies</a>
-                        <ul class="dp-menu">
-                          <li>
-                            <a href="caseStudiesDetails.html"
-                              >Case Studies Details</a
-                            >
-                          </li>
-                        </ul>
+                      <li>
+                        <a href="trade-events.html">Trade Shows &amp; Events</a>
                       </li>
-
-                      <li><a href="contact.html">Contact</a></li>
                     </ul>
-                  </nav>
+                  </li>
+
+                  <li class="menu-item-has-children">
+                    <a href="products.html">Products</a>
+                    <ul class="dp-menu">
+                      <li>
+                        <a href="product-01.html">Fabric Light Boxes</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li><a href="virtualshowroom.html">Virtual Showroom</a></li>
+
+                  <li class="menu-item-has-children">
+                    <a href="caseStudy.html">Case Studies</a>
+                    <ul class="dp-menu">
+                      <li>
+                        <a href="caseStudiesDetails.html"
+                          >Case Studies Details</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header-right">
+              <div class="header__navicon">
+                <div class="side-toggle mobile-button d-lg-block d-xl-none">
+                  <a class="bar-icon" href="javascript:void(0)"
+                    ><span></span><span></span
+                  ></a>
                 </div>
-                <div class="header-right">
-                  <div class="header__navicon">
-                    <div class="side-toggle mobile-button d-lg-block d-xl-none">
-                      <a class="bar-icon" href="javascript:void(0)"
-                        ><span></span><span></span
-                      ></a>
-                    </div>
-                    <a href="contact.html" class="rr-btn-primary bg-base-color">
-                      <span class="text">Let's Talk</span>
-                      <i class="fa-solid fa-angle-right right-icon"></i>
-                    </a>
-                  </div>
-                </div>
+                <a href="contact.html" class="rr-btn-primary bg-base-color">
+                  <span class="text">Let's Talk</span>
+                  <i class="fa-solid fa-angle-right right-icon"></i>
+                </a>
               </div>
             </div>
           </div>
-        </header>
+        </div>
+      </div>
+    </header>
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
         <!-- Header end -->
 
         <main>
@@ -994,10 +1016,10 @@
                       margin-bottom: 15px;
                     }
                     .cd-desc {
-                      font-size: 16px;
+                      font-size: 25px;
                       color: #555;
-                      line-height: 1.7;
-                      margin: 0 0 2rem;
+                      line-height: 1.2;
+                      margin: 1rem 0 2rem;
                       max-width: 560px;
                     }
                     .cd-grid {
@@ -1033,7 +1055,7 @@
                       min-width: 44px; /* already there — keep this, it stops icon squishing */
                       flex-shrink: 0; /* ADD THIS */
                       background: #111;
-                      border-radius: 10px;
+                      /* border-radius: 10px; */
                       display: flex;
                       align-items: center;
                       justify-content: center;
@@ -1050,7 +1072,7 @@
                       height: 44px;
                       min-width: 44px;
                       background: #111;
-                      border-radius: 10px;
+                      /* border-radius: 10px; */
                       display: flex;
                       align-items: center;
                       justify-content: center;
@@ -1244,7 +1266,7 @@
                         <div class="submit-btn">
                           <button type="submit" class="rr-btn-primary">
                             <span class="text">Send Enquiry</span>
-                            <i class="fa-solid fa-arrow-right-long"></i>
+                            <i class="fa-solid fa-arrow-right"></i>
                           </button>
                         </div>
                       </div>
@@ -1315,7 +1337,7 @@
               display: inline-block;
               font-size: 14px;
               padding: 4px 12px;
-              border-radius: 5px;
+              /* border-radius: 5px; */
               margin-bottom: 16px;
               width: 140px;
             }
@@ -1405,7 +1427,7 @@
               color: #ffffff !important;
             }
             .c-location {
-              margin-bottom: 18px;
+              margin-bottom: 22 px;
             }
             .c-location-title {
               font-size: 22px;
@@ -1436,8 +1458,8 @@
 
             .btn-main {
               flex: 1; /* added */
-              padding: 13px 20px;
-              border-radius: 10px;
+              padding: 16px 20px;
+              /* border-radius: 10px; */
               font-size: 16px;
               font-weight: 500;
               cursor: pointer;
@@ -1448,8 +1470,8 @@
             .btn-ghost {
               flex: 1; /* added */
               padding: 12px 20px;
-              border-radius: 10px;
-              font-size: 13px;
+              /* border-radius: 10px; */
+              font-size: 16px;
               font-weight: 600;
               cursor: pointer;
               text-align: center;
@@ -1483,7 +1505,9 @@
                 <div class="team-3__inner rr-pos-rel">
                   <div class="section-title-3__wrapper fade-anim">
                     <div class="wrap">
-                      <h2 class="sub-title">LOREM IPSUM DOLOR SIT</h2>
+                      <h2 class="sub-title sub-title01">
+                        LOREM IPSUM DOLOR SIT
+                      </h2>
                       <h3
                         class="title rr_title_anim"
                         style="perspective: 400px"
@@ -1543,8 +1567,20 @@
                   </li>
                 </ul>
                 <div class="c-cta">
-                  <button class="btn-main">Enter the Virtual Showroom</button>
-                  <button class="btn-ghost">Learn How It Works</button>
+                  <button class="btn-main">
+                    Enter the Virtual Showroom
+                    <i
+                      class="fa-solid fa-arrow-right"
+                      style="rotate: -45deg"
+                    ></i>
+                  </button>
+                  <button class="btn-ghost">
+                    Learn How It Works
+                    <i
+                      class="fa-solid fa-arrow-right ml-2"
+                      style="rotate: -45deg"
+                    ></i>
+                  </button>
                 </div>
               </div>
 
@@ -1594,7 +1630,7 @@
                     <i class="ti ti-layout-grid" aria-hidden="true"></i>
                     Showroom
                   </div>
-                  <p>
+                  <p class="mb-4">
                     3048-50, Gali No. 2, Chuna Mandi<br />Paharganj, New Delhi –
                     110055<br /><span style="color: #aaa; font-size: 16px"
                       >Full range on display. <a href="#">Walk-ins welcome</a> —
@@ -1603,7 +1639,13 @@
                   </p>
                 </div>
                 <div class="c-cta">
-                  <button class="btn-main">Schedule a Factory Visit</button>
+                  <button class="btn-main">
+                    Schedule a Factory Visit
+                    <i
+                      class="fa-solid fa-arrow-right ml-2"
+                      style="rotate: -45deg"
+                    ></i>
+                  </button>
                 </div>
               </div>
             </div>
@@ -1725,13 +1767,14 @@
                   class="strap-cta__btn strap-cta__btn--primary"
                 >
                   Enter the Virtual Showroom
-                  <i class="fa-solid fa-arrow-right"></i>
+                  <i class="fa-solid fa-arrow-right" style="rotate: -45deg"></i>
                 </a>
                 <a
                   href="contact.html"
                   class="strap-cta__btn strap-cta__btn--secondary"
                 >
                   Send a Quick Enquiry
+                  <i class="fa-solid fa-arrow-right" style="rotate: -45deg"></i>
                 </a>
               </div>
             </div>
