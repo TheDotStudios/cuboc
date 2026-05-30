@@ -11836,11 +11836,11 @@ section {
   height: 40px;
   border: none;
   outline: none;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 20px;
   transition: all 0.5s;
-  color: var(--primary);
+  color: #ccc;
   letter-spacing: -0.54px;
   background-color: transparent;
   border-bottom: 1px solid #e5e5e5;
