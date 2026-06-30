@@ -24325,3 +24325,114 @@ section {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
 }
+
+@media (max-width: 767px) {
+  .strap-cta {
+    padding: 50px 0 !important;
+  }
+  .strap-cta__sub {
+    font-style: unset !important;
+  }
+}
+
+/* ── Mobile nav drawer ── */
+.side-toggle.mobile-button {
+  display: none;
+}
+@media (max-width: 768px) {
+  .side-toggle.mobile-button {
+    display: block !important;
+  }
+}
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  z-index: 9999;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease;
+}
+.mobile-nav-drawer.open {
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.mobile-nav-drawer .mob-inner {
+  padding: 24px 28px 32px;
+}
+.mobile-nav-drawer .mob-close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.mobile-nav-drawer .mob-close .mob-logo {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.mobile-nav-drawer .mob-close button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+.mobile-nav-drawer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mobile-nav-drawer > .mob-inner > ul > li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.mobile-nav-drawer ul li a {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 15px 0;
+  text-decoration: none;
+  letter-spacing: -0.3px;
+  transition: color 0.2s;
+}
+.mobile-nav-drawer ul li a:hover {
+  color: rgba(255, 255, 255, 0.55);
+}
+.mobile-nav-drawer .mob-sub {
+  display: none;
+  padding-left: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.mobile-nav-drawer .mob-sub.open {
+  display: block;
+}
+.mobile-nav-drawer .mob-sub li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+.mobile-nav-drawer .mob-sub li a {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.65);
+  padding: 10px 0;
+}
+.mob-arrow {
+  float: right;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.45);
+  transition: transform 0.25s;
+  cursor: pointer;
+  padding: 4px 6px;
+  margin-top: 2px;
+}
+.mob-arrow.open {
+  transform: rotate(180deg);
+}
