@@ -155,7 +155,7 @@
         color: var(--white);
       }
       .breadcrumb__bg::before {
-        background: rgba(0, 0, 0, 0.75) !important;
+        background: rgba(0, 0, 0, 0.65) !important;
         mix-blend-mode: normal !important;
       }
       .breadcrumb__bottom {
@@ -755,10 +755,127 @@
         }
       }
       @media (max-width: 767px) {
-        .breadcrumb__title {
-          font-size: 50px;
-          letter-spacing: -2px;
+        .footer-4__inner .footer-widget-box .content .title {
+          font-size: 25px !important;
+          text-transform: capitalize !important;
+          font-weight: 400 !important;
         }
+        .footer-4__inner .footer-widget-box .title {
+          font-size: 25px !important;
+          text-transform: capitalize !important;
+          font-weight: 400 !important;
+        }
+        .footer_logo__5ncK8 {
+          font-size: 40px !important;
+          padding-top: 20px !important;
+        }
+        .footer-4__inner .copyright {
+          gap: 10px !important;
+        }
+        .footer-4__inner .footer-widget-box:last-child {
+          padding-bottom: 30px !important;
+        }
+        .footer-4__inner .footer-widget-box .content .info {
+          margin-top: 15px !important;
+        }
+        .footer-4__inner .footer-widget-box .newsletter {
+          margin-top: 15px !important;
+        }
+        .team-3__inner .section-title-3__wrapper {
+          grid-template-columns: 1fr !important;
+        }
+        .footer-4__inner .footer-widget-box .footer-nav-list {
+          margin-top: 15px !important;
+        }
+        .call-to-action__inner .section-title-4__wrapper {
+          max-width: 88% !important;
+          transform: unset !important;
+          bottom: 85px;
+        }
+        .c-location-title {
+          margin-top: 20px !important;
+        }
+        .c-card {
+          padding: 30px 30px !important;
+        }
+        .breadcrumb__content {
+          padding-bottom: 61px !important;
+        }
+        .strap-cta__heading {
+          font-size: 25px !important;
+        }
+        .header-area-2 .header-right .side-toggle .bar-icon span {
+          background: rgb(119, 116, 116) !important;
+        }
+        .call-to-action__inner .media {
+          height: 450px !important;
+        }
+        .d-smm-nonee {
+          display: none !important;
+        }
+        .services-3__inner .services-3__item:not(:last-child) {
+          border-right: unset !important;
+        }
+        .services-3__inner {
+          padding-top: 0px !important;
+          padding-bottom: 70px !important;
+        }
+        .call-to-action__inner .media::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: rgba(17, 17, 17, 0.34);
+          z-index: 1;
+        }
+        .cd-title {
+          font-size: 25px !important;
+        }
+        .d-smm-mx-width-100 {
+          max-width: 100% !important;
+        }
+        .team-3__inner .section-title-3__wrapper .sub-title {
+          margin-bottom: 15px !important;
+        }
+        .cd-desc {
+          font-size: 16px !important;
+        }
+        .contact-area-contact-page {
+          padding-top: 30px !important;
+        }
+        .contact-area-contact-page .contact-formwrap {
+          padding: 20px;
+        }
+        .contact-area-contact-page .section-content-wrapper {
+          gap: 0 60px !important;
+        }
+        .contact-section {
+          padding-bottom: 70px !important;
+          padding-left: 13px !important;
+          padding-right: 13px !important;
+        }
+        .team-3__inner .section-title-3__wrapper .title {
+          font-size: 25px !important;
+          line-height: 33px !important;
+        }
+        .team-3__inner .section-title-3__wrapper {
+          padding-bottom: 35px !important;
+        }
+        .hero-6__inner {
+          padding-top: 50px !important;
+          margin-top: 50px !important;
+        }
+        .breadcrumb__title {
+          font-size: 35px;
+          letter-spacing: -1.5px;
+        }
+        .breadcrumb__bottom {
+          margin-top: 27px;
+        }
+        .breadcrumb__body {
+          line-height: 1.4;
+          font-size: 16px;
+        }
+
         .breadcrumb__bottom {
           flex-direction: column;
           gap: 16px;
@@ -798,11 +915,8 @@
           width: 100%;
           justify-content: center;
         }
-      }
-      @media (max-width: 575px) {
-        .breadcrumb__title {
-          font-size: 38px;
-          letter-spacing: -1.5px;
+        .pt-smm-70 {
+          padding-top: 50px !important;
         }
       }
 
@@ -819,6 +933,110 @@
       .hero-6__inner .hero-6__title-wrap .title {
         font-size: 50px;
         line-height: 55px;
+      }
+
+      /* ══════════════════════════════════
+         MOBILE MENU FIX
+      ══════════════════════════════════ */
+      .side-toggle.mobile-button {
+        display: none;
+      }
+      @media (max-width: 1199px) {
+        .side-toggle.mobile-button {
+          display: block !important;
+        }
+      }
+      .mobile-nav-drawer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #111;
+        z-index: 9999;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.4s ease;
+      }
+      .mobile-nav-drawer.open {
+        max-height: 100vh;
+        overflow-y: auto;
+      }
+      .mobile-nav-drawer .mob-inner {
+        padding: 24px 28px 32px;
+      }
+      .mobile-nav-drawer .mob-close {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .mobile-nav-drawer .mob-close .mob-logo {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .mobile-nav-drawer .mob-close button {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 26px;
+        cursor: pointer;
+        line-height: 1;
+        padding: 0;
+      }
+      .mobile-nav-drawer ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .mobile-nav-drawer > .mob-inner > ul > li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .mobile-nav-drawer ul li a {
+        display: block;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 15px 0;
+        text-decoration: none;
+        letter-spacing: -0.3px;
+        transition: color 0.2s;
+      }
+      .mobile-nav-drawer ul li a:hover {
+        color: rgba(255, 255, 255, 0.55);
+      }
+      .mobile-nav-drawer .mob-sub {
+        display: none;
+        padding-left: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .mobile-nav-drawer .mob-sub.open {
+        display: block;
+      }
+      .mobile-nav-drawer .mob-sub li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+      }
+      .mobile-nav-drawer .mob-sub li a {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.65);
+        padding: 10px 0;
+      }
+      .mob-arrow {
+        float: right;
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.45);
+        transition: transform 0.25s;
+        cursor: pointer;
+        padding: 4px 6px;
+        margin-top: 2px;
+      }
+      .mob-arrow.open {
+        transform: rotate(180deg);
       }
     </style>
   </head>
@@ -837,45 +1055,6 @@
     </div>
 
     <!-- Side toggle -->
-    <aside class="fix">
-      <div class="side-info-4">
-        <div class="offcanvas-4">
-          <div class="side-info-content">
-            <div class="offset-widget offset-header">
-              <div class="offset-logo">
-                <a href="index.html">
-                  <img
-                    class="show-light"
-                    src="assets/imgs/logo/dark-logo.png"
-                    alt="site logo"
-                  />
-                </a>
-              </div>
-              <h6>Display systems. Made in India. Built to work.</h6>
-              <span class="date">Cuboc</span>
-            </div>
-            <div class="mobile-menu d-block d-xl-none"></div>
-            <div class="offset-widget-box d-none d-xl-grid">
-              <div class="contact-meta">
-                <div class="contact-item">
-                  <h6 class="title">Menu</h6>
-                  <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="service.html">Services</a></li>
-                    <li><a href="case-studies.html">Case Studies</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <button id="side-info-4-close" class="side-info-close">
-              Close<i class="fas fa-times"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </aside>
 
     <div class="has-smooth" id="has_smooth"></div>
     <style>
@@ -927,7 +1106,29 @@
                     <a href="products.html">Products</a>
                     <ul class="dp-menu">
                       <li>
-                        <a href="product-01.html">Fabric Light Boxes</a>
+                        <a href="Fabric-Light-Boxes-p1.html"
+                          >Fabric Light Boxes</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="Standees-p2.html">Standees </a>
+                      </li>
+
+                      <li>
+                        <a href="ultra-thin-glass-p3.html"
+                          >Ultra Thin Glass Frames
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="battery-table-p4.html"
+                          >Battery Table Top Displays
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="product-gazebo-p5.html">Gazebo Tents </a>
                       </li>
                     </ul>
                   </li>
@@ -938,9 +1139,28 @@
                     <a href="caseStudy.html">Case Studies</a>
                     <ul class="dp-menu">
                       <li>
-                        <a href="caseStudiesDetails.html"
-                          >Case Studies Details</a
-                        >
+                        <a href="Versions203.html">Customisation </a>
+                      </li>
+                      <li>
+                        <a href="CompetitorStock.html"> Service Attitude </a>
+                      </li>
+                      <li>
+                        <a href="DentedStandees.html">
+                          After-Sales Reliability
+                        </a>
+                      </li>
+                      <li>
+                        <a href="CustomEngineering.html">
+                          Custom Engineering
+                        </a>
+                      </li>
+                      <li>
+                        <a href="PremiumFinishes.html"> Premium Finishes </a>
+                      </li>
+                      <li>
+                        <a href="EngineeringforReality.html"
+                          >Engineering for Reality
+                        </a>
                       </li>
                     </ul>
                   </li>
@@ -958,7 +1178,10 @@
                 </div>
                 <a href="contact.html" class="rr-btn-primary bg-base-color">
                   <span class="text">Let's Talk</span>
-                  <i class="fa-solid fa-angle-right right-icon"></i>
+                  <i
+                    class="fa-solid fa-arrow-right text-white"
+                    style="rotate: -45deg"
+                  ></i>
                 </a>
               </div>
             </div>
@@ -975,7 +1198,7 @@
           <!-- ── Breadcrumb ── -->
           <div class="breadcrumb rr-pos-rel">
             <div class="breadcrumb__bg">
-              <img src="assets/imgs/breadcrumb-2.jpg" alt="Contact Cuboc" />
+              <img src="assets/cubo-img/banner02.png" alt="Contact Cuboc" />
             </div>
             <div class="container rr-container-1710">
               <div class="breadcrumb__content">
@@ -1497,6 +1720,14 @@
               .contact-grid {
                 flex-direction: column;
               }
+              .c-cta {
+                flex-direction: column;
+              }
+              .btn-main,
+              .btn-ghost {
+                width: 100%;
+                flex: unset;
+              }
             }
           </style>
           <section class="hero-6" style="background-color: #eeeeee">
@@ -1512,7 +1743,7 @@
                         class="title rr_title_anim"
                         style="perspective: 400px"
                       >
-                        <div style="max-width: 50%">
+                        <div class="d-smm-mx-width-100" style="max-width: 50%">
                           Lorem Ipsum + Dolor
 
                           <span class="base-text-color">Amet Consectetur</span>
@@ -1661,14 +1892,14 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         />
 
-        <section class="services-3" style="padding-top: 150px">
+        <section class="services-3 pt-smm-70" style="padding-top: 150px">
           <div class="container rr-container-1710">
             <div class="team-3__inner rr-pos-rel">
               <div class="section-title-3__wrapper fade-anim">
                 <div class="wrap">
                   <h2 class="sub-title">WHAT HAPPENS NEXT</h2>
                   <h3 class="title rr_title_anim" style="perspective: 400px">
-                    <div style="max-width: 50%">
+                    <div class="d-smm-mx-width-100" style="max-width: 50%">
                       Here's What You Can Expect.
                       <span class="base-text-color">No Surprises</span>
                     </div>
@@ -1681,7 +1912,7 @@
               </div>
             </div>
             <div class="services-3__inner rr-line-area">
-              <div class="rr-v-lines">
+              <div class="rr-v-lines d-smm-nonee">
                 <div class="rr-line"></div>
                 <div class="rr-line"></div>
                 <div class="rr-line"></div>
@@ -1804,7 +2035,7 @@
                   </div>
                 </div>
                 <div class="footer-widget-box">
-                  <h2 class="title">JOIN OUR NEWSLETTER</h2>
+                  <h2 class="title">Join our newsletter</h2>
                   <div class="newsletter">
                     <div class="input-group">
                       <input
@@ -2042,6 +2273,154 @@
             },
           }).then(function () {
             form.reset();
+          });
+        });
+      })();
+    </script>
+    <!-- ── MOBILE NAV DRAWER (top-down) ── -->
+    <div class="mobile-nav-drawer" id="mobDrawer">
+      <div class="mob-inner">
+        <div class="mob-close">
+          <span class="mob-logo">Cuboc</span>
+          <button id="mobCloseBtn" aria-label="Close menu">&#x2715;</button>
+        </div>
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+
+          <li>
+            <a href="#">
+              Company
+              <span class="mob-arrow" data-sub="mobSub1">&#9660;</span>
+            </a>
+            <ul class="mob-sub" id="mobSub1">
+              <li><a href="about.html">About Us</a></li>
+              <li>
+                <a href="recognitionNetwork.html">Recognition &amp; Network</a>
+              </li>
+              <li>
+                <a href="trade-events.html">Trade Shows &amp; Events</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="products.html">
+              Products
+              <span class="mob-arrow" data-sub="mobSub2">&#9660;</span>
+            </a>
+            <ul class="mob-sub" id="mobSub2">
+              <li>
+                <a href="Fabric-Light-Boxes-p1.html">Fabric Light Boxes</a>
+              </li>
+              <li>
+                <a href="Standees-p2.html">Standees</a>
+              </li>
+              <li>
+                <a href="ultra-thin-glass-p3.html">Ultra Thin Glass Frames</a>
+              </li>
+              <li>
+                <a href="battery-table-p4.html">Battery Table Top Displays</a>
+              </li>
+              <li>
+                <a href="product-gazebo-p5.html">Gazebo Tents</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="virtualshowroom.html">Virtual Showroom</a>
+          </li>
+
+          <li>
+            <a href="caseStudy.html">
+              Case Studies
+              <span class="mob-arrow" data-sub="mobSub3">&#9660;</span>
+            </a>
+            <ul class="mob-sub" id="mobSub3">
+              <li>
+                <a href="Versions203.html">Customisation</a>
+              </li>
+              <li>
+                <a href="CompetitorStock.html">Service Attitude</a>
+              </li>
+              <li>
+                <a href="DentedStandees.html">After-Sales Reliability</a>
+              </li>
+              <li>
+                <a href="CustomEngineering.html">Custom Engineering</a>
+              </li>
+              <li>
+                <a href="PremiumFinishes.html">Premium Finishes</a>
+              </li>
+              <li>
+                <a href="EngineeringforReality.html">Engineering for Reality</a>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- ── END MOBILE NAV DRAWER ── -->
+
+    <script>
+      (function () {
+        var drawer = document.getElementById("mobDrawer");
+        var closeBtn = document.getElementById("mobCloseBtn");
+        var toggleBtn = document.querySelector(
+          ".side-toggle.mobile-button .bar-icon",
+        );
+
+        function openMenu() {
+          drawer.classList.add("open");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeMenu() {
+          drawer.classList.remove("open");
+          document.body.style.overflow = "";
+          document.querySelectorAll(".mob-sub").forEach(function (sub) {
+            sub.classList.remove("open");
+          });
+          document.querySelectorAll(".mob-arrow").forEach(function (arrow) {
+            arrow.classList.remove("open");
+          });
+        }
+
+        if (toggleBtn) {
+          toggleBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            openMenu();
+          });
+        }
+
+        if (closeBtn) {
+          closeBtn.addEventListener("click", closeMenu);
+        }
+
+        document.querySelectorAll(".mob-arrow").forEach(function (arrow) {
+          arrow.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            var currentSub = document.getElementById(
+              arrow.getAttribute("data-sub"),
+            );
+            var isOpen = currentSub.classList.contains("open");
+
+            document.querySelectorAll(".mob-sub").forEach(function (sub) {
+              sub.classList.remove("open");
+            });
+            document.querySelectorAll(".mob-arrow").forEach(function (arr) {
+              arr.classList.remove("open");
+            });
+
+            if (!isOpen) {
+              currentSub.classList.add("open");
+              arrow.classList.add("open");
+            }
           });
         });
       })();

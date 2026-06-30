@@ -1,6 +1,18 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      // Browsers restore the previous scroll position on reload. If that
+      // restored position lands anywhere inside/below our pinned stack,
+      // ScrollTrigger measures start/end against that stale scroll state
+      // on first load, producing a stuck/broken first scroll pass that
+      // only resolves once the user manually scrolls to top and back
+      // (forcing GSAP to recalc against the real position). Disabling
+      // restoration here — as early as possible — keeps init clean.
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -183,6 +195,129 @@
         flex: 0 0 52%;
       }
 
+      @media (max-width: 767px) {
+        .exp4-section {
+          margin-bottom: 70px !important;
+        }
+        .mfg-card .card-text {
+          line-height: 1.4 !important;
+        }
+        .mfg-card .card-title {
+          font-weight: 500 !important;
+        }
+        .exp4-row2 {
+          padding: 50px 0 !important;
+        }
+        .exp4-row1__right p {
+          top: 20px !important;
+        }
+        .exp4-row1__right p {
+          line-height: 1.4 !important;
+        }
+        .section-title-4__wrapper {
+          margin-bottom: 0px !important;
+        }
+        .exp4-row2,
+        .exp4-row1 {
+          border-top: unset !important;
+          border-left: unset !important;
+          border-right: unset !important;
+        }
+        .exp4-row1__left {
+          padding-top: 70px !important;
+          border-bottom: unset !important;
+        }
+        .exp4-row1__right {
+          padding: 0 0 !important;
+        }
+        .header-area-2 .header-right .side-toggle .bar-icon span {
+          background: rgb(212 207 207) !important;
+        }
+        .footer-4__inner .footer-widget-box .content .title {
+          font-size: 25px !important;
+          text-transform: capitalize !important;
+          font-weight: 400 !important;
+        }
+        .footer-4__inner .footer-widget-box .title {
+          font-size: 25px !important;
+          text-transform: capitalize !important;
+          font-weight: 400 !important;
+        }
+        .footer_logo__5ncK8 {
+          font-size: 40px !important;
+          padding-top: 20px !important;
+        }
+        .footer-4__inner .copyright {
+          gap: 10px !important;
+        }
+        .footer-4__inner .footer-widget-box:last-child {
+          padding-bottom: 30px !important;
+        }
+        .footer-4__inner .footer-widget-box .content .info {
+          margin-top: 15px !important;
+        }
+        .footer-4__inner .footer-widget-box .newsletter {
+          margin-top: 15px !important;
+        }
+
+        .footer-4__inner .footer-widget-box .footer-nav-list {
+          margin-top: 15px !important;
+        }
+        .call-to-action__inner .section-title-4__wrapper {
+          max-width: 88% !important;
+          transform: unset !important;
+          bottom: 85px;
+        }
+        .call-to-action__inner .media {
+          height: 450px !important;
+        }
+        .call-to-action__inner .media::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: rgba(17, 17, 17, 0.34);
+          z-index: 1;
+        }
+        .strap-cta__heading {
+          font-size: 25px !important;
+        }
+        .strap-cta__actions {
+          flex-direction: row !important;
+          flex-wrap: nowrap !important;
+        }
+        .strap-cta__btn {
+          flex: 1 !important;
+          min-width: 0 !important;
+          text-align: center !important;
+          justify-content: center !important;
+          padding: 14px 10px !important;
+        }
+        .breadcrumb__title {
+          font-size: 35px !important;
+          letter-spacing: unset !important;
+        }
+        .breadcrumb__bottom {
+          display: grid;
+          gap: 10px !important;
+          margin-top: 15px !important;
+          padding-top: 15px !important;
+        }
+        .breadcrumb__content {
+          padding-bottom: 70px !important;
+        }
+        .section-title-4__wrapper .title {
+          font-size: 25px !important;
+        }
+        .sub-title01,
+        .mfg-recognition .sub-title {
+          margin-bottom: 15px !important;
+        }
+        .cert-section .sub-title {
+          margin-bottom: 15px !important;
+          padding: 0 0 !important;
+        }
+      }
+
       /* ════════════════════════════════
          CONTACT SECTIONS
       ════════════════════════════════ */
@@ -201,47 +336,6 @@
         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
       </svg>
     </div>
-
-    <!-- Side toggle -->
-    <aside class="fix">
-      <div class="side-info-4">
-        <div class="offcanvas-4">
-          <div class="side-info-content">
-            <div class="offset-widget offset-header">
-              <div class="offset-logo">
-                <a href="index.html">
-                  <img
-                    class="show-light"
-                    src="assets/imgs/logo/dark-logo.png"
-                    alt="site logo"
-                  />
-                </a>
-              </div>
-              <h6>Display systems. Made in India. Built to work.</h6>
-              <span class="date">Cuboc</span>
-            </div>
-            <div class="mobile-menu d-block d-xl-none"></div>
-            <div class="offset-widget-box d-none d-xl-grid">
-              <div class="contact-meta">
-                <div class="contact-item">
-                  <h6 class="title">Menu</h6>
-                  <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="service.html">Services</a></li>
-                    <li><a href="case-studies.html">Case Studies</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <button id="side-info-4-close" class="side-info-close">
-              Close<i class="fas fa-times"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </aside>
 
     <div class="has-smooth" id="has_smooth"></div>
     <style>
@@ -293,7 +387,29 @@
                     <a href="products.html">Products</a>
                     <ul class="dp-menu">
                       <li>
-                        <a href="product-01.html">Fabric Light Boxes</a>
+                        <a href="Fabric-Light-Boxes-p1.html"
+                          >Fabric Light Boxes</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="Standees-p2.html">Standees </a>
+                      </li>
+
+                      <li>
+                        <a href="ultra-thin-glass-p3.html"
+                          >Ultra Thin Glass Frames
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="battery-table-p4.html"
+                          >Battery Table Top Displays
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="product-gazebo-p5.html">Gazebo Tents </a>
                       </li>
                     </ul>
                   </li>
@@ -304,9 +420,28 @@
                     <a href="caseStudy.html">Case Studies</a>
                     <ul class="dp-menu">
                       <li>
-                        <a href="caseStudiesDetails.html"
-                          >Case Studies Details</a
-                        >
+                        <a href="Versions203.html">Customisation </a>
+                      </li>
+                      <li>
+                        <a href="CompetitorStock.html"> Service Attitude </a>
+                      </li>
+                      <li>
+                        <a href="DentedStandees.html">
+                          After-Sales Reliability
+                        </a>
+                      </li>
+                      <li>
+                        <a href="CustomEngineering.html">
+                          Custom Engineering
+                        </a>
+                      </li>
+                      <li>
+                        <a href="PremiumFinishes.html"> Premium Finishes </a>
+                      </li>
+                      <li>
+                        <a href="EngineeringforReality.html"
+                          >Engineering for Reality
+                        </a>
                       </li>
                     </ul>
                   </li>
@@ -477,12 +612,41 @@
             }
 
             @media (max-width: 575px) {
+              .exp4-row2 {
+                padding: 40px 0 !important;
+              }
+              .brand-marquee-track {
+                gap: 24px !important;
+                animation-duration: 14s !important;
+              }
+              .brand-pill {
+                padding: 8px 14px !important;
+              }
+              .brand-pill img {
+                height: 40px !important;
+                max-width: 80px !important;
+              }
+
               .exp4-row3 .experience-4__wrapper {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr) !important;
               }
               .exp4-row3 .experience-4__item {
-                border-right: none;
-                border-bottom: 1px solid #e9e9e9;
+                padding: 30px 16px !important;
+                border-right: 1px solid #e9e9e9 !important;
+                border-bottom: 1px solid #e9e9e9 !important;
+                text-align: center !important;
+              }
+              .exp4-row3 .experience-4__item:nth-child(2n) {
+                border-right: none !important;
+              }
+              .exp4-row3 .experience-4__item:nth-last-child(-n + 2) {
+                border-bottom: none !important;
+              }
+              .exp4-row3 .experience-4__item .title {
+                font-size: 32px !important;
+              }
+              .exp4-row3 .experience-4__item .sub-title {
+                font-size: 14px !important;
               }
             }
           </style>
@@ -1405,7 +1569,7 @@
                   </div>
                 </div>
                 <div class="footer-widget-box">
-                  <h2 class="title">JOIN OUR NEWSLETTER</h2>
+                  <h2 class="title">Join our newsletter</h2>
                   <div class="newsletter">
                     <div class="input-group">
                       <input
@@ -1532,7 +1696,7 @@
         inset: 0;
         width: 100%;
         height: 100%;
-        overflow-y: auto;
+        overflow: hidden;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1549,10 +1713,106 @@
         z-index: 3;
       }
 
+      /* Laptop / short-viewport fix: these panels are pinned full-height
+         with no internal scroll, so on screens shorter than ~800px tall
+         (common 13"–15" laptops) the original 150px top/bottom padding
+         pushed content taller than 100vh, getting clipped or forcing a
+         second scrollbar. Shrink padding and type scale so everything
+         fits within the viewport instead. */
+      @media (min-width: 768px) and (max-height: 800px) {
+        .ps-pinned-viewport .industry-presence,
+        .ps-pinned-viewport .cert-section,
+        .ps-pinned-viewport .mfg-recognition {
+          padding-top: 60px !important;
+          padding-bottom: 60px !important;
+        }
+        .ps-pinned-viewport .main-title {
+          font-size: 36px !important;
+          line-height: 1.2 !important;
+        }
+        .ps-pinned-viewport .industry-top,
+        .ps-pinned-viewport .mfg-top {
+          margin-bottom: 28px !important;
+        }
+        .ps-pinned-viewport .split-cards,
+        .ps-pinned-viewport .mfg-cards {
+          margin-bottom: 28px !important;
+        }
+        .ps-pinned-viewport .split-card {
+          padding: 24px 22px !important;
+        }
+        .ps-pinned-viewport .split-card .number {
+          font-size: 52px !important;
+        }
+        .ps-pinned-viewport .mfg-card {
+          padding: 22px 20px !important;
+        }
+        .ps-pinned-viewport .cert-row {
+          padding: 16px 0 !important;
+        }
+        .ps-pinned-viewport .cert-section .desc,
+        .ps-pinned-viewport .industry-top .desc,
+        .ps-pinned-viewport .mfg-top .desc {
+          margin-bottom: 0 !important;
+        }
+      }
+
+      @media (min-width: 768px) and (max-height: 700px) {
+        .ps-pinned-viewport .industry-presence,
+        .ps-pinned-viewport .cert-section,
+        .ps-pinned-viewport .mfg-recognition {
+          padding-top: 36px !important;
+          padding-bottom: 36px !important;
+        }
+        .ps-pinned-viewport .main-title {
+          font-size: 28px !important;
+        }
+        .ps-pinned-viewport .split-card .number {
+          font-size: 40px !important;
+        }
+        .ps-pinned-viewport .mfg-cards {
+          gap: 14px !important;
+        }
+        .ps-pinned-viewport .mfg-card,
+        .ps-pinned-viewport .split-card {
+          padding: 16px 16px !important;
+        }
+        .ps-pinned-viewport .cert-row {
+          padding: 10px 0 !important;
+        }
+        .ps-pinned-viewport .cert-row .cert-desc {
+          display: none !important;
+        }
+      }
+
       /* mobile */
       @media (max-width: 767px) {
+        .award-3__inner .section-title-3__wrapper .sub-title {
+          padding: 0 0 !important;
+        }
+        .industry-presence .sub-title {
+          margin-bottom: 15px !important;
+        }
+        .award-3__inner .section-title-3__wrapper .title,
+        .award-3__inner .section-title-3__wrapper .sub-title {
+          margin-bottom: 10px !important;
+        }
+        .award-3__inner .section-title-3__wrapper .title {
+          font-size: 25px !important;
+        }
         .ps-stack-outer {
           height: auto !important;
+        }
+        .industry-top .desc,
+        .split-card .text,
+        .cub-acc__body p {
+          line-height: 1.4 !important;
+        }
+        .cub-acc__title {
+          font-size: 19px !important;
+        }
+        .cub-acc__num {
+          font-size: 25px !important;
         }
         .ps-pinned-viewport {
           position: static;
@@ -1575,9 +1835,218 @@
           opacity: 1 !important;
           transform: none !important;
         }
+
+        /* ── Shared section spacing on mobile ── */
+        .industry-presence,
+        .cert-section,
+        .mfg-recognition {
+          padding: 60px 0 !important;
+        }
+
+        .industry-presence,
+        .cert-section .main-title,
+        .mfg-recognition .main-title {
+          font-size: 25px !important;
+          line-height: 33px !important;
+          letter-spacing: -1px !important;
+        }
+        .split-card .number {
+          font-size: 40px !important;
+        }
+        .industry-presence .main-title {
+          font-size: 25px !important;
+          line-height: 1.25 !important;
+          letter-spacing: -1px !important;
+        }
+
+        /* ── industry-presence ── */
+        .industry-top {
+          flex-direction: column;
+          align-items: flex-start !important;
+          gap: 16px;
+          margin-bottom: 32px;
+        }
+        .industry-top .desc {
+          max-width: 100%;
+        }
+
+        .split-cards {
+          grid-template-columns: 1fr;
+          margin-bottom: 32px;
+        }
+        .split-divider {
+          width: 100%;
+          height: 1px;
+        }
+        .split-divider span {
+          position: relative;
+          margin: -18px auto;
+        }
+        .split-card {
+          padding: 28px 20px;
+        }
+        .split-card .number {
+          font-size: 56px;
+        }
+
+        .industry-footer {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+        }
+
+        /* ── cert-section ── */
+        .cert-section .desc {
+          max-width: 100%;
+          margin-bottom: 32px;
+          margin-top: 15px !important;
+        }
+        .cert-row {
+          grid-template-columns: 1fr;
+          gap: 8px;
+          padding: 20px 0;
+        }
+        .cert-row .num {
+          font-size: 25px;
+        }
+        .cert-row .cert-name {
+          font-size: 17px;
+        }
+        .cert-row .cert-desc {
+          font-size: 14px;
+        }
+
+        /* ── mfg-recognition ── */
+        .mfg-top {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+          margin-bottom: 32px;
+        }
+        .mfg-top .desc {
+          max-width: 100%;
+        }
+        .mfg-cards {
+          grid-template-columns: 1fr;
+          gap: 16px;
+          margin-bottom: 32px;
+        }
+        .mfg-card {
+          padding: 28px 22px;
+        }
+        .mfg-footer p {
+          font-size: 16px;
+        }
       }
     </style>
-
+    <div class="mobile-nav-drawer" id="mobDrawer">
+      <div class="mob-inner">
+        <div class="mob-close">
+          <span class="mob-logo">Cuboc</span>
+          <button id="mobCloseBtn" aria-label="Close menu">&#x2715;</button>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#"
+              >Company
+              <span class="mob-arrow" data-sub="mobSub1">&#9660;</span></a
+            >
+            <ul class="mob-sub" id="mobSub1">
+              <li><a href="about.html">About Us</a></li>
+              <li>
+                <a href="recognitionNetwork.html">Recognition &amp; Network</a>
+              </li>
+              <li><a href="trade-events.html">Trade Shows &amp; Events</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="products.html"
+              >Products
+              <span class="mob-arrow" data-sub="mobSub2">&#9660;</span></a
+            >
+            <ul class="mob-sub" id="mobSub2">
+              <li>
+                <a href="Fabric-Light-Boxes-p1.html">Fabric Light Boxes</a>
+              </li>
+              <li><a href="Standees-p2.html">Standees</a></li>
+              <li>
+                <a href="ultra-thin-glass-p3.html">Ultra Thin Glass Frames</a>
+              </li>
+              <li>
+                <a href="battery-table-p4.html">Battery Table Top Displays</a>
+              </li>
+              <li><a href="product-gazebo-p5.html">Gazebo Tents</a></li>
+            </ul>
+          </li>
+          <li><a href="virtualshowroom.html">Virtual Showroom</a></li>
+          <li>
+            <a href="caseStudy.html"
+              >Case Studies
+              <span class="mob-arrow" data-sub="mobSub3">&#9660;</span></a
+            >
+            <ul class="mob-sub" id="mobSub3">
+              <li><a href="Versions203.html">Customisation</a></li>
+              <li><a href="CompetitorStock.html">Service Attitude</a></li>
+              <li><a href="DentedStandees.html">After-Sales Reliability</a></li>
+              <li><a href="CustomEngineering.html">Custom Engineering</a></li>
+              <li><a href="PremiumFinishes.html">Premium Finishes</a></li>
+              <li>
+                <a href="EngineeringforReality.html">Engineering for Reality</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var drawer = document.getElementById("mobDrawer");
+        var closeBtn = document.getElementById("mobCloseBtn");
+        var toggleBtn = document.querySelector(
+          ".side-toggle.mobile-button .bar-icon",
+        );
+        function openMenu() {
+          drawer.classList.add("open");
+          document.body.style.overflow = "hidden";
+        }
+        function closeMenu() {
+          drawer.classList.remove("open");
+          document.body.style.overflow = "";
+          document.querySelectorAll(".mob-sub").forEach(function (s) {
+            s.classList.remove("open");
+          });
+          document.querySelectorAll(".mob-arrow").forEach(function (a) {
+            a.classList.remove("open");
+          });
+        }
+        if (toggleBtn)
+          toggleBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            openMenu();
+          });
+        if (closeBtn) closeBtn.addEventListener("click", closeMenu);
+        document.querySelectorAll(".mob-arrow").forEach(function (arrow) {
+          arrow.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var sub = document.getElementById(arrow.getAttribute("data-sub"));
+            var isOpen = sub.classList.contains("open");
+            document.querySelectorAll(".mob-sub").forEach(function (s) {
+              s.classList.remove("open");
+            });
+            document.querySelectorAll(".mob-arrow").forEach(function (a) {
+              a.classList.remove("open");
+            });
+            if (!isOpen) {
+              sub.classList.add("open");
+              arrow.classList.add("open");
+            }
+          });
+        });
+      })();
+    </script>
     <!-- Dependencies JS -->
     <script src="assets/vandor/jquery/jquery.js"></script>
     <script src="assets/vandor/bootstrap/bootstrap.bundle.min.js"></script>
@@ -1627,11 +2096,111 @@
     </script>
     <script>
       (function () {
-        function init() {
+        var st = null; // current ScrollTrigger instance
+        var mobileObs = null;
+        var initialized = false;
+        var outer, viewport, panels;
+
+        function clearAll() {
+          if (st) {
+            st.kill();
+            st = null;
+          }
+          if (mobileObs) {
+            mobileObs.disconnect();
+            mobileObs = null;
+          }
+          if (panels) {
+            panels.forEach(function (p) {
+              p.classList.remove("ps-mob-visible");
+              gsap.set(p, { clearProps: "transform" });
+            });
+          }
+          if (outer) outer.style.height = "";
+        }
+
+        function setupDesktop() {
+          var N = panels.length;
+          var vh = window.innerHeight;
+
+          // Use an explicit pixel height instead of CSS "vh" units.
+          // CSS vh can differ from window.innerHeight depending on
+          // browser chrome / OS scaling / zoom level on certain laptop
+          // screens, which made "bottom bottom" resolve to the wrong
+          // pixel offset and broke the scroll trigger entirely on some
+          // resolutions. Pixels keep JS and ScrollTrigger in sync.
+          var totalHeight = N * vh;
+          outer.style.height = totalHeight + "px";
+
+          gsap.set(panels[0], { y: 0 });
+          for (var i = 1; i < N; i++) {
+            gsap.set(panels[i], { y: vh });
+          }
+
+          st = ScrollTrigger.create({
+            trigger: outer,
+            start: "top top",
+            end: function () {
+              return "+=" + (outer.offsetHeight - window.innerHeight);
+            },
+            pin: viewport,
+            pinSpacing: false,
+            scrub: true,
+            invalidateOnRefresh: true,
+            onRefresh: function () {
+              // recompute vh fresh each refresh (orientation/resize safe)
+              vh = window.innerHeight;
+              outer.style.height = N * vh + "px";
+              gsap.set(panels[0], { y: 0 });
+              for (var i = 1; i < N; i++) {
+                gsap.set(panels[i], { y: vh });
+              }
+            },
+            onUpdate: function (self) {
+              var prog = self.progress;
+              for (var i = 1; i < N; i++) {
+                var start = (i - 1) / (N - 1);
+                var end = i / (N - 1);
+                var t = (prog - start) / (end - start);
+                t = Math.max(0, Math.min(1, t));
+                gsap.set(panels[i], { y: vh * (1 - t) });
+              }
+            },
+          });
+        }
+
+        function setupMobile() {
+          mobileObs = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                  e.target.classList.add("ps-mob-visible");
+                  mobileObs.unobserve(e.target);
+                }
+              });
+            },
+            { threshold: 0.15 },
+          );
+          panels.forEach(function (p) {
+            mobileObs.observe(p);
+          });
+        }
+
+        function build() {
+          clearAll();
+
           var isMobile = window.innerWidth <= 767;
-          var outer = document.getElementById("psOuter");
-          var viewport = document.getElementById("psViewport");
-          var panels = Array.from(
+          if (isMobile) {
+            setupMobile();
+          } else {
+            setupDesktop();
+          }
+        }
+
+        function start() {
+          outer = document.getElementById("psOuter");
+          viewport = document.getElementById("psViewport");
+          panels = Array.from(
             viewport
               ? viewport.querySelectorAll(
                   ".industry-presence, .cert-section, .mfg-recognition",
@@ -1646,80 +2215,87 @@
           )
             return;
 
-          /* ── Mobile: fade-up on enter ── */
-          if (isMobile) {
-            var obs = new IntersectionObserver(
-              function (entries) {
-                entries.forEach(function (e) {
-                  if (e.isIntersecting) {
-                    e.target.classList.add("ps-mob-visible");
-                    obs.unobserve(e.target);
-                  }
-                });
-              },
-              { threshold: 0.15 },
-            );
-            panels.forEach(function (p) {
-              obs.observe(p);
-            });
-            return;
+          if (initialized) return;
+          initialized = true;
+
+          // Make sure we measure against scrollY 0, not a browser-restored
+          // position from a previous visit.
+          if (window.scrollY !== 0 || window.pageYOffset !== 0) {
+            window.scrollTo(0, 0);
           }
 
-          /* ── Desktop ── */
-          var N = panels.length; // 3
-          var vh = window.innerHeight;
+          build();
+          // Hard refresh: re-measures trigger start/end from scratch,
+          // ignoring any cached values from a stale scroll position.
+          ScrollTrigger.refresh(true);
 
-          // Outer = N viewports tall (panel 0 already visible, panels 1..N-1 need 1vh each to scroll in)
-          outer.style.height = N * 100 + "vh";
-
-          // Panel 0: already at y=0 (visible)
-          // Panels 1, 2: start translateY(100%) — below the fold
-          gsap.set(panels[0], { y: 0 });
-          for (var i = 1; i < N; i++) {
-            gsap.set(panels[i], { y: vh });
+          // Other bundled template scripts (main.js / common.js / any
+          // ScrollSmoother setup) may run their own ScrollTrigger.refresh()
+          // or layout-affecting code shortly after load, which on first
+          // visit can desync our pin's start/end before everything has
+          // truly settled (fonts swapping, lazy images decoding, etc).
+          // Force several staggered refreshes so the final one always
+          // measures the *actual* settled layout, on desktop only.
+          function forceRefresh() {
+            if (window.innerWidth > 767) {
+              ScrollTrigger.refresh();
+            }
           }
-
-          // Pin viewport for the whole scroll distance
-          ScrollTrigger.create({
-            trigger: outer,
-            start: "top top",
-            end: "bottom bottom",
-            pin: viewport,
-            pinSpacing: false,
-            scrub: true, // ← real-time 1:1 with scroll
-            onUpdate: function (self) {
-              // self.progress: 0 → 1 across the full outer height
-              // Each panel occupies 1/N of that range
-              // panel[i] slides from y=vh to y=0 during its own range
-              var prog = self.progress; // 0..1
-
-              for (var i = 1; i < N; i++) {
-                // panel i starts animating at progress = (i-1)/N  ... wait no:
-                // panel 0 visible from 0→1/N
-                // panel 1 slides in during 1/N → 2/N
-                // panel 2 slides in during 2/N → 3/N
-                var start = (i - 1) / (N - 1); // 0, 0.5  (for N=3 → 0, 0.5)
-                var end = i / (N - 1); // 0.5, 1
-
-                // Actually simpler: each panel i (1-based) slides during its window
-                // Let's recompute: total scroll = (N-1) panels need to slide in
-                // So window for panel i = [ (i-1)/(N-1) , i/(N-1) ]
-                var t = (prog - start) / (end - start); // 0..1 within this panel's window
-                t = Math.max(0, Math.min(1, t));
-                gsap.set(panels[i], { y: vh * (1 - t) });
-              }
-            },
+          requestAnimationFrame(function () {
+            requestAnimationFrame(forceRefresh);
           });
+          setTimeout(forceRefresh, 300);
+          setTimeout(forceRefresh, 800);
+          setTimeout(forceRefresh, 1500);
 
-          window.addEventListener("load", function () {
-            ScrollTrigger.refresh();
+          // Re-run once all images inside the stack have finished decoding,
+          // since image load can shift document height after our first
+          // refresh and is the most common cause of a "stuck" first scroll.
+          var imgs = viewport.querySelectorAll("img");
+          var pending = imgs.length;
+          if (pending) {
+            imgs.forEach(function (img) {
+              if (img.complete) {
+                pending--;
+              } else {
+                img.addEventListener("load", function () {
+                  pending--;
+                  if (pending === 0) forceRefresh();
+                });
+                img.addEventListener("error", function () {
+                  pending--;
+                  if (pending === 0) forceRefresh();
+                });
+              }
+            });
+            if (pending === 0) forceRefresh();
+          }
+
+          // Rebuild cleanly on resize / orientation change (debounced),
+          // and on breakpoint cross (mobile <-> desktop)
+          var resizeTimer = null;
+          var lastIsMobile = window.innerWidth <= 767;
+          window.addEventListener("resize", function () {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function () {
+              var nowMobile = window.innerWidth <= 767;
+              if (nowMobile !== lastIsMobile) {
+                lastIsMobile = nowMobile;
+                build();
+              }
+              ScrollTrigger.refresh();
+            }, 200);
           });
         }
 
-        if (document.readyState === "loading") {
-          document.addEventListener("DOMContentLoaded", init);
+        // Wait for full page load (fonts, images, layout) before measuring
+        // anything — this is what was causing the first-load glitch, since
+        // window.innerHeight / element positions weren't stable yet at
+        // DOMContentLoaded.
+        if (document.readyState === "complete") {
+          start();
         } else {
-          init();
+          window.addEventListener("load", start);
         }
       })();
     </script>

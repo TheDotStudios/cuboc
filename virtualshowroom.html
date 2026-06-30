@@ -43,6 +43,354 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <style>
+      /* ═══════════════════════════════════════
+   MOBILE FIXES — virtualshowroom.html
+   Targets: lq2 · rr-container-1710 · project-6.section-spacing-140
+   Add inside your existing <style> or style.css
+════════════════════════════════════════ */
+      @media (max-width: 768px) {
+        .side-toggle.mobile-button {
+          display: block !important;
+        }
+      }
+      .mobile-nav-drawer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #111;
+        z-index: 9999;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.4s ease;
+      }
+      .mobile-nav-drawer.open {
+        max-height: 100vh;
+        overflow-y: auto;
+      }
+      .mobile-nav-drawer .mob-inner {
+        padding: 24px 28px 32px;
+      }
+      .mobile-nav-drawer .mob-close {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .mobile-nav-drawer .mob-close .mob-logo {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .mobile-nav-drawer .mob-close button {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 26px;
+        cursor: pointer;
+        line-height: 1;
+        padding: 0;
+      }
+      .mobile-nav-drawer ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .mobile-nav-drawer > .mob-inner > ul > li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .mobile-nav-drawer ul li a {
+        display: block;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 15px 0;
+        text-decoration: none;
+        letter-spacing: -0.3px;
+        transition: color 0.2s;
+      }
+      .mobile-nav-drawer ul li a:hover {
+        color: rgba(255, 255, 255, 0.55);
+      }
+      .mobile-nav-drawer .mob-sub {
+        display: none;
+        padding-left: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .mobile-nav-drawer .mob-sub.open {
+        display: block;
+      }
+      .mobile-nav-drawer .mob-sub li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+      }
+      .mobile-nav-drawer .mob-sub li a {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.65);
+        padding: 10px 0;
+      }
+      .mob-arrow {
+        float: right;
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.45);
+        transition: transform 0.25s;
+        cursor: pointer;
+        padding: 4px 6px;
+        margin-top: 2px;
+      }
+      .mob-arrow.open {
+        transform: rotate(180deg);
+      }
+      @media (max-width: 767px) {
+        .header-area-2 .header-right .side-toggle .bar-icon span {
+          background: rgb(119, 116, 116) !important;
+        }
+        .project-6__top-content {
+          margin-top: 25px !important;
+          margin-bottom: 33px !important;
+        }
+        .project-6 .section-title-6__wrapper .title {
+          font-size: 25px !important;
+        }
+        .mb-smm-40 {
+          margin-bottom: 40px !important;
+        }
+        .mb-smm-30 {
+          margin-bottom: 20px !important;
+        }
+        .h3-smm-25px {
+          font-size: 25px !important;
+        }
+        .cx-body {
+          line-height: 1.4 !important;
+        }
+        .lq2 {
+          padding: 60px 0 !important;
+        }
+        .lq2__left-title {
+          font-size: 25px !important;
+          font-weight: 500 !important;
+        }
+        .lq2__left-bottom {
+          margin-top: 10px !important;
+        }
+        .strap-cta__inner {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px !important;
+        }
+        .strap-cta__actions {
+          flex-direction: row !important;
+        }
+        .rr-pos-rel {
+          padding-bottom: 0px !important;
+        }
+        .wbi-col-2,
+        .wbi-col-3 {
+          border-top: unset !important;
+          border-left: unset !important;
+          padding-left: 0px !important;
+        }
+        .wbi-col-1 {
+          padding-right: 0px !important;
+        }
+        .intro-strip__box {
+          padding: 50px 30px !important;
+        }
+        .quote-close {
+          bottom: -10px;
+          right: 15px !important;
+        }
+        .quote-open {
+          top: 16px;
+          left: -3px !important;
+        }
+        /* ── Container padding ── */
+        .container.rr-container-1710 {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        /* ══════════════════
+     LQ2 SECTION
+  ══════════════════ */
+        .lq2 {
+          padding: 60px 0;
+        }
+
+        .lq2__inner {
+          grid-template-columns: 1fr;
+          max-width: 100%;
+          border-radius: 0;
+        }
+
+        .lq2__left {
+          padding: 40px 24px;
+        }
+
+        .lq2__left-title {
+          font-size: 26px;
+        }
+
+        .lq2__left-bottom {
+          margin-top: 32px;
+        }
+
+        .lq2__right {
+          padding: 40px 24px;
+        }
+
+        .lq2__closing {
+          font-size: 17px;
+        }
+
+        /* ══════════════════════════════
+     PROJECT-6 / SECTION-SPACING-140
+  ══════════════════════════════ */
+        .project-6.section-spacing-140 {
+          padding-top: 0px;
+          padding-bottom: 60px;
+        }
+
+        /* Section title */
+        .project-6 .section-title-6__wrapper .title {
+          font-size: 28px !important;
+          letter-spacing: -1px;
+          line-height: 1.2;
+        }
+
+        /* Description offset — kill the margin-left: 400px */
+        .project-6__dec {
+          margin-left: 0 !important;
+          font-size: 15px;
+        }
+
+        .project-6__top-content {
+          margin-top: 32px;
+          margin-bottom: 32px;
+        }
+
+        /* 3-col grid → 1 col */
+        .project-6.section-spacing-140
+          [style*="grid-template-columns: repeat(3, 1fr)"] {
+          display: grid !important;
+          grid-template-columns: 1fr !important;
+          gap: 16px !important;
+        }
+
+        .project-6__thumb img {
+          height: 220px !important;
+        }
+
+        .project-6__content {
+          padding: 16px !important;
+        }
+
+        .project-6__content .title {
+          font-size: 18px !important;
+        }
+
+        /* ══════════════════════════
+     WHO IT'S FOR (same page, same breakpoint)
+     3-col inline-grid cards
+  ══════════════════════════ */
+        section[style*="background: #eeeeee"]
+          .container
+          > div[style*="grid-template-columns: repeat(3, 1fr)"] {
+          display: grid !important;
+          grid-template-columns: 1fr !important;
+          gap: 16px !important;
+        }
+
+        section[style*="background: #eeeeee"] {
+          padding: 60px 0 !important;
+        }
+
+        section[style*="background: #eeeeee"] div[style*="font-size: 32px"] {
+          font-size: 24px !important;
+        }
+
+        /* ── wbi-cols (Why We Built This) ── */
+        .wbi-cols {
+          grid-template-columns: 1fr !important;
+          gap: 32px;
+        }
+
+        .wbi-col-1 {
+          padding-right: 0;
+        }
+        .wbi-col-2 {
+          border-left: none;
+          padding-left: 0;
+          padding-right: 0;
+          border-top: 1px solid rgba(17, 17, 17, 0.1);
+          padding-top: 32px;
+        }
+        .wbi-col-3 {
+          border-left: none;
+          padding-left: 0;
+          border-top: 1px solid rgba(17, 17, 17, 0.1);
+          padding-top: 32px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .lq2__left-title {
+          font-size: 22px;
+        }
+
+        .lq2__middle-text {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        /* ── LQ2 force single column ── */
+        .lq2__inner {
+          display: flex !important;
+          flex-direction: column !important;
+          max-width: 100% !important;
+          border-radius: 4px !important;
+          overflow: hidden !important;
+        }
+
+        .lq2__left,
+        .lq2__right {
+          width: 100% !important;
+          min-width: 0 !important;
+          box-sizing: border-box !important;
+        }
+
+        .lq2__left {
+          padding: 40px 24px !important;
+        }
+
+        .lq2__right {
+          padding: 40px 24px !important;
+        }
+
+        .lq2__points li p {
+          font-size: 16px !important;
+          line-height: 1.6 !important;
+        }
+
+        .lq2__middle-text {
+          font-size: 16px !important;
+        }
+
+        .lq2__closing {
+          font-size: 16px !important;
+        }
+      }
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
       .project-6__dec {
         margin-left: 400px;
       }
@@ -716,6 +1064,111 @@
         }
       }
       @media (max-width: 767px) {
+        .strap-cta__heading {
+          font-size: 25px !important;
+        }
+        .strap-cta__btn {
+          padding: 15px 20px !important;
+          width: 65% !important;
+        }
+        /* footer */
+        .footer-4__inner .footer-widget-box .content .title {
+          font-size: 25px !important;
+          text-transform: capitalize !important;
+          font-weight: 400 !important;
+        }
+        .footer-4__inner .footer-widget-box .title {
+          font-size: 25px !important;
+          text-transform: capitalize !important;
+          font-weight: 400 !important;
+        }
+        .footer_logo__5ncK8 {
+          font-size: 40px !important;
+          padding-top: 20px !important;
+        }
+        .footer-4__inner .copyright {
+          gap: 10px !important;
+        }
+        .footer-4__inner .footer-widget-box:last-child {
+          padding-bottom: 30px !important;
+        }
+        .footer-4__inner .footer-widget-box .content .info {
+          margin-top: 15px !important;
+        }
+        .footer-4__inner .footer-widget-box .newsletter {
+          margin-top: 15px !important;
+        }
+
+        .footer-4__inner .footer-widget-box .footer-nav-list {
+          margin-top: 15px !important;
+        }
+        .call-to-action__inner .section-title-4__wrapper {
+          max-width: 88% !important;
+          transform: unset !important;
+          bottom: 85px;
+        }
+        .call-to-action__inner .media {
+          height: 450px !important;
+        }
+        .call-to-action__inner .media::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: rgba(17, 17, 17, 0.34);
+          z-index: 1;
+        }
+        .d-smm-mx-width-100 {
+          max-width: 100% !important;
+        }
+        .team-3__inner .section-title-3__wrapper .sub-title {
+          margin-bottom: 15px !important;
+        }
+        .team-3__inner .section-title-3__wrapper .title {
+          font-size: 25px !important;
+          line-height: 33px;
+        }
+        .p-smm-40 {
+          padding-top: 0px !important;
+          padding-bottom: 50px !important;
+        }
+        .intro-strip p {
+          font-size: 18px !important;
+          line-height: 1.4 !important;
+          margin: 0 0 10px !important;
+        }
+        .intro-strip {
+          padding-top: 40px !important;
+          padding-bottom: 40px !important;
+        }
+        .intro-strip {
+          margin-top: 0px !important;
+        }
+        .about-hero__eyebrow {
+          letter-spacing: unset !important;
+        }
+        .about-hero__sub {
+          font-size: 16px !important;
+          line-height: 1.4 !important;
+        }
+        .about-hero__title {
+          font-size: 35px !important;
+        }
+        .about-hero__inner {
+          padding: 140px 0 140px !important;
+        }
+        .about-hero__actions {
+          flex-direction: row !important;
+          flex-wrap: nowrap !important;
+        }
+        .about-hero__btn-primary,
+        .about-hero__btn-secondary {
+          flex: 1 !important;
+          min-width: 0 !important;
+          text-align: center !important;
+          justify-content: center !important;
+          font-size: 13px !important;
+          padding: 14px 10px !important;
+        }
         .breadcrumb__title {
           font-size: 50px;
           letter-spacing: -2px;
@@ -730,7 +1183,7 @@
           max-width: 100%;
         }
         .cx-heading {
-          font-size: 34px;
+          font-size: 25px;
           letter-spacing: -1.5px;
         }
         .cx-showroom {
@@ -797,47 +1250,6 @@
       </svg>
     </div>
 
-    <!-- Side toggle -->
-    <aside class="fix">
-      <div class="side-info-4">
-        <div class="offcanvas-4">
-          <div class="side-info-content">
-            <div class="offset-widget offset-header">
-              <div class="offset-logo">
-                <a href="index.html">
-                  <img
-                    class="show-light"
-                    src="assets/imgs/logo/dark-logo.png"
-                    alt="site logo"
-                  />
-                </a>
-              </div>
-              <h6>Display systems. Made in India. Built to work.</h6>
-              <span class="date">Cuboc</span>
-            </div>
-            <div class="mobile-menu d-block d-xl-none"></div>
-            <div class="offset-widget-box d-none d-xl-grid">
-              <div class="contact-meta">
-                <div class="contact-item">
-                  <h6 class="title">Menu</h6>
-                  <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="service.html">Services</a></li>
-                    <li><a href="case-studies.html">Case Studies</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <button id="side-info-4-close" class="side-info-close">
-              Close<i class="fas fa-times"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </aside>
-
     <div class="has-smooth" id="has_smooth"></div>
 
     <!-- ── Header ── -->
@@ -874,22 +1286,61 @@
                     <a href="products.html">Products</a>
                     <ul class="dp-menu">
                       <li>
-                        <a href="product-01.html">Fabric Light Boxes</a>
+                        <a href="Fabric-Light-Boxes-p1.html"
+                          >Fabric Light Boxes</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="Standees-p2.html">Standees </a>
+                      </li>
+
+                      <li>
+                        <a href="ultra-thin-glass-p3.html"
+                          >Ultra Thin Glass Frames
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="battery-table-p4.html"
+                          >Battery Table Top Displays
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="product-gazebo-p5.html">Gazebo Tents </a>
                       </li>
                     </ul>
                   </li>
 
-                  <li>
-                    <a href="virtualshowroom.html">Virtual Showroom</a>
-                  </li>
+                  <li><a href="virtualshowroom.html">Virtual Showroom</a></li>
 
                   <li class="menu-item-has-children">
                     <a href="caseStudy.html">Case Studies</a>
                     <ul class="dp-menu">
                       <li>
-                        <a href="caseStudiesDetails.html"
-                          >Case Studies Details</a
-                        >
+                        <a href="Versions203.html">Customisation </a>
+                      </li>
+                      <li>
+                        <a href="CompetitorStock.html"> Service Attitude </a>
+                      </li>
+                      <li>
+                        <a href="DentedStandees.html">
+                          After-Sales Reliability
+                        </a>
+                      </li>
+                      <li>
+                        <a href="CustomEngineering.html">
+                          Custom Engineering
+                        </a>
+                      </li>
+                      <li>
+                        <a href="PremiumFinishes.html"> Premium Finishes </a>
+                      </li>
+                      <li>
+                        <a href="EngineeringforReality.html"
+                          >Engineering for Reality
+                        </a>
                       </li>
                     </ul>
                   </li>
@@ -949,10 +1400,7 @@
           <!-- banner / hero start -->
           <div class="about-hero">
             <div class="about-hero__bg">
-              <img
-                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1920&auto=format&fit=crop"
-                alt="Virtual Showroom"
-              />
+              <img src="assets/cubo-img/banner02.png" alt="Virtual Showroom" />
               <!-- Overlay for text readability -->
               <div
                 style="
@@ -999,7 +1447,7 @@
                       href="#guided-walkthrough"
                       class="about-hero__btn-secondary"
                     >
-                      Book a Guided Walkthrough
+                      Book a Walkthrough
                       <i
                         class="fa-solid fa-arrow-right"
                         style="rotate: -45deg"
@@ -1143,7 +1591,7 @@
             }
           </style>
 
-          <section style="padding: 80px 0; background: #fff">
+          <section class="p-smm-40" style="padding: 80px 0; background: #fff">
             <div class="container rr-container-1710">
               <div
                 class="team-3__inner rr-pos-rel"
@@ -1159,7 +1607,7 @@
                   <div class="wrap">
                     <h2 class="sub-title">WHY WE BUILT THIS</h2>
                     <h3 class="title rr_title_anim" style="perspective: 400px">
-                      <div style="max-width: 60%">
+                      <div class="d-smm-mx-width-100" style="max-width: 60%">
                         Display Products Are Hard to
                         <span class="base-text-color"
                           >Picture from Catalogues.</span
@@ -1257,156 +1705,183 @@
                 </div>
               </div>
 
-              <div
-                style="
-                  display: grid;
-                  grid-template-columns: repeat(3, 1fr);
-                  gap: 24px;
-                "
-              >
-                <div class="project-6__item">
-                  <div class="project-6__thumb">
-                    <img
-                      src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=507&h=415&fit=crop"
-                      alt="3D virtual showroom"
-                    />
-                    <div class="content-top">
-                      <h2 class="sub-title">3D Walkthrough</h2>
-                      <a href="#" class="project-6__arrow"
-                        ><span
-                          ><i class="fa-regular fa-arrow-right-long"></i></span
-                      ></a>
-                    </div>
-                    <div class="project-6__content">
-                      <div class="price-plan">
-                        <h3 class="title">
-                          Walk Through a Full 3D Environment
-                        </h3>
-                        <span>Experience</span>
-                        <p
-                          style="color: #555; font-size: 16px; margin-top: 6px"
-                        >
-                          FABxGO, FABxGLOW, FABxPRO, standees, frames — arranged
-                          the way they'd look in a live setting.
-                        </p>
+              <!-- Desktop: plain grid | Mobile: swiper -->
+              <div class="project-6__grid-wrap">
+                <div class="project-6__desktop-grid">
+                  <div class="project-6__item">
+                    <div class="project-6__thumb">
+                      <img
+                        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=507&h=415&fit=crop"
+                        alt="3D virtual showroom"
+                      />
+                      <div class="content-top">
+                        <h2 class="sub-title">3D Walkthrough</h2>
+                        <a href="#" class="project-6__arrow"
+                          ><span
+                            ><i
+                              class="fa-regular fa-arrow-right-long"
+                            ></i></span
+                        ></a>
+                      </div>
+                      <div class="project-6__content">
+                        <div class="price-plan">
+                          <h3 class="title">
+                            Walk Through a Full 3D Environment
+                          </h3>
+                          <span>Experience</span>
+                          <p
+                            style="
+                              color: #555;
+                              font-size: 16px;
+                              margin-top: 6px;
+                            "
+                          >
+                            FABxGO, FABxGLOW, FABxPRO, standees, frames —
+                            arranged the way they'd look in a live setting.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="project-6__item">
-                  <div class="project-6__thumb">
-                    <img
-                      src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=507&h=415&fit=crop"
-                      alt="AI assistant"
-                    />
-                    <div class="content-top">
-                      <h2 class="sub-title">AI Assistant</h2>
-                      <a href="#" class="project-6__arrow"
-                        ><span
-                          ><i class="fa-regular fa-arrow-right-long"></i></span
-                      ></a>
-                    </div>
-                    <div class="project-6__content">
-                      <div class="price-plan">
-                        <h3 class="title">Meet Nora, Our AI Assistant</h3>
-                        <span>Ask Anything</span>
-                        <p
-                          style="color: #555; font-size: 16px; margin-top: 6px"
-                        >
-                          Specs, materials, lead times, pricing, customisation —
-                          instant answers, same as our sales team.
-                        </p>
+                  <div class="project-6__item">
+                    <div class="project-6__thumb">
+                      <img
+                        src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=507&h=415&fit=crop"
+                        alt="AI assistant"
+                      />
+                      <div class="content-top">
+                        <h2 class="sub-title">AI Assistant</h2>
+                        <a href="#" class="project-6__arrow"
+                          ><span
+                            ><i
+                              class="fa-regular fa-arrow-right-long"
+                            ></i></span
+                        ></a>
+                      </div>
+                      <div class="project-6__content">
+                        <div class="price-plan">
+                          <h3 class="title">Meet Nora, Our AI Assistant</h3>
+                          <span>Ask Anything</span>
+                          <p
+                            style="
+                              color: #555;
+                              font-size: 16px;
+                              margin-top: 6px;
+                            "
+                          >
+                            Specs, materials, lead times, pricing, customisation
+                            — instant answers, same as our sales team.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="project-6__item">
-                  <div class="project-6__thumb">
-                    <img
-                      src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=507&h=415&fit=crop"
-                      alt="Live founder access"
-                    />
-                    <div class="content-top">
-                      <h2 class="sub-title">Live Founder Access</h2>
-                      <a href="#" class="project-6__arrow"
-                        ><span
-                          ><i class="fa-regular fa-arrow-right-long"></i></span
-                      ></a>
-                    </div>
-                    <div class="project-6__content">
-                      <div class="price-plan">
-                        <h3 class="title">
-                          Meet the Founder. Live. In Seconds.
-                        </h3>
-                        <span>No Gatekeepers</span>
-                        <p
-                          style="color: #555; font-size: 16px; margin-top: 6px"
-                        >
-                          Shashank Gupta is available for a live video call. If
-                          he's available, you're talking to him directly.
-                        </p>
+                  <div class="project-6__item">
+                    <div class="project-6__thumb">
+                      <img
+                        src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=507&h=415&fit=crop"
+                        alt="Live founder access"
+                      />
+                      <div class="content-top">
+                        <h2 class="sub-title">Live Founder Access</h2>
+                        <a href="#" class="project-6__arrow"
+                          ><span
+                            ><i
+                              class="fa-regular fa-arrow-right-long"
+                            ></i></span
+                        ></a>
+                      </div>
+                      <div class="project-6__content">
+                        <div class="price-plan">
+                          <h3 class="title">
+                            Meet the Founder. Live. In Seconds.
+                          </h3>
+                          <span>No Gatekeepers</span>
+                          <p
+                            style="
+                              color: #555;
+                              font-size: 16px;
+                              margin-top: 6px;
+                            "
+                          >
+                            Shashank Gupta is available for a live video call.
+                            If he's available, you're talking to him directly.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="project-6__item">
-                  <div class="project-6__thumb">
-                    <img
-                      src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=507&h=415&fit=crop"
-                      alt="Book a slot"
-                    />
-                    <div class="content-top">
-                      <h2 class="sub-title">Book a Slot</h2>
-                      <a href="#" class="project-6__arrow"
-                        ><span
-                          ><i class="fa-regular fa-arrow-right-long"></i></span
-                      ></a>
-                    </div>
-                    <div class="project-6__content">
-                      <div class="price-plan">
-                        <h3 class="title">
-                          Schedule a Call If Now Doesn't Suit
-                        </h3>
-                        <span>Pick Your Time</span>
-                        <p
-                          style="color: #555; font-size: 16px; margin-top: 6px"
-                        >
-                          Pick a slot from inside the showroom. We meet over
-                          video with full context of your exploration.
-                        </p>
+                  <div class="project-6__item">
+                    <div class="project-6__thumb">
+                      <img
+                        src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=507&h=415&fit=crop"
+                        alt="Book a slot"
+                      />
+                      <div class="content-top">
+                        <h2 class="sub-title">Book a Slot</h2>
+                        <a href="#" class="project-6__arrow"
+                          ><span
+                            ><i
+                              class="fa-regular fa-arrow-right-long"
+                            ></i></span
+                        ></a>
+                      </div>
+                      <div class="project-6__content">
+                        <div class="price-plan">
+                          <h3 class="title">
+                            Schedule a Call If Now Doesn't Suit
+                          </h3>
+                          <span>Pick Your Time</span>
+                          <p
+                            style="
+                              color: #555;
+                              font-size: 16px;
+                              margin-top: 6px;
+                            "
+                          >
+                            Pick a slot from inside the showroom. We meet over
+                            video with full context of your exploration.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="project-6__item">
-                  <div class="project-6__thumb">
-                    <img
-                      src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=507&h=415&fit=crop"
-                      alt="Sample request"
-                    />
-                    <div class="content-top">
-                      <h2 class="sub-title">Sample Request</h2>
-                      <a href="#" class="project-6__arrow"
-                        ><span
-                          ><i class="fa-regular fa-arrow-right-long"></i></span
-                      ></a>
-                    </div>
-                    <div class="project-6__content">
-                      <div class="price-plan">
-                        <h3 class="title">
-                          Request Samples From Inside the Tour
-                        </h3>
-                        <span>Touch Before You Buy</span>
-                        <p
-                          style="color: #555; font-size: 16px; margin-top: 6px"
-                        >
-                          See something you want to touch in person? Request a
-                          sample without leaving the showroom.
-                        </p>
+                  <div class="project-6__item">
+                    <div class="project-6__thumb">
+                      <img
+                        src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=507&h=415&fit=crop"
+                        alt="Sample request"
+                      />
+                      <div class="content-top">
+                        <h2 class="sub-title">Sample Request</h2>
+                        <a href="#" class="project-6__arrow"
+                          ><span
+                            ><i
+                              class="fa-regular fa-arrow-right-long"
+                            ></i></span
+                        ></a>
+                      </div>
+                      <div class="project-6__content">
+                        <div class="price-plan">
+                          <h3 class="title">
+                            Request Samples From Inside the Tour
+                          </h3>
+                          <span>Touch Before You Buy</span>
+                          <p
+                            style="
+                              color: #555;
+                              font-size: 16px;
+                              margin-top: 6px;
+                            "
+                          >
+                            See something you want to touch in person? Request a
+                            sample without leaving the showroom.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1414,6 +1889,84 @@
               </div>
             </div>
           </section>
+          <style>
+            /* ── Desktop grid layout ── */
+            .project-6__desktop-grid {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 24px;
+            }
+
+            /* ── Mobile swiper (hidden on desktop) ── */
+            .project-6__mobile-swiper {
+              display: none;
+            }
+
+            @media (max-width: 767px) {
+              /* hide desktop grid, show swiper */
+              .project-6__desktop-grid {
+                display: none !important;
+              }
+              .project-6__mobile-swiper {
+                display: block;
+                position: relative;
+                padding-bottom: 48px;
+                overflow: hidden;
+              }
+              .project-6__mobile-swiper .swiper {
+                overflow: visible;
+              }
+              .project-6__mobile-swiper .swiper-slide {
+                height: auto;
+              }
+              /* pagination dots */
+              .project-6__mobile-swiper .swiper-pagination {
+                bottom: -40px;
+              }
+              .project-6__mobile-swiper .swiper-pagination-bullet {
+                width: 8px;
+                height: 8px;
+                background: rgba(17, 17, 17, 0.25);
+                opacity: 1;
+                transition:
+                  background 0.25s,
+                  width 0.25s;
+                border-radius: 4px;
+              }
+              .project-6__mobile-swiper .swiper-pagination-bullet-active {
+                width: 28px;
+                background: #111;
+              }
+              /* nav arrows */
+              .p6-mobile-nav {
+                display: flex;
+                justify-content: flex-end;
+                gap: 10px;
+                margin-bottom: 20px;
+              }
+              .p6-mobile-btn {
+                width: 42px;
+                height: 42px;
+                border: 1px solid rgba(17, 17, 17, 0.25);
+                background: transparent;
+                color: #111;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                font-size: 17px;
+                transition:
+                  background 0.2s,
+                  border-color 0.2s;
+              }
+              .p6-mobile-btn:hover {
+                background: #111;
+                color: #fff;
+                border-color: #111;
+              }
+            }
+          </style>
+
           <style>
             .project-6__thumb {
               display: flex;
@@ -1464,11 +2017,96 @@
             }
           </style>
         </main>
+
+        <!-- ── Project-6 Mobile Swiper (injected by JS on mobile only) ── -->
+        <script>
+          (function initProject6MobileSwiper() {
+            function build() {
+              if (window.innerWidth > 767) return; // desktop: do nothing
+
+              var wrap = document.querySelector(".project-6__grid-wrap");
+              if (!wrap) return;
+
+              // Collect all project-6__item elements from the desktop grid
+              var items = wrap.querySelectorAll(
+                ".project-6__desktop-grid .project-6__item",
+              );
+              if (!items.length) return;
+
+              // Build swiper HTML
+              var nav =
+                '<div class="p6-mobile-nav">' +
+                '<button class="p6-mobile-btn" id="p6-prev" aria-label="Previous">&#8592;</button>' +
+                '<button class="p6-mobile-btn" id="p6-next" aria-label="Next">&#8594;</button>' +
+                "</div>";
+
+              var slides = "";
+              items.forEach(function (item) {
+                slides +=
+                  '<div class="swiper-slide">' + item.outerHTML + "</div>";
+              });
+
+              var swEl =
+                '<div class="project-6__mobile-swiper">' +
+                nav +
+                '<div class="swiper" id="p6-swiper">' +
+                '<div class="swiper-wrapper">' +
+                slides +
+                "</div>" +
+                '<div class="swiper-pagination"></div>' +
+                "</div>" +
+                "</div>";
+
+              wrap.insertAdjacentHTML("beforeend", swEl);
+
+              // Init Swiper
+              function run() {
+                if (typeof Swiper === "undefined") {
+                  setTimeout(run, 100);
+                  return;
+                }
+                var sw = new Swiper("#p6-swiper", {
+                  slidesPerView: 1.1,
+                  spaceBetween: 16,
+                  loop: false,
+                  pagination: {
+                    el: "#p6-swiper .swiper-pagination",
+                    clickable: true,
+                  },
+                });
+                document
+                  .getElementById("p6-prev")
+                  .addEventListener("click", function () {
+                    sw.slidePrev();
+                  });
+                document
+                  .getElementById("p6-next")
+                  .addEventListener("click", function () {
+                    sw.slideNext();
+                  });
+              }
+
+              if (document.readyState === "loading") {
+                document.addEventListener("DOMContentLoaded", function () {
+                  setTimeout(run, 400);
+                });
+              } else {
+                setTimeout(run, 400);
+              }
+            }
+
+            if (document.readyState === "loading") {
+              document.addEventListener("DOMContentLoaded", build);
+            } else {
+              build();
+            }
+          })();
+        </script>
         <!-- WHO IT'S FOR -->
         <section style="padding: 150px 0; background: #eeeeee">
           <div class="container rr-container-1710">
             <!-- Section Header -->
-            <div style="margin-bottom: 60px">
+            <div class="mb-smm-40" style="margin-bottom: 60px">
               <span class="cx-eyebrow mb-4">Who It's For</span>
               <h2 class="cx-heading">
                 Three Ways People<br />Actually <span> Use This. </span>
@@ -1497,6 +2135,7 @@
               >
                 <div>
                   <div
+                    class="mb-smm-30"
                     style="
                       display: flex;
                       justify-content: flex-end;
@@ -1508,6 +2147,7 @@
                     >
                   </div>
                   <h3
+                    class="h3-smm-25px"
                     style="
                       font-size: 32px;
                       font-weight: 600;
@@ -1567,6 +2207,7 @@
               >
                 <div>
                   <div
+                    class="mb-smm-30"
                     style="
                       display: flex;
                       justify-content: flex-end;
@@ -1578,6 +2219,7 @@
                     >
                   </div>
                   <h3
+                    class="h3-smm-25px"
                     style="
                       font-size: 32px;
                       font-weight: 600;
@@ -1638,6 +2280,7 @@
               >
                 <div>
                   <div
+                    class="mb-smm-30"
                     style="
                       display: flex;
                       justify-content: flex-end;
@@ -1649,6 +2292,7 @@
                     >
                   </div>
                   <h3
+                    class="h3-smm-25px"
                     style="
                       font-size: 32px;
                       font-weight: 600;
@@ -1917,7 +2561,7 @@
                   </div>
                 </div>
                 <div class="footer-widget-box">
-                  <h2 class="title">JOIN OUR NEWSLETTER</h2>
+                  <h2 class="title">Join our newsletter</h2>
                   <div class="newsletter">
                     <div class="input-group">
                       <input
@@ -2022,7 +2666,114 @@
         <!-- footer end -->
       </div>
     </div>
-
+    <div class="mobile-nav-drawer" id="mobDrawer">
+      <div class="mob-inner">
+        <div class="mob-close">
+          <span class="mob-logo">Cuboc</span>
+          <button id="mobCloseBtn" aria-label="Close menu">&#x2715;</button>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#"
+              >Company
+              <span class="mob-arrow" data-sub="mobSub1">&#9660;</span></a
+            >
+            <ul class="mob-sub" id="mobSub1">
+              <li><a href="about.html">About Us</a></li>
+              <li>
+                <a href="recognitionNetwork.html">Recognition &amp; Network</a>
+              </li>
+              <li><a href="trade-events.html">Trade Shows &amp; Events</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="products.html"
+              >Products
+              <span class="mob-arrow" data-sub="mobSub2">&#9660;</span></a
+            >
+            <ul class="mob-sub" id="mobSub2">
+              <li>
+                <a href="Fabric-Light-Boxes-p1.html">Fabric Light Boxes</a>
+              </li>
+              <li><a href="Standees-p2.html">Standees</a></li>
+              <li>
+                <a href="ultra-thin-glass-p3.html">Ultra Thin Glass Frames</a>
+              </li>
+              <li>
+                <a href="battery-table-p4.html">Battery Table Top Displays</a>
+              </li>
+              <li><a href="product-gazebo-p5.html">Gazebo Tents</a></li>
+            </ul>
+          </li>
+          <li><a href="virtualshowroom.html">Virtual Showroom</a></li>
+          <li>
+            <a href="caseStudy.html"
+              >Case Studies
+              <span class="mob-arrow" data-sub="mobSub3">&#9660;</span></a
+            >
+            <ul class="mob-sub" id="mobSub3">
+              <li><a href="Versions203.html">Customisation</a></li>
+              <li><a href="CompetitorStock.html">Service Attitude</a></li>
+              <li><a href="DentedStandees.html">After-Sales Reliability</a></li>
+              <li><a href="CustomEngineering.html">Custom Engineering</a></li>
+              <li><a href="PremiumFinishes.html">Premium Finishes</a></li>
+              <li>
+                <a href="EngineeringforReality.html">Engineering for Reality</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var drawer = document.getElementById("mobDrawer");
+        var closeBtn = document.getElementById("mobCloseBtn");
+        var toggleBtn = document.querySelector(
+          ".side-toggle.mobile-button .bar-icon",
+        );
+        function openMenu() {
+          drawer.classList.add("open");
+          document.body.style.overflow = "hidden";
+        }
+        function closeMenu() {
+          drawer.classList.remove("open");
+          document.body.style.overflow = "";
+          document.querySelectorAll(".mob-sub").forEach(function (s) {
+            s.classList.remove("open");
+          });
+          document.querySelectorAll(".mob-arrow").forEach(function (a) {
+            a.classList.remove("open");
+          });
+        }
+        if (toggleBtn)
+          toggleBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            openMenu();
+          });
+        if (closeBtn) closeBtn.addEventListener("click", closeMenu);
+        document.querySelectorAll(".mob-arrow").forEach(function (arrow) {
+          arrow.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var sub = document.getElementById(arrow.getAttribute("data-sub"));
+            var isOpen = sub.classList.contains("open");
+            document.querySelectorAll(".mob-sub").forEach(function (s) {
+              s.classList.remove("open");
+            });
+            document.querySelectorAll(".mob-arrow").forEach(function (a) {
+              a.classList.remove("open");
+            });
+            if (!isOpen) {
+              sub.classList.add("open");
+              arrow.classList.add("open");
+            }
+          });
+        });
+      })();
+    </script>
     <!-- Dependencies JS -->
     <script src="assets/vandor/jquery/jquery.js"></script>
     <script src="assets/vandor/bootstrap/bootstrap.bundle.min.js"></script>
