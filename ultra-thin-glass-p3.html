@@ -37,11 +37,20 @@
     />
 
     <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="assets/css/lang-switcher.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
+      .lang-switcher__toggle,
+      .lang-switcher__toggle i.fa-globe {
+        color: white;
+      }
+      .header-area-2.nav-scrolled .lang-switcher__toggle,
+      .header-area-2.nav-scrolled .lang-switcher__toggle i.fa-globe {
+        color: black;
+      }
       @media (max-width: 768px) {
         .header-area-2 .header-right .side-toggle .bar-icon span {
-          background: rgb(119, 116, 116) !important;
+          background: #d5d5d5;
         }
         .fabx-variants__tagline {
           min-height: 0px !important;
@@ -107,13 +116,14 @@
           flex-wrap: nowrap !important;
         }
         .about-hero__btn-primary,
-        .about-hero__btn-secondary {
+        .about-hero__btn-secondary,
+        .project-6__btn .rr-btn-primary {
           flex: 1 !important;
           min-width: 0 !important;
           text-align: center !important;
           justify-content: center !important;
           font-size: 13px !important;
-          padding: 14px 10px !important;
+          padding: 10px 10px !important;
         }
         .project-6__btn {
           width: 100% !important;
@@ -220,7 +230,7 @@
           max-width: 100% !important;
         }
         .ff-card-title {
-          font-size: 25px !important;
+          font-size: 20px !important;
           font-weight: 500 !important;
         }
         .ff-card-desc {
@@ -346,7 +356,6 @@
       }
       .header-area-2 .header__logo img {
         max-width: 120px;
-        filter: invert(1);
       }
       .our-service-9__title {
         margin: 30px 0 0px 0;
@@ -765,13 +774,13 @@
     <div class="has-smooth" id="has_smooth"></div>
 
     <!-- ── Header ── -->
-    <header class="header-area-2">
+    <header class="header-area-2" data-logo-swap="true">
       <div class="header-main">
         <div class="container rr-container-1710">
           <div class="header-area-2__inner">
             <div class="header__logo">
               <a href="index.html">
-                <img src="assets/imgs/cuboc-logo-transparent.png" />
+                <img src="assets/cubo-img/cuboc-logo-white.png" />
               </a>
             </div>
             <div class="header__nav-2">
@@ -862,14 +871,172 @@
               </nav>
             </div>
             <div class="header-right">
+              <div class="lang-switcher">
+                <button
+                  type="button"
+                  class="lang-switcher__toggle"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fa-solid fa-globe"></i>
+                  <span class="lang-switcher__current-label">
+                    <span class="lang-switcher__current">EN</span>
+                  </span>
+                  <i class="fa-solid fa-chevron-down lang-switcher__arrow"></i>
+                </button>
+                <ul class="lang-switcher__menu">
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option is-active"
+                      data-lang="en"
+                      >English</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="hi"
+                      >&#2361;&#2367;&#2306;&#2342;&#2368;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="ta"
+                      >&#2980;&#2990;&#3007;&#2996;&#3021;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="te"
+                      >&#3122;&#3142;&#3122;&#3137;&#3095;&#3137;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="mr"
+                      >&#2350;&#2352;&#2366;&#2336;&#2368;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="gu"
+                      >&#2711;&#2753;&#2716;&#2736;&#2750;&#2724;&#2752;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="bn"
+                      >&#2476;&#2494;&#2434;&#2482;&#2494;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="kn"
+                      >&#3221;&#3277;&#3240;&#3233;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="ur"
+                      >&#1575;&#1585;&#1583;&#1608;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="es"
+                      >Espa&ntilde;ol</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="fr"
+                      >Fran&ccedil;ais</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="de"
+                      >Deutsch</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="zh-CN"
+                      >&#20013;&#25991;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="ar"
+                      >&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="ru"
+                      >&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="ja"
+                      >&#26085;&#26412;&#35486;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="pt"
+                      >Portugu&ecirc;s</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div id="google_translate_element" style="display: none"></div>
               <div class="header__navicon">
                 <div class="side-toggle mobile-button d-lg-block d-xl-none">
                   <a class="bar-icon" href="javascript:void(0)"
                     ><span></span><span></span
                   ></a>
                 </div>
-                <a href="contact.html" class="rr-btn-primary bg-base-color">
-                  <span class="text">Let's Talk</span>
+                <a
+                  href="#"
+                  class="rr-btn-primary bg-base-color"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quoteModal"
+                >
+                  <span class="text">Enquire Now</span>
                   <i
                     class="fa-solid fa-arrow-right text-white"
                     style="rotate: -45deg"
@@ -1017,12 +1184,139 @@
               </p>
             </div>
 
-            <a href="contact.html" class="strip__btn">
+            <a
+              href="javascript:void(0)"
+              data-bs-toggle="modal"
+              data-bs-target="#quoteModal"
+              class="strip__btn"
+            >
               Get a Quote
               <i class="fa-solid fa-arrow-right" style="rotate: -45deg"></i>
             </a>
           </section>
         </main>
+        <style>
+          @media (max-width: 600px) {
+            .product-gallery {
+              padding-top: 0px !important;
+            }
+            .product-gallery__item {
+              border: unset !important;
+              height: auto !important;
+            }
+          }
+        </style>
+        <section class="product-gallery py-5">
+          <div class="container rr-container-1710">
+            <div class="row row-cols-2 row-cols-md-5 g-3">
+              <div class="col">
+                <div
+                  class="product-gallery__item"
+                  style="
+                    border-radius: 8px;
+                    overflow: hidden;
+                    aspect-ratio: 1/1;
+                    border: 1px solid #e0e0e0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <img
+                    src="assets/cubo-img/p3-01.png"
+                    alt="Fabric Light Box - Image 1"
+                    class="img-fluid"
+                    style="width: 100%; height: 100%; object-fit: contain"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div
+                  class="product-gallery__item"
+                  style="
+                    border-radius: 8px;
+                    overflow: hidden;
+                    aspect-ratio: 1/1;
+                    border: 1px solid #e0e0e0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <img
+                    src="assets/cubo-img/p3-02.png"
+                    alt="Fabric Light Box - Image 2"
+                    class="img-fluid"
+                    style="width: 100%; height: 100%; object-fit: contain"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div
+                  class="product-gallery__item"
+                  style="
+                    border-radius: 8px;
+                    overflow: hidden;
+                    aspect-ratio: 1/1;
+                    border: 1px solid #e0e0e0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <img
+                    src="assets/cubo-img/p3-03.png"
+                    alt="Fabric Light Box - Image 3"
+                    class="img-fluid"
+                    style="width: 100%; height: 100%; object-fit: contain"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div
+                  class="product-gallery__item"
+                  style="
+                    border-radius: 8px;
+                    overflow: hidden;
+                    aspect-ratio: 1/1;
+                    border: 1px solid #e0e0e0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <img
+                    src="assets/cubo-img/p3-04.png"
+                    alt="Fabric Light Box - Image 4"
+                    class="img-fluid"
+                    style="width: 100%; height: 100%; object-fit: contain"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div
+                  class="product-gallery__item"
+                  style="
+                    border-radius: 8px;
+                    overflow: hidden;
+                    aspect-ratio: 1/1;
+                    border: 1px solid #e0e0e0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <img
+                    src="assets/cubo-img/p3-05.png"
+                    alt="Fabric Light Box - Image 5"
+                    class="img-fluid"
+                    style="width: 100%; height: 100%; object-fit: contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <style>
           #fabx-features {
             padding: 140px 0;
@@ -1161,11 +1455,10 @@
           }
 
           .ff-card-tag {
-            font-size: 20px;
-            font-weight: 700;
+            font-size: 23px;
             letter-spacing: 0.16em;
             text-transform: uppercase;
-            opacity: 0.5;
+            color: white;
           }
           .ff-card-title {
             font-size: 26px;
@@ -1209,9 +1502,7 @@
           }
 
           /* image card colours */
-          .ff-card.has-img .ff-card-tag {
-            color: rgba(255, 255, 255, 0.9);
-          }
+
           .ff-card.has-img .ff-card-title {
             color: #fff;
           }
@@ -1315,15 +1606,18 @@
                 <div class="ff-card-content">
                   <div class="ff-card-inner">
                     <div class="ff-card-top">
-                      <span class="ff-card-tag">01</span>
+                      <span class="ff-card-tag">
+                        <i class="fa-solid fa-ruler-horizontal"></i>
+                      </span>
+
                       <h3 class="ff-card-title">Ultra-Thin<br />Profile</h3>
                     </div>
                     <div class="ff-card-bottom">
-                      <p class="ff-card-desc">
+                      <!-- <p class="ff-card-desc">
                         Minimal frame thickness. Mounts almost flush with the
                         wall. The graphic looks more like part of the space than
                         a display on top of it.
-                      </p>
+                      </p> -->
 
                       <a href="contact.html" class="about-hero__btn-primary"
                         >More Information
@@ -1342,16 +1636,19 @@
                 <div class="ff-card-content">
                   <div class="ff-card-inner">
                     <div class="ff-card-top">
-                      <span class="ff-card-tag">02</span>
+                      <span class="ff-card-tag">
+                        <i class="fa-solid fa-display"></i>
+                      </span>
+
                       <h3 class="ff-card-title">
                         High Clarity<br />Display Surface
                       </h3>
                     </div>
                     <div class="ff-card-bottom">
-                      <p class="ff-card-desc">
+                      <!-- <p class="ff-card-desc">
                         Optically clear glass. Anti-reflective options
                         available. Colours look like they're meant to.
-                      </p>
+                      </p> -->
                       <div class="project-6__btn">
                         <a href="#" class="rr-btn-primary">
                           <span class="text">More Information</span>
@@ -1374,17 +1671,20 @@
                 <div class="ff-card-content">
                   <div class="ff-card-inner">
                     <div class="ff-card-top">
-                      <span class="ff-card-tag">03</span>
+                      <span class="ff-card-tag">
+                        <i class="fa-solid fa-thumbtack"></i>
+                      </span>
+
                       <h3 class="ff-card-title">
                         Lightweight and<br />Easy to Mount
                       </h3>
                     </div>
                     <div class="ff-card-bottom">
-                      <p class="ff-card-desc">
+                      <!-- <p class="ff-card-desc">
                         Single-person installation. No heavy hardware.
                         Wall-mount brackets included, alternatives available for
                         ceiling-suspended or tabletop configurations.
-                      </p>
+                      </p> -->
                       <a href="contact.html" class="about-hero__btn-primary"
                         >More Information
                         <i
@@ -1402,17 +1702,20 @@
                 <div class="ff-card-content">
                   <div class="ff-card-inner">
                     <div class="ff-card-top">
-                      <span class="ff-card-tag">04</span>
+                      <span class="ff-card-tag">
+                        <i class="fa-solid fa-gem"></i>
+                      </span>
+
                       <h3 class="ff-card-title">
                         Premium Finish for<br />Modern Interiors
                       </h3>
                     </div>
                     <div class="ff-card-bottom">
-                      <p class="ff-card-desc">
+                      <!-- <p class="ff-card-desc">
                         Matches contemporary retail and office design
                         vocabularies. Subtle enough for luxury environments,
                         strong enough for bold brand presence.
-                      </p>
+                      </p> -->
                       <div class="project-6__btn">
                         <a href="#" class="rr-btn-primary">
                           <span class="text">More Information</span>
@@ -1435,16 +1738,19 @@
                 <div class="ff-card-content">
                   <div class="ff-card-inner">
                     <div class="ff-card-top">
-                      <span class="ff-card-tag">05</span>
+                      <span class="ff-card-tag">
+                        <i class="fa-solid fa-lightbulb"></i>
+                      </span>
+
                       <h3 class="ff-card-title">
                         Uniform Illumination<br />(Backlit Variant)
                       </h3>
                     </div>
                     <div class="ff-card-bottom">
-                      <p class="ff-card-desc">
+                      <!-- <p class="ff-card-desc">
                         Backlit options deliver consistent brightness across the
                         entire surface. No hot spots, no dark corners.
-                      </p>
+                      </p> -->
                       <a href="contact.html" class="about-hero__btn-primary"
                         >More Information
                         <i
@@ -1462,18 +1768,21 @@
                 <div class="ff-card-content">
                   <div class="ff-card-inner">
                     <div class="ff-card-top">
-                      <span class="ff-card-tag">06</span>
+                      <span class="ff-card-tag">
+                        <i class="fa-solid fa-ruler-combined"></i>
+                      </span>
+
                       <h3 class="ff-card-title">
                         Custom Sizes<br />On Request
                       </h3>
                     </div>
                     <div class="ff-card-bottom">
-                      <p class="ff-card-desc">
+                      <!-- <p class="ff-card-desc">
                         We manufacture in-house. We've built an 18-inch x 3-inch
                         ultra-thin glass frame for a supermarket client.
                         Standard sizes work for most. Custom sizes are on the
                         table when they don't.
-                      </p>
+                      </p> -->
 
                       <div class="project-6__btn">
                         <a href="#" class="rr-btn-primary">
@@ -1613,8 +1922,7 @@
           /* ---------- Card (default: white) ---------- */
           .fabx-variants__card {
             --card-bg: #ffffff;
-            --card-inner-bg: #f5f5f4;
-            --card-badge-bg: #f5f5f4;
+
             --accent: #111111;
             background: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.06);
@@ -1635,7 +1943,6 @@
 
           /* Alternate card: grey-white */
           .fabx-variants__card--alt {
-            --card-bg: #ededeb;
             --card-inner-bg: #ffffff;
             --card-badge-bg: #ffffff;
           }
@@ -1851,6 +2158,30 @@
               font-size: 28px;
             }
           }
+          .fabx-variants__media {
+            position: relative;
+            width: calc(
+              100% - 68px
+            ); /* matches 34px padding used elsewhere in card */
+            margin: 0 34px 24px;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #e5e5e5;
+            margin: 20px 0;
+          }
+          .fabx-variants__media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+          }
+          @media (max-width: 575px) {
+            .fabx-variants__media {
+              width: calc(100% - 40px);
+              margin: 0 20px 20px;
+            }
+          }
         </style>
 
         <section class="fabx-variants section-spacing fade-anim">
@@ -1899,10 +2230,17 @@
                   <span class="fabx-variants__name-accent">Wall-Mounted</span>
                   Frames
                 </div>
-                <div class="desc">
+                <!-- <div class="desc">
                   The core product. Mounts flush to the wall with minimal
                   visible hardware. Ideal for retail interiors, showrooms,
                   corporate offices.
+                </div> -->
+                <div class="fabx-variants__media">
+                  <img
+                    src="assets/cubo-img/p3-01.png"
+                    alt="Modular reconfigurable display"
+                    loading="lazy"
+                  />
                 </div>
               </div>
 
@@ -1920,10 +2258,17 @@
                   <span class="fabx-variants__name-accent">Backlit</span>
                   Glass Frames
                 </div>
-                <div class="desc">
+                <!-- <div class="desc">
                   Integrated LED backlighting for environments where visibility
                   matters. Great for product highlights, promotional messaging,
                   premium branding.
+                </div> -->
+                <div class="fabx-variants__media">
+                  <img
+                    src="assets/cubo-img/p3-02.png"
+                    alt="Modular reconfigurable display"
+                    loading="lazy"
+                  />
                 </div>
               </div>
 
@@ -1941,10 +2286,17 @@
                   <span class="fabx-variants__name-accent">Custom Size</span>
                   Frames
                 </div>
-                <div class="desc">
+                <!-- <div class="desc">
                   Built to exact dimensions. Whether it's an 18-inch supermarket
                   shelf or a 3-metre luxury retail wall, we manufacture to
                   specification.
+                </div> -->
+                <div class="fabx-variants__media">
+                  <img
+                    src="assets/cubo-img/p3-03.png"
+                    alt="Modular reconfigurable display"
+                    loading="lazy"
+                  />
                 </div>
               </div>
 
@@ -1959,11 +2311,18 @@
                   </div>
                 </div>
                 <div class="fabx-variants__name">Accessories</div>
-                <div class="desc">
+                <!-- <div class="desc">
                   Full mounting ecosystem — tabletop stands, floor stands,
                   suspended ceiling systems, adjustable mounts. Lets you install
                   the same frame across counters, walls, ceilings, and open
                   spaces.
+                </div> -->
+                <div class="fabx-variants__media">
+                  <img
+                    src="assets/cubo-img/p3-04.png"
+                    alt="Modular reconfigurable display"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>
@@ -2446,10 +2805,7 @@
                   <i class="fa-solid fa-arrow-right" style="rotate: -45deg"></i>
                 </a>
 
-                <a
-                  href="contact.html"
-                  class="strap-cta__btn strap-cta__btn--secondary"
-                >
+                <a href="#" class="strap-cta__btn strap-cta__btn--secondary">
                   Ask About Custom Sizes
                   <i
                     class="fa-solid fa-arrow-right text-white"
@@ -2651,7 +3007,58 @@
         </ul>
       </div>
     </div>
+    <style>
+      .whatsapp-float {
+        position: fixed;
+        bottom: 80px; /* increased from 25px */
+        right: 18px;
+        background-color: #25d366;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        transition: transform 0.3s ease;
+      }
 
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+      }
+
+      .whatsapp-float img {
+        width: 22px;
+        height: 22px;
+      }
+
+      @media (max-width: 480px) {
+        .whatsapp-float {
+          width: 40px;
+          height: 40px;
+          bottom: 75px; /* increased from 15px */
+          right: 25px;
+        }
+        .whatsapp-float img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    </style>
+
+    <a
+      href="https://wa.me/919818538180"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v10/icons/whatsapp.svg"
+        alt="WhatsApp"
+        style="filter: brightness(0) invert(1)"
+      />
+    </a>
     <script>
       (function () {
         var drawer = document.getElementById("mobDrawer");
@@ -2699,6 +3106,348 @@
         });
       })();
     </script>
+    <style>
+      .modal-field {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .modal-field input,
+      .modal-field select {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+        outline: none;
+        font-size: 15px;
+        font-weight: 400;
+        color: #111;
+        background: transparent;
+        padding: 10px 0;
+        transition: border-color 0.25s;
+        appearance: none;
+        -webkit-appearance: none;
+      }
+      .modal-field input::placeholder {
+        color: rgba(17, 17, 17, 0.4);
+      }
+      .modal-field input:focus,
+      .modal-field select:focus {
+        border-bottom-color: #111;
+      }
+      .modal-field.has-error input,
+      .modal-field.has-error select {
+        border-bottom-color: #e74c3c;
+      }
+      .modal-field .m-err {
+        font-size: 11px;
+        color: #e74c3c;
+        min-height: 16px;
+        display: block;
+      }
+      @media (max-width: 576px) {
+        .modal-header {
+          padding: 20px !important;
+        }
+        .modal-body {
+          padding: 20px !important;
+        }
+      }
+
+      /* ── Fix: keep modal above mobile nav drawer (z-index 9999) ── */
+      .modal {
+        z-index: 10050 !important;
+      }
+      .modal-backdrop {
+        z-index: 10040 !important;
+      }
+    </style>
+
+    <!-- 3. MODAL MARKUP -->
+    <div
+      class="modal fade"
+      id="quoteModal"
+      tabindex="-1"
+      aria-labelledby="quoteModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content" style="border-radius: 0; border: none">
+          <div
+            class="modal-header"
+            style="
+              border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+              padding: 28px 36px;
+            "
+          >
+            <div>
+              <p
+                style="
+                  font-size: 11px;
+                  font-weight: 600;
+                  letter-spacing: 0.13em;
+                  text-transform: uppercase;
+                  color: rgba(17, 17, 17, 0.4);
+                  margin-bottom: 6px;
+                "
+              >
+                ENQUIRY
+              </p>
+              <h5
+                class="modal-title"
+                id="quoteModalLabel"
+                style="
+                  font-size: 28px;
+                  font-weight: 500;
+                  letter-spacing: -1px;
+                  color: #111;
+                  margin: 0;
+                "
+              >
+                Let's Talk
+              </h5>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body" style="padding: 36px">
+            <form id="quoteModalForm" novalidate>
+              <div class="row g-3 mb-3">
+                <div class="col-12 col-sm-6">
+                  <div class="modal-field">
+                    <input
+                      type="text"
+                      id="m_name"
+                      name="name"
+                      placeholder="Name*"
+                    />
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="modal-field">
+                    <input
+                      type="text"
+                      id="m_company"
+                      name="company"
+                      placeholder="Company Name*"
+                    />
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-12 col-sm-6">
+                  <div class="modal-field">
+                    <input
+                      type="tel"
+                      id="m_phone"
+                      name="phone"
+                      placeholder="Phone Number*"
+                    />
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="modal-field">
+                    <input
+                      type="email"
+                      id="m_email"
+                      name="email"
+                      placeholder="Email Address*"
+                    />
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-12 col-sm-6">
+                  <div class="modal-field">
+                    <select id="m_product" name="product">
+                      <option value="0">Product of Interest*</option>
+                      <option value="1">Fabric Light Boxes</option>
+                      <option value="2">Standees</option>
+                      <option value="3">Ultra Thin Glass Frames</option>
+                      <option value="4">Battery Table Tops</option>
+                      <option value="5">Gazebo Tents</option>
+                      <option value="6">Custom</option>
+                      <option value="7">Not Sure Yet</option>
+                    </select>
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="modal-field">
+                    <input
+                      type="text"
+                      id="m_qty"
+                      name="quantity"
+                      placeholder="Approximate Quantity*"
+                    />
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-4">
+                <div class="col-12">
+                  <div class="modal-field">
+                    <input
+                      type="text"
+                      id="m_req"
+                      name="requirement"
+                      placeholder="Your Requirement*"
+                    />
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-end">
+                <button
+                  type="submit"
+                  class="rr-btn-primary"
+                  style="background: #111; color: #fff; border-color: #111"
+                >
+                  <span>Send Enquiry</span>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. SWEETALERT2 (skip this line if already loaded on the page) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- 5. SCRIPT -->
+    <script>
+      (function () {
+        var mFields = [
+          { id: "m_name", label: "Name", type: "text" },
+          { id: "m_company", label: "Company Name", type: "text" },
+          { id: "m_phone", label: "Phone Number", type: "phone" },
+          { id: "m_email", label: "Email Address", type: "email" },
+          { id: "m_product", label: "Product of Interest", type: "select" },
+          { id: "m_qty", label: "Approximate Quantity", type: "text" },
+          { id: "m_req", label: "Your Requirement", type: "text" },
+        ];
+
+        function isValidEmail(v) {
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+        }
+        function isValidPhone(v) {
+          return /^[+]?[\d\s\-().]{7,15}$/.test(v.trim());
+        }
+
+        function setError(f, msg) {
+          var el = document.getElementById(f.id);
+          var wrap = el.closest(".modal-field");
+          wrap.classList.add("has-error");
+          wrap.querySelector(".m-err").textContent = msg;
+        }
+        function clearErr(el) {
+          var wrap = el.closest(".modal-field");
+          wrap.classList.remove("has-error");
+          wrap.querySelector(".m-err").textContent = "";
+        }
+        function clearAllErrors() {
+          mFields.forEach(function (f) {
+            var el = document.getElementById(f.id);
+            if (el) clearErr(el);
+          });
+        }
+
+        var modalEl = document.getElementById("quoteModal");
+        var formEl = document.getElementById("quoteModalForm");
+
+        mFields.forEach(function (f) {
+          var el = document.getElementById(f.id);
+          if (!el) return;
+          ["input", "change"].forEach(function (ev) {
+            el.addEventListener(ev, function () {
+              clearErr(el);
+            });
+          });
+        });
+
+        /* Close mobile nav drawer automatically if modal opens on top of it */
+        modalEl.addEventListener("show.bs.modal", function () {
+          var drawer = document.getElementById("mobDrawer");
+          if (drawer) {
+            drawer.classList.remove("open");
+            document.body.style.overflow = "";
+          }
+        });
+
+        /* Reset form + clear all errors every time modal closes */
+        modalEl.addEventListener("hidden.bs.modal", function () {
+          formEl.reset();
+          clearAllErrors();
+        });
+
+        formEl.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          var valid = true;
+          var firstInvalid = null;
+
+          mFields.forEach(function (f) {
+            var el = document.getElementById(f.id);
+            if (!el) return;
+            var val = el.value;
+
+            if (!val || val.trim() === "" || val === "0") {
+              setError(f, f.label + " is required.");
+              valid = false;
+              if (!firstInvalid) firstInvalid = el;
+              return;
+            }
+            if (f.type === "email" && !isValidEmail(val)) {
+              setError(f, "Please enter a valid email address.");
+              valid = false;
+              if (!firstInvalid) firstInvalid = el;
+              return;
+            }
+            if (f.type === "phone" && !isValidPhone(val)) {
+              setError(f, "Please enter a valid phone number.");
+              valid = false;
+              if (!firstInvalid) firstInvalid = el;
+              return;
+            }
+
+            clearErr(el);
+          });
+
+          if (!valid) {
+            if (firstInvalid) firstInvalid.focus();
+            return;
+          }
+
+          var bsModal = bootstrap.Modal.getInstance(modalEl);
+          if (bsModal) bsModal.hide();
+
+          Swal.fire({
+            icon: "success",
+            title: "Submitted Successfully!",
+            text: "Thank you for reaching out. We'll get back to you within 1 working day.",
+            confirmButtonText: "Got it",
+            confirmButtonColor: "#111111",
+          });
+          // form.reset() and error-clearing happen automatically via hidden.bs.modal above
+        });
+      })();
+    </script>
     <!-- Dependencies JS Files -->
     <script src="assets/vandor/jquery/jquery.js"></script>
     <script src="assets/vandor/bootstrap/bootstrap.bundle.min.js"></script>
@@ -2721,5 +3470,10 @@
     <!-- Template Main JS File -->
     <script src="assets/vandor/common-js/common.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/lang-switcher.js"></script>
+    <script
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+      async
+    ></script>
   </body>
 </html>
