@@ -1,0 +1,151 @@
+/* =====================================================================
+   CUBOC — Navbar Language Switcher
+   Matches theme: Bai Jamjuree font, --primary/--black/--white/--border
+   vars, flat (0 radius) edges like .rr-btn-primary, divider style like
+   .header-area-2 .header-right children.
+   This file is purely additive — it does not touch any existing class.
+===================================================================== */
+
+.lang-switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-left: 1px solid var(--border);
+  font-family: var(--font_bai);
+}
+
+.lang-switcher__toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font_bai);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  color: var(--black);
+  padding: 8px 2px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.lang-switcher__toggle i.fa-globe {
+  font-size: 15px;
+  color: var(--black);
+}
+
+.lang-switcher__current {
+  min-width: 20px;
+}
+
+.lang-switcher__arrow {
+  font-size: 9px;
+  transition: transform 0.25s ease;
+}
+
+.lang-switcher.is-open .lang-switcher__arrow {
+  transform: rotate(180deg);
+}
+
+.lang-switcher__menu {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+  position: absolute;
+  top: calc(100% + 1px);
+  right: 0;
+  min-width: 170px;
+  max-height: 320px;
+  overflow-y: auto;
+  background: var(--white);
+  border: 1px solid var(--border);
+  box-shadow: 0 18px 40px rgba(17, 17, 17, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 999;
+}
+
+.lang-switcher.is-open .lang-switcher__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-switcher__menu li a {
+  display: block;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--secondary);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.lang-switcher__menu li a:hover {
+  background: #f4f4f4;
+  color: var(--black);
+}
+
+.lang-switcher__menu li a.is-active {
+  color: #21175e;
+  font-weight: 600;
+}
+
+.lang-switcher__menu li a.is-active::after {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 900;
+  float: right;
+  margin-left: 12px;
+  font-size: 11px;
+}
+
+@media (max-width: 575px) {
+  .lang-switcher {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .lang-switcher__toggle .lang-switcher__current-label {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Neutralize Google Website Translator's own UI so ONLY our themed
+   dropdown is visible. Google injects this markup at runtime, so these
+   rules must use !important to reliably override its inline styles.
+--------------------------------------------------------------------- */
+#google_translate_element {
+  display: none !important;
+}
+
+.goog-te-banner-frame,
+.skiptranslate > iframe {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+}
+
+body {
+  top: 0 !important;
+  position: static !important;
+}
+
+.goog-tooltip,
+.goog-tooltip:hover {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}

@@ -1077,16 +1077,28 @@
   //     });
   //   });
   // }
-  /* === scroll-up navbar (index 26) === */
-  /* === scroll-up navbar (index 26) === */
-  /* === scroll-up navbar (index 26) === */
   (function () {
     var header = document.querySelector(".header-area-2");
     if (!header) return;
 
+    var enableLogoSwap = header.hasAttribute("data-logo-swap");
+
+    var logoImg = enableLogoSwap
+      ? header.querySelector(".header__logo img")
+      : null;
+    var defaultLogo = "assets/cubo-img/cuboc-logo-white.png";
+    var stickyLogo = "assets/imgs/cuboc-logo-transparent.png";
+
     var lastScroll = 0;
     var threshold = 80;
     var delta = 5;
+
+    function setLogo(src) {
+      if (!enableLogoSwap) return;
+      if (logoImg && logoImg.getAttribute("src") !== src) {
+        logoImg.setAttribute("src", src);
+      }
+    }
 
     function onScroll(current) {
       if (Math.abs(current - lastScroll) < delta) return;
@@ -1094,23 +1106,24 @@
       if (current <= threshold) {
         header.classList.remove("nav-hidden");
         header.classList.remove("nav-scrolled");
+        setLogo(defaultLogo);
       } else if (current > lastScroll) {
         header.classList.add("nav-hidden");
         header.classList.add("nav-scrolled");
+        setLogo(stickyLogo);
       } else {
         header.classList.remove("nav-hidden");
         header.classList.add("nav-scrolled");
+        setLogo(stickyLogo);
       }
 
       lastScroll = current;
     }
 
-    // Works with both GSAP ScrollSmoother and normal scroll
     window.addEventListener("scroll", function () {
       onScroll(window.scrollY);
     });
 
-    // Fallback for ScrollSmoother (which uses #smooth-wrapper scroll)
     var sw = document.getElementById("smooth-wrapper");
     if (sw) {
       sw.addEventListener("scroll", function () {
@@ -1118,7 +1131,6 @@
       });
     }
   })();
-
   (function () {
     var input = document.getElementById("email");
     var btn = input

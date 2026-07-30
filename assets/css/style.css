@@ -15495,7 +15495,7 @@ section {
   bottom: 0;
   height: 100%;
   position: absolute;
-  background: rgba(17, 17, 17, 0.34);
+  background: rgba(17, 17, 17, 0.69);
 }
 .call-to-action__inner .media img {
   width: 100%;
@@ -15546,7 +15546,7 @@ section {
 }
 .call-to-action__inner .section-title-4__wrapper .sub-title {
   color: var(--white);
-  border: 1.2px solid rgba(255, 255, 255, 0.3);
+  border: 1.2px solid white;
 }
 .call-to-action__inner .section-title-4__wrapper .title {
   font-size: 70px;
@@ -24020,7 +24020,7 @@ section {
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
+  color: white !important;
   margin-bottom: 12px;
 }
 
@@ -24039,7 +24039,7 @@ section {
   font-size: 15px;
   font-weight: 300;
   font-style: italic;
-  color: rgba(255, 255, 255, 0.45);
+  color: white !important;
   letter-spacing: -0.1px;
   max-width: 480px;
   line-height: 1.6;
@@ -24136,13 +24136,20 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.78) 0%,
     rgba(0, 0, 0, 0.25) 60%,
     rgba(0, 0, 0, 0.1) 100%
+  ); */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.75) 60%,
+    rgba(0, 0, 0, 0.9) 200%
   );
 }
+
 .about-hero__inner {
   position: relative;
   z-index: 1;
@@ -24435,4 +24442,10 @@ section {
 }
 .mob-arrow.open {
   transform: rotate(180deg);
+}
+.modal {
+  z-index: 10050 !important;
+}
+.modal-backdrop {
+  z-index: 10040 !important;
 }
