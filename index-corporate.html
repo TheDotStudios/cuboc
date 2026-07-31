@@ -35,6 +35,16 @@
     <link rel="stylesheet" href="assets/css/lang-switcher.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
+      .footer-4__inner .footer-4__wrapper {
+        display: grid;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        grid-template-columns: 615px 862px auto 300px;
+      }
+      @media (max-width: 575px) {
+        .footer-4__inner .footer-4__wrapper {
+          grid-template-columns: 1fr !important;
+        }
+      }
       .lang-switcher__toggle,
       .lang-switcher__toggle i.fa-globe {
         color: white;
@@ -66,9 +76,9 @@
         inset: 0;
         background: linear-gradient(
           to top,
-          rgba(0, 0, 0, 0.6) 0%,
-          rgba(0, 0, 0, 0.6) 60%,
-          rgba(0, 0, 0, 0.7) 200%
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(0, 0, 0, 0.8) 60%,
+          rgba(0, 0, 0, 0.9) 200%
         );
       }
       html,
@@ -519,29 +529,27 @@
                     <a href="products.html">Products</a>
                     <ul class="dp-menu">
                       <li>
-                        <a href="Fabric-Light-Boxes-p1.html"
-                          >Fabric Light Boxes</a
-                        >
+                        <a href="FABx.html">Fabric Light Boxes</a>
                       </li>
 
                       <li>
-                        <a href="Standees-p2.html">Standees </a>
+                        <a href="Standees.html">Standees </a>
                       </li>
 
                       <li>
-                        <a href="ultra-thin-glass-p3.html"
+                        <a href="Ultra_Thin_Glass_Frame.html"
                           >Ultra Thin Glass Frames
                         </a>
                       </li>
 
                       <li>
-                        <a href="battery-table-p4.html"
+                        <a href="Battery_Table_Top_Displays.html"
                           >Battery Table Top Displays
                         </a>
                       </li>
 
                       <li>
-                        <a href="product-gazebo-p5.html">Gazebo Tents </a>
+                        <a href="Gazebo_Tents.html">Gazebo Tents </a>
                       </li>
                     </ul>
                   </li>
@@ -1769,10 +1777,7 @@
             <div class="products-grid">
               <!-- 01 FABxGO -->
               <div class="product-card">
-                <img
-                  src="https://images.unsplash.com/photo-1601924994987-69e26d50dc26?w=800&h=600&auto=format&fit=crop"
-                  alt="FABxGO"
-                />
+                <img src="assets/cubo-img/fab-go.png" alt="FABxGO" />
                 <div class="product-card__overlay"></div>
                 <span class="product-card__tag">Portable</span>
                 <div class="product-card__content">
@@ -1785,8 +1790,8 @@
                     </p>
                   </div>
                   <div class="product-card__btn">
-                    <a href="fabxgo.html"
-                      ><i class="fa-solid fa-arrow-right"></i
+                    <a href="#"
+                      >View Details <i class="fa-solid fa-arrow-right"></i
                     ></a>
                   </div>
                 </div>
@@ -1794,10 +1799,7 @@
 
               <!-- 02 FABxPro -->
               <div class="product-card">
-                <img
-                  src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&auto=format&fit=crop"
-                  alt="FABxPro"
-                />
+                <img src="assets/cubo-img/fa-pro.png" alt="FABxPro" />
                 <div class="product-card__overlay"></div>
                 <span class="product-card__tag">Modular</span>
                 <div class="product-card__content">
@@ -1810,8 +1812,8 @@
                     </p>
                   </div>
                   <div class="product-card__btn">
-                    <a href="fabxpro.html"
-                      ><i class="fa-solid fa-arrow-right"></i
+                    <a href="#"
+                      >View Details <i class="fa-solid fa-arrow-right"></i
                     ></a>
                   </div>
                 </div>
@@ -1819,10 +1821,7 @@
 
               <!-- 03 FABxGlow -->
               <div class="product-card">
-                <img
-                  src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=800&h=600&auto=format&fit=crop"
-                  alt="FABxGlow"
-                />
+                <img src="assets/cubo-img/fa-glow.png" alt="FABxGlow" />
                 <div class="product-card__overlay"></div>
                 <span class="product-card__tag">Illuminated</span>
                 <div class="product-card__content">
@@ -1835,8 +1834,8 @@
                     </p>
                   </div>
                   <div class="product-card__btn">
-                    <a href="fabxglow.html"
-                      ><i class="fa-solid fa-arrow-right"></i
+                    <a href="#"
+                      >View Details <i class="fa-solid fa-arrow-right"></i
                     ></a>
                   </div>
                 </div>
@@ -1845,7 +1844,7 @@
               <!-- 04 Rechargeable Table Tops -->
               <div class="product-card">
                 <img
-                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&auto=format&fit=crop"
+                  src="assets/cubo-img/p4-03.png"
                   alt="Rechargeable Table Tops"
                 />
                 <div class="product-card__overlay"></div>
@@ -1860,8 +1859,8 @@
                     </p>
                   </div>
                   <div class="product-card__btn">
-                    <a href="battery-table-p4.html"
-                      ><i class="fa-solid fa-arrow-right"></i
+                    <a href="Battery_Table_Top_Displays.html"
+                      >View Details <i class="fa-solid fa-arrow-right"></i
                     ></a>
                   </div>
                 </div>
@@ -1870,7 +1869,7 @@
               <!-- 05 Ultra-Thin Glass Frames -->
               <div class="product-card">
                 <img
-                  src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=800&h=600&auto=format&fit=crop"
+                  src="assets/cubo-img/p3-02.png"
                   alt="Ultra-Thin Glass Frames"
                 />
                 <div class="product-card__overlay"></div>
@@ -1884,8 +1883,8 @@
                     </p>
                   </div>
                   <div class="product-card__btn">
-                    <a href="ultra-thin-glass-p3.html"
-                      ><i class="fa-solid fa-arrow-right"></i
+                    <a href="Ultra_Thin_Glass_Frame.html"
+                      >View Details <i class="fa-solid fa-arrow-right"></i
                     ></a>
                   </div>
                 </div>
@@ -1893,10 +1892,7 @@
 
               <!-- 06 Display Essentials -->
               <div class="product-card">
-                <img
-                  src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&auto=format&fit=crop"
-                  alt="Display Essentials"
-                />
+                <img src="assets/cubo-img/p2-01.png" alt="Display Essentials" />
                 <div class="product-card__overlay"></div>
                 <span class="product-card__tag">Versatile</span>
                 <div class="product-card__content">
@@ -1909,8 +1905,8 @@
                     </p>
                   </div>
                   <div class="product-card__btn">
-                    <a href="product-gazebo-p5.html"
-                      ><i class="fa-solid fa-arrow-right"></i
+                    <a href="Standees.html"
+                      >View Details <i class="fa-solid fa-arrow-right"></i
                     ></a>
                   </div>
                 </div>
@@ -2036,10 +2032,6 @@
           }
 
           .product-card__btn {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, 0.35);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -2057,7 +2049,6 @@
           .product-card:hover .product-card__btn {
             opacity: 1;
             transform: scale(1);
-            background: rgba(255, 255, 255, 0.15);
           }
 
           .product-card__tag {
@@ -2158,7 +2149,7 @@
             </div>
           </div>
         </section>
-        <section class="tradeshows">
+        <section class="tradeshows" id="why-choose">
           <div class="container rr-container-1710">
             <!-- Intro row: heading left, para right -->
             <div class="tradeshows__intro">
@@ -2637,7 +2628,11 @@
             }
           </style>
 
-          <div class="container rr-container-1710" style="margin-top: 140px">
+          <div
+            class="container rr-container-1710"
+            style="margin-top: 140px"
+            id="testimonials"
+          >
             <div class="team-3__inner rr-pos-rel section-spacing-bottom-130">
               <div class="section-title-3__wrapper fade-anim">
                 <div class="wrap">
@@ -3829,28 +3824,32 @@
                   <h2 class="title">Products</h2>
                   <ul class="footer-nav-list">
                     <li>
-                      <a href="#applications" data-text="FABxGO"
-                        ><span>FABxGO</span></a
+                      <a href="FABx.html" data-text="FABxGO"
+                        ><span>Fabric Light Box</span></a
                       >
                     </li>
                     <li>
-                      <a href="#applications" data-text="FABxGLOW"
-                        ><span>FABxGLOW</span></a
+                      <a href="Standees.html" data-text="FABxGO"
+                        ><span>Standees</span></a
                       >
                     </li>
                     <li>
-                      <a href="#applications" data-text="FABxPRO"
-                        ><span>FABxPRO</span></a
+                      <a
+                        href="Ultra_Thin_Glass_Frame.html"
+                        data-text="Glass Frames"
+                        ><span>Ultra Thin Glass Frames</span></a
                       >
                     </li>
                     <li>
-                      <a href="#applications" data-text="Table Tops"
-                        ><span>Table Tops</span></a
+                      <a
+                        href="Battery_Table_Top_Displays.html"
+                        data-text="Table Tops"
+                        ><span>Battery Table Top Displays</span></a
                       >
                     </li>
                     <li>
-                      <a href="#applications" data-text="Glass Frames"
-                        ><span>Glass Frames</span></a
+                      <a href="Gazebo_Tents.html" data-text="Table Tops"
+                        ><span>Gazebo Tents</span></a
                       >
                     </li>
                   </ul>
@@ -3879,17 +3878,15 @@
                   <h2 class="title">More</h2>
                   <ul class="footer-nav-list">
                     <li>
-                      <a href="#showroom" data-text="Virtual Showroom"
+                      <a
+                        href="virtualshowroom.html"
+                        data-text="Virtual Showroom"
                         ><span>Virtual Showroom</span></a
                       >
                     </li>
+
                     <li>
-                      <a href="#downloads" data-text="Downloads"
-                        ><span>Downloads</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="#contact" data-text="Contact"
+                      <a href="contact.html" data-text="Contact"
                         ><span>Contact</span></a
                       >
                     </li>
@@ -4481,19 +4478,23 @@ INSTALL:
             </a>
             <ul class="mob-sub" id="mobSub2">
               <li>
-                <a href="Fabric-Light-Boxes-p1.html">Fabric Light Boxes</a>
+                <a href="FABx.html">Fabric Light Boxes</a>
               </li>
               <li>
-                <a href="Standees-p2.html">Standees</a>
+                <a href="Standees.html">Standees</a>
               </li>
               <li>
-                <a href="ultra-thin-glass-p3.html">Ultra Thin Glass Frames</a>
+                <a href="Ultra_Thin_Glass_Frame.html"
+                  >Ultra Thin Glass Frames</a
+                >
               </li>
               <li>
-                <a href="battery-table-p4.html">Battery Table Top Displays</a>
+                <a href="Battery_Table_Top_Displays.html"
+                  >Battery Table Top Displays</a
+                >
               </li>
               <li>
-                <a href="product-gazebo-p5.html">Gazebo Tents</a>
+                <a href="Gazebo_Tents.html">Gazebo Tents</a>
               </li>
             </ul>
           </li>

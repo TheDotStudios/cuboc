@@ -1,0 +1,4039 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cuboc Case Studies — Real Problems. Built Solutions."
+    />
+    <title>Case Studies — Cuboc</title>
+
+    <!-- Fav Icon -->
+    <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.png" />
+
+    <!-- Dependencies CSS Files -->
+    <link rel="stylesheet" href="assets/vandor/bootstrap/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/vandor/fontawesome/fontawesome-pro.min.css"
+    />
+    <link rel="stylesheet" href="assets/vandor/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/vandor/menu/meanmenu.min.css" />
+    <link rel="stylesheet" href="assets/vandor/popup/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vandor/nice-select/nice-select.css" />
+    <link
+      rel="stylesheet"
+      href="assets/vandor/odometer/odometer-theme-default.css"
+    />
+
+    <!-- Google Fonts — Inter (matches index.html via style.css @import) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100;0,14..32,200;0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,100;1,14..32,200;1,14..32,300;1,14..32,400;1,14..32,500;1,14..32,600;1,14..32,700;1,14..32,800;1,14..32,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="assets/css/lang-switcher.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      .lang-switcher__toggle,
+      .lang-switcher__toggle i.fa-globe {
+        color: white;
+      }
+      .header-area-2.nav-scrolled .lang-switcher__toggle,
+      .header-area-2.nav-scrolled .lang-switcher__toggle i.fa-globe {
+        color: black;
+      }
+      .about-hero__bg::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(0, 0, 0, 0.8) 60%,
+          rgba(0, 0, 0, 0.9) 200%
+        );
+      }
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      @media (max-width: 768px) {
+        .why-fabx__footer {
+          margin-top: 40px !important;
+        }
+        #showroom-ui .sr-body {
+          line-height: 1.4 !important;
+        }
+        #showroom-ui .sr-heading {
+          font-size: 25px !important;
+        }
+        #showroom-ui .sr-label {
+          letter-spacing: unset !important;
+        }
+        /* Disable the 250vh scroll-pin height — just a normal full screen section */
+        #showroom-section {
+          height: 100vh !important;
+        }
+
+        /* Un-stick the pin — it was position:sticky which creates the broken scroll */
+        #showroom-pin {
+          position: relative !important;
+          top: unset !important;
+          height: 100vh !important;
+        }
+
+        /* Video: show it full scale, no GSAP zoom needed */
+        #showroom-video-wrap {
+          transform: scale(1) !important;
+        }
+
+        /* Keep overlay visible since GSAP won't fade it */
+        #showroom-overlay {
+          opacity: 0.55 !important;
+        }
+
+        /* Text: reset GSAP inline transforms so content is visible and centered */
+        #showroom-ui .sr-left-block,
+        #showroom-ui .sr-right {
+          transform: none !important;
+          opacity: 1 !important;
+        }
+      }
+      @media (max-width: 767px) {
+        .strap-cta__actions {
+          flex-direction: row !important;
+          flex-wrap: nowrap !important;
+        }
+        .strap-cta__btn {
+          flex: 1 !important;
+          min-width: 0 !important;
+          text-align: center !important;
+          justify-content: center !important;
+          padding: 14px 10px !important;
+        }
+        .about-hero__bottom {
+          gap: 20px !important;
+        }
+        .about-hero__actions {
+          flex-direction: row !important;
+          flex-wrap: nowrap !important;
+        }
+        .about-hero__btn-primary,
+        .about-hero__btn-secondary,
+        .project-6__btn .rr-btn-primary {
+          flex: 1 !important;
+          min-width: 0 !important;
+          text-align: center !important;
+          justify-content: center !important;
+          font-size: 13px !important;
+          padding: 10px 10px !important;
+        }
+        .project-6__btn {
+          width: 100% !important;
+        }
+        .project-6__btn a {
+          width: 100% !important;
+          display: flex !important;
+          box-sizing: border-box !important;
+        }
+        #fabx-features .ff-card {
+          min-height: auto !important;
+        }
+        /* footer */
+        .footer-4__inner .footer-widget-box .content .title {
+          font-size: 25px !important;
+          text-transform: capitalize !important;
+          font-weight: 400 !important;
+        }
+        .footer-4__inner .footer-widget-box .title {
+          font-size: 25px !important;
+          text-transform: capitalize !important;
+          font-weight: 400 !important;
+        }
+        .footer_logo__5ncK8 {
+          font-size: 40px !important;
+          padding-top: 20px !important;
+        }
+        .footer-4__inner .copyright {
+          gap: 10px !important;
+        }
+        .footer-4__inner .footer-widget-box:last-child {
+          padding-bottom: 30px !important;
+        }
+        .footer-4__inner .footer-widget-box .content .info {
+          margin-top: 15px !important;
+        }
+        .footer-4__inner .footer-widget-box .newsletter {
+          margin-top: 15px !important;
+        }
+
+        .footer-4__inner .footer-widget-box .footer-nav-list {
+          margin-top: 15px !important;
+        }
+        .call-to-action__inner .section-title-4__wrapper {
+          max-width: 88% !important;
+          transform: unset !important;
+          bottom: 85px;
+        }
+        .call-to-action__inner .media {
+          height: 450px !important;
+        }
+        .call-to-action__inner .media::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: rgba(17, 17, 17, 0.34);
+          z-index: 1;
+        }
+        .strap-cta__heading {
+          font-size: 25px !important;
+        }
+        .why-fabx {
+          padding: 60px 0 !important;
+        }
+        .fabx-variants {
+          margin-top: 70px !important;
+        }
+        .ff-card-bottom {
+          align-items: center !important;
+        }
+        .fabx-variants__name {
+          font-size: 25px !important;
+        }
+        .about-hero__title {
+          font-size: 35px !important;
+          letter-spacing: -1.5px;
+        }
+        .about-hero__inner {
+          position: relative;
+          z-index: 1;
+          width: 100%;
+          padding: 130px 0 180px !important;
+        }
+        .breadcrumb__title {
+          font-size: 50px;
+          letter-spacing: -2px;
+        }
+        .about-hero__sub {
+          font-size: 16px !important;
+          line-height: 1.4 !important;
+        }
+        .breadcrumb__title {
+          font-size: 35px;
+          letter-spacing: -1.5px;
+        }
+        .intro-strip {
+          flex-direction: column !important;
+          padding: 30px 20px !important;
+        }
+        #fabx-features {
+          padding: 0px 0 !important;
+        }
+        .d-smm-mx-width-100 {
+          max-width: 100% !important;
+        }
+        .ff-card-title {
+          font-size: 20px !important;
+          font-weight: 500 !important;
+        }
+        .ff-card-desc {
+          line-height: 1.4 !important;
+        }
+        .team-3__inner .section-title-3__wrapper .title {
+          font-size: 25px !important;
+          line-height: 33px;
+        }
+        .team-3__inner .section-title-3__wrapper .sub-title {
+          margin-bottom: 10px !important;
+        }
+      }
+      /* ── Mobile nav drawer ── */
+      .side-toggle.mobile-button {
+        display: none;
+      }
+      @media (max-width: 768px) {
+        .side-toggle.mobile-button {
+          display: block !important;
+        }
+      }
+      .mobile-nav-drawer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #111;
+        z-index: 9999;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.4s ease;
+      }
+      .mobile-nav-drawer.open {
+        max-height: 100vh;
+        overflow-y: auto;
+      }
+      .mobile-nav-drawer .mob-inner {
+        padding: 24px 28px 32px;
+      }
+      .mobile-nav-drawer .mob-close {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .mobile-nav-drawer .mob-close .mob-logo {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .mobile-nav-drawer .mob-close button {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 26px;
+        cursor: pointer;
+        line-height: 1;
+        padding: 0;
+      }
+      .mobile-nav-drawer ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .mobile-nav-drawer > .mob-inner > ul > li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .mobile-nav-drawer ul li a {
+        display: block;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 15px 0;
+        text-decoration: none;
+        letter-spacing: -0.3px;
+        transition: color 0.2s;
+      }
+      .mobile-nav-drawer ul li a:hover {
+        color: rgba(255, 255, 255, 0.55);
+      }
+      .mobile-nav-drawer .mob-sub {
+        display: none;
+        padding-left: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .mobile-nav-drawer .mob-sub.open {
+        display: block;
+      }
+      .mobile-nav-drawer .mob-sub li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+      }
+      .mobile-nav-drawer .mob-sub li a {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.65);
+        padding: 10px 0;
+      }
+      .mob-arrow {
+        float: right;
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.45);
+        transition: transform 0.25s;
+        cursor: pointer;
+        padding: 4px 6px;
+        margin-top: 2px;
+      }
+      .mob-arrow.open {
+        transform: rotate(180deg);
+      }
+    </style>
+    <style>
+      .service-6__arrow {
+        width: 50px;
+        height: 50px;
+      }
+      .service-6__wrapper {
+        padding-bottom: 200px;
+      }
+      .header-area-2 .header__logo img {
+        max-width: 120px;
+      }
+      .our-service-9__title {
+        margin: 30px 0 0px 0;
+      }
+      /* ── Font-family enforcement (matches index.html behaviour) ── */
+
+      /* ── Page layout overrides ── */
+      .our-service-9__btn {
+        margin-bottom: 150px;
+      }
+
+      .rr-btn-primary {
+        gap: 6px;
+        display: inline-flex;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 16px;
+        padding: 15px 45px;
+        color: var(--white);
+        align-items: center;
+        border-radius: unset;
+        justify-content: center;
+        border: 1px solid var(--border);
+        transition:
+          background 0.3s ease,
+          color 0.3s ease;
+        cursor: pointer;
+        background: #111111;
+      }
+
+      .rr-btn-primary:hover {
+        background: #333333;
+        color: var(--white);
+      }
+
+      .hero-6__inner {
+        padding-top: 100px;
+      }
+
+      .breadcrumb__content {
+        padding-bottom: 150px;
+      }
+
+      /* ── Breadcrumb heading — same Inter treatment as index.html hero title ── */
+      .breadcrumb__title {
+        font-size: 100px;
+
+        font-weight: 500;
+        line-height: 1.05;
+        letter-spacing: -4px;
+        color: var(--white);
+      }
+
+      @media (max-width: 1199px) {
+        .breadcrumb__title {
+          font-size: 72px;
+          letter-spacing: -3px;
+        }
+      }
+
+      .header-area-3 .main-menu li a {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 16px;
+        color: var(--white);
+        padding: 31.5px 14px;
+      }
+
+      .breadcrumb__bg::before {
+        background: #111111;
+        opacity: 0.6;
+        mix-blend-mode: normal;
+      }
+    </style>
+    <style>
+      .breadcrumb__bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.58);
+        mix-blend-mode: normal;
+      }
+
+      /* ── Case study card elements ── */
+      .our-service-9__content .cs-tag {
+        display: inline-block;
+        font-size: 10px;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        color: var(--white);
+        background: var(--primary);
+        padding: 3px 11px;
+        border-radius: 500px;
+        margin-bottom: 14px;
+      }
+
+      .our-service-9__content .cs-blocks {
+        margin-top: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .our-service-9__content .cs-block-label {
+        display: block;
+        font-size: 22px;
+
+        text-transform: capitalize;
+        color: var(--primary);
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        margin-bottom: 10px;
+      }
+
+      .our-service-9__title {
+        font-size: 36px;
+
+        font-weight: 500;
+        letter-spacing: -1px;
+        line-height: 1.2;
+        color: var(--primary);
+      }
+
+      .our-service-9__title a {
+        font-weight: 500;
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      .our-service-9__desc {
+        font-size: 15px;
+        line-height: 1.7;
+        font-weight: 400;
+        color: var(--secondary);
+      }
+
+      .our-service-9__content .cs-result {
+        padding-top: 14px;
+        margin-top: 4px;
+      }
+
+      .our-service-9__content .cs-result p {
+        font-size: 14px;
+        line-height: 1.7;
+        font-weight: 400;
+
+        color: var(--primary);
+      }
+
+      /* ── Approach grid ── */
+      .cs-approach-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        border-top: 1px solid rgba(17, 17, 17, 0.1);
+        margin-top: 30px;
+      }
+
+      .cs-approach-cell {
+        padding: 30px 0;
+        border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+      }
+
+      .cs-approach-cell:nth-child(odd) {
+        padding-right: 36px;
+        border-right: 1px solid rgba(17, 17, 17, 0.1);
+      }
+
+      .cs-approach-cell:nth-child(even) {
+        padding-left: 36px;
+      }
+
+      .cs-approach-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: #f3f3f3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 15px;
+        color: var(--primary);
+      }
+
+      .cs-approach-cell h4 {
+        font-size: 17px;
+        font-weight: 600;
+
+        color: var(--primary);
+        margin-bottom: 5px;
+        letter-spacing: -0.2px;
+      }
+
+      .cs-approach-cell p {
+        font-size: 15px;
+        line-height: 1.65;
+        font-weight: 400;
+
+        color: var(--secondary);
+      }
+
+      .cs-approach-footer {
+        font-size: 20px;
+        font-weight: 500;
+
+        color: var(--primary);
+        letter-spacing: -0.3px;
+      }
+
+      /* ── Stat bar ── */
+      .cs-stat-bar {
+        display: flex;
+        gap: 0;
+        border-top: 1px solid rgba(17, 17, 17, 0.1);
+        border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+        margin-bottom: 60px;
+      }
+
+      .cs-stat-item {
+        flex: 1;
+        padding: 28px 0;
+        text-align: center;
+        border-right: 1px solid rgba(17, 17, 17, 0.1);
+      }
+
+      .cs-stat-item:last-child {
+        border-right: none;
+      }
+
+      .cs-stat-item strong {
+        display: block;
+        font-size: 42px;
+        font-weight: 500;
+
+        letter-spacing: -2px;
+        color: var(--primary);
+        line-height: 1;
+      }
+
+      .cs-stat-item span {
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+
+        color: var(--secondary);
+        margin-top: 6px;
+        letter-spacing: 0;
+      }
+
+      /* ── Thumb image ── */
+      .our-service-9__thumb {
+        position: relative;
+      }
+
+      .our-service-9__thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* ── hero-6 content — Cuboc-specific font fix ── */
+      .hero-6__inner .hero-6__title-wrap .sub-title {
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .hero-6__inner .hero-6__title-wrap .title {
+        font-size: 72px;
+        font-weight: 500;
+        line-height: 1.08;
+        letter-spacing: -3px;
+        color: var(--primary);
+      }
+
+      .hero-6__inner .hero-6__title-wrap .title span {
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      .hero-6__inner .hero-6__text .desc {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.7;
+        color: var(--secondary);
+        max-width: 400px;
+        margin-bottom: 32px;
+        letter-spacing: -0.2px;
+      }
+
+      @media (max-width: 1199px) {
+        .hero-6__inner .hero-6__title-wrap .title {
+          font-size: 54px;
+          letter-spacing: -2px;
+        }
+      }
+      @media (max-width: 767px) {
+        .hero-6__inner .hero-6__title-wrap .title {
+          font-size: 40px;
+          letter-spacing: -1.5px;
+        }
+        .cs-approach-row {
+          grid-template-columns: 1fr;
+        }
+        .cs-approach-cell:nth-child(odd) {
+          border-right: none;
+          padding-right: 0;
+        }
+        .cs-approach-cell:nth-child(even) {
+          padding-left: 0;
+        }
+        .cs-stat-bar {
+          flex-direction: column;
+        }
+        .cs-stat-item {
+          border-right: none;
+          border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+        }
+        .cs-stat-item:last-child {
+          border-bottom: none;
+        }
+      }
+
+      /* ── Header nav ── */
+      .header-area-2 .header__logo img {
+        max-width: 120px;
+      }
+
+      .header-area-2 .main-menu li a,
+      .header-area-2 .header-meta .date {
+        color: white;
+      }
+
+      /* ── Breadcrumb bottom strip ── */
+      .breadcrumb__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+        margin-top: 40px;
+        padding-top: 28px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .breadcrumb__tagline {
+        font-size: 20px;
+        font-weight: 500;
+
+        line-height: 1.4;
+        color: var(--white);
+        letter-spacing: -0.54px;
+        max-width: 380px;
+        flex: 0 0 40%;
+      }
+
+      .breadcrumb__body {
+        font-size: 16px;
+        font-weight: 300;
+
+        line-height: 1.75;
+        color: white;
+        letter-spacing: -0.01em;
+        flex: 0 0 50%;
+      }
+
+      @media (max-width: 767px) {
+        .breadcrumb__bottom {
+          flex-direction: column;
+          gap: 16px;
+        }
+        .breadcrumb__tagline,
+        .breadcrumb__body {
+          flex: unset;
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Scroll to top -->
+    <div class="progress-wrap">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+      </svg>
+    </div>
+
+    <div class="has-smooth" id="has_smooth"></div>
+
+    <!-- ── Header ── -->
+    <header class="header-area-2" data-logo-swap="true">
+      <div class="header-main">
+        <div class="container rr-container-1710">
+          <div class="header-area-2__inner">
+            <div class="header__logo">
+              <a href="index.html">
+                <img src="assets/cubo-img/cuboc-logo-white.png" />
+              </a>
+            </div>
+            <div class="header__nav-2">
+              <nav class="main-menu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+
+                  <li class="menu-item-has-children">
+                    <a href="#">Company</a>
+                    <ul class="dp-menu">
+                      <li><a href="about.html">About Us</a></li>
+                      <li>
+                        <a href="recognitionNetwork.html"
+                          >Recognition &amp; Network</a
+                        >
+                      </li>
+                      <li>
+                        <a href="trade-events.html">Trade Shows &amp; Events</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="menu-item-has-children">
+                    <a href="products.html">Products</a>
+                    <ul class="dp-menu">
+                      <li>
+                        <a href="FABx.html">Fabric Light Boxes</a>
+                      </li>
+
+                      <li>
+                        <a href="Standees.html">Standees </a>
+                      </li>
+
+                      <li>
+                        <a href="Ultra_Thin_Glass_Frame.html"
+                          >Ultra Thin Glass Frames
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="Battery_Table_Top_Displays.html"
+                          >Battery Table Top Displays
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="Gazebo_Tents.html">Gazebo Tents </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li><a href="virtualshowroom.html">Virtual Showroom</a></li>
+
+                  <li class="menu-item-has-children">
+                    <a href="caseStudy.html">Case Studies</a>
+                    <ul class="dp-menu">
+                      <li>
+                        <a href="Versions203.html">Customisation </a>
+                      </li>
+                      <li>
+                        <a href="CompetitorStock.html"> Service Attitude </a>
+                      </li>
+                      <li>
+                        <a href="DentedStandees.html">
+                          After-Sales Reliability
+                        </a>
+                      </li>
+                      <li>
+                        <a href="CustomEngineering.html">
+                          Custom Engineering
+                        </a>
+                      </li>
+                      <li>
+                        <a href="PremiumFinishes.html"> Premium Finishes </a>
+                      </li>
+                      <li>
+                        <a href="EngineeringforReality.html"
+                          >Engineering for Reality
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header-right">
+              <div class="lang-switcher">
+                <button
+                  type="button"
+                  class="lang-switcher__toggle"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fa-solid fa-globe"></i>
+                  <span class="lang-switcher__current-label">
+                    <span class="lang-switcher__current">EN</span>
+                  </span>
+                  <i class="fa-solid fa-chevron-down lang-switcher__arrow"></i>
+                </button>
+                <ul class="lang-switcher__menu">
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option is-active"
+                      data-lang="en"
+                      >English</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="hi"
+                      >&#2361;&#2367;&#2306;&#2342;&#2368;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="ta"
+                      >&#2980;&#2990;&#3007;&#2996;&#3021;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="te"
+                      >&#3122;&#3142;&#3122;&#3137;&#3095;&#3137;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="mr"
+                      >&#2350;&#2352;&#2366;&#2336;&#2368;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="gu"
+                      >&#2711;&#2753;&#2716;&#2736;&#2750;&#2724;&#2752;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="bn"
+                      >&#2476;&#2494;&#2434;&#2482;&#2494;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="kn"
+                      >&#3221;&#3277;&#3240;&#3233;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="ur"
+                      >&#1575;&#1585;&#1583;&#1608;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="es"
+                      >Espa&ntilde;ol</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="fr"
+                      >Fran&ccedil;ais</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="de"
+                      >Deutsch</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="zh-CN"
+                      >&#20013;&#25991;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="ar"
+                      >&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="ru"
+                      >&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="ja"
+                      >&#26085;&#26412;&#35486;</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="lang-option"
+                      data-lang="pt"
+                      >Portugu&ecirc;s</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div id="google_translate_element" style="display: none"></div>
+              <div class="header__navicon">
+                <div class="side-toggle mobile-button d-lg-block d-xl-none">
+                  <a class="bar-icon" href="javascript:void(0)"
+                    ><span></span><span></span
+                  ></a>
+                </div>
+                <a
+                  href="#"
+                  class="rr-btn-primary bg-base-color"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quoteModal"
+                >
+                  <span class="text">Enquire Now</span>
+                  <i
+                    class="fa-solid fa-arrow-right text-white"
+                    style="rotate: -45deg"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <style>
+      .header-area-2 .main-menu li a,
+      .header-area-2 .header-meta .date {
+        color: white;
+      }
+      .header-area-2 .header-right .side-toggle .bar-icon span {
+        height: 2px;
+        border-radius: 500px;
+        background: #d5d5d5;
+      }
+      /* when scrolled up — glass bg — make text black */
+      .header-area-2.nav-scrolled .main-menu li a,
+      .header-area-2.nav-scrolled .header-meta .date {
+        color: black !important;
+      }
+      .header-area-2 .main-menu ul.dp-menu li a {
+        color: white !important;
+      }
+    </style>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <!-- Header end -->
+
+        <main>
+          <!-- banner / hero start -->
+
+          <div class="about-hero">
+            <div class="about-hero__bg">
+              <img
+                src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&auto=format&fit=crop"
+                alt="About Cuboc"
+              />
+            </div>
+            <div class="about-hero__inner">
+              <div class="container rr-container-1710">
+                <p class="about-hero__eyebrow">About Cuboc Display</p>
+                <h1 class="about-hero__title">
+                  Fabric Light Boxes - FABx Range
+                </h1>
+                <div class="about-hero__bottom">
+                  <p class="about-hero__sub">
+                    Modular fabric systems that assemble in minutes, pack into a
+                    car boot, and look like a million rupees. Three
+                    configurations for three kinds of environments.
+                  </p>
+                  <div class="about-hero__actions">
+                    <a href="contact.html" class="about-hero__btn-primary"
+                      >Get a Quote
+                      <i
+                        class="fa-solid fa-arrow-right"
+                        style="rotate: -45deg"
+                      ></i
+                    ></a>
+                    <a
+                      href="https://cuboc.neofairs.com/"
+                      class="about-hero__btn-secondary"
+                    >
+                      <!-- Walk Through One in Our Virtual Showroom -->
+                      Virtual Showroom
+                      <i
+                        class="fa-solid fa-arrow-right text-white"
+                        style="rotate: -45deg"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .intro-strip {
+              max-width: 1360px;
+              margin: 0 auto;
+              background: linear-gradient(
+                135deg,
+                #21175e 0%,
+                rgb(86 63 167) 100%
+              );
+              padding: 30px 48px;
+              box-sizing: border-box;
+              /* border-radius: 16px; */
+              position: relative;
+              bottom: 60px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 32px;
+            }
+
+            .intro-strip__body {
+              flex: 1;
+            }
+
+            .intro-strip__body p {
+              font-size: 16px;
+              line-height: 1.7;
+              color: #ffffff;
+              margin: 0 0 12px 0;
+              max-width: 100%;
+            }
+
+            .intro-strip__body p:last-child {
+              margin-bottom: 0;
+              color: white;
+              font-size: 16px;
+            }
+
+            .strip__btn {
+              flex-shrink: 0;
+              background: #ffffff;
+              color: #21175e;
+              font-size: 14px;
+              font-weight: 600;
+              padding: 12px 28px;
+              /* border-radius: 8px; */
+              border: none;
+              cursor: pointer;
+              white-space: nowrap;
+              text-decoration: none;
+              display: inline-flex;
+              align-items: center;
+              gap: 8px;
+              transition: opacity 0.2s ease;
+            }
+
+            .strip__btn:hover {
+              opacity: 0.88;
+            }
+          </style>
+
+          <section class="intro-strip">
+            <div class="intro-strip__body">
+              <p>
+                Traditional exhibition booths are heavy. They need specialists
+                to assemble. They barely survive one show before they're
+                damaged. They take up an entire truck to transport.Fabric light
+                boxes changed all that. No tools. No specialists. Pack flat. Set
+                up in minutes. Illuminated edge to edge. Reusable for years. We
+                brought this category to India. Today we manufacture the full
+                range under the FABx brand — three systems, one integrated
+                product line.
+              </p>
+            </div>
+
+            <a
+              href="contact.html"
+              class="strip__btn"
+              href="javascript:void(0)"
+              data-bs-toggle="modal"
+              data-bs-target="#quoteModal"
+            >
+              Get a Quote
+              <i class="fa-solid fa-arrow-right" style="rotate: -45deg"></i>
+            </a>
+          </section>
+        </main>
+        <style>
+          @media (max-width: 600px) {
+            .product-gallery {
+              padding-top: 0px !important;
+            }
+          }
+        </style>
+
+        <!-- Product Gallery Section -->
+        <section class="product-gallery py-5">
+          <div class="container rr-container-1710">
+            <div class="team-3__inner rr-pos-rel">
+              <div class="rr-v-lines">
+                <div class="rr-line"></div>
+                <div class="rr-line"></div>
+                <div class="rr-line"></div>
+                <div class="rr-line"></div>
+              </div>
+              <div class="section-title-3__wrapper fade-anim">
+                <div class="wrap">
+                  <h2 class="sub-title">Gallery</h2>
+                  <h3 class="title rr_title_anim" style="perspective: 400px">
+                    <div class="d-smm-mx-width-100" style="max-width: 70%">
+                      Fabric Light Boxes<span class="base-text-color"
+                        >- FABx Range</span
+                      >
+                    </div>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col-6 col-md-3">
+                <div
+                  class="product-gallery__item"
+                  style="
+                    border-radius: 8px;
+                    overflow: hidden;
+                    aspect-ratio: 1/1;
+                    border: 1px solid #e0e0e0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <img
+                    src="assets/cubo-img/p1-01.png"
+                    alt="Fabric Light Box - Image 1"
+                    class="img-fluid"
+                    style="width: 100%; height: 100%; object-fit: contain"
+                  />
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div
+                  class="product-gallery__item"
+                  style="
+                    border-radius: 8px;
+                    overflow: hidden;
+                    aspect-ratio: 1/1;
+                    border: 1px solid #e0e0e0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <img
+                    src="assets/cubo-img/p1-02.png"
+                    alt="Fabric Light Box - Image 2"
+                    class="img-fluid"
+                    style="width: 100%; height: 100%; object-fit: contain"
+                  />
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div
+                  class="product-gallery__item"
+                  style="
+                    border-radius: 8px;
+                    overflow: hidden;
+                    aspect-ratio: 1/1;
+                    border: 1px solid #e0e0e0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <img
+                    src="assets/cubo-img/p1-03.png"
+                    alt="Fabric Light Box - Image 3"
+                    class="img-fluid"
+                    style="width: 100%; height: 100%; object-fit: contain"
+                  />
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div
+                  class="product-gallery__item"
+                  style="
+                    border-radius: 8px;
+                    overflow: hidden;
+                    aspect-ratio: 1/1;
+                    border: 1px solid #e0e0e0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <img
+                    src="assets/cubo-img/p1-04.png"
+                    alt="Fabric Light Box - Image 4"
+                    class="img-fluid"
+                    style="width: 100%; height: 100%; object-fit: contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ================================================================
+  SHOWROOM SECTION — Full updated code
+  Content: FABx Virtual Showroom
+  Requires: GSAP + ScrollTrigger already loaded on the page
+================================================================ -->
+        <style>
+          #fabx-features {
+            padding: 140px 0;
+          }
+
+          #fabx-features .ff-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 48px;
+          }
+
+          #fabx-features .ff-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: end;
+            gap: 24px;
+            margin-bottom: 48px;
+          }
+          #fabx-features .ff-header-left {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          }
+          #fabx-features .ff-eyebrow {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #888;
+            margin: 0;
+          }
+          #fabx-features .ff-title {
+            font-size: 50px;
+            font-weight: 300;
+            letter-spacing: -0.03em;
+            color: #111;
+            margin: 0;
+            line-height: 1.05;
+          }
+          #fabx-features .ff-title strong {
+            font-weight: 600;
+          }
+          #fabx-features .ff-sub {
+            font-size: 16px;
+            color: #666;
+            margin: 0;
+            max-width: 480px;
+            line-height: 1.7;
+            font-weight: 400;
+            align-self: end;
+          }
+
+          /* ── BENTO GRID ── */
+          #fabx-features .ff-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+          }
+
+          #fabx-features .ff-card {
+            /* border-radius: 16px; */
+            overflow: hidden;
+            position: relative;
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            border: 1px solid #ccc;
+          }
+
+          /* image cards */
+          #fabx-features .ff-card.has-img .ff-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            opacity: 0.35;
+            transition:
+              transform 0.5s ease,
+              opacity 0.4s ease;
+          }
+          #fabx-features .ff-card.has-img {
+            background: #111;
+          }
+          #fabx-features .ff-card.has-img:hover .ff-img {
+            transform: scale(1.04);
+            opacity: 0.75;
+          }
+          #fabx-features .ff-card.has-img::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+              to top,
+              rgba(0, 0, 0, 0.25) 0%,
+              rgba(0, 0, 0, 0.15) 30%,
+              transparent 100%
+            );
+            z-index: 1;
+          }
+
+          /* solid cards */
+          #fabx-features .ff-card.white-card {
+            background: #fff;
+            justify-content: flex-start;
+          }
+          #fabx-features .ff-card.dark-card {
+            background: #1c1c1c;
+            justify-content: flex-start;
+          }
+
+          /* content layer */
+          #fabx-features .ff-card-content {
+            position: relative;
+            z-index: 2;
+            padding: 36px 36px 40px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+          }
+
+          /* title + desc layout: title left, desc right within card */
+          #fabx-features .ff-card-inner {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+          }
+          #fabx-features .ff-card-top {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+          }
+
+          .ff-card-tag {
+            font-size: 23px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+          }
+          .ff-card-title {
+            font-size: 26px;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin: 0;
+            text-align: left;
+          }
+
+          .ff-card-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 16px;
+          }
+          .ff-card-desc {
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 0;
+          }
+          .ff-more {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap 0.2s;
+            border-bottom: 1px solid currentColor;
+            padding-bottom: 2px;
+            padding-top: 10px;
+          }
+          .ff-more:hover {
+            gap: 10px;
+          }
+          .ff-more::after {
+            content: "→";
+            font-size: 13px;
+          }
+
+          /* image card colours */
+          .ff-card.has-img .ff-card-tag {
+            color: white;
+          }
+          .ff-card.has-img .ff-card-title {
+            color: #fff;
+          }
+          .ff-card.has-img .ff-card-desc {
+            color: white;
+          }
+          .ff-card.has-img .ff-more {
+            color: #fff;
+          }
+
+          /* white card colours */
+          .ff-card.white-card .ff-card-tag {
+            color: #111;
+          }
+          .ff-card.white-card .ff-card-title {
+            color: #111;
+          }
+          .ff-card.white-card .ff-card-desc {
+            color: #555;
+          }
+          .ff-card.white-card .ff-more {
+            color: #111;
+          }
+
+          /* dark card colours */
+          .ff-card.dark-card .ff-card-tag {
+            color: rgba(255, 255, 255, 0.9);
+          }
+          .ff-card.dark-card .ff-card-title {
+            color: #fff;
+          }
+          .ff-card.dark-card .ff-card-desc {
+            color: rgba(255, 255, 255, 0.55);
+          }
+          .ff-card.dark-card .ff-more {
+            color: rgba(255, 255, 255, 0.85);
+          }
+
+          @media (max-width: 1024px) {
+            #fabx-features .ff-container {
+              padding: 0 28px;
+            }
+            #fabx-features .ff-title {
+              font-size: 38px;
+            }
+            #fabx-features .ff-grid {
+              grid-template-columns: 1fr 1fr;
+            }
+            #fabx-features .ff-header {
+              grid-template-columns: 1fr;
+            }
+            #fabx-features .ff-sub {
+              text-align: left;
+            }
+          }
+          @media (max-width: 600px) {
+            #fabx-features .ff-grid {
+              grid-template-columns: 1fr;
+            }
+            #fabx-features .ff-title {
+              font-size: 32px;
+            }
+          }
+        </style>
+
+        <section id="fabx-features">
+          <div class="ff-container">
+            <div class="team-3__inner rr-pos-rel">
+              <div class="rr-v-lines">
+                <div class="rr-line"></div>
+                <div class="rr-line"></div>
+                <div class="rr-line"></div>
+                <div class="rr-line"></div>
+              </div>
+              <div class="section-title-3__wrapper fade-anim">
+                <div class="wrap">
+                  <h2 class="sub-title">Key Features</h2>
+                  <h3 class="title rr_title_anim" style="perspective: 400px">
+                    <div class="d-smm-mx-width-100" style="max-width: 50%">
+                      Built for the Reality of
+                      <span class="base-text-color">Indian Exhibitions.</span>
+                    </div>
+                  </h3>
+                </div>
+
+                <p>
+                  What makes FABx different — from tool-free setup to reusable
+                  campaign displays, designed for how exhibitions actually work
+                  in India.
+                </p>
+              </div>
+            </div>
+            <!-- HEADER -->
+
+            <!-- GRID -->
+            <div class="ff-grid">
+              <!-- R1 C1 — IMAGE -->
+              <div class="ff-card has-img">
+                <img
+                  class="ff-img"
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80&auto=format&fit=crop"
+                  alt="Tool-free assembly"
+                  loading="lazy"
+                />
+                <div class="ff-card-content">
+                  <div class="ff-card-inner">
+                    <div class="ff-card-top">
+                      <span class="ff-card-tag">
+                        <i class="fa-solid fa-puzzle-piece"></i
+                      ></span>
+
+                      <h3 class="ff-card-title">Tool-Free<br />Assembly</h3>
+                    </div>
+                    <div class="ff-card-bottom">
+                      <a href="contact.html" class="about-hero__btn-primary"
+                        >More Information
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          style="rotate: -45deg"
+                        ></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- R1 C2 — WHITE -->
+              <div class="ff-card white-card">
+                <div class="ff-card-content">
+                  <div class="ff-card-inner">
+                    <div class="ff-card-top">
+                      <span class="ff-card-tag">
+                        <i class="fa-solid fa-suitcase"></i>
+                      </span>
+
+                      <h3 class="ff-card-title">
+                        Pack Flat,<br />Travel Light
+                      </h3>
+                    </div>
+                    <div class="ff-card-bottom">
+                      <!-- <p class="ff-card-desc">
+                        The whole system collapses into padded cases that fit in
+                        a standard car boot. No truck rental. No freight quotes.
+                      </p> -->
+                      <div class="project-6__btn">
+                        <a href="#" class="rr-btn-primary">
+                          <span class="text">More Information</span>
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- R1 C3 — IMAGE -->
+              <div class="ff-card has-img">
+                <img
+                  class="ff-img"
+                  src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=80&auto=format&fit=crop"
+                  alt="Edge-lit LED exhibition"
+                  loading="lazy"
+                />
+                <div class="ff-card-content">
+                  <div class="ff-card-inner">
+                    <div class="ff-card-top">
+                      <span class="ff-card-tag">
+                        <i class="fa-solid fa-lightbulb"></i>
+                      </span>
+
+                      <h3 class="ff-card-title">
+                        Edge-Lit LED<br />Illumination
+                      </h3>
+                    </div>
+                    <div class="ff-card-bottom">
+                      <!-- <p class="ff-card-desc">
+                        Uniform light distribution across the entire surface.
+                        Bright enough for exhibition halls. Cool enough to run
+                        for 8–10 hours without heat issues.
+                      </p> -->
+                      <a href="contact.html" class="about-hero__btn-primary"
+                        >More Information
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          style="rotate: -45deg"
+                        ></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- R2 C1 — WHITE -->
+              <div class="ff-card white-card">
+                <div class="ff-card-content">
+                  <div class="ff-card-inner">
+                    <div class="ff-card-top">
+                      <span class="ff-card-tag">
+                        <i class="fa-solid fa-shirt"></i>
+                      </span>
+
+                      <h3 class="ff-card-title">Premium<br />Fabric Finish</h3>
+                    </div>
+                    <div class="ff-card-bottom">
+                      <!-- <p class="ff-card-desc">
+                        Dye-sublimation prints on stretch fabric. Edge-to-edge
+                        graphics with no visible seams. Replace the fabric,
+                        reuse the frame — endlessly.
+                      </p> -->
+                      <div class="project-6__btn">
+                        <a href="#" class="rr-btn-primary">
+                          <span class="text">More Information</span>
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- R2 C2 — IMAGE -->
+              <div class="ff-card has-img">
+                <img
+                  class="ff-img"
+                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=80&auto=format&fit=crop"
+                  alt="Modular reconfigurable display"
+                  loading="lazy"
+                />
+                <div class="ff-card-content">
+                  <div class="ff-card-inner">
+                    <div class="ff-card-top">
+                      <span class="ff-card-tag">
+                        <i class="fa-solid fa-cubes"></i>
+                      </span>
+
+                      <h3 class="ff-card-title">
+                        Modular and<br />Reconfigurable
+                      </h3>
+                    </div>
+                    <div class="ff-card-bottom">
+                      <!-- <p class="ff-card-desc">
+                        Same parts, multiple booth layouts. A 3×3 booth this
+                        show, a 6×3 wall next show, a backdrop-plus-counter the
+                        show after. One investment, many configurations.
+                      </p> -->
+                      <a href="contact.html" class="about-hero__btn-primary"
+                        >More Information
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          style="rotate: -45deg"
+                        ></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- R2 C3 — WHITE -->
+              <div class="ff-card white-card">
+                <div class="ff-card-content">
+                  <div class="ff-card-inner">
+                    <div class="ff-card-top">
+                      <span class="ff-card-tag">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                      </span>
+
+                      <h3 class="ff-card-title">
+                        Reusable Across<br />Campaigns
+                      </h3>
+                    </div>
+                    <div class="ff-card-bottom">
+                      <!-- <p class="ff-card-desc">
+                        Built to survive repeated use. Pack, travel, assemble,
+                        disassemble, pack again — for years.
+                      </p> -->
+
+                      <div class="project-6__btn">
+                        <a href="#" class="rr-btn-primary">
+                          <span class="text">More Information</span>
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <style>
+          /* ============ PRODUCT VARIANTS ============ */
+          .fabx-variants {
+            background: #0a0a0a;
+            padding: 150px 0;
+            position: relative;
+            overflow: hidden;
+          }
+          .fabx-variants * {
+            box-sizing: border-box;
+          }
+
+          .fabx-variants__blob {
+            position: absolute;
+            top: -250px;
+            left: -250px;
+            width: 650px;
+            height: 650px;
+            background: radial-gradient(
+              circle,
+              rgba(255, 255, 255, 0.04),
+              transparent 70%
+            );
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+          }
+          .fabx-variants__blob--alt {
+            top: auto;
+            left: auto;
+            bottom: -250px;
+            right: -250px;
+            background: radial-gradient(
+              circle,
+              rgba(255, 255, 255, 0.03),
+              transparent 70%
+            );
+          }
+
+          .fabx-variants__inner {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+          }
+
+          /* ---------- Heading block ---------- */
+          .fabx-variants__head {
+            text-align: center;
+            margin-bottom: 72px;
+            max-width: 760px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .fabx-variants__eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #ffffff;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 500px;
+            margin-bottom: 22px;
+          }
+          .fabx-variants__eyebrow-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #ffffff;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
+          }
+          .fabx-variants .section-sub-title {
+            font-style: italic;
+            color: #a3a3a3;
+            font-size: 17px;
+            margin-bottom: 14px;
+            font-weight: 400;
+          }
+          .fabx-variants .section-title {
+            font-size: 60px;
+            font-weight: 500;
+            line-height: 1.05;
+            letter-spacing: -2px;
+            color: #ffffff;
+            margin: 0 0 18px;
+          }
+          .fabx-variants__highlight {
+            position: relative;
+            display: inline-block;
+          }
+          .fabx-variants__highlight::after {
+            content: "";
+            position: absolute;
+            bottom: 6px;
+            left: 0;
+            right: 0;
+            height: 14px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: -1;
+            border-radius: 2px;
+          }
+          .fabx-variants__head-desc {
+            font-size: 17px;
+            color: #a3a3a3;
+            line-height: 1.6;
+            max-width: 560px;
+            margin: 0 auto;
+          }
+
+          /* ---------- Grid ---------- */
+          .fabx-variants__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px;
+          }
+
+          /* ---------- Card (default: white) ---------- */
+          .fabx-variants__card {
+            --card-bg: #ffffff;
+            --card-inner-bg: #f5f5f4;
+            --card-badge-bg: #f5f5f4;
+            --accent: #111111;
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            /* border-radius: 24px; */
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transition:
+              transform 0.35s ease,
+              box-shadow 0.35s ease;
+          }
+          .fabx-variants__card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+          }
+
+          /* Alternate card: grey-white */
+          .fabx-variants__card--alt {
+            --card-bg: #ededeb;
+            --card-inner-bg: #ffffff;
+            --card-badge-bg: #ffffff;
+          }
+
+          /* Top accent bar */
+          .fabx-variants__card-bar {
+            height: 4px;
+            /* background: var(--accent); */
+            width: 100%;
+          }
+
+          /* Card head: number + badge */
+          .fabx-variants__card-head {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 34px 34px 0;
+            margin-bottom: 8px;
+          }
+          .fabx-variants__number {
+            font-size: 44px;
+            font-weight: 600;
+            letter-spacing: -2px;
+            line-height: 1;
+            color: #d4d4d4;
+          }
+          .fabx-variants__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            padding: 7px 12px;
+            border-radius: 500px;
+            background: var(--card-badge-bg);
+            color: #111111;
+          }
+          .fabx-variants__badge-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #111111;
+          }
+
+          /* Product name */
+          .fabx-variants__name {
+            padding: 0 34px;
+            font-size: 30px;
+            font-weight: 500;
+            letter-spacing: -1.5px;
+            line-height: 1;
+            color: #737373;
+            margin-bottom: 12px;
+          }
+          .fabx-variants__name-accent {
+            color: #21175e !important;
+            font-weight: 800;
+          }
+
+          /* Tagline */
+          .fabx-variants__tagline {
+            padding: 0 34px;
+            font-size: 16px;
+            color: #525252;
+            line-height: 1.5;
+            margin-bottom: 18px;
+            min-height: 42px;
+          }
+
+          /* Description */
+          .fabx-variants .desc {
+            padding: 0 34px;
+            font-size: 16px;
+            line-height: 1.65;
+            color: #525252;
+            font-weight: 400;
+            margin: 0 0 24px;
+          }
+
+          /* Features list */
+          .fabx-variants__features {
+            padding: 0 34px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 28px;
+          }
+          .fabx-variants__feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+          }
+          .fabx-variants__feature-icon {
+            flex-shrink: 0;
+            width: 22px;
+            height: 22px;
+            /* border-radius: 7px; */
+            background-color: #111111;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 12px 12px;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='5 12 10 17 19 7'/></svg>");
+            margin-top: 1px;
+          }
+          .fabx-variants__feature-text {
+            font-size: 16px;
+            line-height: 1.55;
+            color: #111111;
+            font-weight: 500;
+          }
+
+          /* Use case block */
+          .fabx-variants__use-case {
+            margin: auto 34px 34px;
+            padding: 20px 22px;
+            background: var(--card-inner-bg);
+            border-left: 3px solid #111111;
+            /* border-radius: 0 12px 12px 0; */
+          }
+          .fabx-variants__use-case-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #111111;
+            margin-bottom: 8px;
+          }
+          .fabx-variants__use-case-label::before {
+            content: "";
+            width: 14px;
+            height: 1px;
+            background: #111111;
+          }
+          .fabx-variants__use-case-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #111111;
+            font-weight: 500;
+          }
+
+          /* ---------- Responsive ---------- */
+          @media (max-width: 1199px) {
+            .fabx-variants .section-title {
+              font-size: 50px;
+              letter-spacing: -1.5px;
+            }
+            .fabx-variants__grid {
+              gap: 22px;
+            }
+            .fabx-variants__name {
+              font-size: 34px;
+            }
+          }
+          @media (max-width: 991px) {
+            .fabx-variants {
+              padding: 100px 0;
+            }
+            .fabx-variants .section-title {
+              font-size: 42px;
+              letter-spacing: -1.2px;
+            }
+            .fabx-variants__grid {
+              grid-template-columns: 1fr;
+              max-width: 560px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            .fabx-variants__card:hover {
+              transform: translateY(-4px);
+            }
+          }
+          @media (max-width: 767px) {
+            .fabx-variants {
+              padding: 80px 0;
+            }
+            .fabx-variants__head {
+              margin-bottom: 48px;
+            }
+            .fabx-variants .section-title {
+              font-size: 34px;
+              letter-spacing: -0.8px;
+            }
+            .fabx-variants__head-desc {
+              font-size: 15px;
+            }
+            .fabx-variants__card-head {
+              padding: 28px 26px 0;
+            }
+            .fabx-variants__name,
+            .fabx-variants__tagline,
+            .fabx-variants .desc,
+            .fabx-variants__features {
+              padding-left: 26px;
+              padding-right: 26px;
+            }
+            .fabx-variants__use-case {
+              margin: auto 26px 26px;
+            }
+            .fabx-variants__name {
+              font-size: 30px;
+            }
+            .fabx-variants__number {
+              font-size: 36px;
+            }
+          }
+          @media (max-width: 480px) {
+            .fabx-variants .section-title {
+              font-size: 28px;
+            }
+          }
+        </style>
+
+        <section class="fabx-variants section-spacing fade-anim">
+          <div class="fabx-variants__blob"></div>
+          <div class="fabx-variants__blob fabx-variants__blob--alt"></div>
+
+          <div class="fabx-variants__inner">
+            <div class="team-3__inner rr-pos-rel">
+              <div class="rr-v-lines">
+                <div class="rr-line"></div>
+                <div class="rr-line"></div>
+                <div class="rr-line"></div>
+                <div class="rr-line"></div>
+              </div>
+              <div class="section-title-3__wrapper fade-anim">
+                <div class="wrap">
+                  <h2 class="sub-title">PRODUCT VARIANTS</h2>
+                  <h3
+                    class="title rr_title_anim text-white"
+                    style="perspective: 400px"
+                  >
+                    <div class="d-smm-mx-width-100" style="max-width: 50%">
+                      One Range. Three Applications.
+                    </div>
+                  </h3>
+                </div>
+
+                <p class="text-white">
+                  Choose based on what the space needs to do.
+                </p>
+              </div>
+            </div>
+
+            <div class="fabx-variants__grid">
+              <!-- FABxGO -->
+              <div class="fabx-variants__card">
+                <div class="fabx-variants__card-bar"></div>
+                <div class="fabx-variants__card-head">
+                  <div class="fabx-variants__number">01</div>
+                  <div class="fabx-variants__badge">
+                    <div class="fabx-variants__badge-dot"></div>
+                    <div>Modular</div>
+                  </div>
+                </div>
+                <div class="fabx-variants__name">
+                  FAB x <span class="fabx-variants__name-accent">GO</span>
+                </div>
+                <div class="fabx-variants__tagline">
+                  Lightweight Modular System for Multi-Use Applications
+                </div>
+                <!-- <div class="desc">
+                  The most flexible system in the range. Reconfigures into
+                  backdrops, entry gates, kiosks, and booths using the same
+                  parts. Built for teams that attend multiple events a year with
+                  different booth sizes.
+                </div> -->
+                <img
+                  class="ff-img"
+                  src="assets/cubo-img/fab-go.png"
+                  alt="Modular reconfigurable display"
+                  loading="lazy"
+                />
+                <div class="fabx-variants__features mt-5">
+                  <div class="fabx-variants__feature">
+                    <div class="fabx-variants__feature-icon"></div>
+                    <div class="fabx-variants__feature-text">
+                      Modular system for multiple configurations
+                    </div>
+                  </div>
+                  <div class="fabx-variants__feature">
+                    <div class="fabx-variants__feature-icon"></div>
+                    <div class="fabx-variants__feature-text">
+                      Lightweight and quick to transport
+                    </div>
+                  </div>
+                  <div class="fabx-variants__feature">
+                    <div class="fabx-variants__feature-icon"></div>
+                    <div class="fabx-variants__feature-text">
+                      Tool-free assembly, sub-hour setup
+                    </div>
+                  </div>
+                  <div class="fabx-variants__feature">
+                    <div class="fabx-variants__feature-icon"></div>
+                    <div class="fabx-variants__feature-text">
+                      Ideal for events, kiosks, and travelling exhibitions
+                    </div>
+                  </div>
+                  <div class="fabx-variants__feature">
+                    <div class="fabx-variants__feature-icon"></div>
+                    <div class="fabx-variants__feature-text">
+                      Reusable across campaigns and locations
+                    </div>
+                  </div>
+                </div>
+                <div class="fabx-variants__use-case">
+                  <div class="fabx-variants__use-case-label">Use Case</div>
+                  <div class="fabx-variants__use-case-text">
+                    An FMCG brand running 15 activations a year across 8 cities.
+                    One FABxGO system covers all of them.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FABxGLOW (alt - grey-white) -->
+              <div class="fabx-variants__card fabx-variants__card--alt">
+                <div class="fabx-variants__card-bar"></div>
+                <div class="fabx-variants__card-head">
+                  <div class="fabx-variants__number">02</div>
+                  <div class="fabx-variants__badge">
+                    <div class="fabx-variants__badge-dot"></div>
+                    <div>Illuminated</div>
+                  </div>
+                </div>
+                <div class="fabx-variants__name">
+                  FAB x <span class="fabx-variants__name-accent">GLOW</span>
+                </div>
+                <div class="fabx-variants__tagline">
+                  Illuminated Display for Premium Indoor Branding
+                </div>
+                <!-- <div class="desc">
+                  Integrated LED lighting. Designed for retail interiors, mall
+                  installations, and premium brand environments where uniform
+                  illumination matters more than portability.
+                </div> -->
+                <img
+                  class="ff-img"
+                  src="assets/cubo-img/fa-glow.png"
+                  alt="Modular reconfigurable display"
+                  loading="lazy"
+                />
+                <div class="fabx-variants__features mt-5">
+                  <div class="fabx-variants__feature">
+                    <div class="fabx-variants__feature-icon"></div>
+                    <div class="fabx-variants__feature-text">
+                      Built-in edge-lit LED for uniform brightness
+                    </div>
+                  </div>
+                  <div class="fabx-variants__feature">
+                    <div class="fabx-variants__feature-icon"></div>
+                    <div class="fabx-variants__feature-text">
+                      Premium fabric finish for high-quality graphics
+                    </div>
+                  </div>
+                  <div class="fabx-variants__feature">
+                    <div class="fabx-variants__feature-icon"></div>
+                    <div class="fabx-variants__feature-text">
+                      Available in floor, wall, and hanging formats
+                    </div>
+                  </div>
+                  <div class="fabx-variants__feature">
+                    <div class="fabx-variants__feature-icon"></div>
+                    <div class="fabx-variants__feature-text">
+                      Space-efficient, clean modern aesthetic
+                    </div>
+                  </div>
+                  <div class="fabx-variants__feature">
+                    <div class="fabx-variants__feature-icon"></div>
+                    <div class="fabx-variants__feature-text">
+                      Ideal for permanent or semi-permanent retail placement
+                    </div>
+                  </div>
+                </div>
+                <div class="fabx-variants__use-case">
+                  <div class="fabx-variants__use-case-label">Use Case</div>
+                  <div class="fabx-variants__use-case-text">
+                    A retail chain installing backlit branded signage across 40
+                    showrooms. Consistent look, centrally sourced, replacement
+                    fabric on demand.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FABxPRO -->
+              <div class="fabx-variants__card">
+                <div class="fabx-variants__card-bar"></div>
+                <div class="fabx-variants__card-head">
+                  <div class="fabx-variants__number">03</div>
+                  <div class="fabx-variants__badge">
+                    <div class="fabx-variants__badge-dot"></div>
+                    <div>Full Booth</div>
+                  </div>
+                </div>
+                <div class="fabx-variants__name">
+                  FAB x <span class="fabx-variants__name-accent">PRO</span>
+                </div>
+                <div class="fabx-variants__tagline">
+                  Complete Exhibition Booth Systems
+                </div>
+                <!-- <div class="desc">
+                  The full booth solution. Backdrops, counters, display areas,
+                  and integrated elements in one coherent system. Designed for
+                  agencies, fabricators, and brands doing major trade shows.
+                </div> -->
+                <img
+                  class="ff-img"
+                  src="assets/cubo-img/fa-pro.png"
+                  alt="Modular reconfigurable display"
+                  loading="lazy"
+                />
+                <div class="fabx-variants__features mt-5">
+                  <div class="fabx-variants__feature">
+                    <div class="fabx-variants__feature-icon"></div>
+                    <div class="fabx-variants__feature-text">
+                      Complete booth setups with integrated layouts
+                    </div>
+                  </div>
+                  <div class="fabx-variants__feature">
+                    <div class="fabx-variants__feature-icon"></div>
+                    <div class="fabx-variants__feature-text">
+                      Includes counters, backdrops, display walls
+                    </div>
+                  </div>
+                  <div class="fabx-variants__feature">
+                    <div class="fabx-variants__feature-icon"></div>
+                    <div class="fabx-variants__feature-text">
+                      Scalable from 9 sqm to 100+ sqm configurations
+                    </div>
+                  </div>
+                  <div class="fabx-variants__feature">
+                    <div class="fabx-variants__feature-icon"></div>
+                    <div class="fabx-variants__feature-text">
+                      Professional-grade structure for large-scale activations
+                    </div>
+                  </div>
+                  <div class="fabx-variants__feature">
+                    <div class="fabx-variants__feature-icon"></div>
+                    <div class="fabx-variants__feature-text">
+                      Strong visual presence without heavy construction
+                    </div>
+                  </div>
+                </div>
+                <div class="fabx-variants__use-case">
+                  <div class="fabx-variants__use-case-label">Use Case</div>
+                  <div class="fabx-variants__use-case-text">
+                    An agency building a 64 sqm booth for a client at Auto Expo.
+                    Ships in one truck, assembles in half a day, disassembles in
+                    two hours.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <style>
+          /* ============ WHY CHOOSE FABX ============ */
+          .why-fabx {
+            background: #ffffff;
+            padding: 150px 0;
+            position: relative;
+            overflow: hidden;
+          }
+          .why-fabx * {
+            box-sizing: border-box;
+          }
+
+          .why-fabx__blob {
+            position: absolute;
+            top: -250px;
+            right: -250px;
+            width: 650px;
+            height: 650px;
+            background: radial-gradient(
+              circle,
+              rgba(5, 150, 105, 0.06),
+              transparent 70%
+            );
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+          }
+          .why-fabx__blob--alt {
+            top: auto;
+            right: auto;
+            bottom: -250px;
+            left: -250px;
+            background: radial-gradient(
+              circle,
+              rgba(220, 38, 38, 0.04),
+              transparent 70%
+            );
+          }
+
+          .why-fabx__inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+          }
+
+          /* ---------- Heading block ---------- */
+          .why-fabx__head {
+            text-align: center;
+            margin-bottom: 70px;
+          }
+          .why-fabx__eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--primary, #111);
+            padding: 8px 16px;
+            background: #fafaf9;
+            border: 1px solid #e7e5e4;
+            border-radius: 500px;
+            margin-bottom: 22px;
+          }
+          .why-fabx__eyebrow-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #059669;
+            box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.18);
+          }
+          .why-fabx .section-sub-title {
+            font-style: italic;
+            color: var(--secondary, #666);
+            font-size: 17px;
+            margin-bottom: 14px;
+            font-weight: 400;
+          }
+          .why-fabx .section-title {
+            font-size: 64px;
+            font-weight: 500;
+            line-height: 1.05;
+            letter-spacing: -2px;
+            color: var(--primary, #111);
+            margin: 0 auto;
+            max-width: 880px;
+          }
+          .why-fabx__strike {
+            color: #a3a3a3;
+            text-decoration: line-through;
+            text-decoration-thickness: 3px;
+            text-decoration-color: rgba(220, 38, 38, 0.45);
+          }
+          .why-fabx__highlight {
+            position: relative;
+            display: inline-block;
+            color: var(--primary, #111);
+          }
+          .why-fabx__highlight::after {
+            content: "";
+            position: absolute;
+            bottom: 6px;
+            left: 0;
+            right: 0;
+            height: 14px;
+            background: rgba(5, 150, 105, 0.2);
+            z-index: -1;
+            border-radius: 2px;
+          }
+
+          /* ---------- Comparison grid ---------- */
+          .why-fabx__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            position: relative;
+          }
+          .why-fabx__versus {
+            position: absolute;
+            top: 90px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #111111;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            padding: 10px 20px;
+            /* border-radius: 500px; */
+            z-index: 3;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+          }
+          .why-fabx__versus::before {
+            content: "VERSUS";
+          }
+
+          /* ---------- Card ---------- */
+          .why-fabx__card {
+            background: #ffffff;
+            border: 1px solid #e7e5e4;
+            /* border-radius: 24px; */
+            padding: 40px;
+            transition:
+              transform 0.3s ease,
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+          }
+          .why-fabx__card:hover {
+            transform: translateY(-4px);
+          }
+
+          .why-fabx__card--bad {
+            background: linear-gradient(180deg, #fafaf9, #ffffff);
+          }
+          .why-fabx__card--good {
+            background: linear-gradient(180deg, #f0fdf4, #ffffff);
+            border-color: rgba(5, 150, 105, 0.22);
+            box-shadow: 0 12px 40px rgba(5, 150, 105, 0.08);
+          }
+          .why-fabx__card--good:hover {
+            box-shadow: 0 18px 52px rgba(5, 150, 105, 0.16);
+          }
+
+          .why-fabx__card-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 26px;
+            padding-bottom: 22px;
+            border-bottom: 1px dashed #e7e5e4;
+          }
+          .why-fabx__label {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 8px 14px;
+            border-radius: 8px;
+          }
+          .why-fabx__card--bad .why-fabx__label {
+            background: #fef2f2;
+            color: #dc2626;
+          }
+          .why-fabx__card--good .why-fabx__label {
+            background: #ecfdf5;
+            color: #059669;
+          }
+          .why-fabx__label-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+          }
+          .why-fabx__card--bad .why-fabx__label-dot {
+            background: #dc2626;
+          }
+          .why-fabx__card--good .why-fabx__label-dot {
+            background: #059669;
+            animation: why-fabx-pulse 2s infinite;
+          }
+
+          .why-fabx__card .title {
+            font-size: 25px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: var(--primary, #111);
+            margin: 0;
+          }
+          .why-fabx__card--bad .title {
+            color: #111111;
+          }
+
+          /* ---------- List rows ---------- */
+          .why-fabx__list {
+            display: flex;
+            flex-direction: column;
+          }
+          .why-fabx__row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 0;
+          }
+          .why-fabx__row + .why-fabx__row {
+            border-top: 1px solid #f0efec;
+          }
+
+          /* ---------- Icons (SVG background — always perfectly centered) ---------- */
+          .why-fabx__icon {
+            flex-shrink: 0;
+            width: 26px;
+            height: 26px;
+            border-radius: 8px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 14px 14px;
+          }
+          .why-fabx__card--bad .why-fabx__icon {
+            background-color: #fef2f2;
+            border: 1px solid rgba(220, 38, 38, 0.18);
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dc2626' stroke-width='3.2' stroke-linecap='round'><line x1='6' y1='6' x2='18' y2='18'/><line x1='18' y1='6' x2='6' y2='18'/></svg>");
+          }
+          .why-fabx__card--good .why-fabx__icon {
+            background-color: #059669;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='5 12 10 17 19 7'/></svg>");
+          }
+
+          .why-fabx__text {
+            flex: 1;
+            font-size: 16px;
+            line-height: 1.55;
+            color: var(--primary, #111);
+            font-weight: 500;
+          }
+          .why-fabx__card--bad .why-fabx__text {
+            color: #111111;
+            font-weight: 500;
+          }
+
+          /* ---------- Footer note ---------- */
+          .why-fabx__footer {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+          }
+          .why-fabx__footer-inner {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            padding: 18px 28px;
+            background: #fafaf9;
+            border: 1px solid #e7e5e4;
+            /* border-radius: 500px; */
+            max-width: 940px;
+          }
+          .why-fabx__footer .desc {
+            font-size: 19px;
+            line-height: 1.6;
+            color: #111111;
+            font-weight: 600;
+            margin: 0;
+          }
+          .why-fabx__star {
+            flex-shrink: 0;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background-color: #111111;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 14px;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'><path d='M12 2 L14 9 L21 10 L16 15 L17 22 L12 19 L7 22 L8 15 L3 10 L10 9 Z'/></svg>");
+          }
+
+          @keyframes why-fabx-pulse {
+            0%,
+            100% {
+              box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.5);
+            }
+            50% {
+              box-shadow: 0 0 0 6px rgba(5, 150, 105, 0);
+            }
+          }
+
+          /* ---------- Responsive ---------- */
+          @media (max-width: 1199px) {
+            .why-fabx .section-title {
+              font-size: 52px;
+              letter-spacing: -1.5px;
+            }
+          }
+          @media (max-width: 991px) {
+            .why-fabx {
+              padding: 100px 0;
+            }
+            .why-fabx .section-title {
+              font-size: 42px;
+              letter-spacing: -1px;
+            }
+          }
+          @media (max-width: 767px) {
+            .why-fabx {
+              padding: 80px 0;
+            }
+            .why-fabx__head {
+              margin-bottom: 44px;
+            }
+            .why-fabx .section-title {
+              font-size: 34px;
+              letter-spacing: -0.8px;
+            }
+            .why-fabx__grid {
+              grid-template-columns: 1fr;
+              gap: 18px;
+            }
+            .why-fabx__versus {
+              position: relative;
+              top: auto;
+              left: auto;
+              transform: none;
+              margin: 4px auto;
+              display: block;
+              width: fit-content;
+            }
+            .why-fabx__card {
+              padding: 28px 22px;
+            }
+            .why-fabx__footer-inner {
+              padding: 16px 22px;
+            }
+            .why-fabx__footer .desc {
+              font-size: 14px;
+            }
+          }
+          @media (max-width: 480px) {
+            .why-fabx .section-title {
+              font-size: 28px;
+            }
+            .why-fabx__card-head {
+              flex-direction: column;
+              align-items: flex-start;
+            }
+          }
+        </style>
+
+        <section class="why-fabx section-spacing fade-anim">
+          <div class="why-fabx__blob"></div>
+          <div class="why-fabx__blob why-fabx__blob--alt"></div>
+
+          <div class="why-fabx__inner">
+            <div class="team-3__inner rr-pos-rel">
+              <div class="rr-v-lines">
+                <div class="rr-line"></div>
+                <div class="rr-line"></div>
+                <div class="rr-line"></div>
+                <div class="rr-line"></div>
+              </div>
+              <div class="section-title-3__wrapper fade-anim">
+                <div class="wrap">
+                  <h2 class="sub-title">WHY CHOOSE FABX</h2>
+                  <h3 class="title rr_title_anim" style="perspective: 400px">
+                    <div class="d-smm-mx-width-100" style="max-width: 50%">
+                      The Old Way, or the
+                      <span class="base-text-color">FABx Way</span>
+                    </div>
+                  </h3>
+                </div>
+
+                <!-- <p>The Honest Pitch</p> -->
+              </div>
+            </div>
+
+            <div class="why-fabx__grid">
+              <div class="why-fabx__card why-fabx__card--bad">
+                <div class="why-fabx__card-head">
+                  <div class="why-fabx__label">
+                    <div class="why-fabx__label-dot"></div>
+                    <div>Old way</div>
+                  </div>
+                  <div class="title">Traditional grind</div>
+                </div>
+                <div class="why-fabx__list">
+                  <div class="why-fabx__row">
+                    <div class="why-fabx__icon"></div>
+                    <div class="why-fabx__text">
+                      Plywood + carpenters + electricians
+                    </div>
+                  </div>
+                  <div class="why-fabx__row">
+                    <div class="why-fabx__icon"></div>
+                    <div class="why-fabx__text">Ships in a truck</div>
+                  </div>
+                  <div class="why-fabx__row">
+                    <div class="why-fabx__icon"></div>
+                    <div class="why-fabx__text">6–8 hours to set up</div>
+                  </div>
+                  <div class="why-fabx__row">
+                    <div class="why-fabx__icon"></div>
+                    <div class="why-fabx__text">Damaged after every show</div>
+                  </div>
+                  <div class="why-fabx__row">
+                    <div class="why-fabx__icon"></div>
+                    <div class="why-fabx__text">
+                      Graphics printed on vinyl sheets
+                    </div>
+                  </div>
+                  <div class="why-fabx__row">
+                    <div class="why-fabx__icon"></div>
+                    <div class="why-fabx__text">Dumped after the event</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="why-fabx__versus"></div>
+
+              <div class="why-fabx__card why-fabx__card--good">
+                <div class="why-fabx__card-head">
+                  <div class="why-fabx__label">
+                    <div class="why-fabx__label-dot"></div>
+                    <div>FABx way</div>
+                  </div>
+                  <div class="title">Smart &amp; reusable</div>
+                </div>
+                <div class="why-fabx__list">
+                  <div class="why-fabx__row">
+                    <div class="why-fabx__icon"></div>
+                    <div class="why-fabx__text">Two people, no tools</div>
+                  </div>
+                  <div class="why-fabx__row">
+                    <div class="why-fabx__icon"></div>
+                    <div class="why-fabx__text">Ships in a car boot</div>
+                  </div>
+                  <div class="why-fabx__row">
+                    <div class="why-fabx__icon"></div>
+                    <div class="why-fabx__text">Under one hour setup</div>
+                  </div>
+                  <div class="why-fabx__row">
+                    <div class="why-fabx__icon"></div>
+                    <div class="why-fabx__text">Reusable for years</div>
+                  </div>
+                  <div class="why-fabx__row">
+                    <div class="why-fabx__icon"></div>
+                    <div class="why-fabx__text">
+                      Stretch fabric, edge to edge
+                    </div>
+                  </div>
+                  <div class="why-fabx__row">
+                    <div class="why-fabx__icon"></div>
+                    <div class="why-fabx__text">Packed and used again</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="why-fabx__footer">
+              <div class="why-fabx__footer-inner">
+                <div class="why-fabx__star"></div>
+                <div class="desc">
+                  If you've ever built an exhibition booth the traditional way,
+                  you already know why this matters.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <style>
+          /* ── Showroom: outer container gives scroll distance ── */
+          #showroom-section {
+            position: relative;
+            height: 250vh;
+            background: #0e0e0e;
+          }
+
+          /* ── The pinned frame ── */
+          #showroom-pin {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            background: #0e0e0e;
+          }
+
+          /* ── Video starts scaled-down (boxed look) ── */
+          #showroom-video-wrap {
+            position: absolute;
+            inset: 0;
+            transform-origin: center center;
+            transform: scale(0.6);
+            will-change: transform;
+          }
+          #showroom-video-wrap video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+          }
+
+          /* ── Dark overlay ── */
+          #showroom-overlay {
+            position: absolute;
+            inset: 0;
+            background: #0e0e0e;
+            opacity: 0.55;
+            pointer-events: none;
+            z-index: 1;
+            will-change: opacity;
+          }
+
+          /* ── UI layer ── */
+          #showroom-ui {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            pointer-events: none;
+          }
+
+          /* ── Top label bar ── */
+          #showroom-ui .sr-top {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 36px 48px 16px;
+            flex-shrink: 0;
+          }
+          #showroom-ui .sr-label {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            opacity: 0.65;
+            color: #fff;
+          }
+          #showroom-ui .sr-label::before {
+            content: "◆";
+            margin-right: 10px;
+            font-size: 6px;
+            vertical-align: 2px;
+          }
+
+          /* ── Center row: both blocks vertically centered, side by side ── */
+          #showroom-ui .sr-center-row {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(40px, 8vw, 120px);
+            padding: 0 48px;
+            overflow: hidden;
+          }
+
+          /* ── Left text block ── */
+          #showroom-ui .sr-heading-eyebrow {
+            font-size: 14px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            margin: 0 0 18px;
+            font-weight: 400;
+          }
+          #showroom-ui .sr-heading {
+            font-size: 45px;
+            font-weight: 300;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            color: #fff;
+            max-width: 670px;
+            flex-shrink: 0;
+            margin: 0;
+            will-change: transform, opacity;
+          }
+          #showroom-ui .sr-heading strong {
+            font-weight: 500;
+          }
+
+          /* ── Left block wrapper ── */
+          #showroom-ui .sr-left-block {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            flex-shrink: 0;
+            will-change: transform, opacity;
+          }
+
+          /* ── Right block ── */
+          #showroom-ui .sr-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            flex-shrink: 0;
+            color: #fff;
+            max-width: 430px;
+            will-change: transform, opacity;
+          }
+          #showroom-ui .sr-body {
+            font-size: 16px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.72);
+            margin: 0;
+          }
+          #showroom-ui .sr-body .sr-pipe {
+            color: rgba(255, 255, 255, 0.25);
+            margin: 0 6px;
+          }
+          #showroom-ui .sr-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 24px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            background: rgba(255, 255, 255, 0.07);
+            color: #fff;
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            text-decoration: none;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            pointer-events: all;
+            cursor: pointer;
+            transition:
+              background 0.3s,
+              border-color 0.3s,
+              gap 0.3s;
+          }
+          #showroom-ui .sr-btn:hover {
+            background: rgba(255, 255, 255, 0.16);
+            border-color: rgba(255, 255, 255, 0.8);
+            color: #fff;
+            gap: 14px;
+          }
+          #showroom-ui .sr-btn svg {
+            flex-shrink: 0;
+            transition: transform 0.3s;
+          }
+          #showroom-ui .sr-btn:hover svg {
+            transform: translateX(2px);
+          }
+
+          /* ── Divider line between the two blocks ── */
+          #showroom-ui .sr-divider {
+            width: 1px;
+            height: clamp(80px, 14vh, 180px);
+            background: rgba(255, 255, 255, 0.2);
+            flex-shrink: 0;
+          }
+
+          /* ── Bottom bar ── */
+          #showroom-ui .sr-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 16px 48px 28px;
+            flex-shrink: 0;
+            opacity: 0.45;
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #fff;
+          }
+
+          /* ── Mobile ── */
+          @media (max-width: 768px) {
+            #showroom-ui .sr-top {
+              padding: 20px 24px 14px;
+            }
+            #showroom-ui .sr-center-row {
+              flex-direction: column;
+              gap: 28px;
+              padding: 0 24px;
+              text-align: center;
+              align-items: center;
+            }
+            #showroom-ui .sr-left-block {
+              align-items: center;
+            }
+            #showroom-ui .sr-right {
+              align-items: center;
+              text-align: center;
+            }
+            #showroom-ui .sr-divider {
+              width: clamp(60px, 30vw, 120px);
+              height: 1px;
+            }
+            #showroom-ui .sr-bottom {
+              padding: 14px 24px 20px;
+            }
+          }
+        </style>
+
+        <div id="showroom-section">
+          <div id="showroom-pin">
+            <!-- Background video -->
+            <div id="showroom-video-wrap">
+              <video autoplay muted loop playsinline>
+                <source
+                  src="https://player.vimeo.com/progressive_redirect/playback/1143029705/rendition/1080p/file.mp4?loc=external&signature=10e03c1a4ccef96fa97619ea43707acd7a8088353ac3f9a9d4665670a5d5ebbd"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+
+            <!-- Overlay -->
+            <div id="showroom-overlay"></div>
+
+            <!-- UI -->
+            <div id="showroom-ui">
+              <!-- Top label -->
+              <div class="sr-top">
+                <span class="sr-label">Virtual Showroom</span>
+              </div>
+
+              <!-- Center row -->
+              <div class="sr-center-row">
+                <!-- LEFT — slides from left on scroll -->
+                <div class="sr-left-block" id="sr-left">
+                  <p class="sr-heading-eyebrow">See It Assembled</p>
+                  <h2 class="sr-heading">
+                    Walk Through a Full<br />
+                    <strong>FABx Setup</strong> in Our<br />
+                    Virtual Showroom.
+                  </h2>
+                </div>
+
+                <!-- Vertical divider -->
+                <div class="sr-divider"></div>
+
+                <!-- RIGHT — slides from right on scroll -->
+                <div class="sr-right" id="sr-right">
+                  <p class="sr-body">
+                    FABx is the hardest product to understand from a catalogue —
+                    it's modular, it's lit, it's spatial.<span class="sr-pipe"
+                      >|</span
+                    >Our 3D virtual environment shows it assembled at full
+                    exhibition scale. Walk around it. Check dimensions. Ask Nora
+                    anything about specs.
+                  </p>
+                  <a href="https://cuboc.neofairs.com/" class="sr-btn">
+                    <svg
+                      width="13"
+                      height="10"
+                      viewBox="0 0 14 11"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M0.6 0V6H13.1"
+                        stroke="currentColor"
+                        stroke-width="1.2"
+                      />
+                      <rect
+                        x="9.19"
+                        y="2.23"
+                        width="5.56"
+                        height="5.56"
+                        transform="rotate(45 9.19 2.23)"
+                        stroke="currentColor"
+                        stroke-width="1.2"
+                      />
+                    </svg>
+                    Enter the Virtual Showroom
+                  </a>
+                </div>
+              </div>
+
+              <!-- Bottom bar -->
+              <div class="sr-bottom">
+                <span>FABx — Full Exhibition Scale</span>
+                <span>3D Virtual Environment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          (function initShowroom() {
+            function run() {
+              if (
+                typeof gsap === "undefined" ||
+                typeof ScrollTrigger === "undefined"
+              ) {
+                setTimeout(run, 80);
+                return;
+              }
+
+              var section = document.getElementById("showroom-section");
+              var pin = document.getElementById("showroom-pin");
+              var videoWrap = document.getElementById("showroom-video-wrap");
+              var overlay = document.getElementById("showroom-overlay");
+              var srLeft = document.getElementById("sr-left");
+              var srRight = document.getElementById("sr-right");
+
+              if (!pin || !videoWrap || !overlay || !srLeft || !srRight) return;
+
+              function calcOffsets() {
+                var leftRect = srLeft.getBoundingClientRect();
+                var rightRect = srRight.getBoundingClientRect();
+                var vw = window.innerWidth;
+                return {
+                  startLeft: vw * 0.06,
+                  startRight: vw * 0.06,
+                  endLeft: leftRect.left,
+                  endRight: vw - rightRect.right,
+                };
+              }
+
+              /* Set initial positions */
+              var o = calcOffsets();
+              gsap.set(srLeft, { x: -o.startLeft, opacity: 1 });
+              gsap.set(srRight, { x: o.startRight, opacity: 1 });
+              gsap.set(videoWrap, { scale: 0.6 });
+              gsap.set(overlay, { opacity: 0.55 });
+
+              var scroller =
+                document.getElementById("smooth-wrapper") || window;
+
+              ScrollTrigger.create({
+                trigger: section,
+                scroller: scroller,
+                start: "top top",
+                end: "+=150%",
+                pin: pin,
+                pinSpacing: false,
+                scrub: 1,
+                onUpdate: function (self) {
+                  var p = self.progress;
+                  var o = calcOffsets();
+                  var eased = 1 - Math.pow(1 - p, 2);
+
+                  /* Video zoom 0.6 → 1.0 */
+                  gsap.set(videoWrap, { scale: 0.6 + p * 0.4 });
+
+                  /* Overlay fade out */
+                  gsap.set(overlay, { opacity: 0.55 - p * 0.55 });
+
+                  /* Text slides to edges */
+                  var xLeft = o.startLeft + eased * (o.endLeft - o.startLeft);
+                  var xRight =
+                    o.startRight + eased * (o.endRight - o.startRight);
+
+                  gsap.set(srLeft, { x: -xLeft, opacity: 1 });
+                  gsap.set(srRight, { x: xRight, opacity: 1 });
+                },
+              });
+
+              window.addEventListener("resize", function () {
+                ScrollTrigger.refresh();
+                var o = calcOffsets();
+                gsap.set(srLeft, { x: -o.startLeft });
+                gsap.set(srRight, { x: o.startRight });
+              });
+            }
+
+            if (document.readyState === "loading") {
+              document.addEventListener("DOMContentLoaded", function () {
+                setTimeout(run, 400);
+              });
+            } else {
+              setTimeout(run, 400);
+            }
+          })();
+        </script>
+        <!-- ── Strap CTA ── -->
+        <section class="strap-cta">
+          <div class="container rr-container-1710">
+            <div class="strap-cta__inner">
+              <div class="strap-cta__left">
+                <p class="strap-cta__eyebrow">Next Step</p>
+                <h2 class="strap-cta__heading">
+                  Tell Us About Your Next Exhibition.
+                </h2>
+                <p class="strap-cta__sub">
+                  Share the size, the venue, and what you're trying to achieve.
+                  We'll come back with the FABx configuration that fits — and a
+                  quote you can actually plan around.
+                </p>
+              </div>
+
+              <div class="strap-cta__actions">
+                <a
+                  href="contact.html"
+                  class="strap-cta__btn strap-cta__btn--primary"
+                >
+                  Get a Quote
+                  <i class="fa-solid fa-arrow-right" style="rotate: -45deg"></i>
+                </a>
+
+                <a
+                  href="contact.html"
+                  class="strap-cta__btn strap-cta__btn--secondary"
+                >
+                  Talk to Our Team
+                  <i
+                    class="fa-solid fa-arrow-right text-white"
+                    style="rotate: -45deg"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Footer ── -->
+        <footer class="footer-4 theme-bg-primary">
+          <div class="container rr-container-1820">
+            <div class="footer-4__inner">
+              <div class="footer-4__wrapper">
+                <div class="footer-widget-box">
+                  <div class="content">
+                    <h3 class="title">Here's the Direct Line.</h3>
+
+                    <div class="info">
+                      <a href="tel:+919318404993">Sales — +91 93184 04993</a>
+
+                      <a href="tel:+919310133066">Support — +91 93101 33066</a>
+
+                      <a href="tel:+919818538180">Director — +91 98185 38180</a>
+
+                      <a href="mailto:info@cubocdisplay.com">
+                        info@cubocdisplay.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-widget-box">
+                  <h2 class="title">Join our newsletter</h2>
+                  <div class="newsletter">
+                    <div class="input-group">
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email*"
+                      />
+                      <button type="submit">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-widget-box">
+                  <h2 class="title">Quick Links</h2>
+                  <ul class="footer-nav-list">
+                    <li>
+                      <a href="index.html" data-text="Home"
+                        ><span>Home</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="about.html" data-text="About Us"
+                        ><span>About Us</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="caseStudy.html" data-text="Case Studies"
+                        ><span>Case Studies</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="virtualshowroom.html"
+                        data-text="Virtual Showroom"
+                        ><span>Virtual Showroom</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="contact.html" data-text="Contact"
+                        ><span>Contact</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-widget-box">
+                  <h2 class="title">Social</h2>
+                  <ul class="footer-nav-list">
+                    <li>
+                      <a href="https://www.facebook.com/" data-text="Facebook"
+                        ><span>Facebook</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://x.com/" data-text="Twitter"
+                        ><span>Twitter</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/" data-text="Instagram"
+                        ><span>Instagram</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.pinterest.com/" data-text="Pinterest"
+                        ><span>Pinterest</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="copyright">
+                <div class="copyright__logo">
+                  <link
+                    href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+                    rel="stylesheet"
+                  />
+                  <div
+                    class="footer_logo__5ncK8"
+                    style="
+                      color: white;
+                      font-family: &quot;Russo One&quot;, sans-serif;
+                      font-size: 110px;
+                      font-weight: 500;
+                      letter-spacing: 1px;
+                      text-transform: uppercase;
+                      line-height: 0.85;
+                    "
+                  >
+                    CUBOC
+                  </div>
+                </div>
+                <p class="copyright__text" style="text-align: right">
+                  <a href="#">cuboc</a>
+                  © 2025. All Rights Reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+        <!-- footer end -->
+      </div>
+    </div>
+    <div class="mobile-nav-drawer" id="mobDrawer">
+      <div class="mob-inner">
+        <div class="mob-close">
+          <span class="mob-logo">Cuboc</span>
+          <button id="mobCloseBtn" aria-label="Close menu">&#x2715;</button>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#"
+              >Company
+              <span class="mob-arrow" data-sub="mobSub1">&#9660;</span></a
+            >
+            <ul class="mob-sub" id="mobSub1">
+              <li><a href="about.html">About Us</a></li>
+              <li>
+                <a href="recognitionNetwork.html">Recognition &amp; Network</a>
+              </li>
+              <li><a href="trade-events.html">Trade Shows &amp; Events</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="products.html"
+              >Products
+              <span class="mob-arrow" data-sub="mobSub2">&#9660;</span></a
+            >
+            <ul class="mob-sub" id="mobSub2">
+              <li>
+                <a href="FABx.html">Fabric Light Boxes</a>
+              </li>
+              <li><a href="Standees.html">Standees</a></li>
+              <li>
+                <a href="Ultra_Thin_Glass_Frame.html"
+                  >Ultra Thin Glass Frames</a
+                >
+              </li>
+              <li>
+                <a href="Battery_Table_Top_Displays.html">Battery Table Top Displays</a>
+              </li>
+              <li><a href="Gazebo_Tents.html">Gazebo Tents</a></li>
+            </ul>
+          </li>
+          <li><a href="virtualshowroom.html">Virtual Showroom</a></li>
+          <li>
+            <a href="caseStudy.html"
+              >Case Studies
+              <span class="mob-arrow" data-sub="mobSub3">&#9660;</span></a
+            >
+            <ul class="mob-sub" id="mobSub3">
+              <li><a href="Versions203.html">Customisation</a></li>
+              <li><a href="CompetitorStock.html">Service Attitude</a></li>
+              <li><a href="DentedStandees.html">After-Sales Reliability</a></li>
+              <li><a href="CustomEngineering.html">Custom Engineering</a></li>
+              <li><a href="PremiumFinishes.html">Premium Finishes</a></li>
+              <li>
+                <a href="EngineeringforReality.html">Engineering for Reality</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <style>
+      .whatsapp-float {
+        position: fixed;
+        bottom: 80px; /* increased from 25px */
+        right: 18px;
+        background-color: #25d366;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        transition: transform 0.3s ease;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+      }
+
+      .whatsapp-float img {
+        width: 22px;
+        height: 22px;
+      }
+
+      @media (max-width: 480px) {
+        .whatsapp-float {
+          width: 40px;
+          height: 40px;
+          bottom: 75px; /* increased from 15px */
+          right: 25px;
+        }
+        .whatsapp-float img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    </style>
+
+    <a
+      href="https://wa.me/919818538180"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v10/icons/whatsapp.svg"
+        alt="WhatsApp"
+        style="filter: brightness(0) invert(1)"
+      />
+    </a>
+    <script>
+      (function () {
+        var drawer = document.getElementById("mobDrawer");
+        var closeBtn = document.getElementById("mobCloseBtn");
+        var toggleBtn = document.querySelector(
+          ".side-toggle.mobile-button .bar-icon",
+        );
+        function openMenu() {
+          drawer.classList.add("open");
+          document.body.style.overflow = "hidden";
+        }
+        function closeMenu() {
+          drawer.classList.remove("open");
+          document.body.style.overflow = "";
+          document.querySelectorAll(".mob-sub").forEach(function (s) {
+            s.classList.remove("open");
+          });
+          document.querySelectorAll(".mob-arrow").forEach(function (a) {
+            a.classList.remove("open");
+          });
+        }
+        if (toggleBtn)
+          toggleBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            openMenu();
+          });
+        if (closeBtn) closeBtn.addEventListener("click", closeMenu);
+        document.querySelectorAll(".mob-arrow").forEach(function (arrow) {
+          arrow.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var sub = document.getElementById(arrow.getAttribute("data-sub"));
+            var isOpen = sub.classList.contains("open");
+            document.querySelectorAll(".mob-sub").forEach(function (s) {
+              s.classList.remove("open");
+            });
+            document.querySelectorAll(".mob-arrow").forEach(function (a) {
+              a.classList.remove("open");
+            });
+            if (!isOpen) {
+              sub.classList.add("open");
+              arrow.classList.add("open");
+            }
+          });
+        });
+      })();
+    </script>
+    <style>
+      .variant-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+      }
+
+      .variant-image,
+      .variant-card {
+        width: 50%;
+      }
+
+      .variant-image img {
+        width: 100%;
+        display: block;
+      }
+    </style>
+
+    <script>
+      var swiper = new Swiper(".fabxSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        speed: 800,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        mousewheel: true,
+      });
+    </script>
+
+    <style>
+      .modal-field {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .modal-field input,
+      .modal-field select {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+        outline: none;
+        font-size: 15px;
+        font-weight: 400;
+        color: #111;
+        background: transparent;
+        padding: 10px 0;
+        transition: border-color 0.25s;
+        appearance: none;
+        -webkit-appearance: none;
+      }
+      .modal-field input::placeholder {
+        color: rgba(17, 17, 17, 0.4);
+      }
+      .modal-field input:focus,
+      .modal-field select:focus {
+        border-bottom-color: #111;
+      }
+      .modal-field.has-error input,
+      .modal-field.has-error select {
+        border-bottom-color: #e74c3c;
+      }
+      .modal-field .m-err {
+        font-size: 11px;
+        color: #e74c3c;
+        min-height: 16px;
+        display: block;
+      }
+      @media (max-width: 576px) {
+        .modal-header {
+          padding: 20px !important;
+        }
+        .modal-body {
+          padding: 20px !important;
+        }
+      }
+
+      /* ── Fix: keep modal above mobile nav drawer (z-index 9999) ── */
+      .modal {
+        z-index: 10050 !important;
+      }
+      .modal-backdrop {
+        z-index: 10040 !important;
+      }
+    </style>
+
+    <!-- 3. MODAL MARKUP -->
+    <div
+      class="modal fade"
+      id="quoteModal"
+      tabindex="-1"
+      aria-labelledby="quoteModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content" style="border-radius: 0; border: none">
+          <div
+            class="modal-header"
+            style="
+              border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+              padding: 28px 36px;
+            "
+          >
+            <div>
+              <p
+                style="
+                  font-size: 11px;
+                  font-weight: 600;
+                  letter-spacing: 0.13em;
+                  text-transform: uppercase;
+                  color: rgba(17, 17, 17, 0.4);
+                  margin-bottom: 6px;
+                "
+              >
+                ENQUIRY
+              </p>
+              <h5
+                class="modal-title"
+                id="quoteModalLabel"
+                style="
+                  font-size: 28px;
+                  font-weight: 500;
+                  letter-spacing: -1px;
+                  color: #111;
+                  margin: 0;
+                "
+              >
+                Let's Talk
+              </h5>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body" style="padding: 36px">
+            <form id="quoteModalForm" novalidate>
+              <div class="row g-3 mb-3">
+                <div class="col-12 col-sm-6">
+                  <div class="modal-field">
+                    <input
+                      type="text"
+                      id="m_name"
+                      name="name"
+                      placeholder="Name*"
+                    />
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="modal-field">
+                    <input
+                      type="text"
+                      id="m_company"
+                      name="company"
+                      placeholder="Company Name*"
+                    />
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-12 col-sm-6">
+                  <div class="modal-field">
+                    <input
+                      type="tel"
+                      id="m_phone"
+                      name="phone"
+                      placeholder="Phone Number*"
+                    />
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="modal-field">
+                    <input
+                      type="email"
+                      id="m_email"
+                      name="email"
+                      placeholder="Email Address*"
+                    />
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-12 col-sm-6">
+                  <div class="modal-field">
+                    <select id="m_product" name="product">
+                      <option value="0">Product of Interest*</option>
+                      <option value="1">Fabric Light Boxes</option>
+                      <option value="2">Standees</option>
+                      <option value="3">Ultra Thin Glass Frames</option>
+                      <option value="4">Battery Table Tops</option>
+                      <option value="5">Gazebo Tents</option>
+                      <option value="6">Custom</option>
+                      <option value="7">Not Sure Yet</option>
+                    </select>
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="modal-field">
+                    <input
+                      type="text"
+                      id="m_qty"
+                      name="quantity"
+                      placeholder="Approximate Quantity*"
+                    />
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-4">
+                <div class="col-12">
+                  <div class="modal-field">
+                    <input
+                      type="text"
+                      id="m_req"
+                      name="requirement"
+                      placeholder="Your Requirement*"
+                    />
+                    <span class="m-err"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-end">
+                <button
+                  type="submit"
+                  class="rr-btn-primary"
+                  style="background: #111; color: #fff; border-color: #111"
+                >
+                  <span>Send Enquiry</span>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. SWEETALERT2 (skip this line if already loaded on the page) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- 5. SCRIPT -->
+    <script>
+      (function () {
+        var mFields = [
+          { id: "m_name", label: "Name", type: "text" },
+          { id: "m_company", label: "Company Name", type: "text" },
+          { id: "m_phone", label: "Phone Number", type: "phone" },
+          { id: "m_email", label: "Email Address", type: "email" },
+          { id: "m_product", label: "Product of Interest", type: "select" },
+          { id: "m_qty", label: "Approximate Quantity", type: "text" },
+          { id: "m_req", label: "Your Requirement", type: "text" },
+        ];
+
+        function isValidEmail(v) {
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+        }
+        function isValidPhone(v) {
+          return /^[+]?[\d\s\-().]{7,15}$/.test(v.trim());
+        }
+
+        function setError(f, msg) {
+          var el = document.getElementById(f.id);
+          var wrap = el.closest(".modal-field");
+          wrap.classList.add("has-error");
+          wrap.querySelector(".m-err").textContent = msg;
+        }
+        function clearErr(el) {
+          var wrap = el.closest(".modal-field");
+          wrap.classList.remove("has-error");
+          wrap.querySelector(".m-err").textContent = "";
+        }
+        function clearAllErrors() {
+          mFields.forEach(function (f) {
+            var el = document.getElementById(f.id);
+            if (el) clearErr(el);
+          });
+        }
+
+        var modalEl = document.getElementById("quoteModal");
+        var formEl = document.getElementById("quoteModalForm");
+
+        mFields.forEach(function (f) {
+          var el = document.getElementById(f.id);
+          if (!el) return;
+          ["input", "change"].forEach(function (ev) {
+            el.addEventListener(ev, function () {
+              clearErr(el);
+            });
+          });
+        });
+
+        /* Close mobile nav drawer automatically if modal opens on top of it */
+        modalEl.addEventListener("show.bs.modal", function () {
+          var drawer = document.getElementById("mobDrawer");
+          if (drawer) {
+            drawer.classList.remove("open");
+            document.body.style.overflow = "";
+          }
+        });
+
+        /* Reset form + clear all errors every time modal closes */
+        modalEl.addEventListener("hidden.bs.modal", function () {
+          formEl.reset();
+          clearAllErrors();
+        });
+
+        formEl.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          var valid = true;
+          var firstInvalid = null;
+
+          mFields.forEach(function (f) {
+            var el = document.getElementById(f.id);
+            if (!el) return;
+            var val = el.value;
+
+            if (!val || val.trim() === "" || val === "0") {
+              setError(f, f.label + " is required.");
+              valid = false;
+              if (!firstInvalid) firstInvalid = el;
+              return;
+            }
+            if (f.type === "email" && !isValidEmail(val)) {
+              setError(f, "Please enter a valid email address.");
+              valid = false;
+              if (!firstInvalid) firstInvalid = el;
+              return;
+            }
+            if (f.type === "phone" && !isValidPhone(val)) {
+              setError(f, "Please enter a valid phone number.");
+              valid = false;
+              if (!firstInvalid) firstInvalid = el;
+              return;
+            }
+
+            clearErr(el);
+          });
+
+          if (!valid) {
+            if (firstInvalid) firstInvalid.focus();
+            return;
+          }
+
+          var bsModal = bootstrap.Modal.getInstance(modalEl);
+          if (bsModal) bsModal.hide();
+
+          Swal.fire({
+            icon: "success",
+            title: "Submitted Successfully!",
+            text: "Thank you for reaching out. We'll get back to you within 1 working day.",
+            confirmButtonText: "Got it",
+            confirmButtonColor: "#111111",
+          });
+          // form.reset() and error-clearing happen automatically via hidden.bs.modal above
+        });
+      })();
+    </script>
+    <!-- Dependencies JS Files -->
+    <script src="assets/vandor/jquery/jquery.js"></script>
+    <script src="assets/vandor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/vandor/popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vandor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vandor/gsap/gsap.min.js"></script>
+    <script src="assets/vandor/gsap/ScrollSmoother.min.js"></script>
+    <script src="assets/vandor/gsap/ScrollTrigger.min.js"></script>
+    <script src="assets/vandor/gsap/SplitText.min.js"></script>
+    <script src="assets/vandor/gsap/SplitType.js"></script>
+    <script src="assets/vandor/gsap/customEase.js"></script>
+    <script src="assets/vandor/menu/jquery.meanmenu.min.js"></script>
+    <script src="assets/vandor/backtop/backToTop.js"></script>
+    <script src="assets/vandor/nice-select/nice-select.js"></script>
+    <script src="assets/vandor/odometer/odometer.min.js"></script>
+    <script src="assets/vandor/odometer/waypoints.min.js"></script>
+    <script src="assets/vandor/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vandor/isotope/isotope.pkgd.min.js"></script>
+    <script src="assets/vandor/magnific/magnific-popup.min.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/vandor/common-js/common.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/lang-switcher.js"></script>
+    <script
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+      async
+    ></script>
+  </body>
+</html>
