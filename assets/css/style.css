@@ -24350,6 +24350,9 @@ section {
   .side-toggle.mobile-button {
     display: block !important;
   }
+  .header-area-2 .header-right{
+    gap: 0px !important
+  }
 }
 .mobile-nav-drawer {
   position: fixed;
