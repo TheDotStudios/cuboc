@@ -44,6 +44,9 @@
     <link rel="stylesheet" href="assets/css/lang-switcher.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
+      .section-spacing-top-100 {
+        padding-top: 100px;
+      }
       .lang-switcher__toggle,
       .lang-switcher__toggle i.fa-globe {
         color: white;
@@ -885,7 +888,7 @@
     <div class="has-smooth" id="has_smooth"></div>
 
     <!-- ── Header ── -->
-    <header class="header-area-2">
+    <header class="header-area-2" data-logo-swap="true">
       <div class="header-main">
         <div class="container rr-container-1710">
           <div class="header-area-2__inner">
@@ -1211,8 +1214,10 @@
                         style="rotate: -45deg"
                       ></i
                     ></a>
-                    <a href="#our-story" class="about-hero__btn-secondary"
-                      >Meet the Team
+                    <a
+                      href="recognitionNetwork.html"
+                      class="about-hero__btn-secondary"
+                      >Recognition & Reach
                       <i
                         class="fa-solid fa-arrow-right"
                         style="rotate: -45deg"
@@ -1252,9 +1257,8 @@
                         We're not the biggest. We're not trying to be. We're
                         trying to be the one you don't have to worry about.
                       </p>
-                      <a href="about.html" class="rr-btn-primary btn-black-2">
-                        <span class="text">Our Journey</span>
-                        <i class="fa-regular fa-arrow-right-long"></i>
+                      <a href="#" class="rr-btn-primary btn-black-2">
+                        <span class="text">Read Our Story</span>
                       </a>
                     </div>
                   </div>
@@ -1817,7 +1821,10 @@
             })();
           </script>
 
-          <section class="team-area rr-bg-gray" style="padding: 150px 0">
+          <section
+            class="team-area rr-bg-gray"
+            style="padding-top: 150px; padding-bottom: 100px"
+          >
             <div class="container rr-container-1710">
               <div class="team-3__inner rr-pos-rel">
                 <div class="rr-v-lines">
@@ -1849,7 +1856,7 @@
                 <div class="team__box">
                   <div class="media">
                     <img
-                      src="assets/imgs/dummy.webp"
+                      src="assets/cubo-img/Shashank Gupta.png"
                       alt="Shashank Gupta"
                       style="width: 390px; height: 480px; object-fit: cover"
                     />
@@ -1880,7 +1887,7 @@
                 <div class="team__box">
                   <div class="media">
                     <img
-                      src="assets/imgs/dummy.webp"
+                      src="assets/cubo-img/Naresh Chand Gupta.png"
                       style="width: 390px; height: 480px; object-fit: cover"
                       alt="Naresh Chand Gupta"
                     />
@@ -1942,30 +1949,16 @@
                         <div class="experience-4__wrapper">
                           <div class="experience-4__item">
                             <h2 class="title">
-                              <span class="odometer" data-count="50">0</span>+
+                              <span class="odometer" data-count="70">0</span>+
                             </h2>
-                            <h3 class="sub-title">Workers</h3>
-                          </div>
-
-                          <div class="experience-4__item">
-                            <h2 class="title">
-                              <span class="odometer" data-count="3">0</span>
-                            </h2>
-                            <h3 class="sub-title">Production supervisors</h3>
-                          </div>
-
-                          <div class="experience-4__item">
-                            <h2 class="title">
-                              <span class="odometer" data-count="9">0</span>
-                            </h2>
-                            <h3 class="sub-title">Office staff</h3>
+                            <h3 class="sub-title">Peoples</h3>
                           </div>
 
                           <div class="experience-4__item">
                             <h2 class="title">
                               <span class="odometer" data-count="14000">0</span>
+                              <h3 class="sub-title">Sq. ft. facility</h3>
                             </h2>
-                            <h3 class="sub-title">Sq. ft. facility</h3>
                           </div>
                         </div>
                       </div>
@@ -2059,8 +2052,8 @@
           </section>
           <style>
             .hwb-section {
-              padding-top: 180px;
-              padding-bottom: 150px;
+              padding-top: 100px;
+              padding-bottom: 100px;
             }
             .hwb-container {
               max-width: 1600px;
@@ -2670,7 +2663,7 @@
             })();
           </script>
           <section class="service-6">
-            <div class="service-6__wrapper section-spacing-top-140">
+            <div class="service-6__wrapper section-spacing-top-100">
               <div class="container rr-container-1710">
                 <div class="team-3__inner rr-pos-rel">
                   <div class="rr-v-lines">
@@ -2701,8 +2694,7 @@
                         style="display: flex; justify-content: end"
                       >
                         <a href="#" class="rr-btn-primary">
-                          <span class="text">Learn more</span>
-                          <i class="fa-solid fa-arrow-right"></i>
+                          <span class="text">Our Values</span>
                         </a>
                       </div>
                     </span>
@@ -2871,11 +2863,12 @@
               <div class="strap-cta__actions">
                 <a href="#" class="strap-cta__btn strap-cta__btn--primary">
                   Schedule a Factory Visit
-                  <i class="fa-solid fa-arrow-right" style="rotate: -45deg"></i>
                 </a>
 
                 <a
                   href="contact.html"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quoteModal"
                   class="strap-cta__btn strap-cta__btn--secondary"
                 >
                   Get a Quote
@@ -3657,7 +3650,7 @@
       (function () {
         var teamMembers = [
           {
-            image: "assets/imgs/dummy.webp",
+            image: "assets/cubo-img/Shashank Gupta.png",
             name: "Shashank Gupta",
             role: "Founder & Director",
             tagline:
@@ -3669,7 +3662,7 @@
             ],
           },
           {
-            image: "assets/imgs/dummy.webp",
+            image: "assets/cubo-img/Naresh Chand Gupta.png",
             name: "Naresh Chand Gupta",
             role: "Mentor",
             tagline:

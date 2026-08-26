@@ -366,7 +366,7 @@
       }
     </style>
     <!-- ── Header ── -->
-    <header class="header-area-2">
+    <header class="header-area-2" data-logo-swap="true">
       <div class="header-main">
         <div class="container rr-container-1710">
           <div class="header-area-2__inner">
@@ -862,13 +862,7 @@
                         />
                       </div>
                       <div class="brand-pill">
-                        <img
-                          src="assets/imgs/marine.webp"
-                          alt="Marine Captain Pure"
-                        />
-                      </div>
-                      <div class="brand-pill">
-                        <img src="assets/imgs/robo1.webp" alt="Robotek" />
+                        <img src="assets/cubo-img/theo.webp" alt="Rockworth" />
                       </div>
                       <div class="brand-pill">
                         <img
@@ -893,13 +887,7 @@
                         />
                       </div>
                       <div class="brand-pill">
-                        <img
-                          src="assets/imgs/marine.webp"
-                          alt="Marine Captain Pure"
-                        />
-                      </div>
-                      <div class="brand-pill">
-                        <img src="assets/imgs/robo1.webp" alt="Robotek" />
+                        <img src="assets/cubo-img/theo.webp" alt="Rockworth" />
                       </div>
                       <div class="brand-pill">
                         <img
@@ -918,20 +906,15 @@
                         <img src="assets/imgs/relience1.png" alt="Reliance" />
                       </div>
                       <div class="brand-pill">
+                        <img src="assets/cubo-img/theo.webp" alt="Rockworth" />
+                      </div>
+                      <div class="brand-pill">
                         <img
                           src="assets/imgs/Aditya_Birla_Group.webp"
                           alt="Aditya Birla"
                         />
                       </div>
-                      <div class="brand-pill">
-                        <img
-                          src="assets/imgs/marine.webp"
-                          alt="Marine Captain Pure"
-                        />
-                      </div>
-                      <div class="brand-pill">
-                        <img src="assets/imgs/robo1.webp" alt="Robotek" />
-                      </div>
+
                       <div class="brand-pill">
                         <img
                           src="assets/imgs/rockworthlogotransparent.png"
@@ -1003,7 +986,7 @@
                               &quot;Bai Jamjuree&quot;, sans-serif !important;
                           "
                           >90</span
-                        >
+                        >%
                       </h2>
                       <h3 class="sub-title">Indian states</h3>
                     </div>
@@ -1367,32 +1350,112 @@
                     They're also how we've measured our own growth.
                   </p>
                 </div>
-                <div class="split-cards">
-                  <div class="split-card left">
-                    <p class="tag">Media Expo Delhi 2023</p>
-                    <div class="number">18<span> sq.m</span></div>
-                    <p class="text">
-                      Cuboc's first major industry showcase. First meaningful
-                      exposure to a national audience.
-                    </p>
+                <style>
+                  /* Scoped to #statSlider only — doesn't touch .split-cards
+                     anywhere else. Turns the grid into a Swiper track while
+                     keeping the same card/border/divider look. */
+                  #statSlider {
+                    display: block;
+                    position: relative;
+                    padding: 0;
+                  }
+                  #statSlider .swiper {
+                    width: 100%;
+                    overflow: hidden;
+                  }
+                  #statSlider .swiper-slide {
+                    height: auto;
+                  }
+                  #statSlider .swiper-slide .split-card {
+                    height: 100%;
+                  }
+                  #statSlider .split-divider {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: 5;
+                    pointer-events: none;
+                  }
+                  @media (max-width: 767px) {
+                    #statSlider .split-divider {
+                      display: none !important;
+                    }
+                  }
+                </style>
+
+                <div class="split-cards" id="statSlider">
+                  <div class="swiper stat-slider-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="split-card left">
+                          <p class="tag">Media Expo Delhi 2023</p>
+                          <div class="number">18<span> sq.m</span></div>
+                          <p class="text">
+                            Cuboc's first major industry showcase. First
+                            meaningful exposure to a national audience.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="split-card right">
+                          <p class="tag">Media Expo Delhi 2025</p>
+                          <div class="number">64<span> sq.m</span></div>
+                          <p class="text">
+                            Same show, 3.5× the floor space. Reflected the
+                            growth in product range, customer base, and
+                            conviction behind what we were building.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="split-card left">
+                          <p class="tag">India Expo Event - Mumbai 2026</p>
+                          <div class="number">18<span> sq.m</span></div>
+                          <p class="text">
+                            An 18 sq. m stall built entirely from our own FABx
+                            range. Two people put it up in a day, took it down
+                            in two hours, and packed the whole thing into a
+                            hatchback for the drive from Delhi to Mumbai.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="split-divider"><span>→</span></div>
-                  <div class="split-card right">
-                    <p class="tag">Media Expo Delhi 2025</p>
-                    <div class="number">64<span> sq.m</span></div>
-                    <p class="text">
-                      Same show, 3.5× the floor space. Reflected the growth in
-                      product range, customer base, and conviction behind what
-                      we were building.
-                    </p>
-                  </div>
                 </div>
+
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    if (typeof Swiper === "undefined") return;
+                    var el = document.querySelector(
+                      "#statSlider .stat-slider-swiper",
+                    );
+                    if (!el) return;
+                    new Swiper(el, {
+                      loop: true,
+                      spaceBetween: 0,
+                      autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: false,
+                      },
+                      breakpoints: {
+                        0: { slidesPerView: 1 },
+                        768: { slidesPerView: 2 },
+                      },
+                    });
+                  });
+                </script>
                 <div class="industry-footer">
                   <p>
                     Every show teaches us something the factory floor can't.
                     Which is why we keep showing up.
                   </p>
-                  <a href="#">See Our Event Coverage</a>
+
+                  <a href="#" class="rr-btn-primary btn-black-2">
+                    <span class="text">See Our Event Coverage</span>
+                  </a>
                 </div>
               </div>
             </section>
@@ -1700,6 +1763,8 @@
               <div class="strap-cta__actions">
                 <a
                   href="contact.html"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quoteModal"
                   class="strap-cta__btn strap-cta__btn--primary"
                 >
                   Get a Quote
@@ -2152,7 +2217,9 @@
                 >
               </li>
               <li>
-                <a href="Battery_Table_Top_Displays.html">Battery Table Top Displays</a>
+                <a href="Battery_Table_Top_Displays.html"
+                  >Battery Table Top Displays</a
+                >
               </li>
               <li><a href="Gazebo_Tents.html">Gazebo Tents</a></li>
             </ul>

@@ -1103,7 +1103,11 @@
                     chrome-finish and modular cube systems.
                   </p>
                   <div class="about-hero__actions">
-                    <a href="contact.html" class="about-hero__btn-primary"
+                    <a
+                      href="#"
+                      class="about-hero__btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#quoteModal"
                       >Get a Quote
                       <i
                         class="fa-solid fa-arrow-right"
@@ -3108,7 +3112,7 @@
               <div class="section-title-3__wrapper fade-anim">
                 <div class="wrap">
                   <h2 class="sub-title">WHY CHOOSE CUBOC STANDEES</h2>
-                  <h3 class="title rr_title_anim" style="perspective: 400px">
+                  <h3 class="title">
                     <div class="d-smm-mx-width-100" style="max-width: 50%">
                       What You're
                       <span class="base-text-color">Actually Buying</span>
@@ -3225,411 +3229,7 @@
             </div>
           </div>
         </section>
-        <style>
-          /* ── Showroom: outer container gives scroll distance ── */
-          #showroom-section {
-            position: relative;
-            height: 250vh;
-            background: #0e0e0e;
-          }
 
-          /* ── The pinned frame ── */
-          #showroom-pin {
-            position: sticky;
-            top: 0;
-            height: 100vh;
-            width: 100%;
-            overflow: hidden;
-            background: #0e0e0e;
-          }
-
-          /* ── Video starts scaled-down (boxed look) ── */
-          #showroom-video-wrap {
-            position: absolute;
-            inset: 0;
-            transform-origin: center center;
-            transform: scale(0.6);
-            will-change: transform;
-          }
-          #showroom-video-wrap video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-          }
-
-          /* ── Dark overlay ── */
-          #showroom-overlay {
-            position: absolute;
-            inset: 0;
-            background: #0e0e0e;
-            opacity: 0.55;
-            pointer-events: none;
-            z-index: 1;
-            will-change: opacity;
-          }
-
-          /* ── UI layer ── */
-          #showroom-ui {
-            position: absolute;
-            inset: 0;
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            color: #fff;
-            pointer-events: none;
-          }
-
-          /* ── Top label bar ── */
-          #showroom-ui .sr-top {
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-            padding: 36px 48px 16px;
-            flex-shrink: 0;
-          }
-          #showroom-ui .sr-label {
-            font-size: 16px;
-            font-weight: 600;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            opacity: 0.65;
-            color: #fff;
-          }
-          #showroom-ui .sr-label::before {
-            content: "◆";
-            margin-right: 10px;
-            font-size: 6px;
-            vertical-align: 2px;
-          }
-
-          /* ── Center row: both blocks vertically centered, side by side ── */
-          #showroom-ui .sr-center-row {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: clamp(40px, 8vw, 120px);
-            padding: 0 48px;
-            overflow: hidden;
-          }
-
-          /* ── Left text block ── */
-          #showroom-ui .sr-heading-eyebrow {
-            font-size: 14px;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.5);
-            margin: 0 0 18px;
-            font-weight: 400;
-          }
-          #showroom-ui .sr-heading {
-            font-size: 45px;
-            font-weight: 300;
-            line-height: 1.08;
-            letter-spacing: -0.03em;
-            color: #fff;
-            max-width: 670px;
-            flex-shrink: 0;
-            margin: 0;
-            will-change: transform, opacity;
-          }
-          #showroom-ui .sr-heading strong {
-            font-weight: 500;
-          }
-
-          /* ── Left block wrapper ── */
-          #showroom-ui .sr-left-block {
-            display: flex;
-            flex-direction: column;
-            max-width: 600px;
-            flex-shrink: 0;
-            will-change: transform, opacity;
-          }
-
-          /* ── Right block ── */
-          #showroom-ui .sr-right {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 20px;
-            flex-shrink: 0;
-            color: #fff;
-            max-width: 430px;
-            will-change: transform, opacity;
-          }
-          #showroom-ui .sr-body {
-            font-size: 16px;
-            line-height: 1.7;
-            color: rgba(255, 255, 255, 0.72);
-            margin: 0;
-          }
-          #showroom-ui .sr-body .sr-pipe {
-            color: rgba(255, 255, 255, 0.25);
-            margin: 0 6px;
-          }
-          #showroom-ui .sr-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 13px 24px;
-            border: 1px solid rgba(255, 255, 255, 0.35);
-            background: rgba(255, 255, 255, 0.07);
-            color: #fff;
-            font-size: 11px;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            text-decoration: none;
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            pointer-events: all;
-            cursor: pointer;
-            transition:
-              background 0.3s,
-              border-color 0.3s,
-              gap 0.3s;
-          }
-          #showroom-ui .sr-btn:hover {
-            background: rgba(255, 255, 255, 0.16);
-            border-color: rgba(255, 255, 255, 0.8);
-            color: #fff;
-            gap: 14px;
-          }
-          #showroom-ui .sr-btn svg {
-            flex-shrink: 0;
-            transition: transform 0.3s;
-          }
-          #showroom-ui .sr-btn:hover svg {
-            transform: translateX(2px);
-          }
-
-          /* ── Divider line between the two blocks ── */
-          #showroom-ui .sr-divider {
-            width: 1px;
-            height: clamp(80px, 14vh, 180px);
-            background: rgba(255, 255, 255, 0.2);
-            flex-shrink: 0;
-          }
-
-          /* ── Bottom bar ── */
-          #showroom-ui .sr-bottom {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-top: 1px solid rgba(255, 255, 255, 0.12);
-            padding: 16px 48px 28px;
-            flex-shrink: 0;
-            opacity: 0.45;
-            font-size: 11px;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: #fff;
-          }
-
-          /* ── Mobile ── */
-          @media (max-width: 768px) {
-            #showroom-ui .sr-top {
-              padding: 20px 24px 14px;
-            }
-            #showroom-ui .sr-center-row {
-              flex-direction: column;
-              gap: 28px;
-              padding: 0 24px;
-              text-align: center;
-              align-items: center;
-            }
-            #showroom-ui .sr-left-block {
-              align-items: center;
-            }
-            #showroom-ui .sr-right {
-              align-items: center;
-              text-align: center;
-            }
-            #showroom-ui .sr-divider {
-              width: clamp(60px, 30vw, 120px);
-              height: 1px;
-            }
-            #showroom-ui .sr-bottom {
-              padding: 14px 24px 20px;
-            }
-            #showroom-ui .sr-heading {
-              font-size: clamp(26px, 7vw, 38px);
-            }
-          }
-        </style>
-
-        <div id="showroom-section">
-          <div id="showroom-pin">
-            <!-- Background video -->
-            <div id="showroom-video-wrap">
-              <video autoplay muted loop playsinline>
-                <source
-                  src="https://player.vimeo.com/progressive_redirect/playback/1143029705/rendition/1080p/file.mp4?loc=external&signature=10e03c1a4ccef96fa97619ea43707acd7a8088353ac3f9a9d4665670a5d5ebbd"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-
-            <!-- Overlay -->
-            <div id="showroom-overlay"></div>
-
-            <!-- UI -->
-            <div id="showroom-ui">
-              <!-- Top label -->
-              <div class="sr-top">
-                <span class="sr-label">Virtual Showroom</span>
-              </div>
-
-              <!-- Center row -->
-              <div class="sr-center-row">
-                <!-- LEFT — slides from left on scroll -->
-                <div class="sr-left-block" id="sr-left">
-                  <p class="sr-heading-eyebrow">See It in Action</p>
-                  <h2 class="sr-heading">
-                    Browse Every<br />
-                    <strong>Standee Variant</strong> in Our<br />
-                    Virtual Showroom.
-                  </h2>
-                </div>
-
-                <!-- Vertical divider -->
-                <div class="sr-divider"></div>
-
-                <!-- RIGHT — slides from right on scroll -->
-                <div class="sr-right" id="sr-right">
-                  <p class="sr-body">
-                    Standees are easier to choose when you can see them
-                    side-by-side at full scale. Our virtual showroom shows all
-                    five variants — Regular, Luxury, Side Chrome, Cube, and
-                    Black — so you can compare finish, height, and footprint
-                    before you order.<span class="sr-pipe">|</span>Ask Nora
-                    anything about specs, bulk pricing, or lead times.
-                  </p>
-                  <a href="https://cuboc.neofairs.com/" class="sr-btn">
-                    <svg
-                      width="13"
-                      height="10"
-                      viewBox="0 0 14 11"
-                      fill="none"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M0.6 0V6H13.1"
-                        stroke="currentColor"
-                        stroke-width="1.2"
-                      />
-                      <rect
-                        x="9.19"
-                        y="2.23"
-                        width="5.56"
-                        height="5.56"
-                        transform="rotate(45 9.19 2.23)"
-                        stroke="currentColor"
-                        stroke-width="1.2"
-                      />
-                    </svg>
-                    Enter the Virtual Showroom
-                  </a>
-                </div>
-              </div>
-
-              <!-- Bottom bar -->
-              <div class="sr-bottom">
-                <span>Standees — All Five Variants</span>
-                <span>Virtual Showroom</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <script>
-          (function initShowroom() {
-            function run() {
-              if (
-                typeof gsap === "undefined" ||
-                typeof ScrollTrigger === "undefined"
-              ) {
-                setTimeout(run, 80);
-                return;
-              }
-
-              var section = document.getElementById("showroom-section");
-              var pin = document.getElementById("showroom-pin");
-              var videoWrap = document.getElementById("showroom-video-wrap");
-              var overlay = document.getElementById("showroom-overlay");
-              var srLeft = document.getElementById("sr-left");
-              var srRight = document.getElementById("sr-right");
-
-              if (!pin || !videoWrap || !overlay || !srLeft || !srRight) return;
-
-              function calcOffsets() {
-                var leftRect = srLeft.getBoundingClientRect();
-                var rightRect = srRight.getBoundingClientRect();
-                var vw = window.innerWidth;
-                return {
-                  startLeft: vw * 0.06,
-                  startRight: vw * 0.06,
-                  endLeft: leftRect.left,
-                  endRight: vw - rightRect.right,
-                };
-              }
-
-              /* Set initial positions */
-              var o = calcOffsets();
-              gsap.set(srLeft, { x: -o.startLeft, opacity: 1 });
-              gsap.set(srRight, { x: o.startRight, opacity: 1 });
-              gsap.set(videoWrap, { scale: 0.6 });
-              gsap.set(overlay, { opacity: 0.55 });
-
-              var scroller =
-                document.getElementById("smooth-wrapper") || window;
-
-              ScrollTrigger.create({
-                trigger: section,
-                scroller: scroller,
-                start: "top top",
-                end: "+=150%",
-                pin: pin,
-                pinSpacing: false,
-                scrub: 1,
-                onUpdate: function (self) {
-                  var p = self.progress;
-                  var o = calcOffsets();
-                  var eased = 1 - Math.pow(1 - p, 2);
-
-                  /* Video zoom 0.6 → 1.0 */
-                  gsap.set(videoWrap, { scale: 0.6 + p * 0.4 });
-
-                  /* Overlay fade out */
-                  gsap.set(overlay, { opacity: 0.55 - p * 0.55 });
-
-                  /* Text slides to edges */
-                  var xLeft = o.startLeft + eased * (o.endLeft - o.startLeft);
-                  var xRight =
-                    o.startRight + eased * (o.endRight - o.startRight);
-
-                  gsap.set(srLeft, { x: -xLeft, opacity: 1 });
-                  gsap.set(srRight, { x: xRight, opacity: 1 });
-                },
-              });
-
-              window.addEventListener("resize", function () {
-                ScrollTrigger.refresh();
-                var o = calcOffsets();
-                gsap.set(srLeft, { x: -o.startLeft });
-                gsap.set(srRight, { x: o.startRight });
-              });
-            }
-
-            if (document.readyState === "loading") {
-              document.addEventListener("DOMContentLoaded", function () {
-                setTimeout(run, 400);
-              });
-            } else {
-              setTimeout(run, 400);
-            }
-          })();
-        </script>
         <!-- ── Strap CTA ── -->
         <section class="strap-cta">
           <div class="container rr-container-1710">
@@ -3648,7 +3248,9 @@
 
               <div class="strap-cta__actions">
                 <a
-                  href="contact.html"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quoteModal"
                   class="strap-cta__btn strap-cta__btn--primary"
                 >
                   Get a Quote
@@ -3833,7 +3435,9 @@
                 >
               </li>
               <li>
-                <a href="Battery_Table_Top_Displays.html">Battery Table Top Displays</a>
+                <a href="Battery_Table_Top_Displays.html"
+                  >Battery Table Top Displays</a
+                >
               </li>
               <li><a href="Gazebo_Tents.html">Gazebo Tents</a></li>
             </ul>

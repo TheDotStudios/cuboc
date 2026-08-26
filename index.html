@@ -33,8 +33,12 @@
 
     <!-- Template Main CSS File -->
     <link rel="stylesheet" href="assets/css/lang-switcher.css" />
+    <link rel="stylesheet" href="assets/css/hero-banner-slider.css?v=2" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
+      .about-overview-9__content {
+        gap: 80px;
+      }
       .call-to-action__inner .media::before {
         background: rgba(17, 17, 17, 0.89);
       }
@@ -112,6 +116,32 @@
       }
       .header-area-2 .header__logo img {
         max-width: 120px;
+      }
+
+      /* ── Header nav — white by default, black once scrolled/glass ── */
+      .header-area-2 .main-menu li a,
+      .header-area-2 .header-meta .date {
+        color: white;
+      }
+      .header-area-2.nav-scrolled .main-menu li a,
+      .header-area-2.nav-scrolled .header-meta .date {
+        color: black !important;
+      }
+      .header-area-2 .main-menu ul.dp-menu li a {
+        color: white !important;
+      }
+      .lang-switcher__toggle,
+      .lang-switcher__toggle i.fa-globe {
+        color: white;
+      }
+      .header-area-2.nav-scrolled .lang-switcher__toggle,
+      .header-area-2.nav-scrolled .lang-switcher__toggle i.fa-globe {
+        color: black;
+      }
+      .header-area-2 .header-right .side-toggle .bar-icon span {
+        height: 2px;
+        border-radius: 500px;
+        background: white !important;
       }
 
       /* ── Quote Button span fix ── */
@@ -337,13 +367,13 @@
     <div class="has-smooth" id="has_smooth"></div>
 
     <!-- Header area start -->
-    <header class="header-area-2">
+    <header class="header-area-2" data-logo-swap="true">
       <div class="header-main">
         <div class="container rr-container-1710">
           <div class="header-area-2__inner">
             <div class="header__logo">
               <a href="index.html">
-                <img src="assets/imgs/cuboc-logo-transparent.png" />
+                <img src="assets/cubo-img/cuboc-logo-white.png" />
               </a>
             </div>
             <div class="header__nav-2">
@@ -615,7 +645,42 @@
       <div id="smooth-content">
         <main>
           <div class="hero-2-scene">
-            <section class="hero-2">
+            <section class="hero-2 hero-2--banner-slider">
+              <div class="hero-2-banner-slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div
+                      class="hero-2-banner-slider__slide"
+                      style="
+                        background-image: url(assets/cubo-img/events-02.jpeg);
+                      "
+                    ></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="hero-2-banner-slider__slide"
+                      style="
+                        background-image: url(assets/cubo-img/events-03.jpeg);
+                      "
+                    ></div>
+                  </div>
+                </div>
+                <div class="hero-2-banner-slider__overlay"></div>
+                <button
+                  type="button"
+                  class="hero-2-banner-slider__prev"
+                  aria-label="Previous slide"
+                >
+                  <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button
+                  type="button"
+                  class="hero-2-banner-slider__next"
+                  aria-label="Next slide"
+                >
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
               <div class="container rr-container-1710">
                 <div class="hero-2__inner">
                   <div class="line"><span></span></div>
@@ -650,50 +715,90 @@
               </div>
             </section>
           </div>
-          <!-- /hero-2-scene -->
-          <section class="featured-project-3">
-            <div class="featured-project-3__inner">
-              <div class="featured-project-3__left">
-                <div class="thumb rr-ov-hidden">
-                  <img
-                    data-speed="0.5"
-                    src="assets/cubo-img/index-02.png"
-                    style="width: 561px; height: 970px"
-                    alt="image not found"
-                  />
-                </div>
-                <div class="content">
-                  <div class="project-6__btn">
-                    <a href="#" class="rr-btn-primary">
-                      <span class="text">See the Range</span>
-                      <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="featured-project-3__right">
-                <div class="thumb rr-ov-hidden">
-                  <img
-                    data-speed="0.5"
-                    src="assets/cubo-img/index-03.png"
-                    alt="image not found"
-                  />
-                </div>
-                <div class="content">
-                  <h2 class="title">
-                    Built by the market, not bought through marketing.
-                  </h2>
-                  <p class="desc">
-                    From standees to full exhibition booths — engineered
-                    in-house, delivered on time, backed by a 100% replacement
-                    guarantee.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+          <style>
+            .hero-banner {
+              max-width: 1600px;
+              width: 100%;
+              margin: 0 auto;
+              background-color: #0d0d0d;
+              /* background-image: linear-gradient(
+                90deg,
+                rgba(139, 0, 0, 0.15) 0%,
+                rgba(13, 13, 13, 1) 15%,
+                rgba(13, 13, 13, 1) 85%,
+                rgba(139, 0, 0, 0.15) 100%
+              ); */
+              border-top: 1px solid #2a2a2a;
+              overflow: hidden;
+              box-sizing: border-box;
+              padding: 40px 60px;
+              position: relative;
+              z-index: 3;
+              bottom: 80px;
+            }
 
-          <section class="about-overview-9" style="padding-top: 200px">
+            .hero-banner__container {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 32px;
+              box-sizing: border-box;
+            }
+
+            .hero-banner .heading {
+              color: #ffffff;
+              font-size: 25px;
+              font-weight: 500;
+              line-height: 1.4;
+              margin: 0;
+              width: 360px;
+              flex-shrink: 0;
+            }
+
+            .hero-banner .description {
+              color: #ffffff;
+              font-size: 16px;
+              line-height: 1.6;
+              margin: 0;
+              width: 320px;
+              flex-shrink: 0;
+              text-align: left;
+            }
+
+            @media (max-width: 768px) {
+              .hero-banner {
+                padding: 30px 20px;
+              }
+
+              .hero-banner__container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+              }
+
+              .hero-banner .heading,
+              .hero-banner .description {
+                width: 100%;
+              }
+            }
+          </style>
+
+          <div class="hero-banner">
+            <div class="hero-banner__container">
+              <h2 class="heading">
+                Built by the market, not bought through marketing.
+              </h2>
+
+              <p class="description">
+                From standees to full exhibition booths — engineered in-house,
+                delivered on time, backed by a 100% replacement guarantee.
+              </p>
+            </div>
+          </div>
+          <!-- /hero-2-scene -->
+
+          <section class="about-overview-9" style="padding-top: 100px">
             <div class="container rr-container-1710">
               <div class="about-overview-9__wrap">
                 <div class="about-overview-9__thumb rr-ov-hidden">
@@ -732,7 +837,7 @@
                       class="project-6__btn ml-smm-00"
                       style="margin-top: 30px; margin-right: 58px"
                     >
-                      <a href="#" class="rr-btn-primary">
+                      <a href="about.html" class="rr-btn-primary">
                         <span class="text">Read the Full Story</span>
                         <i class="fa-solid fa-arrow-right"></i>
                       </a>
@@ -879,7 +984,7 @@
                     <div class="project-6__item">
                       <div class="project-6__thumb">
                         <img
-                          src="assets/cubo-img/Fabric-Light-Boxes.jpg"
+                          src="assets/cubo-img/ultra-02.png"
                           alt="Ultra Thin Glass Frames"
                         />
                         <div class="content-top">
@@ -1259,6 +1364,8 @@
 
             /* ── The pinned frame ── */
             #showroom-pin {
+              position: sticky;
+              top: 0;
               height: 100vh;
               width: 100%;
               overflow: hidden;
@@ -1272,6 +1379,8 @@
               transform-origin: center center;
               transform: scale(0.6);
               will-change: transform;
+              pointer-events: none !important;
+              z-index: 0;
             }
             #showroom-video-wrap video {
               width: 100%;
@@ -1587,12 +1696,15 @@
                       Sahil — Sales Coordinator<br />
                       93184 04993
                     </p>
-                    <div class="project-6__btn">
-                      <a href="virtualshowroom.html" class="rr-btn-primary">
-                        <span class="text">Showroom</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                      </a>
-                    </div>
+                    <a
+                      href="https://cuboc.neofairs.com/"
+                      class="sr-btn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span class="text">Showroom</span>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1930,7 +2042,13 @@
 
               <div class="ts-footer">
                 <div class="ts-dots" id="ts-dots"></div>
-                <a href="#" class="ts-cta">Read all testimonials →</a>
+                <a
+                  href="#"
+                  class="ts-cta"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quoteModal"
+                  >Get a Quote</a
+                >
               </div>
             </div>
 
@@ -2165,11 +2283,19 @@
                 cost, and when it'll arrive — before you commit to anything.
               </p>
               <div class="call-to-action__btns">
-                <a href="#" class="rr-btn"
+                <a
+                  href="#"
+                  class="rr-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quoteModal"
                   >Get a Quote
                   <i class="fa-solid fa-arrow-right" style="rotate: -45deg"></i
                 ></a>
-                <a href="#" class="rr-btn rr-btn--outline"
+                <a
+                  href="#"
+                  class="rr-btn rr-btn--outline"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quoteModal"
                   >Book a Call
                   <i class="fa-solid fa-arrow-right" style="rotate: -45deg"></i
                 ></a>
@@ -2820,7 +2946,9 @@ INSTALL:
                 >
               </li>
               <li>
-                <a href="Battery_Table_Top_Displays.html">Battery Table Top Displays</a>
+                <a href="Battery_Table_Top_Displays.html"
+                  >Battery Table Top Displays</a
+                >
               </li>
               <li>
                 <a href="Gazebo_Tents.html">Gazebo Tents</a>

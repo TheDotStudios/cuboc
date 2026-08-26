@@ -40,6 +40,17 @@
     <link rel="stylesheet" href="assets/css/lang-switcher.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
+      .fabx-variants__swiper .swiper-wrapper {
+        display: flex;
+        position: relative;
+        height: 100%;
+      }
+      .fabx-variants__swiper .swiper-slide {
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
       .about-hero__bg::after {
         content: "";
         position: absolute;
@@ -1100,7 +1111,11 @@
                     configurations.
                   </p>
                   <div class="about-hero__actions">
-                    <a href="contact.html" class="about-hero__btn-primary"
+                    <a
+                      href="#"
+                      class="about-hero__btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#quoteModal"
                       >Get a Quote
                       <i
                         class="fa-solid fa-arrow-right"
@@ -1236,109 +1251,79 @@
                 </div>
               </div>
             </div>
-            <div class="row row-cols-2 row-cols-md-5 g-3">
+            <style>
+              .product-gallery {
+                --gallery-gap: 0.5rem;
+              }
+              .product-gallery__item {
+                border-radius: 8px;
+                overflow: hidden;
+                aspect-ratio: 3 / 4; /* portrait box to match your portrait photos */
+                background: #f5f5f5;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+              .product-gallery__item img {
+                width: 100%;
+                height: 100%;
+              }
+              @media (min-width: 768px) {
+                .product-gallery {
+                  --gallery-gap: 0.75rem;
+                }
+              }
+            </style>
+
+            <div
+              class="row row-cols-2 row-cols-md-5 product-gallery"
+              style="
+                --bs-gutter-x: var(--gallery-gap);
+                --bs-gutter-y: var(--gallery-gap);
+              "
+            >
               <div class="col">
-                <div
-                  class="product-gallery__item"
-                  style="
-                    border-radius: 8px;
-                    overflow: hidden;
-                    aspect-ratio: 1/1;
-                    border: 1px solid #e0e0e0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                  "
-                >
+                <div class="product-gallery__item">
                   <img
-                    src="assets/cubo-img/p3-01.png"
+                    src="assets/cubo-img/ultra-01.png"
                     alt="Fabric Light Box - Image 1"
                     class="img-fluid"
-                    style="width: 100%; height: 100%; object-fit: contain"
                   />
                 </div>
               </div>
               <div class="col">
-                <div
-                  class="product-gallery__item"
-                  style="
-                    border-radius: 8px;
-                    overflow: hidden;
-                    aspect-ratio: 1/1;
-                    border: 1px solid #e0e0e0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                  "
-                >
+                <div class="product-gallery__item">
                   <img
-                    src="assets/cubo-img/p3-02.png"
+                    src="assets/cubo-img/ultra-02.png"
                     alt="Fabric Light Box - Image 2"
                     class="img-fluid"
-                    style="width: 100%; height: 100%; object-fit: contain"
                   />
                 </div>
               </div>
               <div class="col">
-                <div
-                  class="product-gallery__item"
-                  style="
-                    border-radius: 8px;
-                    overflow: hidden;
-                    aspect-ratio: 1/1;
-                    border: 1px solid #e0e0e0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                  "
-                >
+                <div class="product-gallery__item">
                   <img
-                    src="assets/cubo-img/p3-03.png"
+                    src="assets/cubo-img/8.png"
                     alt="Fabric Light Box - Image 3"
                     class="img-fluid"
-                    style="width: 100%; height: 100%; object-fit: contain"
                   />
                 </div>
               </div>
               <div class="col">
-                <div
-                  class="product-gallery__item"
-                  style="
-                    border-radius: 8px;
-                    overflow: hidden;
-                    aspect-ratio: 1/1;
-                    border: 1px solid #e0e0e0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                  "
-                >
+                <div class="product-gallery__item">
                   <img
-                    src="assets/cubo-img/p3-04.png"
+                    src="assets/cubo-img/Roof Hanging - 1.jpeg"
                     alt="Fabric Light Box - Image 4"
                     class="img-fluid"
-                    style="width: 100%; height: 100%; object-fit: contain"
                   />
                 </div>
               </div>
               <div class="col">
-                <div
-                  class="product-gallery__item"
-                  style="
-                    border-radius: 8px;
-                    overflow: hidden;
-                    aspect-ratio: 1/1;
-                    border: 1px solid #e0e0e0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                  "
-                >
+                <div class="product-gallery__item">
                   <img
-                    src="assets/cubo-img/p3-05.png"
+                    src="assets/cubo-img/ultra-05.png"
                     alt="Fabric Light Box - Image 5"
                     class="img-fluid"
-                    style="width: 100%; height: 100%; object-fit: contain"
                   />
                 </div>
               </div>
@@ -2020,7 +2005,7 @@
           /* Product name */
           .fabx-variants__name {
             padding: 0 34px;
-            font-size: 30px;
+            font-size: 28px;
             font-weight: 500;
             letter-spacing: -1.5px;
             line-height: 1;
@@ -2186,29 +2171,59 @@
               font-size: 28px;
             }
           }
+
+          /* ---------- Media box (shared by static images AND sliders) ---------- */
           .fabx-variants__media {
             position: relative;
             width: calc(
               100% - 68px
             ); /* matches 34px padding used elsewhere in card */
-            margin: 0 34px 24px;
-            aspect-ratio: 4 / 3;
+            height: 480px; /* fixed height so all 4 card images render consistently */
             overflow: hidden;
-            border-radius: 8px;
-            background: #e5e5e5;
-            margin: 20px 0;
+            margin: 20px auto; /* auto centers the box left-to-right inside the card */
+            padding: 12px; /* inset applied to ALL cards (static + slider) equally */
+            box-sizing: border-box;
+            background: #ffffff;
           }
-          .fabx-variants__media img {
+
+          /* Static images (cards 01 & 03) */
+          .fabx-variants__media > img {
+            display: block;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            display: block;
+            /* object-fit: cover; */
           }
+
           @media (max-width: 575px) {
             .fabx-variants__media {
               width: calc(100% - 40px);
-              margin: 0 20px 20px;
+              height: 320px;
+              margin: 0 auto 20px;
             }
+          }
+
+          /* Swiper image slider (cards 02 & 04 only) — fills the same padded box as cards 01 & 03 */
+          .fabx-variants__swiper {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+          }
+          .fabx-variants__swiper .swiper-wrapper {
+            height: 100%;
+            display: flex;
+            position: relative;
+          }
+          .fabx-variants__swiper .swiper-slide {
+            height: 100%;
+            width: 100%;
+            flex-shrink: 0;
+            position: relative;
+          }
+          .fabx-variants__swiper .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
           }
         </style>
 
@@ -2226,19 +2241,19 @@
               </div>
               <div class="section-title-3__wrapper fade-anim">
                 <div class="wrap">
-                  <h2 class="sub-title">PRODUCT VARIANTS</h2>
+                  <h2 class="sub-title">USPs</h2>
                   <h3
                     class="title rr_title_anim text-white"
                     style="perspective: 400px"
                   >
                     <div class="d-smm-mx-width-100" style="max-width: 50%">
-                      Configurations
+                      The Difference Is in the Details.
                     </div>
                   </h3>
                 </div>
 
                 <p class="text-white">
-                  Wall. Backlit. Custom. Plus Accessories.
+                  Toughened. Customisable. Guaranteed. Plus Accessories.
                 </p>
               </div>
             </div>
@@ -2251,12 +2266,12 @@
                   <div class="fabx-variants__number">01</div>
                   <div class="fabx-variants__badge">
                     <div class="fabx-variants__badge-dot"></div>
-                    <div>Wall-Mounted</div>
+                    <div>TOUGHENED</div>
                   </div>
                 </div>
                 <div class="fabx-variants__name">
-                  <span class="fabx-variants__name-accent">Wall-Mounted</span>
-                  Frames
+                  <span class="fabx-variants__name-accent">Toughened </span>
+                  Glass
                 </div>
                 <!-- <div class="desc">
                   The core product. Mounts flush to the wall with minimal
@@ -2265,7 +2280,7 @@
                 </div> -->
                 <div class="fabx-variants__media">
                   <img
-                    src="assets/cubo-img/p3-01.png"
+                    src="assets/cubo-img/ultra-001.png"
                     alt="Modular reconfigurable display"
                     loading="lazy"
                   />
@@ -2279,12 +2294,12 @@
                   <div class="fabx-variants__number">02</div>
                   <div class="fabx-variants__badge">
                     <div class="fabx-variants__badge-dot"></div>
-                    <div>Backlit</div>
+                    <div>CUSTOM</div>
                   </div>
                 </div>
                 <div class="fabx-variants__name">
-                  <span class="fabx-variants__name-accent">Backlit</span>
-                  Glass Frames
+                  <span class="fabx-variants__name-accent">Custom Size </span>
+                  & Colour
                 </div>
                 <!-- <div class="desc">
                   Integrated LED backlighting for environments where visibility
@@ -2292,11 +2307,24 @@
                   premium branding.
                 </div> -->
                 <div class="fabx-variants__media">
-                  <img
-                    src="assets/cubo-img/p3-02.png"
-                    alt="Modular reconfigurable display"
-                    loading="lazy"
-                  />
+                  <div class="swiper fabx-variants__swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/cubo-img/ultra-07.png"
+                          alt="Modular reconfigurable display"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/cubo-img/ultra-08.png"
+                          alt="Modular reconfigurable display"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -2307,12 +2335,12 @@
                   <div class="fabx-variants__number">03</div>
                   <div class="fabx-variants__badge">
                     <div class="fabx-variants__badge-dot"></div>
-                    <div>Custom</div>
+                    <div>GUARANTEED</div>
                   </div>
                 </div>
                 <div class="fabx-variants__name">
-                  <span class="fabx-variants__name-accent">Custom Size</span>
-                  Frames
+                  <span class="fabx-variants__name-accent">Replacement</span>
+                  Guarantee
                 </div>
                 <!-- <div class="desc">
                   Built to exact dimensions. Whether it's an 18-inch supermarket
@@ -2321,7 +2349,7 @@
                 </div> -->
                 <div class="fabx-variants__media">
                   <img
-                    src="assets/cubo-img/p3-03.png"
+                    src="assets/cubo-img/ultra-09.png"
                     alt="Modular reconfigurable display"
                     loading="lazy"
                   />
@@ -2335,10 +2363,14 @@
                   <div class="fabx-variants__number">04</div>
                   <div class="fabx-variants__badge">
                     <div class="fabx-variants__badge-dot"></div>
-                    <div>Mounting</div>
+                    <div>ACCESSORIES</div>
                   </div>
                 </div>
-                <div class="fabx-variants__name">Accessories</div>
+                <div class="fabx-variants__name">
+                  <span class="fabx-variants__name-accent">Stands, Mounts</span>
+                  & More
+                </div>
+
                 <!-- <div class="desc">
                   Full mounting ecosystem — tabletop stands, floor stands,
                   suspended ceiling systems, adjustable mounts. Lets you install
@@ -2346,11 +2378,31 @@
                   spaces.
                 </div> -->
                 <div class="fabx-variants__media">
-                  <img
-                    src="assets/cubo-img/p3-04.png"
-                    alt="Modular reconfigurable display"
-                    loading="lazy"
-                  />
+                  <div class="swiper fabx-variants__swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/cubo-img/A Stand - Double and Single Side.jpeg"
+                          alt="Modular reconfigurable display"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/cubo-img/F Stand - 2.jpeg"
+                          alt="Modular reconfigurable display"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/cubo-img/Roof Hanging - 3.jpeg"
+                          alt="Modular reconfigurable display"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2826,7 +2878,9 @@
 
               <div class="strap-cta__actions">
                 <a
-                  href="contact.html"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quoteModal"
                   class="strap-cta__btn strap-cta__btn--primary"
                 >
                   Get a Quote
@@ -3011,7 +3065,9 @@
                 >
               </li>
               <li>
-                <a href="Battery_Table_Top_Displays.html">Battery Table Top Displays</a>
+                <a href="Battery_Table_Top_Displays.html"
+                  >Battery Table Top Displays</a
+                >
               </li>
               <li><a href="Gazebo_Tents.html">Gazebo Tents</a></li>
             </ul>
@@ -3505,5 +3561,23 @@
       src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
       async
     ></script>
+    <!-- Auto-sliding Swiper for fabx-variants cards 02 & 04 -->
+    <script>
+      (function () {
+        document
+          .querySelectorAll(".fabx-variants__swiper")
+          .forEach(function (el) {
+            new Swiper(el, {
+              loop: true,
+              speed: 700,
+              slidesPerView: 1,
+              autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+              },
+            });
+          });
+      })();
+    </script>
   </body>
 </html>
