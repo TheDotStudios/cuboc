@@ -398,6 +398,25 @@
     });
   }
 
+  /* === hero-2-banner-slider (background image slider, text stays fixed) === */
+  if ($(".hero-2-banner-slider").length > 0) {
+    var hero_2_banner_slider = new Swiper(".hero-2-banner-slider", {
+      loop: true,
+      speed: 900,
+      effect: "slide",
+      allowTouchMove: true,
+      grabCursor: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".hero-2-banner-slider__next",
+        prevEl: ".hero-2-banner-slider__prev",
+      },
+    });
+  }
+
   /* === projects-6__active (index 02) === */
   if ($(".project-6__slider").length > 0) {
     var design_showcase = new Swiper(".project-6__slider", {

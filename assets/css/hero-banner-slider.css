@@ -1,0 +1,171 @@
+/* =====================================================================
+   CUBOC — Hero Banner Image Slider (Swiper-powered)
+   Sits inside the existing `.hero-2` section (directly below the
+   navbar). `.hero-2-banner-slider` is a real Swiper instance — only
+   the background images cross-fade between slides; the text inside
+   `.hero-2-content.fade-anim` sits on top in the container and is
+   never part of the Swiper, so it never slides or changes.
+   This file is purely additive — it does not touch any existing class.
+===================================================================== */
+
+.hero-2--banner-slider {
+  position: relative;
+  overflow: hidden;
+  min-height: 835px;
+  isolation: isolate;
+}
+@media only screen and (max-width: 1399px) {
+  .hero-2--banner-slider {
+    min-height: 680px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .hero-2--banner-slider {
+    min-height: 600px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .hero-2--banner-slider {
+    min-height: 560px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .hero-2--banner-slider {
+    min-height: 520px;
+  }
+}
+@media (max-width: 575px) {
+  .hero-2--banner-slider {
+    min-height: 480px;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Swiper instance sits absolutely behind the content. Swiper handles
+   the slide transition between images (see main.js) — the text on top
+   never moves because it lives outside the .swiper element entirely,
+   inside .container.
+--------------------------------------------------------------------- */
+.hero-2-banner-slider.swiper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-2-banner-slider .swiper-wrapper,
+.hero-2-banner-slider .swiper-slide {
+  height: 100%;
+}
+
+.hero-2-banner-slider__slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Dark/gradient overlay so the fixed text stays readable on every slide.
+   Sealed inside .hero-2--banner-slider's own stacking context (isolation:
+   isolate above), so it can never render over/through the .hero-banner
+   bar that overlaps this section from below. */
+.hero-2-banner-slider__overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Prev / next arrows */
+.hero-2-banner-slider__prev,
+.hero-2-banner-slider__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(10, 10, 15, 0.35);
+  color: #ffffff;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+.hero-2-banner-slider__prev:hover,
+.hero-2-banner-slider__next:hover {
+  background: rgba(10, 10, 15, 0.6);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+.hero-2-banner-slider__prev {
+  left: 24px;
+}
+.hero-2-banner-slider__next {
+  right: 24px;
+}
+@media (max-width: 767px) {
+  .hero-2-banner-slider__prev,
+  .hero-2-banner-slider__next {
+    width: 38px;
+    height: 38px;
+  }
+  .hero-2-banner-slider__prev {
+    left: 12px;
+  }
+  .hero-2-banner-slider__next {
+    right: 12px;
+  }
+}
+
+/* Keep the existing content above the slider */
+.hero-2--banner-slider > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------------------------------------------------------------------
+   Text color for the slider variant only — the fixed content needs to
+   stay legible over a photo background instead of the plain page bg.
+--------------------------------------------------------------------- */
+.hero-2--banner-slider .hero-2-content .sub-title01 {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.hero-2--banner-slider .hero-2-content .title {
+  color: #ffffff;
+}
+.hero-2--banner-slider .hero-2-content .title .base-text-color {
+  color: #ffffff !important;
+  opacity: 0.85;
+}
+
+/* Route the decorative frame lines to the section's own box (instead of
+   .hero-2__inner's shorter content box) so they run edge-to-edge — from
+   the very top (behind the navbar) to the very bottom (where .hero-banner
+   sits) — clipped cleanly by the section's own overflow:hidden. */
+.hero-2--banner-slider .hero-2__inner {
+  position: static;
+}
+.hero-2--banner-slider .hero-2__inner::before,
+.hero-2--banner-slider .hero-2__inner::after,
+.hero-2--banner-slider .hero-2__inner .line::before,
+.hero-2--banner-slider .hero-2__inner .line::after,
+.hero-2--banner-slider .hero-2__inner .line span::before {
+  top: 0;
+  height: 100%;
+}
+
+/* All five lines get the same soft, translucent light-grey tone —
+   .line::after was missing before and stayed a solid off-white. */
+.hero-2--banner-slider .hero-2__inner::before,
+.hero-2--banner-slider .hero-2__inner::after,
+.hero-2--banner-slider .hero-2__inner .line::before,
+.hero-2--banner-slider .hero-2__inner .line::after,
+.hero-2--banner-slider .hero-2__inner .line span::before {
+  background: rgba(255, 255, 255, 0.18);
+}
