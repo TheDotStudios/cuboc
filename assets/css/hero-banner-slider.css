@@ -1,10 +1,10 @@
 /* =====================================================================
    CUBOC — Hero Banner Image Slider (Swiper-powered)
    Sits inside the existing `.hero-2` section (directly below the
-   navbar). `.hero-2-banner-slider` is a real Swiper instance — only
-   the background images cross-fade between slides; the text inside
-   `.hero-2-content.fade-anim` sits on top in the container and is
-   never part of the Swiper, so it never slides or changes.
+   navbar). `.hero-2-banner-slider` is a real Swiper instance. Each
+   `.swiper-slide` now carries its own background image AND its own
+   `.hero-2-banner-slider__content` block, so the heading/copy/CTA
+   slide together with the banner image instead of staying fixed.
    This file is purely additive — it does not touch any existing class.
 ===================================================================== */
 
@@ -41,10 +41,10 @@
 }
 
 /* ---------------------------------------------------------------------
-   Swiper instance sits absolutely behind the content. Swiper handles
-   the slide transition between images (see main.js) — the text on top
-   never moves because it lives outside the .swiper element entirely,
-   inside .container.
+   Swiper instance fills the section. Swiper handles the transition
+   between slides (see main.js) — each slide is a self-contained
+   stacking context (image + dark tint + content), so the content
+   travels with its own slide.
 --------------------------------------------------------------------- */
 .hero-2-banner-slider.swiper {
   position: absolute;
@@ -58,24 +58,70 @@
   height: 100%;
 }
 
+/* Each slide is its own local stacking context so its image, dark tint
+   and content layer stack correctly regardless of Swiper's own
+   transform/stacking context on .swiper-wrapper. */
+.hero-2-banner-slider .swiper-slide {
+  position: relative;
+  isolation: isolate;
+}
+
 .hero-2-banner-slider__slide {
   position: absolute;
   inset: 0;
+  z-index: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* Dark/gradient overlay so the fixed text stays readable on every slide.
-   Sealed inside .hero-2--banner-slider's own stacking context (isolation:
-   isolate above), so it can never render over/through the .hero-banner
-   bar that overlaps this section from below. */
-.hero-2-banner-slider__overlay {
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 2 !important;
-  pointer-events: none !important;
-  background: rgba(0, 0, 0, 0.8) !important;
+/* Dark tint so each slide's own text stays readable over its own photo. */
+.hero-2-banner-slider__slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Content layer sits above the image + tint, inside the same slide, so
+   it slides in and out together with its banner image. pointer-events
+   is off on the wrapper (so drag/swipe still works across the empty
+   areas) and back on for the actual content box. */
+.hero-2-banner-slider__content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+.hero-2-banner-slider__content .container {
+  width: 100%;
+  pointer-events: none;
+}
+.hero-2-banner-slider__content .hero-2-content {
+  pointer-events: auto;
+}
+
+/* Guard against the page's scroll/load-triggered entrance animation
+   (fade-anim / rr_title_anim) never firing for slide 2 and 3 — those
+   slides sit off-screen (translated out by Swiper) at the moment that
+   animation runs, so it can leave their text stuck invisible. Also
+   covers the brief flash on slide 1 where the heading is hidden for a
+   split second while that script splits/re-hides the title text before
+   its own reveal tween runs — forcing every descendant (not just the
+   .rr_title_anim element itself) beats any inline opacity/transform
+   that script sets on the split characters/words it injects. */
+.hero-2-banner-slider .fade-anim,
+.hero-2-banner-slider .rr_title_anim,
+.hero-2-banner-slider .hero-2-content,
+.hero-2-banner-slider .hero-2-content * {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  filter: none !important;
 }
 
 /* Prev / next arrows */
@@ -87,13 +133,15 @@
   z-index: 5;
   width: 48px;
   height: 48px;
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.35);
   background: rgba(10, 10, 15, 0.35);
   color: #ffffff;
   cursor: pointer;
+  opacity: 1 !important;
+  visibility: visible !important;
   transition:
     background 0.2s ease,
     border-color 0.2s ease;
@@ -109,11 +157,24 @@
 .hero-2-banner-slider__next {
   right: 24px;
 }
+/* Explicit icon size — without this the icon inherits whatever
+   font-size is in scope, and on some mobile widths that resolves
+   to 0/near-invisible, which is why the arrows can appear to
+   "disappear" even though the button box itself is still there. */
+.hero-2-banner-slider__prev i,
+.hero-2-banner-slider__next i {
+  font-size: 16px !important;
+  line-height: 1 !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+  display: inline-block !important;
+}
 @media (max-width: 767px) {
   .hero-2-banner-slider__prev,
   .hero-2-banner-slider__next {
     width: 38px;
     height: 38px;
+    background: rgba(10, 10, 15, 0.55);
   }
   .hero-2-banner-slider__prev {
     left: 12px;
@@ -121,17 +182,15 @@
   .hero-2-banner-slider__next {
     right: 12px;
   }
-}
-
-/* Keep the existing content above the slider */
-.hero-2--banner-slider > .container {
-  position: relative;
-  z-index: 2;
+  .hero-2-banner-slider__prev i,
+  .hero-2-banner-slider__next i {
+    font-size: 13px !important;
+  }
 }
 
 /* ---------------------------------------------------------------------
-   Text color for the slider variant only — the fixed content needs to
-   stay legible over a photo background instead of the plain page bg.
+   Text color for the slider variant only — content needs to stay
+   legible over a photo background instead of the plain page bg.
 --------------------------------------------------------------------- */
 .hero-2--banner-slider .hero-2-content .sub-title01 {
   border-color: rgba(255, 255, 255, 0.35);
@@ -140,16 +199,20 @@
   color: #ffffff;
 }
 .hero-2--banner-slider .hero-2-content .title .base-text-color {
-  color: #ffffff !important;
-  opacity: 0.85;
+  color: #b9a6ff !important;
+  opacity: 1;
 }
 
-/* Route the decorative frame lines to the section's own box (instead of
+/* Route the decorative frame lines to each slide's own box (instead of
    .hero-2__inner's shorter content box) so they run edge-to-edge — from
    the very top (behind the navbar) to the very bottom (where .hero-banner
-   sits) — clipped cleanly by the section's own overflow:hidden. */
+   sits) — clipped cleanly by the section's own overflow:hidden. Since
+   this now lives inside each slide, the frame effectively travels with
+   the active slide too, but looks identical slide to slide. */
 .hero-2--banner-slider .hero-2__inner {
   position: static;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .hero-2--banner-slider .hero-2__inner::before,
 .hero-2--banner-slider .hero-2__inner::after,
@@ -168,4 +231,142 @@
 .hero-2--banner-slider .hero-2__inner .line::after,
 .hero-2--banner-slider .hero-2__inner .line span::before {
   background: rgba(255, 255, 255, 0.18);
+}
+
+/* ---------------------------------------------------------------------
+   Per-slide supporting copy (kicker line under the title).
+--------------------------------------------------------------------- */
+.hero-2-banner-slider__sub {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: var(--font_bai);
+  font-size: 19px;
+  line-height: 1.55;
+  margin: 18px 0 0;
+  max-width: 560px;
+}
+@media (max-width: 575px) {
+  .hero-2-banner-slider__sub {
+    font-size: 16px;
+  }
+}
+
+/* Small "1st time in India"-style eyebrow badge (slide 1) */
+.hero-2-banner-slider__eyebrow {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-family: var(--font_bai);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(139, 92, 246, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 7px 16px;
+  margin-bottom: 18px;
+}
+
+/* Pill row (slide 1) */
+.hero-2-banner-slider__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+.hero-2-banner-slider__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font_bai);
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* border-radius: 999px; */
+  padding: 10px 18px;
+}
+.hero-2-banner-slider__pill--strong {
+  background: rgba(0, 0, 0, 0.55);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.hero-2-banner-slider__pill b {
+  color: #b9a6ff;
+  font-weight: 700;
+}
+
+/* Stat row (slide 2) */
+.hero-2-banner-slider__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-top: 28px;
+}
+.hero-2-banner-slider__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: var(--font_bai);
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.75);
+}
+.hero-2-banner-slider__stat-num {
+  font-size: 30px;
+  font-weight: 700;
+  color: #b9a6ff;
+  padding-bottom: 10px;
+}
+
+/* Keep all 3 stats on a single row on smaller screens instead of
+   wrapping the 3rd one onto its own line — shrink the gap, numbers
+   and labels so the row still fits, and let each column share the
+   width evenly so long labels wrap onto a 2nd line within their own
+   column rather than pushing the row wide. */
+@media (max-width: 767px) {
+  .hero-2-banner-slider__stats {
+    flex-wrap: nowrap;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .hero-2-banner-slider__stat {
+    flex: 1 1 0;
+    min-width: 0;
+    font-size: 12px;
+    line-height: 1.3;
+  }
+  .hero-2-banner-slider__stat-num {
+    font-size: 22px;
+    padding-bottom: 4px;
+  }
+}
+@media (max-width: 575px) {
+  .hero-2-banner-slider__stats {
+    gap: 10px;
+  }
+  .hero-2-banner-slider__stat {
+    font-size: 11px;
+  }
+  .hero-2-banner-slider__stat-num {
+    font-size: 19px;
+  }
+}
+
+/* Tag row (slide 3) */
+.hero-2-banner-slider__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+  max-width: 440px;
+}
+.hero-2-banner-slider__tag {
+  font-family: var(--font_bai);
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* border-radius: 999px; */
+  padding: 8px 16px;
 }

@@ -398,7 +398,7 @@
     });
   }
 
-  /* === hero-2-banner-slider (background image slider, text stays fixed) === */
+  /* === hero-2-banner-slider (background image + text slide together, one set per slide) === */
   if ($(".hero-2-banner-slider").length > 0) {
     var hero_2_banner_slider = new Swiper(".hero-2-banner-slider", {
       loop: true,

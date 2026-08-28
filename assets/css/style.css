@@ -24289,7 +24289,7 @@ section {
     font-size: 100px;
   }
   .about-hero {
-    min-height: 100vh;
+    min-height: 75vh;
   }
   .about-hero__inner {
     padding-bottom: 120px;
@@ -24350,8 +24350,8 @@ section {
   .side-toggle.mobile-button {
     display: block !important;
   }
-  .header-area-2 .header-right{
-    gap: 0px !important
+  .header-area-2 .header-right {
+    gap: 0px !important;
   }
 }
 .mobile-nav-drawer {
@@ -24451,4 +24451,7 @@ section {
 }
 .modal-backdrop {
   z-index: 10040 !important;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1366px) and (orientation: landscape) {
 }
