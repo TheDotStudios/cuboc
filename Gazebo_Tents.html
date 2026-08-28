@@ -40,6 +40,9 @@
     <link rel="stylesheet" href="assets/css/lang-switcher.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
+      .about-hero {
+        min-height: 70vh;
+      }
       .about-hero__bg::after {
         content: "";
         position: absolute;
@@ -1159,10 +1162,7 @@
 
           <div class="about-hero">
             <div class="about-hero__bg">
-              <img
-                src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=1920&auto=format&fit=crop"
-                alt="Gazebo Tents"
-              />
+              <img src="assets/cubo-img/p5-022.png" alt="Gazebo Tents" />
             </div>
             <div class="about-hero__inner">
               <div class="container rr-container-1710">
@@ -1841,10 +1841,17 @@
             background: #0a0a0a;
             padding: 150px 0;
             position: relative;
-            overflow: hidden;
           }
           .fabx-variants * {
             box-sizing: border-box;
+          }
+
+          .fabx-variants__blobs {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
           }
 
           .fabx-variants__blob {
@@ -1890,9 +1897,14 @@
             align-items: start;
           }
 
+          .fabx-variants__media-wrap {
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+          }
+
           .fabx-variants__media {
-            position: sticky;
-            top: 100px;
+            width: 100%;
             aspect-ratio: 4 / 5;
             overflow: hidden;
             border-radius: 6px;
@@ -2074,8 +2086,10 @@
             .fabx-variants__layout {
               grid-template-columns: 1fr;
             }
+            .fabx-variants__media-wrap {
+              min-height: 0;
+            }
             .fabx-variants__media {
-              position: static;
               aspect-ratio: 16/9;
               margin-bottom: 8px;
             }
@@ -2101,8 +2115,10 @@
         </style>
 
         <section class="fabx-variants section-spacing fade-anim">
-          <div class="fabx-variants__blob"></div>
-          <div class="fabx-variants__blob fabx-variants__blob--alt"></div>
+          <div class="fabx-variants__blobs">
+            <div class="fabx-variants__blob"></div>
+            <div class="fabx-variants__blob fabx-variants__blob--alt"></div>
+          </div>
 
           <div class="fabx-variants__inner">
             <div class="team-3__inner rr-pos-rel">
@@ -2134,15 +2150,17 @@
 
             <div class="fabx-variants__layout">
               <!-- single shared image -->
-              <div class="fabx-variants__media">
-                <img
-                  src="assets/cubo-img/p5-01.png"
-                  alt="Steel White Frame gazebo"
-                  loading="lazy"
-                />
-                <div class="fabx-variants__media-caption">
-                  <div class="eyebrow">Same build, three footprints</div>
-                  <div class="name">Steel <b>White</b> Frame</div>
+              <div class="fabx-variants__media-wrap">
+                <div class="fabx-variants__media">
+                  <img
+                    src="assets/cubo-img/p5-01.png"
+                    alt="Steel White Frame gazebo"
+                    loading="lazy"
+                  />
+                  <div class="fabx-variants__media-caption">
+                    <div class="eyebrow">Same build, three footprints</div>
+                    <div class="name">Steel <b>White</b> Frame</div>
+                  </div>
                 </div>
               </div>
 
@@ -3536,6 +3554,39 @@
     <script src="assets/vandor/common-js/common.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/lang-switcher.js"></script>
+    <!-- Pin the Product Variants image (ScrollSmoother breaks native CSS
+         position: sticky, so this recreates the sticky/centered behaviour
+         with ScrollTrigger's pin instead). -->
+    <script>
+      window.addEventListener("load", function () {
+        if (
+          typeof gsap === "undefined" ||
+          typeof ScrollTrigger === "undefined"
+        ) {
+          return;
+        }
+        gsap.registerPlugin(ScrollTrigger);
+
+        ScrollTrigger.matchMedia({
+          "(min-width: 992px)": function () {
+            var variantsPin = ScrollTrigger.create({
+              trigger: ".fabx-variants__layout",
+              start: "top top",
+              end: "bottom bottom",
+              pin: ".fabx-variants__media",
+              pinSpacing: false,
+              anticipatePin: 1,
+            });
+
+            return function () {
+              variantsPin.kill();
+            };
+          },
+        });
+
+        ScrollTrigger.refresh();
+      });
+    </script>
     <script
       src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
       async

@@ -40,6 +40,11 @@
     <link rel="stylesheet" href="assets/css/lang-switcher.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
+      @media (max-width: 767px) {
+        .section-spacing-to {
+          padding-top: 60px;
+        }
+      }
       .blog-details__content p {
         margin-bottom: 0px;
       }
@@ -54,7 +59,42 @@
       }
       .blog-details__media {
         overflow: hidden;
-        margin-bottom: 160px;
+        margin-bottom: 90px;
+      }
+      /* Client feedback: the case-study image was rendering far too
+         tall (648px) as if it were body content. It should only serve
+         as a compact header banner for this case study, with a dark
+         overlay so it reads as a header rather than a full content
+         image. Scoped to this page only — .blog-details__media is
+         also used by the real blog template via style.css, and we
+         don't want to shrink that. */
+      .blog-details__media.cs-header-media {
+        position: relative;
+        isolation: isolate;
+      }
+      .blog-details__media.cs-header-media img {
+        display: block;
+        width: 100%;
+        height: 380px !important;
+        object-fit: cover;
+      }
+      .blog-details__media.cs-header-media::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background: rgba(0, 0, 0, 0.55);
+      }
+      @media (max-width: 991px) {
+        .blog-details__media.cs-header-media img {
+          height: 320px !important;
+        }
+      }
+      @media (max-width: 575px) {
+        .blog-details__media.cs-header-media img {
+          height: 220px !important;
+        }
       }
       .blog-details .section-title-wrapper .section-title {
         font-size: 45px;
@@ -515,8 +555,8 @@
         .blog-details__media {
           margin-bottom: 70px !important;
         }
-        .blog-details__media img {
-          height: auto !important;
+        .blog-details__media.cs-header-media img {
+          height: 220px !important;
         }
         .section-title-wrapper {
           margin-bottom: 30px !important;
@@ -1006,7 +1046,7 @@
         <main>
           <!-- case study details area start -->
           <section class="blog-details section-spacing">
-            <div class="blog-details-inner section-spacing-top">
+            <div class="blog-details-inner section-spacing-to">
               <div class="container rr-container-1710">
                 <div class="blog-details-info">
                   <ul class="meta">
@@ -1030,11 +1070,10 @@
                 </div>
               </div>
 
-              <div class="blog-details__media parallax-view">
+              <div class="blog-details__media parallax-view cs-header-media">
                 <img
-                  src="https://images.unsplash.com/photo-1769355104335-acef3aa4c9b6?w=900&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1769355104335-acef3aa4c9b6?w=1600&auto=format&fit=crop"
                   alt="6,000 Dented Standees — packaging and shipping damage case study"
-                  style="height: 648px; object-fit: cover"
                 />
               </div>
               <div class="container">

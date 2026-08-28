@@ -35,19 +35,13 @@
     <link rel="stylesheet" href="assets/css/lang-switcher.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
+      .about-hero {
+        min-height: 60vh;
+      }
       .product-card__btn a:hover {
         color: white !important;
       }
-      .footer-4__inner .footer-4__wrapper {
-        display: grid;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        grid-template-columns: 615px 862px auto 300px;
-      }
-      @media (max-width: 575px) {
-        .footer-4__inner .footer-4__wrapper {
-          grid-template-columns: 1fr !important;
-        }
-      }
+
       .lang-switcher__toggle,
       .lang-switcher__toggle i.fa-globe {
         color: white;
@@ -3240,8 +3234,13 @@
                     </ul>
                   </div>
                   <div class="project-6__btn" style="margin-top: 50px">
-                    <a href="#" style="font-size: 16px" class="rr-btn-primary">
+                    <a
+                      href="https://cuboc.neofairs.com/"
+                      style="font-size: 16px"
+                      class="rr-btn-primary"
+                    >
                       <span class="text">The Experience </span>
+                      <i class="fa-solid fa-arrow-right-long"></i>
                     </a>
                   </div>
                 </div>
@@ -3275,7 +3274,7 @@
                       class="project-6__btn ml-smm-00"
                       style="margin-top: 30px; margin-right: 58px"
                     >
-                      <a href="#" class="rr-btn-primary">
+                      <a href="about.html" class="rr-btn-primary">
                         <span class="text">Read the Full Story</span>
                       </a>
                     </div>
@@ -3602,7 +3601,7 @@
                 and 2–3 reusable setup ideas for your brand.
               </p>
               <div class="call-to-action__btns">
-                <a href="#contact" class="rr-btn">Book a 20-Minute Demo </a>
+                <a href="about.html" class="rr-btn">Book a 20-Minute Demo </a>
               </div>
             </div>
           </div>
@@ -3806,75 +3805,52 @@
                     <h3 class="title">Here's the Direct Line.</h3>
 
                     <div class="info">
-                      <a href="tel:+919818538180">+91 98185 38180</a>
+                      <a href="tel:+919318404993">Sales — +91 93184 04993</a>
+
+                      <a href="tel:+919310133066">Support — +91 93101 33066</a>
+
+                      <a href="tel:+919818538180">Director — +91 98185 38180</a>
 
                       <a href="mailto:info@cubocdisplay.com">
                         info@cubocdisplay.com
                       </a>
-
-                      <span class="font-main-color"
-                        >Mundka Industrial Area, Delhi, India</span
-                      >
                     </div>
                   </div>
                 </div>
                 <div class="footer-widget-box">
-                  <h2 class="title">Products</h2>
-                  <ul class="footer-nav-list">
-                    <li>
-                      <a href="FABx.html" data-text="FABxGO"
-                        ><span>Fabric Light Box</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="Standees.html" data-text="FABxGO"
-                        ><span>Standees</span></a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="Ultra_Thin_Glass_Frame.html"
-                        data-text="Glass Frames"
-                        ><span>Ultra Thin Glass Frames</span></a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="Battery_Table_Top_Displays.html"
-                        data-text="Table Tops"
-                        ><span>Battery Table Top Displays</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="Gazebo_Tents.html" data-text="Table Tops"
-                        ><span>Gazebo Tents</span></a
-                      >
-                    </li>
-                  </ul>
+                  <h2 class="title">Join our newsletter</h2>
+                  <div class="newsletter">
+                    <div class="input-group">
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email*"
+                      />
+                      <button type="submit">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
                 <div class="footer-widget-box">
-                  <h2 class="title">About</h2>
+                  <h2 class="title">Quick Links</h2>
                   <ul class="footer-nav-list">
                     <li>
-                      <a href="#why-choose" data-text="Why Cuboc"
-                        ><span>Why Cuboc</span></a
+                      <a href="index.html" data-text="Home"
+                        ><span>Home</span></a
                       >
                     </li>
                     <li>
-                      <a href="#why" data-text="Our Story"
-                        ><span>Our Story</span></a
+                      <a href="about.html" data-text="About Us"
+                        ><span>About Us</span></a
                       >
                     </li>
                     <li>
-                      <a href="#testimonials" data-text="Testimonials"
-                        ><span>Testimonials</span></a
+                      <a href="caseStudy.html" data-text="Case Studies"
+                        ><span>Case Studies</span></a
                       >
                     </li>
-                  </ul>
-                </div>
-                <div class="footer-widget-box">
-                  <h2 class="title">More</h2>
-                  <ul class="footer-nav-list">
                     <li>
                       <a
                         href="virtualshowroom.html"
@@ -3882,10 +3858,49 @@
                         ><span>Virtual Showroom</span></a
                       >
                     </li>
-
                     <li>
                       <a href="contact.html" data-text="Contact"
                         ><span>Contact</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="index-retail-brand.html" data-text="Contact"
+                        ><span>Retail Brand</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="index-Exhibition.html" data-text="Contact"
+                        ><span>Exhibition</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="index-corporate.html" data-text="Contact"
+                        ><span>Corporate</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-widget-box">
+                  <h2 class="title">Social</h2>
+                  <ul class="footer-nav-list">
+                    <li>
+                      <a href="https://www.facebook.com/" data-text="Facebook"
+                        ><span>Facebook</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://x.com/" data-text="Twitter"
+                        ><span>Twitter</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/" data-text="Instagram"
+                        ><span>Instagram</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.pinterest.com/" data-text="Pinterest"
+                        ><span>Pinterest</span></a
                       >
                     </li>
                   </ul>
@@ -3913,10 +3928,8 @@
                   </div>
                 </div>
                 <p class="copyright__text" style="text-align: right">
-                  © 2026 Cuboc Display. 100% Made in India. All Rights Reserved.
-                  <br />
-                  <a href="#">Privacy Policy</a> · <a href="#">Disclaimer</a> ·
-                  <a href="#">Terms of Use</a>
+                  <a href="#">cuboc</a>
+                  © 2025. All Rights Reserved.
                 </p>
               </div>
             </div>
