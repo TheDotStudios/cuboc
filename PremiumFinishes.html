@@ -143,6 +143,11 @@
       }
       .header-area-2 .main-menu li a,
       .header-area-2 .header-meta .date {
+        color: white !important;
+      }
+      /* when scrolled up — glass bg — make text black, matches caseStudy.html */
+      .header-area-2.nav-scrolled .main-menu li a,
+      .header-area-2.nav-scrolled .header-meta .date {
         color: black !important;
       }
       .our-service-9__title {
@@ -165,34 +170,49 @@
       }
 
       .breadcrumb__content {
-        padding-bottom: 150px;
+        padding-top: 160px;
+        padding-bottom: 90px;
+      }
+
+      @media (max-width: 767px) {
+        .breadcrumb__content {
+          padding-top: 120px;
+          padding-bottom: 60px;
+        }
       }
 
       /* ── Breadcrumb heading — same Inter treatment as index.html hero title ── */
       .breadcrumb__title {
-        font-size: 80px;
+        font-size: 60px;
 
         font-weight: 500;
         line-height: 1.05;
-        letter-spacing: -4px;
+        letter-spacing: -3px;
         color: var(--white);
+      }
+
+      /* Keep the whole heading solid white on this dark, image-free
+         banner — the accent color reads poorly without a photo behind
+         it, so the highlighted span stays white here too. */
+      .breadcrumb__title .base-text-color {
+        color: var(--white) !important;
       }
 
       @media (max-width: 1199px) {
         .breadcrumb__title {
-          font-size: 72px;
-          letter-spacing: -3px;
+          font-size: 52px;
+          letter-spacing: -2.5px;
         }
       }
       @media (max-width: 767px) {
         .breadcrumb__title {
-          font-size: 50px;
+          font-size: 42px;
           letter-spacing: -2px;
         }
       }
       @media (max-width: 575px) {
         .breadcrumb__title {
-          font-size: 38px;
+          font-size: 32px;
           letter-spacing: -1.5px;
         }
       }
@@ -209,6 +229,64 @@
         background: #111111;
         opacity: 0.6;
         mix-blend-mode: normal;
+      }
+
+      /* No banner photo on this page — instead of a photo, the banner
+         runs a subtle moving dot-grid pattern on the dark fill, with
+         the same dark overlay on top so the white heading/badge stay
+         legible. */
+      .breadcrumb__bg {
+        background-color: #111111;
+        background-image: radial-gradient(
+          rgba(255, 255, 255, 0.22) 1.5px,
+          transparent 1.5px
+        );
+        background-size: 24px 24px;
+        animation: breadcrumbDotsRun 25s linear infinite;
+      }
+      @keyframes breadcrumbDotsRun {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: 240px 240px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .breadcrumb__bg {
+          animation: none;
+        }
+      }
+
+      /* Badge (case-study meta tags) sitting above the title, inside
+         the dark banner. Rebuilt as a self-contained pill list here
+         because the base pill layout in style.css only applies inside
+         .blog-details — this badge now lives in .breadcrumb instead,
+         so it needs its own flex/pill rules rather than relying on
+         the (non-matching) base selector. */
+      .breadcrumb .blog-details-info .meta {
+        gap: 10px;
+        display: flex;
+        list-style: none;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0 0 24px;
+        padding: 0;
+      }
+      .breadcrumb .blog-details-info .meta li {
+        gap: 8px;
+        display: inline-flex;
+        align-items: center;
+        width: auto;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 14px;
+        padding: 9px 16px;
+        border-radius: 500px;
+        letter-spacing: -0.3px;
+        color: var(--white);
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.5);
       }
       .blog-details__content blockquote {
         margin-top: 150px;
@@ -749,13 +827,13 @@
       }
     </style>
     <!-- ── Header ── -->
-    <header class="header-area-2">
+    <header class="header-area-2" data-logo-swap="true">
       <div class="header-main">
         <div class="container rr-container-1710">
           <div class="header-area-2__inner">
             <div class="header__logo">
               <a href="index.html">
-                <img src="assets/imgs/cuboc-logo-transparent.png" />
+                <img src="assets/cubo-img/cuboc-logo-white.png" />
               </a>
             </div>
             <div class="header__nav-2">
@@ -1027,10 +1105,11 @@
         <!-- Header end -->
 
         <main>
-          <!-- case study details area start -->
-          <section class="blog-details section-spacing">
-            <div class="blog-details-inner section-spacing-to">
-              <div class="container rr-container-1710">
+          <!-- Breadcrumb -->
+          <div class="breadcrumb rr-pos-rel">
+            <div class="breadcrumb__bg"></div>
+            <div class="container rr-container-1710">
+              <div class="breadcrumb__content">
                 <div class="blog-details-info">
                   <ul class="meta">
                     <li>
@@ -1043,19 +1122,17 @@
                     </li>
                   </ul>
                 </div>
-                <div class="section-title-wrapper">
-                  <h2 class="section-title">
-                    A Chrome Finish at a
-                    <span class="base-text-color">Non-Chrome Price.</span>
-                  </h2>
-                </div>
+                <h2 class="breadcrumb__title">
+                  A Chrome Finish at a
+                  <span class="base-text-color">Non-Chrome Price.</span>
+                </h2>
               </div>
-              <div class="blog-details__media parallax-view cs-header-media">
-                <img
-                  src="https://images.unsplash.com/photo-1565608438257-fac3c27beb36?w=1915&auto=format&fit=crop"
-                  alt="A Chrome Finish at a Non-Chrome Price."
-                />
-              </div>
+            </div>
+          </div>
+
+          <!-- case study details area start -->
+          <section class="blog-details section-spacing">
+            <div class="blog-details-inner section-spacing-to">
               <div class="container">
                 <div class="blog-details__content">
                   <style>
