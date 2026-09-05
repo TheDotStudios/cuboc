@@ -36,6 +36,18 @@
     <link rel="stylesheet" href="assets/css/hero-banner-slider.css?v=3" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
+      @media (min-width: 1100px) and (max-width: 1599px) and (orientation: landscape) {
+        .about-overview-9__counter-item h2 {
+          font-size: 30px !important;
+        }
+        .pt-smmm-50 {
+          margin-top: 80px !important;
+        }
+        .about-overview-9__content {
+          gap: 30px !important;
+        }
+      }
+
       .hero-2-content .title {
         font-size: 80px;
         letter-spacing: -2px;
@@ -844,6 +856,74 @@
             </section>
           </div>
           <style>
+            .intro-strip {
+              max-width: 1360px;
+              margin: 0 auto;
+              background: linear-gradient(
+                135deg,
+                #21175e 0%,
+                rgb(86 63 167) 100%
+              );
+              padding: 40px 20px;
+              box-sizing: border-box;
+              position: relative;
+              bottom: 60px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-wrap: wrap;
+              gap: 12px 32px;
+            }
+
+            .intro-strip__item {
+              font-size: 16px;
+              letter-spacing: 0.4px;
+              color: #ffffff;
+              white-space: nowrap;
+              padding: 0 12px;
+              position: relative;
+            }
+
+            .intro-strip__item:not(:last-child)::after {
+              content: "";
+              position: absolute;
+              right: -16px;
+              top: 50%;
+              transform: translateY(-50%);
+              height: 16px;
+              width: 1px;
+              background: rgba(255, 255, 255, 0.35);
+            }
+
+            @media (max-width: 768px) {
+              .intro-strip {
+                flex-direction: column;
+                align-items: center;
+                padding: 24px 20px;
+                gap: 16px;
+              }
+
+              .intro-strip__item {
+                padding: 0;
+                white-space: normal;
+                text-align: center;
+              }
+
+              .intro-strip__item:not(:last-child)::after {
+                display: none;
+              }
+            }
+          </style>
+
+          <section class="intro-strip">
+            <span class="intro-strip__item"
+              >From standees to full exhibition booths</span
+            >
+            <span class="intro-strip__item">Engineered in-house</span>
+            <span class="intro-strip__item">Delivered on time</span>
+            <span class="intro-strip__item">100% replacement guarantee.</span>
+          </section>
+          <style>
             .hero-banner {
               max-width: 1600px;
               width: 100%;
@@ -912,18 +992,6 @@
             }
           </style>
 
-          <div class="hero-banner">
-            <div class="hero-banner__container">
-              <h2 class="heading">
-                Built by the market, not bought through marketing.
-              </h2>
-
-              <p class="description">
-                From standees to full exhibition booths — engineered in-house,
-                delivered on time, backed by a 100% replacement guarantee.
-              </p>
-            </div>
-          </div>
           <!-- /hero-2-scene -->
 
           <section class="about-overview-9" style="padding-top: 100px">
@@ -1005,7 +1073,7 @@
             }
           </style>
           <section
-            class="project-6 section-spacing-140 sm-section-1"
+            class="pt-smmm-50"
             style="
               padding-top: 100px;
               background-color: #eeeeee;
@@ -2599,8 +2667,6 @@
               </div>
             </div>
           </div>
-
-     
         </footer>
 
         <!-- footer area end  -->
