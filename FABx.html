@@ -843,36 +843,7 @@
                   </li>
 
                   <li><a href="virtualshowroom.html">Virtual Showroom</a></li>
-
-                  <li class="menu-item-has-children">
-                    <a href="caseStudy.html">Case Studies</a>
-                    <ul class="dp-menu">
-                      <li>
-                        <a href="Versions203.html">Customisation </a>
-                      </li>
-                      <li>
-                        <a href="CompetitorStock.html"> Service Attitude </a>
-                      </li>
-                      <li>
-                        <a href="DentedStandees.html">
-                          After-Sales Reliability
-                        </a>
-                      </li>
-                      <li>
-                        <a href="CustomEngineering.html">
-                          Custom Engineering
-                        </a>
-                      </li>
-                      <li>
-                        <a href="PremiumFinishes.html"> Premium Finishes </a>
-                      </li>
-                      <li>
-                        <a href="EngineeringforReality.html"
-                          >Engineering for Reality
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
+                  <li><a href="caseStudy.html">Case Studies</a></li>
 
                   <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -1220,6 +1191,48 @@
             }
           }
         </style>
+        <style>
+          /* ── Product gallery: one slider, 4 items visible, one prev/next pair ── */
+          .product-gallery .pg-swiper {
+            overflow: hidden;
+            width: 100%;
+          }
+          .product-gallery .pg-swiper .swiper-slide {
+            height: auto;
+          }
+          .product-gallery .pg-arrows {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-top: 20px;
+          }
+          .product-gallery .pg-btn {
+            width: 44px;
+            height: 44px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: transparent;
+            color: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            padding: 0;
+            transition:
+              background 0.2s,
+              color 0.2s,
+              border-color 0.2s;
+          }
+          .product-gallery .pg-btn:hover {
+            background: #111;
+            color: #fff;
+            border-color: #111;
+          }
+          /* hide arrows automatically when there are 4 or fewer slides */
+          .product-gallery .pg-btn.swiper-button-lock {
+            display: none;
+          }
+        </style>
 
         <!-- Product Gallery Section -->
         <section class="product-gallery py-5">
@@ -1244,91 +1257,218 @@
                 </div>
               </div>
             </div>
-            <div class="row g-3">
-              <div class="col-6 col-md-3">
-                <div
-                  class="product-gallery__item"
-                  style="
-                    border-radius: 8px;
-                    overflow: hidden;
-                    aspect-ratio: 1/1;
-                    border: 1px solid #e0e0e0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                  "
-                >
-                  <img
-                    src="assets/cubo-img/p1-01.png"
-                    alt="Fabric Light Box - Image 1"
-                    class="img-fluid"
-                    style="width: 100%; height: 100%; object-fit: contain"
-                  />
+            <!-- ONE slider: every .product-gallery__item is a slide.
+                 Shows 4 at a time (2 on mobile). Add more slides by copying a
+                 .swiper-slide block. -->
+            <div class="swiper pg-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div
+                    class="product-gallery__item"
+                    style="
+                      border-radius: 8px;
+                      overflow: hidden;
+                      aspect-ratio: 1/1;
+                      border: 1px solid #e0e0e0;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <img
+                      src="assets/cubo-img/p1-01.png"
+                      alt="Fabric Light Box - Image 1"
+                      class="img-fluid"
+                      style="width: 100%; height: 100%; object-fit: contain"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="product-gallery__item"
+                    style="
+                      border-radius: 8px;
+                      overflow: hidden;
+                      aspect-ratio: 1/1;
+                      border: 1px solid #e0e0e0;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <img
+                      src="assets/cubo-img/p1-02.png"
+                      alt="Fabric Light Box - Image 2"
+                      class="img-fluid"
+                      style="width: 100%; height: 100%; object-fit: contain"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="product-gallery__item"
+                    style="
+                      border-radius: 8px;
+                      overflow: hidden;
+                      aspect-ratio: 1/1;
+                      border: 1px solid #e0e0e0;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <img
+                      src="assets/cubo-img/p1-03.png"
+                      alt="Fabric Light Box - Image 3"
+                      class="img-fluid"
+                      style="width: 100%; height: 100%; object-fit: contain"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="product-gallery__item"
+                    style="
+                      border-radius: 8px;
+                      overflow: hidden;
+                      aspect-ratio: 1/1;
+                      border: 1px solid #e0e0e0;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <img
+                      src="assets/cubo-img/p1-04.png"
+                      alt="Fabric Light Box - Image 4"
+                      class="img-fluid"
+                      style="width: 100%; height: 100%; object-fit: contain"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="product-gallery__item"
+                    style="
+                      border-radius: 8px;
+                      overflow: hidden;
+                      aspect-ratio: 1/1;
+                      border: 1px solid #e0e0e0;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <img
+                      src="assets/cubo-img/fab-slider-01.png"
+                      alt="Fabric Light Box - Image 5"
+                      class="img-fluid"
+                      style="width: 100%; height: 100%; object-fit: contain"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="product-gallery__item"
+                    style="
+                      border-radius: 8px;
+                      overflow: hidden;
+                      aspect-ratio: 1/1;
+                      border: 1px solid #e0e0e0;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <img
+                      src="assets/cubo-img/Floor Plan.png"
+                      alt="Fabric Light Box - Image 6"
+                      class="img-fluid"
+                      style="width: 100%; height: 100%; object-fit: contain"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="product-gallery__item"
+                    style="
+                      border-radius: 8px;
+                      overflow: hidden;
+                      aspect-ratio: 1/1;
+                      border: 1px solid #e0e0e0;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <img
+                      src="assets/cubo-img/Pillar.png"
+                      alt="Fabric Light Box - Image 7"
+                      class="img-fluid"
+                      style="width: 100%; height: 100%; object-fit: contain"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="product-gallery__item"
+                    style="
+                      border-radius: 8px;
+                      overflow: hidden;
+                      aspect-ratio: 1/1;
+                      border: 1px solid #e0e0e0;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <img
+                      src="assets/cubo-img/Registration counter.png"
+                      alt="Fabric Light Box - Image 8"
+                      class="img-fluid"
+                      style="width: 100%; height: 100%; object-fit: contain"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="product-gallery__item"
+                    style="
+                      border-radius: 8px;
+                      overflow: hidden;
+                      aspect-ratio: 1/1;
+                      border: 1px solid #e0e0e0;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <img
+                      src="assets/cubo-img//Cafeteria.png"
+                      alt="Fabric Light Box - Image 8"
+                      class="img-fluid"
+                      style="width: 100%; height: 100%; object-fit: contain"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
               </div>
-              <div class="col-6 col-md-3">
-                <div
-                  class="product-gallery__item"
-                  style="
-                    border-radius: 8px;
-                    overflow: hidden;
-                    aspect-ratio: 1/1;
-                    border: 1px solid #e0e0e0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                  "
-                >
-                  <img
-                    src="assets/cubo-img/p1-02.png"
-                    alt="Fabric Light Box - Image 2"
-                    class="img-fluid"
-                    style="width: 100%; height: 100%; object-fit: contain"
-                  />
-                </div>
-              </div>
-              <div class="col-6 col-md-3">
-                <div
-                  class="product-gallery__item"
-                  style="
-                    border-radius: 8px;
-                    overflow: hidden;
-                    aspect-ratio: 1/1;
-                    border: 1px solid #e0e0e0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                  "
-                >
-                  <img
-                    src="assets/cubo-img/p1-03.png"
-                    alt="Fabric Light Box - Image 3"
-                    class="img-fluid"
-                    style="width: 100%; height: 100%; object-fit: contain"
-                  />
-                </div>
-              </div>
-              <div class="col-6 col-md-3">
-                <div
-                  class="product-gallery__item"
-                  style="
-                    border-radius: 8px;
-                    overflow: hidden;
-                    aspect-ratio: 1/1;
-                    border: 1px solid #e0e0e0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                  "
-                >
-                  <img
-                    src="assets/cubo-img/p1-04.png"
-                    alt="Fabric Light Box - Image 4"
-                    class="img-fluid"
-                    style="width: 100%; height: 100%; object-fit: contain"
-                  />
-                </div>
-              </div>
+            </div>
+            <div class="pg-arrows">
+              <button
+                type="button"
+                class="pg-btn pg-prev"
+                aria-label="Previous"
+              >
+                <i class="fa-regular fa-arrow-left"></i>
+              </button>
+              <button type="button" class="pg-btn pg-next" aria-label="Next">
+                <i class="fa-regular fa-arrow-right"></i>
+              </button>
             </div>
           </div>
         </section>
@@ -2846,7 +2986,7 @@
                   </div>
                   <div class="why-fabx__row">
                     <div class="why-fabx__icon"></div>
-                    <div class="why-fabx__text">Damaged after every show</div>
+                    <div class="why-fabx__text">Damaged after every use</div>
                   </div>
                   <div class="why-fabx__row">
                     <div class="why-fabx__icon"></div>
@@ -2856,7 +2996,9 @@
                   </div>
                   <div class="why-fabx__row">
                     <div class="why-fabx__icon"></div>
-                    <div class="why-fabx__text">Dumped after the event</div>
+                    <div class="why-fabx__text">
+                      Dumped after the event/campaign
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3322,12 +3464,12 @@
               <div class="strap-cta__left">
                 <p class="strap-cta__eyebrow">Next Step</p>
                 <h2 class="strap-cta__heading">
-                  Tell Us About Your Next Exhibition.
+                  Tell Us About Your Next Event/Campaign.
                 </h2>
                 <p class="strap-cta__sub">
-                  Share the size, the venue, and what you're trying to achieve.
-                  We'll come back with the FABx configuration that fits — and a
-                  quote you can actually plan around.
+                  Share the size, the location, and what you're trying to
+                  achieve. We'll come back with the FABx configuration that fits
+                  — and a quote you can actually plan around.
                 </p>
               </div>
 
@@ -4098,5 +4240,26 @@
       src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
       async
     ></script>
+    <!-- Product gallery: one slider, 4 visible (2 on mobile) -->
+    <script>
+      (function () {
+        var el = document.querySelector(".product-gallery .pg-swiper");
+        if (!el || typeof Swiper === "undefined") return;
+        new Swiper(el, {
+          slidesPerView: 2,
+          spaceBetween: 16,
+          slidesPerGroup: 1,
+          speed: 600,
+          rewind: true,
+          breakpoints: {
+            768: { slidesPerView: 4, spaceBetween: 16 },
+          },
+          navigation: {
+            prevEl: ".product-gallery .pg-prev",
+            nextEl: ".product-gallery .pg-next",
+          },
+        });
+      })();
+    </script>
   </body>
 </html>

@@ -729,36 +729,7 @@
                   </li>
 
                   <li><a href="virtualshowroom.html">Virtual Showroom</a></li>
-
-                  <li class="menu-item-has-children">
-                    <a href="caseStudy.html">Case Studies</a>
-                    <ul class="dp-menu">
-                      <li>
-                        <a href="Versions203.html">Customisation </a>
-                      </li>
-                      <li>
-                        <a href="CompetitorStock.html"> Service Attitude </a>
-                      </li>
-                      <li>
-                        <a href="DentedStandees.html">
-                          After-Sales Reliability
-                        </a>
-                      </li>
-                      <li>
-                        <a href="CustomEngineering.html">
-                          Custom Engineering
-                        </a>
-                      </li>
-                      <li>
-                        <a href="PremiumFinishes.html"> Premium Finishes </a>
-                      </li>
-                      <li>
-                        <a href="EngineeringforReality.html"
-                          >Engineering for Reality
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
+                  <li><a href="caseStudy.html">Case Studies</a></li>
 
                   <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -964,7 +935,7 @@
                   <p class="breadcrumb__body">
                     Most display companies have a catalogue and a price list. We
                     have those too — but the work we're proudest of happens when
-                    the catalogue doesn't have the answer. Here are six stories
+                    the catalogue doesn't have the answer. Here are five stories
                     from the last few years.
                   </p>
                 </div>
@@ -1007,7 +978,7 @@
                       </a>
                     </div>
                     <p>
-                      Six stories from our workshop floor — where standard
+                      Five stories from our workshop floor — where standard
                       catalogues ran out and engineering took over.
                     </p>
                   </div>
@@ -1015,206 +986,329 @@
               </div>
             </div>
           </section>
-          <section class="our-service-9 section-spacing-top-140">
+          <style>
+            /* ── Case studies: 5 cards (site purple, square corners) ── */
+            .cs5 {
+              padding: 100px 0 120px;
+            }
+            .cs5__grid {
+              display: grid;
+              grid-template-columns: repeat(6, 1fr);
+              gap: 24px;
+            }
+            .cs5-card {
+              grid-column: span 2;
+              display: flex;
+              flex-direction: column;
+              background: #fff;
+              border: 1px solid #dfdede;
+              border-radius: 0;
+            }
+            .cs5-card__top {
+              background: linear-gradient(
+                135deg,
+                #21175e 0%,
+                rgb(86 63 167) 100%
+              );
+              color: #fff;
+              padding: 28px 30px 30px;
+              min-height: 170px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              gap: 22px;
+            }
+            .cs5-card__eyebrow {
+              font-size: 13px;
+              font-weight: 600;
+              letter-spacing: 0.13em;
+              text-transform: uppercase;
+              color: rgba(255, 255, 255, 0.7);
+            }
+            .cs5-stats {
+              display: flex;
+              align-items: stretch;
+              gap: 0;
+            }
+            .cs5-stat {
+              padding: 0 26px;
+              border-left: 1px solid rgba(255, 255, 255, 0.3);
+            }
+            .cs5-stat:first-child {
+              padding-left: 0;
+              border-left: none;
+            }
+            .cs5-stat:last-child {
+              padding-right: 0;
+            }
+            .cs5-stat__value {
+              font-size: 38px;
+              font-weight: 500;
+              letter-spacing: -1.5px;
+              line-height: 1.05;
+            }
+            .cs5-stat__label {
+              margin-top: 6px;
+              font-size: 14px;
+              color: rgba(255, 255, 255, 0.75);
+            }
+            .cs5-card__body {
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              padding: 30px;
+            }
+            .cs5-card__title {
+              font-size: 24px;
+              font-weight: 500;
+              letter-spacing: -0.8px;
+              line-height: 1.2;
+              color: var(--primary, #111);
+              margin: 0 0 12px;
+            }
+            .cs5-card__desc {
+              font-size: 16px;
+              font-style: italic;
+              line-height: 1.6;
+              color: var(--secondary, #555);
+              margin: 0 0 28px;
+            }
+            .cs5-card__meta {
+              margin-top: auto;
+              padding-top: 20px;
+              border-top: 1px solid #ccc;
+              margin-bottom: 24px;
+            }
+            .cs5-card__meta p {
+              font-size: 15px;
+              line-height: 1.7;
+              color: var(--secondary, #555);
+              margin: 0;
+            }
+            .cs5-card__meta strong {
+              font-weight: 600;
+              color: var(--primary, #111);
+            }
+            .cs5-card__btn {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+              padding: 14px 20px;
+              border: 1px solid #111;
+              border-radius: 0;
+              background: transparent;
+              color: #111;
+              font-size: 15px;
+              font-weight: 500;
+              text-decoration: none;
+              transition:
+                background 0.25s,
+                color 0.25s;
+            }
+            .cs5-card__btn:hover {
+              background: #111;
+              color: #fff;
+            }
+            @media (max-width: 1199px) {
+              .cs5__grid {
+                grid-template-columns: repeat(2, 1fr);
+              }
+              .cs5-card {
+                grid-column: span 1;
+              }
+            }
+            @media (max-width: 767px) {
+              .cs5 {
+                padding: 60px 0 70px;
+              }
+              .cs5__grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+              }
+              .cs5-card__top {
+                padding: 22px 20px 24px;
+                min-height: 0;
+              }
+              .cs5-card__body {
+                padding: 22px 20px;
+              }
+              .cs5-stat {
+                padding: 0 18px;
+              }
+              .cs5-stat__value {
+                font-size: 30px;
+              }
+              .cs5-card__title {
+                font-size: 18px;
+                line-height: 1.25;
+              }
+            }
+          </style>
+
+          <section class="cs5">
             <div class="container rr-container-1710">
-              <div class="our-service-9__wrapper">
-                <!-- ── CASE STUDY 01 — Customisation: 203 versions ── -->
-                <div class="our-service-9__wrap">
-                  <div class="our-service-9__item">
-                    <div class="section-subtitle__wrap">
-                      <!-- <h5 class="subtitle">[ Case Studies ]</h5> -->
-                    </div>
-                    <div class="box">
-                      <div class="our-service-9__thumb rr-ov-hidden">
-                        <img
-                          data-speed="0.7"
-                          src="https://images.unsplash.com/photo-1710828530560-2920125ad032?w=900&auto=format&fit=crop"
-                          alt="Customisation — 203 versions"
-                          style="width: 400px; height: 585px; object-fit: cover"
-                        />
-                        <span class="our-service-9__number one">01</span>
+              <div class="cs5__grid">
+                <article class="cs5-card">
+                  <div class="cs5-card__top">
+                    <div class="cs5-card__eyebrow">Case Study 01</div>
+                    <div class="cs5-stats">
+                      <div class="cs5-stat">
+                        <div class="cs5-stat__value">1,000</div>
+                        <div class="cs5-stat__label">Customised units</div>
                       </div>
-                      <div class="our-service-9__content">
-                        <div class="cs-blocks">
-                          <div class="cs-result">
-                            <a href="Versions203.html" class="rr-btn-primary">
-                              <span class="text">Customisation</span>
-                              <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                          </div>
-                        </div>
+                      <div class="cs5-stat">
+                        <div class="cs5-stat__value">7–8 days</div>
+                        <div class="cs5-stat__label">Delivered in</div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <!-- end wrap 01 -->
+                  <div class="cs5-card__body">
+                    <h3 class="cs5-card__title">
+                      When the standard product wasn’t enough
+                    </h3>
+                    <p class="cs5-card__desc">No battery. Direct power only.</p>
+                    <div class="cs5-card__meta">
+                      <p>Client: <strong>Shanti Enterprises</strong></p>
+                      <p>
+                        Product: <strong>Illuminated Table-Top Display</strong>
+                      </p>
+                    </div>
+                    <a href="case1.html" class="cs5-card__btn">
+                      Read case study
+                      <i class="fa-regular fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </article>
 
-                <!-- ── CASE STUDIES 02 & 03 ── -->
-                <div class="our-service-9__wrap-box">
-                  <!-- Case Study 02 — Service Attitude: repaired competitor stock -->
-                  <div class="our-service-9__item">
-                    <div class="box">
-                      <div class="our-service-9__thumb rr-ov-hidden">
-                        <img
-                          data-speed="0.7"
-                          src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=900&auto=format&fit=crop"
-                          alt="Service Attitude — repair competitor stock"
-                          style="width: 865px; height: 578px; object-fit: cover"
-                        />
-                        <span class="our-service-9__number one">02</span>
+                <article class="cs5-card">
+                  <div class="cs5-card__top">
+                    <div class="cs5-card__eyebrow">Case Study 02</div>
+                    <div class="cs5-stats">
+                      <div class="cs5-stat">
+                        <div class="cs5-stat__value">300</div>
+                        <div class="cs5-stat__label">Outlets</div>
                       </div>
-                      <div class="our-service-9__content">
-                        <div class="cs-blocks">
-                          <div class="cs-result">
-                            <a
-                              href="CompetitorStock.html"
-                              class="rr-btn-primary"
-                            >
-                              <span class="text">Service Attitude</span>
-                              <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                          </div>
-                        </div>
+                      <div class="cs5-stat">
+                        <div class="cs5-stat__value">10 days</div>
+                        <div class="cs5-stat__label">Rollout completed</div>
                       </div>
                     </div>
                   </div>
+                  <div class="cs5-card__body">
+                    <h3 class="cs5-card__title">
+                      One campaign. 300 outlets. One consistent brand
+                      experience.
+                    </h3>
+                    <p class="cs5-card__desc">
+                      How Theobroma took a new dessert campaign live across
+                      multiple cities — without sending installation teams
+                      everywhere.
+                    </p>
+                    <div class="cs5-card__meta">
+                      <p>Client: <strong>Theobroma</strong></p>
+                      <p>Product: <strong>FABxGO</strong></p>
+                    </div>
+                    <a href="case2.html" class="cs5-card__btn">
+                      Read case study
+                      <i class="fa-regular fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </article>
 
-                  <!-- Case Study 03 — After-Sales Reliability: 6000 dented standees -->
-                  <div class="our-service-9__item">
-                    <div class="box">
-                      <div class="our-service-9__thumb rr-ov-hidden">
-                        <img
-                          data-speed="0.7"
-                          src="https://images.unsplash.com/photo-1769355104335-acef3aa4c9b6?w=900&auto=format&fit=crop"
-                          alt="After-Sales Reliability — transit damage"
-                          style="width: 865px; height: 578px; object-fit: cover"
-                        />
-                        <span class="our-service-9__number one">03</span>
-                      </div>
-                      <div class="our-service-9__content">
-                        <div class="cs-blocks">
-                          <div class="cs-result">
-                            <a
-                              href="DentedStandees.html"
-                              class="rr-btn-primary"
-                            >
-                              <span class="text">After-Sales Reliability</span>
-                              <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                          </div>
-                        </div>
+                <article class="cs5-card">
+                  <div class="cs5-card__top">
+                    <div class="cs5-card__eyebrow">Case Study 03</div>
+                    <div class="cs5-stats">
+                      <div class="cs5-stat">
+                        <div class="cs5-stat__value">~70%</div>
+                        <div class="cs5-stat__label">Units recovered</div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <!-- end wrap-box 02–03 -->
+                  <div class="cs5-card__body">
+                    <h3 class="cs5-card__title">
+                      When the supplier wouldn’t help, we did.
+                    </h3>
+                    <p class="cs5-card__desc">
+                      How Cuboc helped a customer recover value from a
+                      competitor’s damaged shipment.
+                    </p>
+                    <div class="cs5-card__meta">
+                      <p>Client: <strong>Real Ad Solutions, Noida</strong></p>
+                      <p>Product: <strong>Roll-up Standees</strong></p>
+                    </div>
+                    <a href="case3.html" class="cs5-card__btn">
+                      Read case study
+                      <i class="fa-regular fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </article>
+
+                <article class="cs5-card">
+                  <div class="cs5-card__top">
+                    <div class="cs5-card__eyebrow">Case Study 04</div>
+                    <div class="cs5-stats">
+                      <div class="cs5-stat">
+                        <div class="cs5-stat__value">~6,000</div>
+                        <div class="cs5-stat__label">Units</div>
+                      </div>
+                      <div class="cs5-stat">
+                        <div class="cs5-stat__value">Large-scale</div>
+                        <div class="cs5-stat__label">Shipment recovered</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cs5-card__body">
+                    <h3 class="cs5-card__title">
+                      When 6,000 standees were damaged in transit
+                    </h3>
+                    <p class="cs5-card__desc">
+                      How Cuboc stood behind a large shipment when things went
+                      wrong on the way to Chennai.
+                    </p>
+                    <div class="cs5-card__meta">
+                      <p>Client: <strong>Maharaja Marketing</strong></p>
+                      <p>Product: <strong>Roll-up Standees</strong></p>
+                    </div>
+                    <a href="case4.html" class="cs5-card__btn">
+                      Read case study
+                      <i class="fa-regular fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </article>
+
+                <article class="cs5-card">
+                  <div class="cs5-card__top">
+                    <div class="cs5-card__eyebrow">Case Study 05</div>
+                    <div class="cs5-stats">
+                      <div class="cs5-stat">
+                        <div class="cs5-stat__value">18&quot; × 3&quot;</div>
+                        <div class="cs5-stat__label">Custom size</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cs5-card__body">
+                    <h3 class="cs5-card__title">
+                      When the standard size didn’t fit the application
+                    </h3>
+                    <p class="cs5-card__desc">
+                      How Cuboc customised an ultra-thin glass frame to fit a
+                      specific supermarket rack.
+                    </p>
+                    <div class="cs5-card__meta">
+                      <p>Client: <strong>Arya Industries</strong></p>
+                      <p>
+                        Product: <strong>Ultra-Thin Glass Display Frame</strong>
+                      </p>
+                    </div>
+                    <a href="case5.html" class="cs5-card__btn">
+                      Read case study
+                      <i class="fa-regular fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </article>
               </div>
-              <!-- end first our-service-9__wrapper -->
-
-              <!-- ── SECOND WRAPPER for cases 04–06 ── -->
-              <div
-                class="our-service-9__wrapper mt-smm-0"
-                style="margin-top: 80px"
-              >
-                <!-- ── CASE STUDY 04 — Custom Engineering: ultra-thin glass frame ── -->
-                <div class="our-service-9__wrap">
-                  <div class="our-service-9__item">
-                    <div class="box">
-                      <div class="our-service-9__thumb rr-ov-hidden">
-                        <img
-                          data-speed="0.7"
-                          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1915&auto=format&fit=crop"
-                          alt="Custom Engineering — ultra-thin glass frame"
-                          style="width: 400px; height: 266px; object-fit: cover"
-                        />
-                        <span class="our-service-9__number one">04</span>
-                      </div>
-                      <div class="our-service-9__content">
-                        <div class="cs-blocks">
-                          <div class="cs-result">
-                            <a
-                              href="CustomEngineering.html"
-                              class="rr-btn-primary"
-                            >
-                              <span class="text">Custom Engineering</span>
-                              <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- end wrap 04 -->
-
-                <!-- ── CASE STUDIES 05 & 06 ── -->
-                <div class="our-service-9__wrap-box">
-                  <!-- Case Study 05 — Premium Finishes, Smarter Cost: chrome at non-chrome price -->
-                  <div class="our-service-9__item">
-                    <div class="box">
-                      <div class="our-service-9__thumb rr-ov-hidden">
-                        <img
-                          data-speed="0.7"
-                          src="https://images.unsplash.com/photo-1565608438257-fac3c27beb36?w=1915&auto=format&fit=crop"
-                          alt="Premium Finishes — chrome anodised"
-                          style="width: 865px; height: 578px; object-fit: cover"
-                        />
-                        <span class="our-service-9__number one">05</span>
-                      </div>
-                      <div class="our-service-9__content">
-                        <div class="cs-blocks">
-                          <div class="cs-result">
-                            <a
-                              href="PremiumFinishes.html"
-                              class="rr-btn-primary"
-                            >
-                              <span class="text"
-                                >Premium Finishes, Smarter Cost</span
-                              >
-                              <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Case Study 06 — Engineering for Reality: 18hr battery display -->
-                  <div class="our-service-9__item">
-                    <div class="box">
-                      <div class="our-service-9__thumb rr-ov-hidden">
-                        <img
-                          data-speed="0.7"
-                          src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1915&auto=format&fit=crop"
-                          alt="Engineering for Reality — battery powered display"
-                          style="width: 865px; height: 578px; object-fit: cover"
-                        />
-                        <span class="our-service-9__number one">06</span>
-                      </div>
-                      <div class="our-service-9__content">
-                        <div class="cs-blocks">
-                          <div class="cs-result">
-                            <a
-                              href="EngineeringforReality.html"
-                              class="rr-btn-primary"
-                            >
-                              <span class="text">Engineering for Reality</span>
-                              <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    class="our-service-9__btn"
-                    style="margin-top: 40px"
-                  ></div>
-                </div>
-                <!-- end wrap-box 05–06 -->
-              </div>
-              <!-- end second our-service-9__wrapper -->
             </div>
           </section>
 

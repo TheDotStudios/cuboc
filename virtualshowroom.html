@@ -44,12 +44,14 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <style>
-      @media (min-width: 1100px) and (max-width: 1599px) and (orientation: landscape) {
+      @media (min-width: 992px) and (max-width: 1599px) {
         .about-hero {
-          min-height: 78vh !important;
+          min-height: clamp(560px, 78vh, 820px) !important;
         }
         .about-hero__title {
-          font-size: 65px !important;
+          font-size: clamp(40px, 4.6vw, 65px) !important;
+          line-height: 1.08;
+          letter-spacing: -0.02em;
         }
       }
       .about-hero {
@@ -1333,36 +1335,7 @@
                   </li>
 
                   <li><a href="virtualshowroom.html">Virtual Showroom</a></li>
-
-                  <li class="menu-item-has-children">
-                    <a href="caseStudy.html">Case Studies</a>
-                    <ul class="dp-menu">
-                      <li>
-                        <a href="Versions203.html">Customisation </a>
-                      </li>
-                      <li>
-                        <a href="CompetitorStock.html"> Service Attitude </a>
-                      </li>
-                      <li>
-                        <a href="DentedStandees.html">
-                          After-Sales Reliability
-                        </a>
-                      </li>
-                      <li>
-                        <a href="CustomEngineering.html">
-                          Custom Engineering
-                        </a>
-                      </li>
-                      <li>
-                        <a href="PremiumFinishes.html"> Premium Finishes </a>
-                      </li>
-                      <li>
-                        <a href="EngineeringforReality.html"
-                          >Engineering for Reality
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
+                  <li><a href="caseStudy.html">Case Studies</a></li>
 
                   <li><a href="contact.html">Contact</a></li>
                 </ul>

@@ -691,36 +691,7 @@
                   </li>
 
                   <li><a href="virtualshowroom.html">Virtual Showroom</a></li>
-
-                  <li class="menu-item-has-children">
-                    <a href="caseStudy.html">Case Studies</a>
-                    <ul class="dp-menu">
-                      <li>
-                        <a href="Versions203.html">Customisation </a>
-                      </li>
-                      <li>
-                        <a href="CompetitorStock.html"> Service Attitude </a>
-                      </li>
-                      <li>
-                        <a href="DentedStandees.html">
-                          After-Sales Reliability
-                        </a>
-                      </li>
-                      <li>
-                        <a href="CustomEngineering.html">
-                          Custom Engineering
-                        </a>
-                      </li>
-                      <li>
-                        <a href="PremiumFinishes.html"> Premium Finishes </a>
-                      </li>
-                      <li>
-                        <a href="EngineeringforReality.html"
-                          >Engineering for Reality
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
+                  <li><a href="caseStudy.html">Case Studies</a></li>
 
                   <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -1284,6 +1255,71 @@
                 letter-spacing: -1px;
               }
             }
+            /* ── Responsive media box (all event images + Event 2 video slider) ──
+               Desktop result is identical to before (722 x 541), but it now
+               scales with its column instead of using a fixed pixel width. */
+            .cx-events .cx-event__image {
+              width: 100%;
+              max-width: 100%;
+              height: auto;
+              aspect-ratio: 4 / 3;
+              min-width: 0;
+            }
+
+            /* ── Event 2 video slider ── */
+            .cx-event__video-slider {
+              position: relative;
+              overflow: hidden;
+              background: #111;
+            }
+            .cx-event-video-swiper {
+              position: absolute;
+              inset: 0;
+              width: 100%;
+              height: 100%;
+            }
+            .cx-event-video-swiper .swiper-wrapper,
+            .cx-event-video-swiper .swiper-slide {
+              width: 100%;
+              height: 100%;
+            }
+            .cx-event-video-swiper .swiper-slide video {
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: cover; /* always fills the full box width */
+              background: #111;
+            }
+            .cx-event-video-swiper .swiper-pagination {
+              bottom: 12px;
+            }
+            .cx-event-video-swiper .swiper-pagination-bullet {
+              background: #fff;
+              opacity: 0.5;
+            }
+            .cx-event-video-swiper .swiper-pagination-bullet-active {
+              opacity: 1;
+            }
+
+            /* Tablet: media takes the full row, so use a wider ratio */
+            @media (max-width: 991px) {
+              .cx-events .cx-event__image {
+                aspect-ratio: 16 / 10;
+              }
+            }
+            /* Mobile */
+            @media (max-width: 767px) {
+              .cx-events .cx-event__image {
+                height: auto !important;
+                aspect-ratio: 4 / 3;
+              }
+            }
+            /* Small phones: taller box so portrait videos crop less */
+            @media (max-width: 480px) {
+              .cx-events .cx-event__video-slider {
+                aspect-ratio: 4 / 5;
+              }
+            }
           </style>
 
           <section class="cx-events">
@@ -1328,7 +1364,8 @@
                     <div>
                       <span class="cx-event__label">Event 1</span>
                       <h3 class="cx-event__title">
-                        The Stall Was the Product.<br />18 Square Metres.
+                        The Stall Was the Product.<br />Built Entirely with our
+                        FABx Range.
                       </h3>
                       <p class="cx-event__meta">
                         <strong>India Expo Event Mumbai</strong> · 2026
@@ -1387,25 +1424,45 @@
                     <span class="cx-event__day">07</span>
                   </div>
 
-                  <img
-                    class="cx-event__image"
-                    src="assets/cubo-img/Media Expo 2025.png"
-                    alt="Media Expo Delhi 2025"
-                  />
+                  <div class="cx-event__image cx-event__video-slider">
+                    <div class="swiper cx-event-video-swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <video
+                            src="assets/videos/Events%201%20(1).mp4"
+                            muted
+                            playsinline
+                            preload="metadata"
+                            aria-label="Media Expo Delhi 2025 - video 1"
+                          ></video>
+                        </div>
+                        <div class="swiper-slide">
+                          <video
+                            src="assets/videos/Events%202%20(1).mp4"
+                            muted
+                            playsinline
+                            preload="metadata"
+                            aria-label="Media Expo Delhi 2025 - video 2"
+                          ></video>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
 
                   <div class="cx-event__content">
                     <div>
                       <span class="cx-event__label">Event 2</span>
                       <h3 class="cx-event__title">
-                        Same Show.<br />3.5× The Floor Space.
+                        Same Show.<br />A Much Bigger Stage.
                       </h3>
                       <p class="cx-event__meta">
                         <strong>Media Expo Delhi</strong> · 2025
                       </p>
                       <p class="cx-event__desc">
-                        Two years later, we returned with a 64 sq. m stall —
-                        more than three times our 2023 footprint. The size
-                        wasn't the statement. The product range was.
+                        Two years later, we returned with a significantly larger
+                        stall and a far bigger story to tell. The size wasn't
+                        the statement. The product range was.
                       </p>
                       <ul class="cx-event__bullets">
                         <li>
@@ -1442,7 +1499,7 @@
                     </div>
                     <div class="cx-event__actions">
                       <a href="#" class="rr-btn-primary btn-black-2">
-                        <span class="text"> 64 Sq. Metre Showcase</span>
+                        <span class="text">A Bigger Showcase </span>
                         <i class="fa-regular fa-arrow-right-long"></i>
                       </a>
                     </div>
@@ -1465,13 +1522,13 @@
                     <div>
                       <span class="cx-event__label">Event 3</span>
                       <h3 class="cx-event__title">
-                        First Major Showcase.<br />18 Square Metres.
+                        First Major Showcase.<br />Where It Started.
                       </h3>
                       <p class="cx-event__meta">
                         <strong>Media Expo Delhi</strong> · 2023
                       </p>
                       <p class="cx-event__desc">
-                        Our first serious industry presence. An 18 sq. m stall
+                        Our first serious industry presence. A compact stall
                         that put Cuboc in front of a national audience for the
                         first time. The stall was small. The learning wasn't.
                       </p>
@@ -1662,19 +1719,22 @@
                 <div class="cx-trajectory__left">
                   <span class="cx-eyebrow">What These Shows Tell Us</span>
                   <h2 class="cx-heading" style="margin-top: 16px">
-                    Our Stall Size Is the Easiest Way to
-                    <span>Measure Our Trajectory.</span>
+                    The Way We Show Up Is the Easiest Way to
+                    <span> Measure Our Growth. </span>
                   </h2>
-                  <p class="cx-trajectory__intro">From 2023 to 2025:</p>
+                  <p class="cx-trajectory__intro">From 2023 to 2026:</p>
                 </div>
 
                 <!-- RIGHT -->
                 <div class="cx-trajectory__right">
                   <div class="cx-trajectory__rows">
                     <div class="cx-trajectory__row">
-                      <span class="cx-trajectory__row-label">Stall Size</span>
+                      <span class="cx-trajectory__row-label">THE STALL </span>
                       <span class="cx-trajectory__row-value">
-                        18 sq. m → 64 sq. m <em>(3.5× growth)</em>
+                        Compact stall → larger stall →<strong
+                          >complete stalls</strong
+                        >
+                        built with our own system, in any size
                       </span>
                     </div>
 
@@ -3624,5 +3684,60 @@
       src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
       async
     ></script>
+    <!-- Event 2 video slider: plays each video fully, then slides to the next -->
+    <script>
+      (function () {
+        var el = document.querySelector(".cx-event-video-swiper");
+        if (!el || typeof Swiper === "undefined") return;
+        var videos = el.querySelectorAll("video");
+        var swiper;
+
+        function playActive() {
+          videos.forEach(function (v, i) {
+            if (i === swiper.activeIndex) {
+              v.currentTime = 0;
+              var p = v.play();
+              if (p && p.catch) p.catch(function () {});
+            } else {
+              v.pause();
+            }
+          });
+        }
+
+        function goNext() {
+          if (swiper.activeIndex >= videos.length - 1) {
+            swiper.slideTo(0);
+          } else {
+            swiper.slideNext();
+          }
+        }
+
+        swiper = new Swiper(el, {
+          slidesPerView: 1,
+          speed: 600,
+          loop: false,
+          autoplay: false, // no timer: slide changes only when a video ends
+          pagination: {
+            el: el.querySelector(".swiper-pagination"),
+            clickable: true,
+          },
+          on: {
+            slideChangeTransitionStart: playActive,
+          },
+        });
+
+        videos.forEach(function (v, i) {
+          v.addEventListener("ended", function () {
+            if (i === swiper.activeIndex) goNext();
+          });
+          // if a video file fails to load, don't get stuck on it
+          v.addEventListener("error", function () {
+            if (i === swiper.activeIndex) setTimeout(goNext, 1500);
+          });
+        });
+
+        playActive();
+      })();
+    </script>
   </body>
 </html>

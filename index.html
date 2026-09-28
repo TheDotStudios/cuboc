@@ -36,18 +36,31 @@
     <link rel="stylesheet" href="assets/css/hero-banner-slider.css?v=3" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
-      @media (min-width: 1100px) and (max-width: 1599px) and (orientation: landscape) {
-        .about-overview-9__counter-item h2 {
-          font-size: 30px !important;
+      @media (min-width: 769px) and (max-width: 1199px) {
+        .hero-2-scene .hero-2-banner-slider__content .hero-2__inner {
+          padding-left: 96px !important;
+          padding-right: 96px !important;
         }
-        .pt-smmm-50 {
-          margin-top: 80px !important;
-        }
-        .about-overview-9__content {
-          gap: 30px !important;
+        .hero-2-scene .hero-2-content .title {
+          font-size: clamp(44px, 6.2vw, 68px) !important;
+          line-height: 0.95 !important;
+          letter-spacing: -1.5px !important;
         }
       }
-
+      /* Counters: scale with the screen instead of fixed sizes */
+      @media (min-width: 992px) and (max-width: 1599px) {
+        .about-overview-9__counter-item h2 {
+          font-size: clamp(26px, 2.6vw, 42px) !important;
+          line-height: 1.1;
+          white-space: nowrap; /* keeps "10+" / "80%" on one line */
+        }
+        .about-overview-9__content {
+          gap: clamp(20px, 2.4vw, 40px) !important;
+        }
+        .pt-smmm-50 {
+          margin-top: clamp(40px, 5vw, 80px) !important;
+        }
+      }
       .hero-2-content .title {
         font-size: 80px;
         letter-spacing: -2px;
@@ -91,6 +104,78 @@
       }
       .about-overview-9__thumb img {
         height: unset !important;
+      }
+      /* ── About overview: 5-image slider ── */
+      .about-overview-9__thumb {
+        align-self: start;
+        min-width: 0;
+      }
+      /* push the image slightly down so it lines up with the heading (desktop/tablet) */
+      @media (min-width: 768px) {
+        .about-overview-9__thumb {
+          margin-top: 40px;
+        }
+      }
+      /* clipping frame: fixed 4:3 box so layout never jumps between images */
+      .about-overview-9__thumb .ov9-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+        background: #fff;
+      }
+      /* slider fills the clipping frame */
+      .about-overview-9__thumb .ov9-swiper {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .about-overview-9__thumb .ov9-swiper .swiper-slide {
+        height: 100%;
+      }
+      /* override the earlier "height: unset !important" for slider images */
+      .about-overview-9__thumb .ov9-swiper .swiper-slide img {
+        display: block;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover; /* fills the whole box; change to contain to show full image with margins */
+      }
+      /* Bigger image column on desktop (was fixed 515px) */
+      @media (min-width: 1200px) {
+        .about-overview-9__wrap {
+          grid-template-columns: clamp(515px, 34vw, 580px) 84px 1fr;
+          gap: clamp(30px, 3vw, 60px);
+        }
+      }
+      .about-overview-9__thumb .ov9-pagination.swiper-pagination {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: center;
+        justify-content: flex-start;
+        position: static; /* keep it in the flow, under the image */
+        width: auto;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        margin-top: 24px; /* gap between image and dots */
+        z-index: 2;
+      }
+      .about-overview-9__thumb .ov9-pagination .swiper-pagination-bullet {
+        width: 20px;
+        height: 2px;
+        margin: 0 !important;
+        border-radius: 2px;
+        background: #ddd;
+        opacity: 1;
+        transition: all 0.2s;
+      }
+      .about-overview-9__thumb
+        .ov9-pagination
+        .swiper-pagination-bullet-active {
+        width: 40px;
+        background: #111;
       }
       /* ── Slider image fix — no stretch ── */
       .project-6__thumb img {
@@ -481,36 +566,7 @@
                   </li>
 
                   <li><a href="virtualshowroom.html">Virtual Showroom</a></li>
-
-                  <li class="menu-item-has-children">
-                    <a href="caseStudy.html">Case Studies</a>
-                    <ul class="dp-menu">
-                      <li>
-                        <a href="Versions203.html">Customisation </a>
-                      </li>
-                      <li>
-                        <a href="CompetitorStock.html"> Service Attitude </a>
-                      </li>
-                      <li>
-                        <a href="DentedStandees.html">
-                          After-Sales Reliability
-                        </a>
-                      </li>
-                      <li>
-                        <a href="CustomEngineering.html">
-                          Custom Engineering
-                        </a>
-                      </li>
-                      <li>
-                        <a href="PremiumFinishes.html"> Premium Finishes </a>
-                      </li>
-                      <li>
-                        <a href="EngineeringforReality.html"
-                          >Engineering for Reality
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
+                  <li><a href="caseStudy.html">Case Studies</a></li>
 
                   <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -857,7 +913,7 @@
           </div>
           <style>
             .intro-strip {
-              max-width: 1360px;
+              max-width: 1000px;
               margin: 0 auto;
               background: linear-gradient(
                 135deg,
@@ -896,17 +952,37 @@
             }
 
             @media (max-width: 768px) {
+              /* mobile: neat 2-column grid with thin dividers */
               .intro-strip {
-                flex-direction: column;
-                align-items: center;
-                padding: 24px 20px;
-                gap: 16px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-items: stretch;
+                align-items: stretch;
+                padding: 0;
+                gap: 0;
               }
 
               .intro-strip__item {
-                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 18px 8px;
                 white-space: normal;
                 text-align: center;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+              }
+
+              /* vertical line between the two columns */
+              .intro-strip__item:nth-child(odd):not(:last-child) {
+                border-right: 1px solid rgba(255, 255, 255, 0.22);
+              }
+
+              /* odd last item sits centered on its own full row */
+              .intro-strip__item:last-child {
+                border-bottom: none;
+              }
+              .intro-strip__item:last-child:nth-child(odd) {
+                grid-column: 1 / -1;
               }
 
               .intro-strip__item:not(:last-child)::after {
@@ -916,12 +992,11 @@
           </style>
 
           <section class="intro-strip">
-            <span class="intro-strip__item"
-              >From standees to full exhibition booths</span
-            >
-            <span class="intro-strip__item">Engineered in-house</span>
-            <span class="intro-strip__item">Delivered on time</span>
-            <span class="intro-strip__item">100% replacement guarantee.</span>
+            <span class="intro-strip__item">Modular </span>
+            <span class="intro-strip__item">Portable </span>
+            <span class="intro-strip__item">Tool Free</span>
+            <span class="intro-strip__item">Reusable </span>
+            <span class="intro-strip__item">Sustainable </span>
           </section>
           <style>
             .hero-banner {
@@ -998,11 +1073,47 @@
             <div class="container rr-container-1710">
               <div class="about-overview-9__wrap">
                 <div class="about-overview-9__thumb rr-ov-hidden">
-                  <img
-                    data-speed="0.8"
-                    src="assets/imgs/cp01.jpg"
-                    alt="image not found"
-                  />
+                  <div class="ov9-frame">
+                    <div class="swiper ov9-swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/cubo-img/Second Section - 1.jpeg"
+                            alt="Cuboc exhibition stall 1"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/cubo-img/Second Section - 2.jpeg"
+                            alt="Cuboc exhibition stall 2"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/cubo-img/Second Section - 3.jpeg"
+                            alt="Cuboc exhibition stall 3"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/cubo-img/Second Section - 4.jpeg"
+                            alt="Cuboc exhibition stall 4"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/imgs/cp01.jpg"
+                            alt="Cuboc exhibition stall 5"
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ov9-pagination"></div>
                 </div>
                 <div class="section-subtitle__wrap overview mt-40">
                   <h2 class="sub-title01">About</h2>
@@ -2143,11 +2254,13 @@
               }
               .ts-dots {
                 display: flex;
+                flex-wrap: wrap;
                 gap: 6px;
                 align-items: center;
+                max-width: 70%;
               }
               .ts-dot {
-                width: 20px;
+                width: 14px;
                 height: 2px;
                 background: #ddd;
                 border: none;
@@ -2157,7 +2270,7 @@
                 border-radius: 2px;
               }
               .ts-dot.active {
-                width: 40px;
+                width: 28px;
                 background: #111;
               }
               .ts-cta {
@@ -2201,41 +2314,175 @@
                   <div class="ts-slide">
                     <div class="ts-number">01</div>
                     <p class="ts-quote">
-                      "From order to dispatch, the entire experience is smooth
-                      and professional. Even if there is any issue, replacement
-                      or support is handled within 24 hours."
+                      "Cuboc makes premium exhibition setups faster, flexible
+                      and easier to execute."
+                    </p>
+                    <p class="ts-author-name">Vinay Javeri</p>
+                    <p class="ts-author-role">MM Activ</p>
+                  </div>
+                  <div class="ts-slide">
+                    <div class="ts-number">02</div>
+                    <p class="ts-quote">
+                      "It combines premium finish, portability and practical
+                      execution for corporate clients."
+                    </p>
+                    <p class="ts-author-name">Ayush Dharmare</p>
+                    <p class="ts-author-role">Kanika Digital</p>
+                  </div>
+                  <div class="ts-slide">
+                    <div class="ts-number">03</div>
+                    <p class="ts-quote">
+                      "A very practical system for shell scheme stalls. Easy to
+                      install, dismantle and carry."
+                    </p>
+                    <p class="ts-author-name">Mayur Jhatar</p>
+                    <p class="ts-author-role">Elecrama</p>
+                  </div>
+                  <div class="ts-slide">
+                    <div class="ts-number">04</div>
+                    <p class="ts-quote">
+                      "A Made-in-India modular display system with real
+                      sustainability and reuse potential."
+                    </p>
+                    <p class="ts-author-name">Prashant Nandy</p>
+                    <p class="ts-author-role">PEC Chamber</p>
+                  </div>
+                  <div class="ts-slide">
+                    <div class="ts-number">05</div>
+                    <p class="ts-quote">
+                      "We really appreciate your way of working and
+                      communication. The quality is always excellent, and the
+                      best part is that every order is customized exactly as per
+                      the client’s requirement."
+                    </p>
+                    <p class="ts-author-name">Vishwas Sales</p>
+                    <p class="ts-author-role">Verified client</p>
+                  </div>
+                  <div class="ts-slide">
+                    <div class="ts-number">06</div>
+                    <p class="ts-quote">
+                      "From sales order to dispatch, the service experience has
+                      been smooth and professional. Even if there is any issue,
+                      replacement or credit note support is provided within 24
+                      hours. Working with you feels like dealing with a highly
+                      reputed company."
                     </p>
                     <p class="ts-author-name">Krishna Traders</p>
                     <p class="ts-author-role">Verified client</p>
                   </div>
                   <div class="ts-slide">
-                    <div class="ts-number">02</div>
+                    <div class="ts-number">07</div>
                     <p class="ts-quote">
-                      "Product quality and packaging are excellent. Our
-                      customers specifically ask for your standees because of
-                      the quality."
+                      "What stands out is the regular updates at every stage.
+                      From dispatch to transport to final delivery, we receive
+                      timely information without even having to ask. Even after
+                      delivery, your team follows up for feedback, which is
+                      impressive."
                     </p>
-                    <p class="ts-author-name">Universal Publicity</p>
+                    <p class="ts-author-name">Bhatia Silver</p>
                     <p class="ts-author-role">Verified client</p>
                   </div>
                   <div class="ts-slide">
-                    <div class="ts-number">03</div>
+                    <div class="ts-number">08</div>
                     <p class="ts-quote">
-                      "Your team stands by every commitment. Consistent delivery
-                      and reliability helped us build strong trust from the very
-                      first order."
+                      "Your quality and service are both excellent. The quality
+                      you deliver the first time remains consistent in every
+                      order, which gives us great confidence."
+                    </p>
+                    <p class="ts-author-name">Kumar Mark Ad</p>
+                    <p class="ts-author-role">Verified client</p>
+                  </div>
+                  <div class="ts-slide">
+                    <div class="ts-number">09</div>
+                    <p class="ts-quote">
+                      "Your dispatch process is very fast and efficient. We
+                      needed urgent delivery, and your team made it happen. This
+                      kind of service is only possible when stock is always
+                      ready and operations are well managed."
+                    </p>
+                    <p class="ts-author-name">9 Expression</p>
+                    <p class="ts-author-role">Verified client</p>
+                  </div>
+                  <div class="ts-slide">
+                    <div class="ts-number">10</div>
+                    <p class="ts-quote">
+                      "Commitment and delivery timing matter the most, and your
+                      team stands by every promise. Even when we were unsure
+                      during our first deal, you fulfilled the commitment and
+                      delivered daily quantities consistently, which built
+                      strong trust in your company."
                     </p>
                     <p class="ts-author-name">Lakshya Signage</p>
                     <p class="ts-author-role">Verified client</p>
                   </div>
                   <div class="ts-slide">
-                    <div class="ts-number">04</div>
+                    <div class="ts-number">11</div>
                     <p class="ts-quote">
-                      "What stands out is the regular updates at every stage. We
-                      receive timely information from dispatch to delivery
-                      without even asking."
+                      "Your product quality is very good, and the packing is
+                      excellent. In fact, our customers specifically ask for
+                      your standees because of the quality they receive."
                     </p>
-                    <p class="ts-author-name">Bhatia Silver</p>
+                    <p class="ts-author-name">Universal Publicity</p>
+                    <p class="ts-author-role">Verified client</p>
+                  </div>
+                  <div class="ts-slide">
+                    <div class="ts-number">12</div>
+                    <p class="ts-quote">
+                      "Along with great quality, your service is equally
+                      impressive. It’s always a good experience working with
+                      your team."
+                    </p>
+                    <p class="ts-author-name">Mamtanil</p>
+                    <p class="ts-author-role">Verified client</p>
+                  </div>
+                  <div class="ts-slide">
+                    <div class="ts-number">13</div>
+                    <p class="ts-quote">
+                      "Your quality is always consistent. We have never received
+                      any complaint, which shows how reliable your products
+                      are."
+                    </p>
+                    <p class="ts-author-name">Prachar Bharat</p>
+                    <p class="ts-author-role">Verified client</p>
+                  </div>
+                  <div class="ts-slide">
+                    <div class="ts-number">14</div>
+                    <p class="ts-quote">
+                      "Your luxury-quality products and packing are simply the
+                      best."
+                    </p>
+                    <p class="ts-author-name">Excellent</p>
+                    <p class="ts-author-role">Verified client</p>
+                  </div>
+                  <div class="ts-slide">
+                    <div class="ts-number">15</div>
+                    <p class="ts-quote">
+                      "You pay attention to even the smallest details. Even a
+                      minor complaint is taken seriously and resolved quickly,
+                      which shows your dedication to customer satisfaction."
+                    </p>
+                    <p class="ts-author-name">Yashika</p>
+                    <p class="ts-author-role">Verified client</p>
+                  </div>
+                  <div class="ts-slide">
+                    <div class="ts-number">16</div>
+                    <p class="ts-quote">
+                      "Your material quality is very good, and whenever there
+                      has been any issue, the replacement has been provided
+                      within 24 hours."
+                    </p>
+                    <p class="ts-author-name">Desi Aangan</p>
+                    <p class="ts-author-role">Verified client</p>
+                  </div>
+                  <div class="ts-slide">
+                    <div class="ts-number">17</div>
+                    <p class="ts-quote">
+                      "We always receive timely updates, including pricing
+                      information. We also value the exclusivity and consistency
+                      in working with a single trusted dealer in the same
+                      location."
+                    </p>
+                    <p class="ts-author-name">Nanak Print</p>
                     <p class="ts-author-role">Verified client</p>
                   </div>
                 </div>
@@ -2258,7 +2505,7 @@
                 var track = document.getElementById("ts-track");
                 var outer = document.getElementById("ts-outer");
                 var dotsWrap = document.getElementById("ts-dots");
-                var total = 4,
+                var total = track.children.length, // counts slides automatically
                   cur = 0,
                   autoInterval;
 
@@ -2310,12 +2557,15 @@
                     var next = cur + 1;
                     if (next > total - perView) next = 0;
                     go(next);
-                  }, 3000);
+                  }, 5000);
                 }
 
                 function stopAuto() {
                   clearInterval(autoInterval);
                 }
+
+                outer.addEventListener("mouseenter", stopAuto);
+                outer.addEventListener("mouseleave", startAuto);
 
                 document.getElementById("ts-prev").onclick = function () {
                   stopAuto();
@@ -2361,6 +2611,7 @@
                   function (e) {
                     startX = e.touches[0].clientX;
                     startScroll = cur * (slideW() + getGap());
+                    track.classList.add("dragging");
                     stopAuto();
                   },
                   { passive: true },
@@ -2376,6 +2627,7 @@
                   { passive: true },
                 );
                 track.addEventListener("touchend", function (e) {
+                  track.classList.remove("dragging");
                   var dx = e.changedTouches[0].clientX - startX;
                   if (dx < -50) go(cur + 1);
                   else if (dx > 50) go(cur - 1);
@@ -3696,5 +3948,24 @@ INSTALL:
       })();
     </script>
     <!-- ── END QUOTE MODAL ── -->
+    <!-- About overview: 5-image auto slider -->
+    <script>
+      (function () {
+        var el = document.querySelector(".ov9-swiper");
+        if (!el || typeof Swiper === "undefined") return;
+        new Swiper(el, {
+          loop: true,
+          speed: 800,
+          slidesPerView: 1,
+          effect: "fade",
+          fadeEffect: { crossFade: true },
+          autoplay: { delay: 3000, disableOnInteraction: false },
+          pagination: {
+            el: ".ov9-pagination",
+            clickable: true,
+          },
+        });
+      })();
+    </script>
   </body>
 </html>
