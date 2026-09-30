@@ -47,6 +47,31 @@
         .about-hero__title {
           font-size: 65px !important;
         }
+        .intro-strip {
+          max-width: 1200px !important;
+        }
+      }
+
+      /* 1366x768 laptops: short viewport, so shrink things */
+      @media (min-width: 1100px) and (max-width: 1599px) and (max-height: 800px) and (orientation: landscape) {
+        .about-hero {
+          min-height: 80vh !important;
+          padding-top: 90px;
+          padding-bottom: 40px;
+        }
+        .about-hero__title {
+          font-size: 48px !important;
+          line-height: 1.15;
+        }
+        .intro-strip {
+          max-width: 1100px !important;
+        }
+        .about-hero__inner {
+          position: relative;
+          z-index: 1;
+          width: 100%;
+          padding: 40px 0 130px !important;
+        }
       }
       .about-hero {
         min-height: 60vh;

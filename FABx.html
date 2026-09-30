@@ -8,7 +8,7 @@
       name="description"
       content="Cuboc Case Studies — Real Problems. Built Solutions."
     />
-    <title>Case Studies — Cuboc</title>
+    <title>FABx — Cuboc</title>
 
     <!-- Fav Icon -->
     <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.png" />
@@ -46,6 +46,25 @@
         }
         .about-hero__title {
           font-size: 65px !important;
+        }
+        .intro-strip {
+          max-width: 1200px !important;
+        }
+      }
+
+      /* 1366x768 laptops: short viewport, so shrink things */
+      @media (min-width: 1100px) and (max-width: 1599px) and (max-height: 800px) and (orientation: landscape) {
+        .about-hero {
+          min-height: 80vh !important;
+          padding-top: 90px;
+          padding-bottom: 40px;
+        }
+        .about-hero__title {
+          font-size: 48px !important;
+          line-height: 1.15;
+        }
+        .intro-strip {
+          max-width: 1200px !important;
         }
       }
       .about-hero {
@@ -1059,7 +1078,7 @@
             </div>
             <div class="about-hero__inner">
               <div class="container rr-container-1710">
-                <p class="about-hero__eyebrow">About Cuboc Display</p>
+                <p class="about-hero__eyebrow">Three Systems · One Range</p>
                 <h1 class="about-hero__title">
                   Fabric Light Boxes - FABx Range
                 </h1>
