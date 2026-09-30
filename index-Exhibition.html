@@ -35,6 +35,24 @@
     <link rel="stylesheet" href="assets/css/lang-switcher.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
+      @media (min-width: 1100px) and (max-width: 1599px) and (orientation: landscape) {
+        .about-hero {
+          min-height: 67vh !important;
+        }
+        .about-hero__title {
+          font-size: 65px !important;
+        }
+        .intro-strip {
+          max-width: 1200px !important;
+          padding: 40px 70px !important;
+        }
+        .about-hero__inner {
+          position: relative;
+          z-index: 1;
+          width: 100%;
+          padding: 120px 0 140px !important;
+        }
+      }
       @media (max-width: 767px) {
         .cd-wrap {
           padding: 0px 0 !important;
