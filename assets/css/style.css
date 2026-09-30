@@ -24513,3 +24513,9 @@ section {
     gap: 16px;
   }
 }
+
+@media (min-width: 1100px) and (max-width: 1599px) and (max-height: 800px) and (orientation: landscape) {
+  .rr-container-1710 {
+    padding: 0 70px !important;
+  }
+}
